@@ -422,8 +422,24 @@
 										  <fileset dir="${project.build.directory}/derby/sql">
 										    <include name="*.sql"/>
 										  </fileset>
-										</replaceregexp>																																				
-																		
+										</replaceregexp>
+										
+										<replaceregexp byline="true">
+										  <regexp pattern="timestamp without time zone"/>
+										  <substitution expression="timestamp"/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
+										</replaceregexp>
+										
+										<replaceregexp byline="true">
+										  <regexp pattern="DEFAULT ''::LONG VARCHAR NOT NULL"/>
+										  <substitution expression="NOT NULL WITH DEFAULT ''"/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
+										</replaceregexp>										
+										
 									</then>
 								</if>
 							</target>

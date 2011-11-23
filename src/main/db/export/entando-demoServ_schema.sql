@@ -88,7 +88,7 @@ CREATE TABLE authpermissions (
 --
 
 CREATE TABLE authrolepermissions (
-    rolename character varying(30) NOT NULL,
+    rolename character varying(20) NOT NULL,
     permissionname character varying(30) NOT NULL
 );
 
@@ -249,7 +249,7 @@ CREATE TABLE jpsurvey_voters (
     id integer NOT NULL,
     age smallint,
     country character varying(2),
-    sex "char",
+    sex char,
     votedate date NOT NULL,
     surveyid integer NOT NULL,
     username character varying(30) NOT NULL,
