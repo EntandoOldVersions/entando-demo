@@ -24,7 +24,7 @@
 					<li class="navigation_menu_li<c:if test="${pageCurrent.code==surfedCode}"> current</c:if>"><c:if test="${pageCurrent.level==0}"><span class="main-item"></c:if>
 					<c:if test="${pageCurrent.level!=0}"><span class="sub-item"></c:if>
 						<c:choose>
-							<c:when test="${pageCurrent.void}"><span class="link"><span><c:out value="${pageCurrent.title}" /></span></span></c:when>
+							<c:when test="${pageCurrent.voidPage}"><span class="link"><span><c:out value="${pageCurrent.title}" /></span></span></c:when>
 							<c:otherwise><a href="<c:out value="${pageCurrent.url}" />" class="link"><span><c:out value="${pageCurrent.title}" /></span></a>
 							</c:otherwise>
 						</c:choose></span>
@@ -51,7 +51,7 @@
 							<li class="navigation_menu_li<c:if test="${pageCurrent.code==surfedCode}"> current</c:if>"><c:if test="${pageCurrent.level==0}"><span class="main-item"></c:if>
 							<c:if test="${pageCurrent.level!=0}"><span class="sub-item"></c:if>
 								<c:choose>
-									<c:when test="${pageCurrent.void}"><span class="link"><span><c:out value="${pageCurrent.title}" /></span></span></c:when>
+									<c:when test="${pageCurrent.voidPage}"><span class="link"><span><c:out value="${pageCurrent.title}" /></span></span></c:when>
 									<c:otherwise><a href="<c:out value="${pageCurrent.url}" />" class="link"><span><c:out value="${pageCurrent.title}" /></span></a>
 									</c:otherwise>
 								</c:choose></span>
@@ -68,7 +68,7 @@
 							<li class="navigation_menu_li<c:if test="${pageCurrent.code==surfedCode}"> current</c:if>"><c:if test="${pageCurrent.level==0}"><span class="main-item"></c:if>
 							<c:if test="${pageCurrent.level!=0}"><span class="sub-item"></c:if>
 								<c:choose>
-									<c:when test="${pageCurrent.void}"><span class="link"><span><c:out value="${pageCurrent.title}" /></span></span></c:when>
+									<c:when test="${pageCurrent.voidPage}"><span class="link"><span><c:out value="${pageCurrent.title}" /></span></span></c:when>
 									<c:otherwise><a href="<c:out value="${pageCurrent.url}" />" class="link"><span><c:out value="${pageCurrent.title}" /></span></a>
 									</c:otherwise>
 								</c:choose></span>
@@ -89,7 +89,7 @@
 							<li class="navigation_menu_li<c:if test="${pageCurrent.code==surfedCode}"> current</c:if>"><c:if test="${pageCurrent.level==0}"><span class="main-item"></c:if>
 							<c:if test="${pageCurrent.level!=0}"><span class="sub-item"></c:if>
 								<c:choose>
-									<c:when test="${pageCurrent.void}"><span class="link"><span><c:out value="${pageCurrent.title}" /></span></span></c:when>
+									<c:when test="${pageCurrent.voidPage}"><span class="link"><span><c:out value="${pageCurrent.title}" /></span></span></c:when>
 									<c:otherwise><a href="<c:out value="${pageCurrent.url}" />" class="link"><span><c:out value="${pageCurrent.title}" /></span></a>
 									</c:otherwise>
 								</c:choose></span>
