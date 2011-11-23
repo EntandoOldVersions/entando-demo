@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context path="/entando-demo" docBase="./entando-demo" debug="1" reloadable="true">
+	
+	<Environment name="logName" value="entando-demo" type="java.lang.String" override="false" />
+	<Environment name="logFilePrefix" value="/home/wiz/git-tmp/entando-demo/target/log_entando-demo" type="java.lang.String" override="false" />
+	<Environment name="logLevel" value="ALL" type="java.lang.String" override="false" />
+	<Environment name="logFileSize" value="200000" type="java.lang.String" override="false" />
+	<Environment name="logFilesCount" value="10" type="java.lang.String" override="false" />
+	
+	<Environment name="configVersion" value="production" type="java.lang.String" override="false" />
+	
+	<Environment name="applicationBaseURL" value="http://localhost:8080/entando-demo/" type="java.lang.String" override="false" />
+	<Environment name="resourceRootURL" value="/entando-demo/resources/" type="java.lang.String" override="false" />
+	<Environment name="protectedResourceRootURL" value="/entando-demo/protected/" type="java.lang.String" override="false" />
+	
+	<Environment name="resourceDiskRootFolder" value="/home/wiz/git-tmp/entando-demo/src/main/webapp/resources" type="java.lang.String" override="false" />
+	<Environment name="protectedResourceDiskRootFolder" value="/home/wiz/git-tmp/entando-demo/src/main/webapp/protected" type="java.lang.String" override="false" />
+	
+	<Environment name="indexDiskRootFolder" value="/home/wiz/git-tmp/entando-demo/target/temp/indexdir" type="java.lang.String" override="false" />
+	
+	<Environment name="cacheDiskRootFolder" value="/home/wiz/git-tmp/entando-demo/target/temp/cache" type="java.lang.String" override="false" />
+	
+	<Resource name="jdbc/portDataSource" auth="Container" 
+		type="javax.sql.DataSource" driverClassName="org.postgresql.Driver" 
+		maxActive="8" maxIdle="4" 
+		username="agile" password="agile" 
+		url="jdbc:postgresql://localhost:5432/entando-demoPort" />
+	
+	<Resource name="jdbc/servDataSource" auth="Container" 
+		type="javax.sql.DataSource" driverClassName="org.postgresql.Driver" 
+		maxActive="8" maxIdle="4" 
+		username="agile" password="agile" 
+		url="jdbc:postgresql://localhost:5432/entando-demoServ" />
+	
+</Context>

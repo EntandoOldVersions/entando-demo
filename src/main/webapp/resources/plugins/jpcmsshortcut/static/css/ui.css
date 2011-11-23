@@ -1,0 +1,59 @@
+.ui-widget { 
+	font-size: 12px;
+}
+
+.ui-widget .js_noscreen {
+	display: none;
+
+}
+
+.ui-widget .attribute {
+	margin: 0 0 15px 0;
+	line-height: 25px;
+}
+
+.ui-widget .attribute .inlineNote {
+	color: rgba(0,0,0, 0.6);
+	font-style: italic;
+}
+
+.ui-widget .attribute .attribute-meta-tip {
+	color: rgba(0,0,0, 0.4);
+}
+
+.ui-widget .save {
+	text-align: center;
+	margin: 15px 0;
+}
+
+.ui-widget .save input[type="submit"]:hover {
+	color: #000;
+}
+
+.widget-center {
+	margin: 40px auto;
+	text-align: center;
+}
+
+.ui-widget-overlay {
+	opacity: 0.65;
+	background: #ffffff;
+}
+
+.ui-dialog {
+	-webkit-box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.ui-widget input,
+.ui-widget select, 
+.ui-widget textarea {
+	min-width: 90%;
+	padding: 5px;
+}
+
+.ui-widget .save input {
+	min-width: 40px;
+}
+

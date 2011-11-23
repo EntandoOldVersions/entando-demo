@@ -1,0 +1,36 @@
+body { /* use it to define the width and max-width of the content */
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+#container {/* use it to properly insert a background image or color also for padding bottom */
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.page-space { /* use it as "expandable" container of color and background */
+	float: left;
+	width: 100%;
+	margin: 0 0 0 0; /* bottom space from other boxes */
+	padding: 0;
+}
+
+.page-space:last-child {
+	margin: 0 0 0 0;
+}
+
+.page-space-1 { /* use it for spacing left/right the "whole content colum", if no spacing needed use width 100% */
+	margin: 0 auto;
+	width: 100%;
+	/*max-width: 100%;*/
+	max-width: 964px;
+}
+
+.page-space-2 {/* dont touch it, maybe set a background */
+	float: left;
+	width: 100%;
+}

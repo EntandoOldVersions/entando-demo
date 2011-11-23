@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+    
+    <package name="entandoDemo_jpfastcontentedit_do/jpfastcontentedit/Content/Resource" namespace="/do/jpfastcontentedit/Content/Resource" extends="jpfastcontentedit_do/jpfastcontentedit/Content/Resource">
+    	
+        <result-types>	
+            <result-type name="frontRedirectAction" class="com.agiletec.plugins.jpfastcontentedit.aps.system.dispatcher.FrontServletActionRedirectResult" />
+        </result-types>
+        
+        <global-results>
+            <result name="userNotAllowed" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/userNotAllowed.jsp</result>
+            <result name="failure" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/errors.jsp</result>
+        </global-results>
+    	
+        <!-- ######## INIZIO GESTIONE RICERCA ATTRIBUTI RISORSA ######## -->
+        
+        <action name="findResource" class="jpfastcontenteditExtendedResourceFinderAction">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/${resourceTypeCode}Archive.jsp</result>
+            <interceptor-ref name="requestAuth"><param name="requiredPermission">jpfastcontentedit_editContents</param></interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" ><param name="chain.includeParameters">attributeName,elementIndex,resourceTypeCode,resourceLangCode</param></interceptor-ref>
+        </action>
+        
+        <action name="search*" class="jpfastcontenteditExtendedResourceFinderAction">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/${resourceTypeCode}Archive.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="openCloseCategoryTreeNodeOnResourceFinding*" class="jpfastcontenteditExtendedResourceFinderAction" method="buildTree">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/${resourceTypeCode}Archive.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="joinResource*" class="jpfastcontenteditExtendedResourceFinderAction" method="joinResource">
+            <result type="frontRedirectAction">
+                <param name="namespace">/do/jpfastcontentedit/Content</param>
+                <param name="actionName">entryContent</param>
+                <!-- <param name="anchorDest">${entryContentAnchorDest}</param> -->
+    		<param name="anchorDest">${langTabAnchorDest}</param>
+            </result>
+            <interceptor-ref name="requestAuth"><param name="requiredPermission">jpfastcontentedit_editContents</param></interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <!-- ######## FINE GESTIONE RICERCA ATTRIBUTI RISORSA ######## -->
+        
+        <!-- ######## INIZIO GESTIONE NUOVO ATTRIBUTO RISORSA ######## -->
+        
+        <action name="new" class="jpfastcontenteditExtendedResourceAction" method="newResource">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/entryResource.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">manageResources</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+    	
+        <action name="openCloseCategoryTreeNodeOnEntryResource*" class="jpfastcontenteditExtendedResourceAction" method="buildTree">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/entryResource.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">manageResources</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="joinCategory*" class="jpfastcontenteditExtendedResourceAction" method="joinCategory">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/entryResource.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">manageResources</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+    	
+        <action name="removeCategory*" class="jpfastcontenteditExtendedResourceAction" method="removeCategory">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/entryResource.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">manageResources</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="save" class="jpfastcontenteditExtendedResourceAction" method="save">
+            <result type="dispatcher" name="input">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/entryResource.jsp</result>
+            <result type="frontRedirectAction">
+            	<param name="namespace">/do/jpfastcontentedit/Content</param>
+    		<param name="actionName">entryContent</param>
+                <!-- <param name="anchorDest">${entryContentAnchorDest}</param> -->
+    		<param name="anchorDest">${langTabAnchorDest}</param>
+            </result>
+            <interceptor-ref name="fileUpload"><param name="maximumSize">10485760</param></interceptor-ref><!-- maximun Size = 10 Mb -->
+            <interceptor-ref name="requestAuth"><param name="requiredPermission">manageResources</param></interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+        </action>
+        
+        <!-- ######## FINE GESTIONE NUOVO ATTRIBUTO RISORSA ######## -->
+        
+        <action name="backToEntryContent" class="jacmsResourceAttributeAction" method="backToEntryContent">
+            <result type="frontRedirectAction">
+            	<param name="namespace">/do/jpfastcontentedit/Content</param>
+    		<param name="actionName">entryContent</param>
+    		<param name="anchorDest">${entryContentAnchorDest}</param>
+            </result>
+            <interceptor-ref name="requestAuth"><param name="requiredPermission">jpfastcontentedit_editContents</param></interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+    </package>
+    
+    
+    <package name="entandoDemo_jpfastcontentedit_do/jpfastcontentedit/Content/Link" namespace="/do/jpfastcontentedit/Content/Link" extends="jpfastcontentedit_do/jpfastcontentedit/Content/Link">
+	
+        <result-types>	
+            <result-type name="frontRedirectAction" class="com.agiletec.plugins.jpfastcontentedit.aps.system.dispatcher.FrontServletActionRedirectResult" />
+        </result-types>
+        
+        <global-results>
+            <result name="userNotAllowed" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/userNotAllowed.jsp</result>
+            <result name="failure" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/errors.jsp</result>
+        </global-results>
+    	
+        <action name="chooseLink*" class="jacmsLinkAttributeAction" method="chooseLinkType">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/chooseLink.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" >
+                <param name="chain.includeParameters">attributeName,elementIndex,langCode</param>
+            </interceptor-ref>
+        </action>
+	
+        <action name="configLink" class="jacmsLinkAttributeAction" method="configLink">
+            <result name="input" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/chooseLink.jsp</result>
+            <result name="configUrlLink" type="chain">configUrlLink</result>
+            <result name="configPageLink" type="chain">configPageLink</result>
+            <result name="configContentLink" type="chain">configContentLink</result>
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/chooseLink.jsp</result>
+            <interceptor-ref name="requestAuth"><param name="requiredPermission">jpfastcontentedit_editContents</param></interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+        </action>
+	
+        <action name="configUrlLink" class="jpfastcontenteditUrlLinkAttributeAction">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/configUrlLinkType.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+	
+        <action name="joinUrlLink" class="jpfastcontenteditUrlLinkAttributeAction" method="joinUrlLink">
+            <result name="input" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/configUrlLinkType.jsp</result>
+            <result type="frontRedirectAction">
+                <param name="namespace">/do/jpfastcontentedit/Content</param>
+                <param name="actionName">entryContent</param>
+                <!-- <param name="anchorDest">${entryContentAnchorDest}</param> -->
+    		<param name="anchorDest">${langTabAnchorDest}</param>
+            </result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+        </action>
+	
+        <action name="configPageLink" class="jpfastcontenteditPageLinkAttributeAction">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/configPageLinkType.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+	
+        <action name="joinPageLink" class="jpfastcontenteditPageLinkAttributeAction" method="joinLink">
+            <result name="input" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/configPageLinkType.jsp</result>
+            <result type="frontRedirectAction">
+                <param name="namespace">/do/jpfastcontentedit/Content</param>
+                <param name="actionName">entryContent</param>
+                <!-- <param name="anchorDest">${entryContentAnchorDest}</param> -->
+    		<param name="anchorDest">${langTabAnchorDest}</param>
+            </result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+        </action>
+	
+        <action name="configContentLink" class="jpfastcontenteditContentLinkAttributeAction" >
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/configContentLinkType.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="search*" class="jpfastcontenteditContentLinkAttributeAction">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/configContentLinkType.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="changeOrder*" class="jpfastcontenteditContentLinkAttributeAction" method="changeOrder">
+            <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/configContentLinkType.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="joinContentLink*" class="jpfastcontenteditContentLinkAttributeAction" method="joinContentLink" >
+            <result name="input" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/configContentLinkType.jsp</result>
+            <result name="configContentOnPageLink" type="chain">configPageLink</result>
+            <result type="frontRedirectAction">
+                <param name="namespace">/do/jpfastcontentedit/Content</param>
+                <param name="actionName">entryContent</param>
+                <!-- <param name="anchorDest">${entryContentAnchorDest}</param> -->
+    		<param name="anchorDest">${langTabAnchorDest}</param>
+            </result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+        </action>
+		
+    </package>
+    
+    <package name="entandoDemo_jpfastcontentedit_do/jpfastcontentedit/Content/Hypertext" namespace="/do/jpfastcontentedit/Content/Hypertext" extends="jpfastcontentedit_do/jpfastcontentedit/Content/Hypertext">
+        
+        <global-results>
+            <result name="userNotAllowed" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/userNotAllowed.jsp</result>
+            <result name="failure" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/errors.jsp</result>
+        </global-results>
+    	
+        <action name="configInternalLink" class="jacmsHypertextAttributeAction">
+            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/fck_japslink.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="introPageLink" class="jacmsPageLinkHypertextAttributeAction" method="buildTree">
+            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/pageLink.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="introContentLink" class="jacmsContentLinkHypertextAttributeAction">
+            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/contentLink.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="search" class="jacmsContentLinkHypertextAttributeAction">
+            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/contentLink.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+        
+        <action name="changeOrder" class="jacmsHypertextAttributeAction" method="changeOrder">
+            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/fck_japslink.jsp</result>
+            <interceptor-ref name="requestAuth">
+                <param name="requiredPermission">jpfastcontentedit_editContents</param>
+            </interceptor-ref>
+            <interceptor-ref name="japsFrontEndFreeStack" />
+        </action>
+    	
+    </package>
+	
+</struts>

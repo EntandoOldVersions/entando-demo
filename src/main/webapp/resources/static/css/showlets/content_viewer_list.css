@@ -1,0 +1,73 @@
+.dragdrop_box .content_viewer_list ul {
+	margin: 0 0 5px 0;
+	padding: 0;
+	float: left;
+	width: 100%;
+}
+.dragdrop_box .content_viewer_list {
+	float: left;
+	width: 100%;
+	margin: 0 0 0 0;
+}
+
+.content_viewer_list {
+	float: left;
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+
+.content_viewer_list_NEW_22 ul,
+.content_viewer_list_NEW_22 li,
+.colum-container .content_viewer_list_NEW_22 li,
+ 
+.content_viewer_list_NEW_23 ul,
+.content_viewer_list_NEW_23 li,
+.colum-container .content_viewer_list_NEW_23 li,
+
+.content_viewer_list_NEW_24 ul,
+.content_viewer_list_NEW_24 li,
+.colum-container .content_viewer_list_NEW_24 li
+
+ {
+	float: left;
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .content_viewer_list_CNG_35, 
+#footer .content_viewer_list_CNG_35 ul, 
+#footer .content_viewer_list_CNG_35 li {
+	margin: 0;
+	padding: 0;
+}
+
+
+.dragdrop_box .content_viewer_list_NEW .news {
+    float: left;
+    width: 100%;
+   	-webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.dragdrop_box .content_viewer_list_NEW .news h3 {
+    margin-top: 0;
+}
+
+
+
+.content_viewer_list_YTB > ul, 
+.content_viewer_list_YTB > ul > li { 
+	list-style-type: none;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.content_viewer_list_YTB > ul {
+	margin-top: 30px;
+} 

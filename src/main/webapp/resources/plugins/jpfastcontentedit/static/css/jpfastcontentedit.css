@@ -1,0 +1,68 @@
+.jpfastcontentedit-newshortcut {
+	float: left;
+	width: 100%;
+	margin: 40px 0 20px 0;
+	padding: 0;
+}
+
+.jpfastcontentedit-newshortcut a.linkInEvidenza:link,
+.jpfastcontentedit-newshortcut a.linkInEvidenza:visited {
+	background-image: url(../img/content-new.png);
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	display: block;
+	font-weight: bold;
+	margin-top: 1em;
+	padding: 10px 5px 10px 35px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 100%; 
+
+	text-decoration: none;
+	background-color: #0079C6;
+	color: #F0F0F0;
+	border: 1px solid #0079C6;
+}
+
+.jpfastcontentedit-newshortcut a.linkInEvidenza:hover,
+.jpfastcontentedit-newshortcut a.linkInEvidenza:active,
+.jpfastcontentedit-newshortcut a.linkInEvidenza:focus {
+	text-decoration: none;
+	background-color: #F0F0F0;
+	color: #0079C6;
+	border: 1px solid #C8C8C8;
+}						    
+
+.jpfastcontentedit .buttons {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.jpfastcontentedit-editbar {
+	float: right;
+	margin: 6px 0 35px 0;
+	padding: 6px 0;
+}
+
+.jpfastcontentedit-editbar a:link,
+.jpfastcontentedit-editbar a:visited {
+	/*background-color: #0079C6;*/
+	background-color: #C6BF00;
+	color: #000;
+	text-decoration: none;
+	padding: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #C6BF00;
+	margin-right: 4px;
+}
+
+.jpfastcontentedit-editbar a:hover,
+.jpfastcontentedit-editbar a:active,
+.jpfastcontentedit-editbar a:focus {
+	border: 1px solid #000;
+}
+
+

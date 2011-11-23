@@ -1,0 +1,16 @@
+.dragdrop_box .dragdrop_content p.share-buttons{
+	margin: 8px 0 0 0;
+}
+
+.dragdrop_box .news {
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+
+
+.dragdrop_box .content_viewer_list_NEW ul li:first-child div.news { 
+	margin-top: 0px;
+}
+
+
+

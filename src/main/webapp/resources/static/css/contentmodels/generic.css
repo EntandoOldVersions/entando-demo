@@ -1,0 +1,23 @@
+.widget_doc a {
+	background-image: url("../../img/download.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	margin-bottom: 5px;
+}
+
+.widget_noscreen {
+	position: absolute;
+	top: -1000em;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.dragdrop_content .news img, .dragdrop_content .widget img {
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+
+

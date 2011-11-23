@@ -1,0 +1,225 @@
+.jpfastcontentedit-editor .tab-container {
+	background-color: #ffffff;
+	border: 1px solid #dedede;
+}
+
+.jpfastcontentedit-editor ul.tab-toggle-bar li a {
+	font-weight: normal;
+}
+
+.jpfastcontentedit-editor ul.tab-toggle-bar li {
+	margin: 0 0.25em;
+	padding: 0;
+}
+
+.jpfastcontentedit-editor ul.horizontal li {
+	display: inline;
+	margin: 0 0.5em 0 0;
+}
+
+.jpfastcontentedit-editor ul.tab-toggle-bar li a.tab-current {
+	background-color: #ffffff;
+	font-weight: bold;
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: medium;
+}
+
+.jpfastcontentedit-editor ul.tab-toggle-bar li a {
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+	border-top: 1px solid #dedede;
+	font-weight: normal;
+	padding: 0.2em 0.5em;
+}
+
+.jpfastcontentedit-editor #pageTree,
+.jpfastcontentedit-editor #pageTree li,
+.jpfastcontentedit-editor #categoryTree li {
+	list-style-type: none;
+}
+
+.jpfastcontentedit-editor #pageTree li,
+.jpfastcontentedit-editor #categoryTree li {
+	margin-left: 25px;
+}
+
+.jpfastcontentedit-editor .contentAttributeBox {
+	margin: 1.5em 0;
+	padding: 5px 0;
+	border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+.jpfastcontentedit-editor .contentAttributeBox ul {
+	margin-left: 20px;
+}
+
+.jpfastcontentedit-editor .contentAttributeBox li {
+	list-style-type: none;
+}
+
+.jpfastcontentedit-editor .contentAttributeBox li input {
+	margin: 0 0.25em;
+}
+
+.jpfastcontentedit-editor .inlineNote {
+	margin-left: 0.5em;
+	font-size: 0.9em;
+}
+
+.jpfastcontentedit-editor .tab {
+	border-bottom: 1px solid #c8c8c8;
+	padding-bottom: 1em;
+}
+
+.jpfastcontentedit-editor .buttons {
+	text-align: center;
+}
+.jpfastcontentedit-editor .tab-toggle-bar {
+	width: 100%;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 0;
+	display: block;
+}
+.jpfastcontentedit-editor .tab,
+.jpfastcontentedit-editor .newContentForm {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+
+.jpfastcontentedit-editor ul.tab-toggle-bar li a:link,
+.jpfastcontentedit-editor ul.tab-toggle-bar li a:visited {
+	text-decoration: none;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
+	text-shadow: 1px 1px 1px rgba(0,0,0, 0.4);
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+.jpfastcontentedit-editor ul.tab-toggle-bar li a {
+	background-color: #8A8A8A;
+	color: #fafafa;
+	text-decoration: none;
+}
+
+.jpfastcontentedit-editor ul.tab-toggle-bar abbr[title], 
+.jpfastcontentedit-editor ul.tab-toggle-bar acronym[title] {
+    border-bottom: 0 none;
+}
+
+.jpfastcontentedit-editor ul.tab-toggle-bar li a.tab-current,
+.jpfastcontentedit-editor .showClass {
+	background-color: #FFFFFF;
+	color: #000;
+}
+
+.jpfastcontentedit-editor .tab {
+	padding: 20px;
+	background-color: #FFFFFF;
+}
+
+.jpfastcontentedit-editor .tab > *:first-child {
+	margin-top: 0;
+	background-color: #FFFFFF;
+}
+.jpfastcontentedit-editor #info ul {
+	margin-bottom: 25px;
+	list-style-type: none;
+}
+.jpfastcontentedit-editor #info ul li {
+	list-style-type: none;
+	margin-bottom: 6px;
+}
+ 
+.jpfastcontentedit-editor #info li input[type="image"] {
+	vertical-align: bottom;
+}
+
+.jpfastcontentedit-editor input[type="text"] {
+	width: 190px;
+}
+
+.jpfastcontentedit-editor textarea {
+	height: 105px;
+	width: 390px;
+}
+/*******************/
+
+.jpfastcontentedit-editor .gallery {
+	display: inline-block;
+	margin-right: 5px;
+	text-align: center;
+	border: 1px solid rgba(0,0,0, 0.4);
+	padding: 2px;
+	
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	
+	-webkit-box-shadow: 2px 2px 1px 1px rgba(0,0,0, 0.4);
+	-moz-box-shadow: 	2px 2px 1px 1px rgba(0,0,0, 0.4);
+	box-shadow: 		2px 2px 1px 1px rgba(0,0,0, 0.4);
+	
+}
+
+.jpfastcontentedit-editor .gallery img  {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0, 0.3);
+}
+.jpfastcontentedit-editor .gallery.attach img  {
+	border: 0 none;
+}
+
+.jpfastcontentedit-editor .pager {
+	text-align: center;
+}
+
+.jpfastcontentedit-editor fieldset {
+	border: 0;
+	background-color : #F7F7F7;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	
+	-webkit-box-shadow: 2px 2px 1px 1px rgba(0,0,0, 0.4);
+	-moz-box-shadow: 	2px 2px 1px 1px rgba(0,0,0, 0.4);
+	box-shadow: 		2px 2px 1px 1px rgba(0,0,0, 0.4);
+	margin-bottom: 20px;
+}
+.jpfastcontentedit-editor .centerText {
+	text-align: center;
+}
+
+.jpfastcontentedit-editor legend {
+	color: #000;
+}
+
+.jpfastcontentedit-editor .normal-list,
+.jpfastcontentedit-editor .normal-list > li { 
+	list-style-type: none;
+}
+
+
+.jpfastcontentedit-editor table.generic td,
+.jpfastcontentedit-editor table.generic th {
+	border: 1px solid rgba(0,0,0, 0.3);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0, 0.2);
+	-moz-box-shadow: 	1px 1px 1px 1px rgba(0,0,0, 0.2);
+	box-shadow: 		1px 1px 1px 1px rgba(0,0,0, 0.2);
+}
+
+
+
+
+

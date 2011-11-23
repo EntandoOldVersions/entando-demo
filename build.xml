@@ -1,0 +1,7 @@
+<project name="entando-demo" default="WAR-build" basedir=".">
+	<description>entando-demo - Build file</description>
+	
+	<import file="buildProperties.xml"/>
+	<import file="buildTasks.xml"/>
+	
+</project>

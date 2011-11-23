@@ -1,0 +1,122 @@
+.column-container { /* needed for resetting safe */
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* 30 / 70 */
+.column-left-30 {
+	float: left;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+}
+.column-right-30 {
+	float: none;
+	margin: 0 0 0 30%;
+	padding: 0;
+}
+
+/* 70 / 30 */
+.column-left-70 {
+	float: left;
+	width: 70%;
+	padding: 0;
+}
+
+.column-right-70 {
+	float: none;
+	margin: 0 0 0 70%;
+	padding: 0;
+}
+
+/* 50 / 50 */
+.column-left-50 {
+	float: left;
+	width: 50%;
+	margin: 0;
+	padding: 0;
+}
+
+.column-right-50 {
+	float: none;
+	margin: 0 0 0 50%;
+	padding: 0;
+}
+
+/* for users 46/64 */
+.colum-left-46 {
+	float: left;
+	width: 46%;
+	margin: 0;
+	padding: 0;
+}
+
+.colum-right-46 {
+	float: none;
+	margin: 0 0 0 46%;
+	padding: 0;
+}
+
+/* for users 40/60 */
+.colum-left-40 {
+	float: left;
+	width: 40%;
+	margin: 0;
+	padding: 0;
+}
+
+.colum-right-40 {
+	float: none;
+	margin: 0 0 0 40%;
+	padding: 0;
+}
+
+/* 75 / 25 */
+.column-left-75 {
+	float: left;
+	width: 75%;
+	padding: 0;
+}
+
+.column-right-75 {
+	float: none;
+	margin: 0 0 0 75%;
+	padding: 0;
+}
+
+/* 25 / 75 */
+.column-left-25 {
+	float: left;
+	width: 25%;
+	padding: 0;
+}
+
+.column-right-25 {
+	float: none;
+	margin: 0 0 0 25%;
+	padding: 0;
+}
+
+
+/* 32 / 32 / 32 */
+.column-1 {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 32%;
+}
+
+.column-2 {
+	float: left;
+	margin: 0 2%;
+	padding: 0;
+	width: 32%;
+}
+
+.column-3 {
+	margin: 0 0 0 68%;
+	padding: 0;
+	float: none;
+	zoom: 1; /*ie7 fix*/
+}
