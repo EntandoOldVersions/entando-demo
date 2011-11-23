@@ -9,15 +9,15 @@
 <div class="navigation_menu">
 	<c:set var="counter" value="${0}" />
 	<c:set var="closeUl" value="${false}" />
-	<c:set var="pagePrev"value="${null}" />
-	<c:set var="pageCurrent"value="${null}" />
-	<c:set var="pageNext"value="${null}" />
+	<c:set var="pagePrev" value="${null}" />
+	<c:set var="pageCurrent" value="${null}" />
+	<c:set var="pageNext" value="${null}" />
 	<ul class="navigation_menu_ul">
 		<wp:nav var="page">
 			<%-- -------------------------------------------  --%>
 			<c:choose>
-				<c:when test="${empty pageCurrent}"><c:set var="pageCurrent"value="${page}" /></c:when>
-				<c:when test="${empty pageNext}"><c:set var="pageNext"value="${page}" /></c:when>
+				<c:when test="${empty pageCurrent}"><c:set var="pageCurrent" value="${page}" /></c:when>
+				<c:when test="${empty pageNext}"><c:set var="pageNext" value="${page}" /></c:when>
 				<%-- -------------------------------------------  --%>
 				<c:otherwise>
 					<c:if test="${pagePrev.level < pageCurrent.level}"><ul class="navigation_menu_ul"></c:if>
@@ -32,9 +32,9 @@
 					<c:if test="${pageCurrent.level > pageNext.level}"><c:forEach begin="${pageNext.level}" end="${pageCurrent.level-1}"></li>
 					</ul></c:forEach></li></c:if>
 					<c:if test="${pageCurrent.level < pageNext.level}"><%-- nothing --%></c:if>
-					<c:set var="pagePrev"value="${pageCurrent}" />
-					<c:set var="pageCurrent"value="${pageNext}" />
-					<c:set var="pageNext"value="${page}" />
+					<c:set var="pagePrev" value="${pageCurrent}" />
+					<c:set var="pageCurrent" value="${pageNext}" />
+					<c:set var="pageNext" value="${page}" />
 				</c:otherwise>
 			</c:choose>
 			<c:set var="counter" value="${counter+1}" />
@@ -59,9 +59,9 @@
 					<c:if test="${pageCurrent.level > pageNext.level}"><c:forEach begin="${pageNext.level}" end="${pageCurrent.level-1}"></li>
 					</ul></c:forEach></li></c:if>
 					<c:if test="${pageCurrent.level < pageNext.level}"><%-- nothing --%></c:if>
-					<c:set var="pagePrev"value="${pageCurrent}" />
-					<c:set var="pageCurrent"value="${pageNext}" />
-					<c:set var="pageNext"value="${null}" />
+					<c:set var="pagePrev" value="${pageCurrent}" />
+					<c:set var="pageCurrent" value="${pageNext}" />
+					<c:set var="pageNext" value="${null}" />
 
 				<%-- elabora l'ultimo --%>
 					<c:if test="${pagePrev.level < pageCurrent.level}"><ul class="navigation_menu_ul"></c:if>
@@ -78,9 +78,9 @@
 					<c:if test="${pageCurrent.level < pageNext.level}"><%-- nothing --%></c:if>
 
 				<%-- end --%>
-					<c:set var="pagePrev"value="${null}" />
-					<c:set var="pageCurrent"value="${null}" />
-					<c:set var="pageNext"value="${null}" />
+					<c:set var="pagePrev" value="${null}" />
+					<c:set var="pageCurrent" value="${null}" />
+					<c:set var="pageNext" value="${null}" />
 			</c:when>
 			<%-- -------------------------------------------  --%>
 			<c:when test="${counter == 1}"><%-- se la voce è solo una --%>
@@ -99,9 +99,9 @@
 					<c:if test="${pageCurrent.level < pageNext.level}"><%-- nothing --%></c:if>
 
 				<%-- end --%>
-					<c:set var="pagePrev"value="${null}" />
-					<c:set var="pageCurrent"value="${null}" />
-					<c:set var="pageNext"value="${null}" />
+					<c:set var="pagePrev" value="${null}" />
+					<c:set var="pageCurrent" value="${null}" />
+					<c:set var="pageNext" value="${null}" />
 			</c:when>
 		</c:choose>
 	</ul>
