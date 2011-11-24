@@ -290,13 +290,71 @@
 		</exec>
 	</target>
 
-	<target name="Test-init">
-		<echo message="========================================================================" />
-		<echo message=".:[Maven] :: Getting ready for Tests" />
-		<echo message="========================================================================" />
-		<exec executable="mvn" dir="${basedir}">
-			<arg value="process-test-classes"/>
-		</exec>		
+	<!-- TODO: non può funzionare in combutta con ant Test.
+			   bisogna fare un task che faccia solo il check e setti le property.
+			   Impostare anche nel WiKi l'elenco dei comandi da lanciare per.
+			   Tipo ant Test invece che mvn test
+	-->
+    <target name="Test-db-resources-check">
+		<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+			<classpath>
+				<pathelement location="/usr/share/java/ant-contrib.jar" />
+			</classpath>
+		</taskdef>
+		
+		<if>
+			<and>
+				<resourceexists>
+					<file file="${basedir}/src/test/db/export/${webappname}testPort_schema.sql" />
+				</resourceexists>
+				<resourceexists>
+					<file file="${basedir}/src/test/db/export/${webappname}testPort_data.sql" />
+				</resourceexists>
+				<resourceexists>
+					<file file="${basedir}/src/test/db/export/${webappname}testServ_schema.sql" />
+				</resourceexists>
+				<resourceexists>
+					<file file="${basedir}/src/test/db/export/${webappname}testServ_data.sql" />
+				</resourceexists>					
+			</and>
+			<then>
+				<property name="test.database.resources" value="custom" />
+				<property name="test.database.basepath" value="${basedir}/src/test/db/export"/>
+				<property name="test.database.basename" value="${webappname}"/>		
+			</then>
+			<else>
+				<property name="test.database.resources" value="core" />
+			</else>
+		</if>		
+    </target>
+	
+	<target name="Test-init" description="Use it to restore databases and compile classes for tests" depends="Test-db-resources-check">
+		<if>
+			<equals arg1="${test.database.resources}" arg2="custom" />
+			<then>
+				<echo message="========================================================================" />
+				<echo message=".:[Maven] :: Getting ready for Tests" />
+				<echo message="          :: Using files in: ${basedir}/src/test/db/export" />
+				<echo message="========================================================================" />
+				<exec executable="mvn" dir="${basedir}">
+					<arg value="process-test-classes"/>
+					<arg line="-Dtest.database.basename=${test.database.basename}" />
+					<arg line="-Dtest.database.basepath=${test.database.basepath}" />					
+				</exec>
+			</then>
+			<elseif>
+				<equals arg1="${test.database.resources}" arg2="core" />
+				<then>
+					<echo message="========================================================================" />
+					<echo message=".:[Maven] :: Getting ready for Tests" />
+					<echo message="          :: Using files from entando-core-engine" />				
+					<echo message="========================================================================" />
+					<exec executable="mvn" dir="${basedir}">
+						<arg value="process-test-classes"/>
+					</exec>
+				</then>
+			</elseif>
+		</if>
 	</target>
 
 	<target name="Test-PG-db-export-SQL" >
@@ -306,13 +364,33 @@
 		</antcall>
 	</target>
 
-	<target name="Test" description="Run Unit Tests">
-		<echo message="========================================================================" />
-		<echo message=".:[Maven] :: Running the Tests..." />
-		<echo message="========================================================================" />
-		<exec executable="mvn" dir="${basedir}">
-			<arg value="test"/>
-		</exec>
+	<target name="Test" description="Run Unit Tests" depends="Test-db-resources-check">
+		<if>
+			<equals arg1="${test.database.resources}" arg2="custom" />
+			<then>
+				<echo message="========================================================================" />
+				<echo message=".:[Maven] :: Running the Tests..." />
+				<echo message="          :: Using files in: ${basedir}/src/test/db/export" />
+				<echo message="========================================================================" />
+				<exec executable="mvn" dir="${basedir}">
+					<arg value="test"/>
+					<arg line="-Dtest.database.basename=${test.database.basename}" />
+					<arg line="-Dtest.database.basepath=${test.database.basepath}" />					
+				</exec>
+			</then>
+			<elseif>
+				<equals arg1="${test.database.resources}" arg2="core" />
+				<then>
+					<echo message="========================================================================" />
+					<echo message=".:[Maven] :: Running the Tests..." />
+					<echo message="          :: Using files from entando-core-engine" />				
+					<echo message="========================================================================" />
+					<exec executable="mvn" dir="${basedir}">
+						<arg value="test"/>
+					</exec>
+				</then>
+			</elseif>
+		</if>
 	</target>
 
 	<!-- Generate Site -->
