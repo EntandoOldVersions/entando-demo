@@ -144,7 +144,7 @@ CREATE TABLE jpcontentfeedback_rating (
 
 CREATE TABLE jpmyportalplus_userpageconfig (
     username character varying(40) NOT NULL,
-    pagecode character varying(80) DEFAULT ''::character varying NOT NULL,
+    pagecode character varying(30) DEFAULT ''::character varying NOT NULL,
     framepos integer NOT NULL,
     showletcode character varying(40) NOT NULL,
     config character varying,
