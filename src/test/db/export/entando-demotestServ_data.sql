@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-20 17:08:35 CET
+-- Started on 2011-11-25 11:17:31 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,24 +13,24 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1842 (class 0 OID 3366201)
--- Dependencies: 1509
+-- TOC entry 1842 (class 0 OID 72495)
+-- Dependencies: 127
 -- Data for Name: apicatalog_services; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
 --
--- TOC entry 1843 (class 0 OID 3366207)
--- Dependencies: 1510
+-- TOC entry 1843 (class 0 OID 72501)
+-- Dependencies: 128
 -- Data for Name: apicatalog_status; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
 --
--- TOC entry 1844 (class 0 OID 3366210)
--- Dependencies: 1511
+-- TOC entry 1844 (class 0 OID 72504)
+-- Dependencies: 129
 -- Data for Name: authgroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -43,8 +43,8 @@ INSERT INTO authgroups (groupname, descr) VALUES ('management', 'Management');
 
 
 --
--- TOC entry 1845 (class 0 OID 3366213)
--- Dependencies: 1512
+-- TOC entry 1845 (class 0 OID 72507)
+-- Dependencies: 130
 -- Data for Name: authpermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -61,8 +61,8 @@ INSERT INTO authpermissions (permissionname, descr) VALUES ('jpcontentfeedback_r
 
 
 --
--- TOC entry 1846 (class 0 OID 3366216)
--- Dependencies: 1513
+-- TOC entry 1846 (class 0 OID 72510)
+-- Dependencies: 131
 -- Data for Name: authrolepermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -78,8 +78,8 @@ INSERT INTO authrolepermissions (rolename, permissionname) VALUES ('editor', 'ma
 
 
 --
--- TOC entry 1847 (class 0 OID 3366219)
--- Dependencies: 1514
+-- TOC entry 1847 (class 0 OID 72513)
+-- Dependencies: 132
 -- Data for Name: authroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -90,8 +90,8 @@ INSERT INTO authroles (rolename, descr) VALUES ('pageManager', 'Gestore di Pagin
 
 
 --
--- TOC entry 1848 (class 0 OID 3366222)
--- Dependencies: 1515
+-- TOC entry 1848 (class 0 OID 72516)
+-- Dependencies: 133
 -- Data for Name: authusergroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -109,8 +109,8 @@ INSERT INTO authusergroups (username, groupname) VALUES ('admin', 'administrator
 
 
 --
--- TOC entry 1849 (class 0 OID 3366225)
--- Dependencies: 1516
+-- TOC entry 1849 (class 0 OID 72519)
+-- Dependencies: 134
 -- Data for Name: authuserroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -125,8 +125,8 @@ INSERT INTO authuserroles (username, rolename) VALUES ('pageManagerCustomers', '
 
 
 --
--- TOC entry 1850 (class 0 OID 3366228)
--- Dependencies: 1517
+-- TOC entry 1850 (class 0 OID 72522)
+-- Dependencies: 135
 -- Data for Name: authusers; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -141,8 +141,8 @@ INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpassw
 
 
 --
--- TOC entry 1851 (class 0 OID 3366231)
--- Dependencies: 1518
+-- TOC entry 1851 (class 0 OID 72525)
+-- Dependencies: 136
 -- Data for Name: authusershortcuts; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -159,8 +159,8 @@ INSERT INTO authusershortcuts (username, config) VALUES ('admin', '<shortcuts>
 
 
 --
--- TOC entry 1852 (class 0 OID 3366237)
--- Dependencies: 1519
+-- TOC entry 1852 (class 0 OID 72531)
+-- Dependencies: 137
 -- Data for Name: jpsurvey; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -189,8 +189,8 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 
 
 --
--- TOC entry 1853 (class 0 OID 3366243)
--- Dependencies: 1520
+-- TOC entry 1853 (class 0 OID 72537)
+-- Dependencies: 138
 -- Data for Name: jpsurvey_choices; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -232,8 +232,8 @@ INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (7, 
 
 
 --
--- TOC entry 1854 (class 0 OID 3366249)
--- Dependencies: 1521
+-- TOC entry 1854 (class 0 OID 72543)
+-- Dependencies: 139
 -- Data for Name: jpsurvey_questions; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -250,8 +250,8 @@ INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minre
 
 
 --
--- TOC entry 1855 (class 0 OID 3366255)
--- Dependencies: 1522
+-- TOC entry 1855 (class 0 OID 72549)
+-- Dependencies: 140
 -- Data for Name: jpsurvey_responses; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -259,8 +259,8 @@ INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES 
 
 
 --
--- TOC entry 1856 (class 0 OID 3366258)
--- Dependencies: 1523
+-- TOC entry 1856 (class 0 OID 72552)
+-- Dependencies: 141
 -- Data for Name: jpsurvey_voters; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -268,8 +268,8 @@ INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username
 
 
 --
--- TOC entry 1857 (class 0 OID 3366261)
--- Dependencies: 1524
+-- TOC entry 1857 (class 0 OID 72555)
+-- Dependencies: 142
 -- Data for Name: jpuserprofile_authuserprofiles; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -324,8 +324,8 @@ INSERT INTO jpuserprofile_authuserprofiles (username, profiletype, profilexml, p
 
 
 --
--- TOC entry 1858 (class 0 OID 3366267)
--- Dependencies: 1525
+-- TOC entry 1858 (class 0 OID 72561)
+-- Dependencies: 143
 -- Data for Name: jpuserprofile_profilesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -356,30 +356,30 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1859 (class 0 OID 3366270)
--- Dependencies: 1526
+-- TOC entry 1859 (class 0 OID 72564)
+-- Dependencies: 144
 -- Data for Name: jpwebdynamicform_messageanswers; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
 --
--- TOC entry 1860 (class 0 OID 3366276)
--- Dependencies: 1527
+-- TOC entry 1860 (class 0 OID 72570)
+-- Dependencies: 145
 -- Data for Name: jpwebdynamicform_messages; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
 --
--- TOC entry 1861 (class 0 OID 3366282)
--- Dependencies: 1528
+-- TOC entry 1861 (class 0 OID 72576)
+-- Dependencies: 146
 -- Data for Name: jpwebdynamicform_messagesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
--- Completed on 2011-11-20 17:08:35 CET
+-- Completed on 2011-11-25 11:17:31 CET
 
 --
 -- PostgreSQL database dump complete
