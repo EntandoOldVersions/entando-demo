@@ -390,7 +390,7 @@
 		</antcall>              
 	</target>	
 
-	<target name="Test-PG-db-export-SQL" >
+	<target name="Test-PG-db-export-SQL" description="Test - PG db backup in plain SQL">
 		<antcall target="PG-db-export-SQL">
 			<param name="test.marker" value="test" />
 			<param name="project.src.branch" value="test" />
