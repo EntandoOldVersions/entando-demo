@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-20 17:08:46 CET
+-- Started on 2011-11-25 09:54:00 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,8 +13,8 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1843 (class 0 OID 3363980)
--- Dependencies: 1511
+-- TOC entry 1843 (class 0 OID 70107)
+-- Dependencies: 127
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -42,8 +42,8 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('footerlinks', 'hom
 
 
 --
--- TOC entry 1844 (class 0 OID 3363986)
--- Dependencies: 1512
+-- TOC entry 1844 (class 0 OID 70113)
+-- Dependencies: 128
 -- Data for Name: contentmodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -359,8 +359,77 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 
 
 --
--- TOC entry 1846 (class 0 OID 3363995)
--- Dependencies: 1514
+-- TOC entry 1845 (class 0 OID 70119)
+-- Dependencies: 129
+-- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, '54', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST2', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST4', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST3', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '27', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '28', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, 'events', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '14', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '29', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, 'events', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '16', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '25', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '13', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '27', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, '32', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'intranet');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, '20', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, NULL, NULL, 'intranet');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, '10', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, '24', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, NULL, NULL, 'customers');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, '31', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '18', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '26', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, '57', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG59', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG55', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('YTB58', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'intranet');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, '48', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, NULL, NULL, 'customers');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, '46', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, '37', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, NULL, NULL, 'intranet');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, '43', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, NULL, NULL, 'customers');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, '50', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, '52', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, '39', NULL, NULL);
+
+
+--
+-- TOC entry 1846 (class 0 OID 70122)
+-- Dependencies: 130
 -- Data for Name: contents; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -709,8 +778,8 @@ The best ideas bubble up to the top. Provide your responses within Community, Do
 
 
 --
--- TOC entry 1847 (class 0 OID 3364001)
--- Dependencies: 1515
+-- TOC entry 1847 (class 0 OID 70128)
+-- Dependencies: 131
 -- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -774,23 +843,153 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1848 (class 0 OID 3364004)
--- Dependencies: 1516
+-- TOC entry 1848 (class 0 OID 70131)
+-- Dependencies: 132
 -- Data for Name: jpcontentfeedback_comments; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
 --
--- TOC entry 1849 (class 0 OID 3364010)
--- Dependencies: 1517
+-- TOC entry 1849 (class 0 OID 70137)
+-- Dependencies: 133
 -- Data for Name: jpcontentfeedback_rating; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
+
 --
--- TOC entry 1851 (class 0 OID 3364020)
--- Dependencies: 1519
+-- TOC entry 1850 (class 0 OID 70140)
+-- Dependencies: 134
+-- Data for Name: jpmyportalplus_userpageconfig; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 25, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 14, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="linkDescr_it">Configura</property>
+<property key="maxElemForItem">1</property>
+<property key="pageLink">news_style1</property>
+<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
+<property key="linkDescr_en">Configure</property>
+<property key="modelId">26</property>
+<property key="contentType">NEW</property>
+</properties>
+
+', 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 15, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="linkDescr_it">Configura</property>
+<property key="pageLink">configure_latest_documents</property>
+<property key="linkDescr_en">Configure</property>
+<property key="modelId">42</property>
+<property key="contentType">DWN</property>
+</properties>
+
+', 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 66, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 67, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 116, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 117, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 14, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="linkDescr_it">Configura</property>
+<property key="maxElemForItem">1</property>
+<property key="pageLink">news_style1</property>
+<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
+<property key="linkDescr_en">Configure</property>
+<property key="modelId">26</property>
+<property key="contentType">NEW</property>
+</properties>
+
+', 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 125, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 19, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 15, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="linkDescr_it">Configura</property>
+<property key="pageLink">configure_latest_documents</property>
+<property key="linkDescr_en">Configure</property>
+<property key="modelId">42</property>
+<property key="contentType">DWN</property>
+</properties>
+
+', 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 16, 'latest_events', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="linkDescr_it">Configura</property>
+<property key="maxElemForItem">2</property>
+<property key="categories">events</property>
+<property key="pageLink">events</property>
+<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
+<property key="linkDescr_en">Configure</property>
+<property key="modelId">26</property>
+<property key="contentType">NEW</property>
+</properties>
+
+', 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 114, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 16, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="linkDescr_it">Configura</property>
+<property key="pageLink">configure_latest_documents</property>
+<property key="linkDescr_en">Configure</property>
+<property key="modelId">42</property>
+<property key="contentType">DWN</property>
+</properties>
+
+', 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 125, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 22, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 76, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 20, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 21, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 23, 'latest_news', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 14, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 115, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 15, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="linkDescr_it">Configura</property>
+<property key="maxElemForItem">1</property>
+<property key="pageLink">news_style1</property>
+<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
+<property key="linkDescr_en">Configure</property>
+<property key="modelId">26</property>
+<property key="contentType">NEW</property>
+</properties>
+
+', 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 64, 'inEvidenza', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 64, 'inEvidenza', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 75, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
+
+
+--
+-- TOC entry 1851 (class 0 OID 70147)
+-- Dependencies: 135
 -- Data for Name: localstrings; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -1397,8 +1596,8 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 
 
 --
--- TOC entry 1852 (class 0 OID 3364026)
--- Dependencies: 1520
+-- TOC entry 1852 (class 0 OID 70153)
+-- Dependencies: 136
 -- Data for Name: pagemodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -2056,8 +2255,8 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('home', 'Home P
 
 
 --
--- TOC entry 1853 (class 0 OID 3364032)
--- Dependencies: 1521
+-- TOC entry 1853 (class 0 OID 70159)
+-- Dependencies: 137
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -2285,159 +2484,18 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 ');
 
---
--- TOC entry 1850 (class 0 OID 3364013)
--- Dependencies: 1518
--- Data for Name: jpmyportalplus_userpageconfig; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 25, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 14, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="maxElemForItem">1</property>
-<property key="pageLink">news_style1</property>
-<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">26</property>
-<property key="contentType">NEW</property>
-</properties>
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 15, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="pageLink">configure_latest_documents</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">42</property>
-<property key="contentType">DWN</property>
-</properties>
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 66, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 67, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 116, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 117, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 14, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-
-<property key="linkDescr_it">Configura</property>
-<property key="maxElemForItem">1</property>
-<property key="pageLink">news_style1</property>
-<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
-
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">26</property>
-<property key="contentType">NEW</property>
-</properties>
-
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 125, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 19, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 15, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-
-<property key="pageLink">configure_latest_documents</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">42</property>
-<property key="contentType">DWN</property>
-</properties>
-
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 16, 'latest_events', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="maxElemForItem">2</property>
-<property key="categories">events</property>
-
-<property key="pageLink">events</property>
-<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">26</property>
-
-<property key="contentType">NEW</property>
-</properties>
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 114, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 16, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="pageLink">configure_latest_documents</property>
-
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">42</property>
-<property key="contentType">DWN</property>
-</properties>
-
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 125, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 22, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 76, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 20, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 21, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 23, 'latest_news', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 14, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 115, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 15, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
-
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="maxElemForItem">1</property>
-<property key="pageLink">news_style1</property>
-
-<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">26</property>
-<property key="contentType">NEW</property>
-</properties>
-
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 64, 'inEvidenza', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 64, 'inEvidenza', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 75, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
-
-
 
 --
--- TOC entry 1854 (class 0 OID 3364038)
--- Dependencies: 1522
+-- TOC entry 1854 (class 0 OID 70165)
+-- Dependencies: 138
 -- Data for Name: resourcerelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
 --
--- TOC entry 1855 (class 0 OID 3364041)
--- Dependencies: 1523
+-- TOC entry 1855 (class 0 OID 70168)
+-- Dependencies: 139
 -- Data for Name: resources; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -2527,78 +2585,9 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 ', 'webforms.png');
 
 
-
 --
--- TOC entry 1845 (class 0 OID 3363992)
--- Dependencies: 1513
--- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, '54', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST2', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST4', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST3', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '27', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '28', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, 'events', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '14', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '29', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, 'events', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '16', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '25', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '13', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '27', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, '32', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'intranet');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, '20', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, NULL, NULL, 'intranet');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, '10', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, '24', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, NULL, NULL, 'customers');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, '31', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '18', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '26', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, '57', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG59', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG55', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('YTB58', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'intranet');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, '48', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, NULL, NULL, 'customers');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, '46', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, '37', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, NULL, NULL, 'intranet');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, '43', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, NULL, NULL, 'customers');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, '50', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, '52', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, '39', NULL, NULL);
-
---
--- TOC entry 1856 (class 0 OID 3364047)
--- Dependencies: 1524
+-- TOC entry 1856 (class 0 OID 70174)
+-- Dependencies: 140
 -- Data for Name: showletcatalog; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -2955,8 +2944,8 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 
 
 --
--- TOC entry 1857 (class 0 OID 3364053)
--- Dependencies: 1525
+-- TOC entry 1857 (class 0 OID 70180)
+-- Dependencies: 141
 -- Data for Name: showletconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -3411,8 +3400,8 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 
 --
--- TOC entry 1858 (class 0 OID 3364059)
--- Dependencies: 1526
+-- TOC entry 1858 (class 0 OID 70186)
+-- Dependencies: 142
 -- Data for Name: sysconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -3799,8 +3788,8 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 
 
 --
--- TOC entry 1859 (class 0 OID 3364065)
--- Dependencies: 1527
+-- TOC entry 1859 (class 0 OID 70192)
+-- Dependencies: 143
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -3808,8 +3797,8 @@ INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 60);
 
 
 --
--- TOC entry 1860 (class 0 OID 3364068)
--- Dependencies: 1528
+-- TOC entry 1860 (class 0 OID 70195)
+-- Dependencies: 144
 -- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -3818,8 +3807,8 @@ INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW11', 'even
 
 
 --
--- TOC entry 1861 (class 0 OID 3364071)
--- Dependencies: 1529
+-- TOC entry 1861 (class 0 OID 70198)
+-- Dependencies: 145
 -- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
@@ -3882,7 +3871,7 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
 
 
--- Completed on 2011-11-20 17:08:46 CET
+-- Completed on 2011-11-25 09:54:00 CET
 
 --
 -- PostgreSQL database dump complete
