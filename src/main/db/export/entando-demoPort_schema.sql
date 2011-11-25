@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-20 17:08:45 CET
+-- Started on 2011-11-25 09:53:59 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -11,7 +11,7 @@ SET client_min_messages = warning;
 SET escape_string_warning = off;
 
 --
--- TOC entry 339 (class 2612 OID 16386)
+-- TOC entry 478 (class 2612 OID 16386)
 -- Name: plpgsql; Type: PROCEDURAL LANGUAGE; Schema: -; Owner: -
 --
 
@@ -25,7 +25,7 @@ SET default_tablespace = '';
 SET default_with_oids = true;
 
 --
--- TOC entry 1511 (class 1259 OID 3363980)
+-- TOC entry 127 (class 1259 OID 70107)
 -- Dependencies: 6
 -- Name: categories; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -38,7 +38,7 @@ CREATE TABLE categories (
 
 
 --
--- TOC entry 1512 (class 1259 OID 3363986)
+-- TOC entry 128 (class 1259 OID 70113)
 -- Dependencies: 6
 -- Name: contentmodels; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -53,7 +53,7 @@ CREATE TABLE contentmodels (
 
 
 --
--- TOC entry 1513 (class 1259 OID 3363992)
+-- TOC entry 129 (class 1259 OID 70119)
 -- Dependencies: 6
 -- Name: contentrelations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -69,7 +69,7 @@ CREATE TABLE contentrelations (
 
 
 --
--- TOC entry 1514 (class 1259 OID 3363995)
+-- TOC entry 130 (class 1259 OID 70122)
 -- Dependencies: 6
 -- Name: contents; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -90,7 +90,7 @@ CREATE TABLE contents (
 
 
 --
--- TOC entry 1515 (class 1259 OID 3364001)
+-- TOC entry 131 (class 1259 OID 70128)
 -- Dependencies: 6
 -- Name: contentsearch; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -106,7 +106,7 @@ CREATE TABLE contentsearch (
 
 
 --
--- TOC entry 1516 (class 1259 OID 3364004)
+-- TOC entry 132 (class 1259 OID 70131)
 -- Dependencies: 6
 -- Name: jpcontentfeedback_comments; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -122,7 +122,7 @@ CREATE TABLE jpcontentfeedback_comments (
 
 
 --
--- TOC entry 1517 (class 1259 OID 3364010)
+-- TOC entry 133 (class 1259 OID 70137)
 -- Dependencies: 6
 -- Name: jpcontentfeedback_rating; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -137,7 +137,7 @@ CREATE TABLE jpcontentfeedback_rating (
 
 
 --
--- TOC entry 1518 (class 1259 OID 3364013)
+-- TOC entry 134 (class 1259 OID 70140)
 -- Dependencies: 1796 6
 -- Name: jpmyportalplus_userpageconfig; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -153,7 +153,7 @@ CREATE TABLE jpmyportalplus_userpageconfig (
 
 
 --
--- TOC entry 1519 (class 1259 OID 3364020)
+-- TOC entry 135 (class 1259 OID 70147)
 -- Dependencies: 6
 -- Name: localstrings; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -166,7 +166,7 @@ CREATE TABLE localstrings (
 
 
 --
--- TOC entry 1520 (class 1259 OID 3364026)
+-- TOC entry 136 (class 1259 OID 70153)
 -- Dependencies: 6
 -- Name: pagemodels; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -180,7 +180,7 @@ CREATE TABLE pagemodels (
 
 
 --
--- TOC entry 1521 (class 1259 OID 3364032)
+-- TOC entry 137 (class 1259 OID 70159)
 -- Dependencies: 6
 -- Name: pages; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -198,7 +198,7 @@ CREATE TABLE pages (
 
 
 --
--- TOC entry 1522 (class 1259 OID 3364038)
+-- TOC entry 138 (class 1259 OID 70165)
 -- Dependencies: 6
 -- Name: resourcerelations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -210,7 +210,7 @@ CREATE TABLE resourcerelations (
 
 
 --
--- TOC entry 1523 (class 1259 OID 3364041)
+-- TOC entry 139 (class 1259 OID 70168)
 -- Dependencies: 6
 -- Name: resources; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -226,7 +226,7 @@ CREATE TABLE resources (
 
 
 --
--- TOC entry 1524 (class 1259 OID 3364047)
+-- TOC entry 140 (class 1259 OID 70174)
 -- Dependencies: 6
 -- Name: showletcatalog; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -244,7 +244,7 @@ CREATE TABLE showletcatalog (
 
 
 --
--- TOC entry 1525 (class 1259 OID 3364053)
+-- TOC entry 141 (class 1259 OID 70180)
 -- Dependencies: 6
 -- Name: showletconfig; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -259,7 +259,7 @@ CREATE TABLE showletconfig (
 
 
 --
--- TOC entry 1526 (class 1259 OID 3364059)
+-- TOC entry 142 (class 1259 OID 70186)
 -- Dependencies: 6
 -- Name: sysconfig; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -273,7 +273,7 @@ CREATE TABLE sysconfig (
 
 
 --
--- TOC entry 1527 (class 1259 OID 3364065)
+-- TOC entry 143 (class 1259 OID 70192)
 -- Dependencies: 6
 -- Name: uniquekeys; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -285,7 +285,7 @@ CREATE TABLE uniquekeys (
 
 
 --
--- TOC entry 1528 (class 1259 OID 3364068)
+-- TOC entry 144 (class 1259 OID 70195)
 -- Dependencies: 6
 -- Name: workcontentrelations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -297,7 +297,7 @@ CREATE TABLE workcontentrelations (
 
 
 --
--- TOC entry 1529 (class 1259 OID 3364071)
+-- TOC entry 145 (class 1259 OID 70198)
 -- Dependencies: 6
 -- Name: workcontentsearch; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -313,8 +313,8 @@ CREATE TABLE workcontentsearch (
 
 
 --
--- TOC entry 1798 (class 2606 OID 3365356)
--- Dependencies: 1511 1511
+-- TOC entry 1798 (class 2606 OID 71483)
+-- Dependencies: 127 127
 -- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -323,8 +323,8 @@ ALTER TABLE ONLY categories
 
 
 --
--- TOC entry 1800 (class 2606 OID 3365358)
--- Dependencies: 1512 1512
+-- TOC entry 1800 (class 2606 OID 71485)
+-- Dependencies: 128 128
 -- Name: contentmodels_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -333,8 +333,8 @@ ALTER TABLE ONLY contentmodels
 
 
 --
--- TOC entry 1804 (class 2606 OID 3365360)
--- Dependencies: 1514 1514
+-- TOC entry 1804 (class 2606 OID 71487)
+-- Dependencies: 130 130
 -- Name: contents_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -343,8 +343,8 @@ ALTER TABLE ONLY contents
 
 
 --
--- TOC entry 1807 (class 2606 OID 3365362)
--- Dependencies: 1516 1516
+-- TOC entry 1807 (class 2606 OID 71489)
+-- Dependencies: 132 132
 -- Name: jpcontentfeedback_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -353,8 +353,8 @@ ALTER TABLE ONLY jpcontentfeedback_comments
 
 
 --
--- TOC entry 1809 (class 2606 OID 3365364)
--- Dependencies: 1517 1517
+-- TOC entry 1809 (class 2606 OID 71491)
+-- Dependencies: 133 133
 -- Name: jpcontentfeedback_rating_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -363,8 +363,8 @@ ALTER TABLE ONLY jpcontentfeedback_rating
 
 
 --
--- TOC entry 1811 (class 2606 OID 3365366)
--- Dependencies: 1518 1518 1518 1518
+-- TOC entry 1811 (class 2606 OID 71823)
+-- Dependencies: 134 134 134 134
 -- Name: jpmyportalplus_userpageconfig_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -373,8 +373,8 @@ ALTER TABLE ONLY jpmyportalplus_userpageconfig
 
 
 --
--- TOC entry 1813 (class 2606 OID 3365368)
--- Dependencies: 1519 1519 1519
+-- TOC entry 1813 (class 2606 OID 71495)
+-- Dependencies: 135 135 135
 -- Name: localstrings_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -383,8 +383,8 @@ ALTER TABLE ONLY localstrings
 
 
 --
--- TOC entry 1815 (class 2606 OID 3365370)
--- Dependencies: 1520 1520
+-- TOC entry 1815 (class 2606 OID 71497)
+-- Dependencies: 136 136
 -- Name: pagemodels_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -393,8 +393,8 @@ ALTER TABLE ONLY pagemodels
 
 
 --
--- TOC entry 1817 (class 2606 OID 3365372)
--- Dependencies: 1521 1521
+-- TOC entry 1817 (class 2606 OID 71499)
+-- Dependencies: 137 137
 -- Name: pages_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -403,8 +403,8 @@ ALTER TABLE ONLY pages
 
 
 --
--- TOC entry 1819 (class 2606 OID 3365374)
--- Dependencies: 1523 1523
+-- TOC entry 1819 (class 2606 OID 71501)
+-- Dependencies: 139 139
 -- Name: resources_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -413,8 +413,8 @@ ALTER TABLE ONLY resources
 
 
 --
--- TOC entry 1821 (class 2606 OID 3365376)
--- Dependencies: 1524 1524
+-- TOC entry 1821 (class 2606 OID 71503)
+-- Dependencies: 140 140
 -- Name: showletcatalog_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -423,8 +423,8 @@ ALTER TABLE ONLY showletcatalog
 
 
 --
--- TOC entry 1823 (class 2606 OID 3365378)
--- Dependencies: 1525 1525 1525
+-- TOC entry 1823 (class 2606 OID 71505)
+-- Dependencies: 141 141 141
 -- Name: showletconfig_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -433,8 +433,8 @@ ALTER TABLE ONLY showletconfig
 
 
 --
--- TOC entry 1825 (class 2606 OID 3365380)
--- Dependencies: 1526 1526 1526
+-- TOC entry 1825 (class 2606 OID 71507)
+-- Dependencies: 142 142 142
 -- Name: system_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -443,8 +443,8 @@ ALTER TABLE ONLY sysconfig
 
 
 --
--- TOC entry 1827 (class 2606 OID 3365382)
--- Dependencies: 1527 1527
+-- TOC entry 1827 (class 2606 OID 71509)
+-- Dependencies: 143 143
 -- Name: uniquekeys_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -453,8 +453,8 @@ ALTER TABLE ONLY uniquekeys
 
 
 --
--- TOC entry 1801 (class 1259 OID 3365383)
--- Dependencies: 1513 1513 1513
+-- TOC entry 1801 (class 1259 OID 71510)
+-- Dependencies: 129 129 129
 -- Name: contentrelations_idx; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -462,8 +462,8 @@ CREATE INDEX contentrelations_idx ON contentrelations USING btree (contentid, re
 
 
 --
--- TOC entry 1802 (class 1259 OID 3365384)
--- Dependencies: 1514 1514
+-- TOC entry 1802 (class 1259 OID 71511)
+-- Dependencies: 130 130
 -- Name: contents_idx; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -471,8 +471,8 @@ CREATE INDEX contents_idx ON contents USING btree (contenttype, maingroup);
 
 
 --
--- TOC entry 1805 (class 1259 OID 3365385)
--- Dependencies: 1515 1515
+-- TOC entry 1805 (class 1259 OID 71512)
+-- Dependencies: 131 131
 -- Name: contentsearch_idx; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -480,8 +480,8 @@ CREATE INDEX contentsearch_idx ON contentsearch USING btree (contentid, attrname
 
 
 --
--- TOC entry 1828 (class 2606 OID 3365386)
--- Dependencies: 1513 1803 1514
+-- TOC entry 1828 (class 2606 OID 71513)
+-- Dependencies: 129 1803 130
 -- Name: contentrelations_contentid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -490,8 +490,8 @@ ALTER TABLE ONLY contentrelations
 
 
 --
--- TOC entry 1829 (class 2606 OID 3365391)
--- Dependencies: 1511 1513 1797
+-- TOC entry 1829 (class 2606 OID 71518)
+-- Dependencies: 127 129 1797
 -- Name: contentrelations_refcategory_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -500,8 +500,8 @@ ALTER TABLE ONLY contentrelations
 
 
 --
--- TOC entry 1830 (class 2606 OID 3365396)
--- Dependencies: 1513 1803 1514
+-- TOC entry 1830 (class 2606 OID 71523)
+-- Dependencies: 1803 129 130
 -- Name: contentrelations_refcontent_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -510,8 +510,8 @@ ALTER TABLE ONLY contentrelations
 
 
 --
--- TOC entry 1831 (class 2606 OID 3365401)
--- Dependencies: 1816 1513 1521
+-- TOC entry 1831 (class 2606 OID 71528)
+-- Dependencies: 137 1816 129
 -- Name: contentrelations_refpage_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -520,8 +520,8 @@ ALTER TABLE ONLY contentrelations
 
 
 --
--- TOC entry 1832 (class 2606 OID 3365406)
--- Dependencies: 1523 1513 1818
+-- TOC entry 1832 (class 2606 OID 71533)
+-- Dependencies: 139 1818 129
 -- Name: contentrelations_refresource_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -530,8 +530,8 @@ ALTER TABLE ONLY contentrelations
 
 
 --
--- TOC entry 1833 (class 2606 OID 3365411)
--- Dependencies: 1514 1515 1803
+-- TOC entry 1833 (class 2606 OID 71538)
+-- Dependencies: 131 130 1803
 -- Name: contentsearch_contentid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -540,8 +540,8 @@ ALTER TABLE ONLY contentsearch
 
 
 --
--- TOC entry 1834 (class 2606 OID 3365416)
--- Dependencies: 1516 1806 1517
+-- TOC entry 1834 (class 2606 OID 71543)
+-- Dependencies: 1806 133 132
 -- Name: jpcontentfeedback_rating_refcommentid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -550,8 +550,8 @@ ALTER TABLE ONLY jpcontentfeedback_rating
 
 
 --
--- TOC entry 1835 (class 2606 OID 3365421)
--- Dependencies: 1521 1816 1518
+-- TOC entry 1835 (class 2606 OID 71824)
+-- Dependencies: 134 1816 137
 -- Name: jpmyportalplus_userpageconfig_pagecode_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -560,8 +560,8 @@ ALTER TABLE ONLY jpmyportalplus_userpageconfig
 
 
 --
--- TOC entry 1836 (class 2606 OID 3365426)
--- Dependencies: 1521 1814 1520
+-- TOC entry 1836 (class 2606 OID 71553)
+-- Dependencies: 136 1814 137
 -- Name: pages_modelcode_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -570,8 +570,8 @@ ALTER TABLE ONLY pages
 
 
 --
--- TOC entry 1837 (class 2606 OID 3365431)
--- Dependencies: 1797 1511 1522
+-- TOC entry 1837 (class 2606 OID 71558)
+-- Dependencies: 138 1797 127
 -- Name: resourcerelations_refcategory_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -580,8 +580,8 @@ ALTER TABLE ONLY resourcerelations
 
 
 --
--- TOC entry 1838 (class 2606 OID 3365436)
--- Dependencies: 1522 1523 1818
+-- TOC entry 1838 (class 2606 OID 71563)
+-- Dependencies: 1818 139 138
 -- Name: resourcerelations_resid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -590,8 +590,8 @@ ALTER TABLE ONLY resourcerelations
 
 
 --
--- TOC entry 1839 (class 2606 OID 3365441)
--- Dependencies: 1525 1521 1816
+-- TOC entry 1839 (class 2606 OID 71568)
+-- Dependencies: 141 1816 137
 -- Name: showletconfig_pagecode_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -600,8 +600,8 @@ ALTER TABLE ONLY showletconfig
 
 
 --
--- TOC entry 1840 (class 2606 OID 3365446)
--- Dependencies: 1524 1820 1525
+-- TOC entry 1840 (class 2606 OID 71573)
+-- Dependencies: 140 141 1820
 -- Name: showletconfig_showletcode_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -610,8 +610,8 @@ ALTER TABLE ONLY showletconfig
 
 
 --
--- TOC entry 1841 (class 2606 OID 3365451)
--- Dependencies: 1528 1803 1514
+-- TOC entry 1841 (class 2606 OID 71578)
+-- Dependencies: 144 1803 130
 -- Name: workcontentrelations_contentid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -620,8 +620,8 @@ ALTER TABLE ONLY workcontentrelations
 
 
 --
--- TOC entry 1842 (class 2606 OID 3365456)
--- Dependencies: 1514 1803 1529
+-- TOC entry 1842 (class 2606 OID 71583)
+-- Dependencies: 130 1803 145
 -- Name: workcontentsearch_contentid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -641,7 +641,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2011-11-20 17:08:45 CET
+-- Completed on 2011-11-25 09:53:59 CET
 
 --
 -- PostgreSQL database dump complete
