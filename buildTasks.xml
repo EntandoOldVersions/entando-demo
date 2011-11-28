@@ -45,7 +45,8 @@
 		<exec executable="mvn" dir="${basedir}">
 			<env key="MAVEN_WORKING_MODE" value="production"/>
 			<arg value="package"/>
-			<arg line="-DskipTests"/>			
+			<arg line="-DskipTests"/>
+			<arg line="-DskipDerby"/>			
 		</exec>
 	</target>
 
@@ -290,11 +291,6 @@
 		</exec>
 	</target>
 
-	<!-- TODO: non può funzionare in combutta con ant Test.
-			   bisogna fare un task che faccia solo il check e setti le property.
-			   Impostare anche nel WiKi l'elenco dei comandi da lanciare per.
-			   Tipo ant Test invece che mvn test
-	-->
     <target name="Test-db-resources-check">
 		<taskdef resource="net/sf/antcontrib/antcontrib.properties">
 			<classpath>
