@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-25 09:53:59 CET
+-- Started on 2011-11-29 16:56:52 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -641,7 +641,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2011-11-25 09:53:59 CET
+-- Completed on 2011-11-29 16:56:52 CET
 
 --
 -- PostgreSQL database dump complete

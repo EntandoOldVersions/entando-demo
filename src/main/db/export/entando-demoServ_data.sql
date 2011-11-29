@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-25 09:54:01 CET
+-- Started on 2011-11-29 16:56:54 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -147,8 +147,8 @@ INSERT INTO authuserroles (username, rolename) VALUES ('jeff', 'admin');
 
 INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('caroline', 'd6lFouRLMVSGYCQqiZnvMA==', '2011-09-26', '2011-11-18', '2011-09-26', 1);
 INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('max', 'oqYapx7mUieGYCQqiZnvMA==', '2011-09-26', '2011-11-18', '2011-09-26', 1);
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('admin', 'adminadmin', '2008-10-10', '2011-11-20', NULL, 1);
 INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('jeff', 'M6a/uY1I0JDGWU/XU+dWTA==', '2011-09-26', '2011-11-20', NULL, 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('admin', 'adminadmin', '2008-10-10', '2011-11-25', NULL, 1);
 
 
 --
@@ -524,7 +524,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 
--- Completed on 2011-11-25 09:54:01 CET
+-- Completed on 2011-11-29 16:56:54 CET
 
 --
 -- PostgreSQL database dump complete

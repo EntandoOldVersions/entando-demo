@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-25 09:54:00 CET
+-- Started on 2011-11-29 16:56:53 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -36,6 +36,55 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('footerlinks', 'hom
 <properties>
 <property key="en">Footer Links</property>
 <property key="it">Link per Footer</property>
+</properties>
+
+');
+INSERT INTO categories (catcode, parentcode, titles) VALUES ('factes', 'home', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Facets</property>
+<property key="it">Faccette</property>
+</properties>
+
+');
+INSERT INTO categories (catcode, parentcode, titles) VALUES ('f1', 'factes', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">f1</property>
+<property key="it">f1</property>
+</properties>
+
+');
+INSERT INTO categories (catcode, parentcode, titles) VALUES ('f2', 'factes', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">f2</property>
+<property key="it">f2</property>
+</properties>
+
+');
+INSERT INTO categories (catcode, parentcode, titles) VALUES ('f3', 'factes', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">f3</property>
+<property key="it">f3</property>
+</properties>
+
+');
+INSERT INTO categories (catcode, parentcode, titles) VALUES ('f11', 'f1', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="it">f1-1</property>
+<property key="en">f1-1</property>
+</properties>
+
+');
+INSERT INTO categories (catcode, parentcode, titles) VALUES ('f111', 'f11', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="it">f1-1-1</property>
+<property key="en">f1-1-1</property>
+</properties>
+
+');
+INSERT INTO categories (catcode, parentcode, titles) VALUES ('f1111', 'f111', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="it">f1-1-1-1</property>
+<property key="en">f1-1-1-1</property>
 </properties>
 
 ');
@@ -425,6 +474,23 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'administrators');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, '39', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG61', NULL, NULL, NULL, 'factes', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG61', NULL, NULL, NULL, 'f1', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG61', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG62', NULL, NULL, NULL, 'factes', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG62', NULL, NULL, NULL, 'f1', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG62', NULL, NULL, NULL, 'f2', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG62', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG63', NULL, NULL, NULL, 'factes', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG63', NULL, NULL, NULL, 'f3', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG63', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f11', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f1111', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'factes', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f1', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f111', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f3', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, NULL, 'free');
 
 
 --
@@ -775,6 +841,26 @@ The best ideas bubble up to the top. Provide your responses within Community, Do
 <p><strong>The best ideas bubble up to the top. </strong></p>
 <p>Provide your responses within these Entando categories: <strong>Community</strong>, <strong>Documentation</strong>, <strong>Core</strong> <strong>Features</strong> and <strong>Plugins</strong>.</p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="18" lang="en" /><text lang="it">Logo Ideascale</text><text lang="en">Ideascale Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="26" lang="en" /><text lang="it">Contribuisci</text><text lang="en">Contribute</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link"><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://japsplatform.ideascale.com/</urldest></link><text lang="it">Condividi la tua idea sul progetto Entando</text><text lang="en">Share your Idea for Entando Project</text></attribute></list></attributes><status>PUBLIC</status><version>4.0</version><lastEditor>jeff</lastEditor><created>20110926141219</created><lastModified>20110927183550</lastModified></content>
 ', 'free', '4.0', 'jeff');
+INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG61', 'CNG', 'facet test 1 - f1', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG61" typecode="CNG" typedescr="Generic Content"><descr>facet test 1 - f1</descr><groups mainGroup="free" /><categories><category id="f1" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 1 - f1</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104556</created><lastModified>20111125104556</lastModified></content>
+', '20111125104556', '20111125104556', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG61" typecode="CNG" typedescr="Generic Content"><descr>facet test 1 - f1</descr><groups mainGroup="free" /><categories><category id="f1" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 1 - f1</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104556</created><lastModified>20111125104556</lastModified></content>
+', 'free', '1.0', 'admin');
+INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG62', 'CNG', 'facet test 2 - f1/f2', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG62" typecode="CNG" typedescr="Generic Content"><descr>facet test 2 - f1/f2</descr><groups mainGroup="free" /><categories><category id="f1" /><category id="f2" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 1 - f1/f2</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104623</created><lastModified>20111125104623</lastModified></content>
+', '20111125104623', '20111125104623', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG62" typecode="CNG" typedescr="Generic Content"><descr>facet test 2 - f1/f2</descr><groups mainGroup="free" /><categories><category id="f1" /><category id="f2" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 1 - f1/f2</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104623</created><lastModified>20111125104623</lastModified></content>
+', 'free', '1.0', 'admin');
+INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG63', 'CNG', 'facet test 1 - f3', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG63" typecode="CNG" typedescr="Generic Content"><descr>facet test 1 - f3</descr><groups mainGroup="free" /><categories><category id="f3" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 3 - f3</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104711</created><lastModified>20111125104711</lastModified></content>
+', '20111125104711', '20111125104711', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG63" typecode="CNG" typedescr="Generic Content"><descr>facet test 1 - f3</descr><groups mainGroup="free" /><categories><category id="f3" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 3 - f3</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104711</created><lastModified>20111125104711</lastModified></content>
+', 'free', '1.0', 'admin');
+INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG64', 'CNG', 'facet test 4 - f1-1-1-1', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG64" typecode="CNG" typedescr="Generic Content"><descr>facet test 4 - f1-1-1-1</descr><groups mainGroup="free" /><categories><category id="f1111" /><category id="f3" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 3 - f3</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>2.0</version><lastEditor>admin</lastEditor><created>20111125105503</created><lastModified>20111125112919</lastModified></content>
+', '20111125105503', '20111125112919', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG64" typecode="CNG" typedescr="Generic Content"><descr>facet test 4 - f1-1-1-1</descr><groups mainGroup="free" /><categories><category id="f1111" /><category id="f3" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 3 - f3</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>2.0</version><lastEditor>admin</lastEditor><created>20111125105503</created><lastModified>20111125112919</lastModified></content>
+', 'free', '2.0', 'admin');
 
 
 --
@@ -840,6 +926,14 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG61', 'Title', 'facet test 1 - f1', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG61', 'Title', 'facet test 1 - f1', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG62', 'Title', 'facet test 1 - f1/f2', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG62', 'Title', 'facet test 1 - f1/f2', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG63', 'Title', 'facet test 3 - f3', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG63', 'Title', 'facet test 3 - f3', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG64', 'Title', 'facet test 3 - f3', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG64', 'Title', 'facet test 3 - f3', NULL, NULL, 'it');
 
 
 --
@@ -1593,6 +1687,16 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Title', 'it', 'Titolo');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Abstract', 'en', 'Abstract');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Abstract', 'it', 'Estratto');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_REMOVE_FILTER', 'it', 'Rimuovi');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_REMOVE_FILTER', 'en', 'Remove');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_TITLE_TREE', 'it', 'Albero delle Faccette');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_TITLE_TREE', 'en', 'Facet Tree');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_TITLE_FACET_RESULTS', 'it', 'Faccette');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_TITLE_FACET_RESULTS', 'en', 'Facets');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_OCCURRENCES_FOR', 'it', 'Numero occorrenze per');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_OCCURRENCES_FOR', 'en', 'Occurences for');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_EMPTY_TAG', 'it', 'Nussuna occorrenza per');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_EMPTY_TAG', 'en', 'No items for');
 
 
 --
@@ -2406,18 +2510,6 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 </config>
 
 ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('fastcontentedit', 'service', 9, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">fastcontentedit</property>
-<property key="it">fastcontentedit</property>
-</properties>
-
-', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>true</useextratitles>
-</config>
-
-');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('surveys_list', 'quest_suveys', 1, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
 <property key="en">Active Questionnaires</property> 
 <property key="it">Questionari Attivi</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
@@ -2478,6 +2570,30 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 </properties>
 
 ', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>true</useextratitles>
+</config>
+
+');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('fastcontentedit', 'service', 9, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Frontent Content Editing</property>
+<property key="it">Modifica Contenuto da Frontend</property>
+</properties>
+
+', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>true</useextratitles>
+</config>
+
+');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('facetnav', 'homepage', 6, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Faceted Navigation</property>
+<property key="it">Navigazione Faccette</property>
+</properties>
+
+', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
 </config>
@@ -2941,6 +3057,29 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 </properties>
 
 ', 0, 'free');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfacetnav_results', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Results</property>
+<property key="it">Risultati Ricerca</property>
+</properties>', '<config>
+	<parameter name="contentTypesFilter">
+		Tipi di contenuto dei risultati da erogare (OPZIONALE)
+	</parameter>
+	<action name="facetNavResultConfig"/>
+</config>', 'jpfacetnav', NULL, NULL, 1, NULL);
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfacetnav_tree', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Facets Tree</property>
+<property key="it">Albero delle faccette</property>
+</properties>', '<config>
+	<parameter name="facetRootNodes">
+		Facet Category Root
+	</parameter>
+	<parameter name="contentTypesFilter">
+		Content Type (optional)
+	</parameter>
+	<action name="facetNavTreeConfig"/>
+</config>', 'jpfacetnav', NULL, NULL, 1, NULL);
 
 
 --
@@ -3246,22 +3385,6 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 163, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 55, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 45, 'jpmyportalplus_void', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 0, 'navigation_langbar', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 1, 'login_form', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 4, 'search_form', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 10, 'navigation_menu', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="navSpec">code(homepage).subtree(1)</property>
-</properties>
-
-', NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 36, 'jpsharewith', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 14, 'jpfastcontentedit_formAction', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="typeCode">NEW</property>
-</properties>
-
-', NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('surveys_list', 0, 'navigation_langbar', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('surveys_list', 1, 'login_form', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('surveys_list', 5, 'search_form', NULL, NULL);
@@ -3397,6 +3520,45 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 ', NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 74, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 123, 'jpmyportalplus_void', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 0, 'navigation_langbar', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 1, 'login_form', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 4, 'search_form', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 10, 'navigation_menu', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="navSpec">code(homepage).subtree(1)</property>
+</properties>
+
+', NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 14, 'jpfastcontentedit_formAction', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="typeCode">NEW</property>
+</properties>
+
+', NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 36, 'jpsharewith', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 0, 'navigation_langbar', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 1, 'login_form', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 4, 'search_form', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 10, 'navigation_menu', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="navSpec">code(homepage).subtree(1)</property>
+</properties>
+
+', NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 36, 'jpsharewith', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 14, 'jpfacetnav_tree', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="facetRootNodes">factes</property>
+<property key="contentTypesFilter">CNG</property>
+</properties>
+
+', NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 15, 'jpfacetnav_results', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="contentTypesFilter">CNG</property>
+</properties>
+
+', NULL);
 
 
 --
@@ -3571,7 +3733,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpma
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpmyportalplus_config', 'Definizione degli oggetti configurabili di My Portal', '<?xml version="1.0" encoding="UTF-8"?>
 <myportalConfig><showlets><showlet code="latest_video" /><showlet code="jpsurvey_questionnaireList" /><showlet code="form_list" /><showlet code="jpsurvey_pollList" /><showlet code="latest_events" /><showlet code="Task" /><showlet code="latest_news" /><showlet code="documents_list" /><showlet code="inEvidenza" /></showlets></myportalConfig>
 ');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20111120131216');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'contentTypes', 'Definition of the Content Types', '<?xml version="1.0" encoding="UTF-8"?>
 <contenttypes>
 	<contenttype typecode="CNG" typedescr="Generic Content" viewpage="contentsview" listmodel="31" defaultmodel="3">
@@ -3785,6 +3946,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 </contenttypes>
 
 ');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20111129161425');
 
 
 --
@@ -3793,7 +3955,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 60);
+INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 64);
 
 
 --
@@ -3804,6 +3966,19 @@ INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 60);
 
 INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW15', 'events');
 INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW11', 'events');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG61', 'factes');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG61', 'f1');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG62', 'factes');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG62', 'f1');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG62', 'f2');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG63', 'factes');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG63', 'f3');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f11');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f1111');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'factes');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f1');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f111');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f3');
 
 
 --
@@ -3869,9 +4044,17 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG61', 'Title', 'facet test 1 - f1', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG61', 'Title', 'facet test 1 - f1', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG62', 'Title', 'facet test 1 - f1/f2', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG62', 'Title', 'facet test 1 - f1/f2', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG63', 'Title', 'facet test 3 - f3', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG63', 'Title', 'facet test 3 - f3', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG64', 'Title', 'facet test 3 - f3', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG64', 'Title', 'facet test 3 - f3', NULL, NULL, 'it');
 
 
--- Completed on 2011-11-25 09:54:00 CET
+-- Completed on 2011-11-29 16:56:53 CET
 
 --
 -- PostgreSQL database dump complete
