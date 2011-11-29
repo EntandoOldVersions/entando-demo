@@ -7,7 +7,7 @@
 	<wpfp:facetNavTree requiredFacetsParamName="requiredFacets" facetsTreeParamName="facetsForTree" />
 	<c:set var="occurrences" value="${occurrences}" scope="request" />
 	<c:forEach var="facetRoot" items="${facetsForTree}">
-		<h3><wpfp:facetNodeTitle facetNodeCode="${facetRoot.code}" /></h3>
+		<%-- <h3><wpfp:facetNodeTitle facetNodeCode="${facetRoot.code}" /></h3> --%>
 		<c:choose>
 			<c:when test="${occurrences[facetRoot.code] != null && !(empty occurrences[facetRoot.code])}">
 				<ul>
