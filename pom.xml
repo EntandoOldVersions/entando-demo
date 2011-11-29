@@ -2,17 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>	
 	<groupId>org.entando.entando</groupId>
 	<artifactId>entando-demo</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>entando-demo</name>
-	<url>http://maven.apache.org/</url>
+	<url>http://demo.entando.com/</url>
 	<repositories>
 		<repository>
 			<id>Apache Snapshots</id>
@@ -100,7 +95,8 @@
 		<test.database.username>agile</test.database.username>
 		<test.database.password>agile</test.database.password>
 		<test.database.basename>entando-core-engine</test.database.basename>
-		<test.database.basepath>${project.build.directory}/test/sql</test.database.basepath>	
+		<test.database.basepath>${project.build.directory}/test/sql</test.database.basepath>
+		<skipDerby>true</skipDerby>
 	</properties>
 	<build>
 		<finalName>entando-demo</finalName>
@@ -116,6 +112,13 @@
 					<include>**/*.xsd</include>
 				</includes>
 			</resource>
+			<resource>
+				<directory>src/main/tld</directory>
+				<targetPath>META-INF</targetPath>
+				<includes>
+					<include>**/*.tld</include>
+				</includes>
+			</resource>			
 		</resources>
 		<filters>
 			<filter>src/main/filters/filter-${env}.properties</filter>
@@ -467,7 +470,7 @@
 					<dependency>
 						<groupId>postgresql</groupId>
 						<artifactId>postgresql</artifactId>
-						<version>9.1-901.jdbc3</version>
+						<version>9.1-901.jdbc4</version>
 					</dependency>
 					<dependency>
 						<groupId>org.apache.derby</groupId>
@@ -695,6 +698,7 @@
 							<password>${test.database.password}</password>							
 							<keepFormat>false</keepFormat>			
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Port;create=true</url>
+							<skip>${skipDerby}</skip>
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -715,6 +719,7 @@
 							<password>${test.database.password}</password>							
 							<keepFormat>false</keepFormat>			
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Port</url>
+							<skip>${skipDerby}</skip>							
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -735,6 +740,7 @@
 							<password>${test.database.password}</password>							
 							<keepFormat>false</keepFormat>			
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Serv;create=true</url>
+							<skip>${skipDerby}</skip>							
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -755,6 +761,7 @@
 							<password>${test.database.password}</password>							
 							<keepFormat>false</keepFormat>			
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Serv</url>
+							<skip>${skipDerby}</skip>							
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -798,7 +805,7 @@
 					<dependency>
 						<groupId>postgresql</groupId>
 						<artifactId>postgresql</artifactId>
-						<version>9.1-901.jdbc3</version>
+						<version>9.1-901.jdbc4</version>
 					</dependency>
 					<dependency>
 						<groupId>commons-dbcp</groupId>
@@ -877,7 +884,7 @@
 											sql-maven-plugin
 										</artifactId>
 										<versionRange>
-											[1.4,)
+											[1.5,)
 										</versionRange>
 										<goals>
 											<goal>execute</goal>
@@ -917,27 +924,27 @@
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-webapp</artifactId>
-			<version>2.4.0</version>
+			<version>2.4.0.1</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>2.4.0</version>
+			<version>2.4.0.1</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>2.4.0</version>
+			<version>2.4.0.1</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>2.4.0</version>
+			<version>2.4.0.1</version>
 			<type>zip</type>
 			<classifier>misc-test</classifier>
 			<scope>test</scope>
@@ -963,7 +970,7 @@
 		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.1-901.jdbc3</version>
+			<version>9.1-901.jdbc4</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -976,13 +983,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>1.8.0</version>
+			<version>1.8.0.1</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>1.8.0</version>
+			<version>1.8.0.1</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -990,13 +997,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>1.1.0</version>
+			<version>1.1.0.1</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>1.1.0</version>
+			<version>1.1.0.1</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1004,13 +1011,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>1.4.0</version>
+			<version>1.4.0.1</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>1.4.0</version>
+			<version>1.4.0.1</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1018,13 +1025,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>1.4.0</version>
+			<version>1.4.0.1</version>
 			<type>war</type>
 		</dependency>
                 <dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>1.4.0</version>
+			<version>1.4.0.1</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1032,13 +1039,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>1.2.0</version>
+			<version>1.2.0.1</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>1.2.0</version>
+			<version>1.2.0.1</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1047,13 +1054,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>1.2.0</version>
+			<version>1.2.0.1</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>1.2.0</version>
+			<version>1.2.0.1</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1063,13 +1070,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>1.4.0</version>
+			<version>1.4.0.1</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>1.4.0</version>
+			<version>1.4.0.1</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
