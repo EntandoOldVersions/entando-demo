@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-25 11:17:31 CET
+-- Started on 2011-12-02 16:02:16 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1842 (class 0 OID 72495)
+-- TOC entry 1842 (class 0 OID 91137)
 -- Dependencies: 127
 -- Data for Name: apicatalog_services; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -21,7 +21,7 @@ SET search_path = public, pg_catalog;
 
 
 --
--- TOC entry 1843 (class 0 OID 72501)
+-- TOC entry 1843 (class 0 OID 91143)
 -- Dependencies: 128
 -- Data for Name: apicatalog_status; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -29,7 +29,7 @@ SET search_path = public, pg_catalog;
 
 
 --
--- TOC entry 1844 (class 0 OID 72504)
+-- TOC entry 1844 (class 0 OID 91146)
 -- Dependencies: 129
 -- Data for Name: authgroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -43,7 +43,7 @@ INSERT INTO authgroups (groupname, descr) VALUES ('management', 'Management');
 
 
 --
--- TOC entry 1845 (class 0 OID 72507)
+-- TOC entry 1845 (class 0 OID 91149)
 -- Dependencies: 130
 -- Data for Name: authpermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -61,7 +61,7 @@ INSERT INTO authpermissions (permissionname, descr) VALUES ('jpcontentfeedback_r
 
 
 --
--- TOC entry 1846 (class 0 OID 72510)
+-- TOC entry 1846 (class 0 OID 91152)
 -- Dependencies: 131
 -- Data for Name: authrolepermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -78,7 +78,7 @@ INSERT INTO authrolepermissions (rolename, permissionname) VALUES ('editor', 'ma
 
 
 --
--- TOC entry 1847 (class 0 OID 72513)
+-- TOC entry 1847 (class 0 OID 91155)
 -- Dependencies: 132
 -- Data for Name: authroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -90,7 +90,7 @@ INSERT INTO authroles (rolename, descr) VALUES ('pageManager', 'Gestore di Pagin
 
 
 --
--- TOC entry 1848 (class 0 OID 72516)
+-- TOC entry 1848 (class 0 OID 91158)
 -- Dependencies: 133
 -- Data for Name: authusergroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -109,7 +109,7 @@ INSERT INTO authusergroups (username, groupname) VALUES ('admin', 'administrator
 
 
 --
--- TOC entry 1849 (class 0 OID 72519)
+-- TOC entry 1849 (class 0 OID 91161)
 -- Dependencies: 134
 -- Data for Name: authuserroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -125,7 +125,7 @@ INSERT INTO authuserroles (username, rolename) VALUES ('pageManagerCustomers', '
 
 
 --
--- TOC entry 1850 (class 0 OID 72522)
+-- TOC entry 1850 (class 0 OID 91164)
 -- Dependencies: 135
 -- Data for Name: authusers; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -141,7 +141,7 @@ INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpassw
 
 
 --
--- TOC entry 1851 (class 0 OID 72525)
+-- TOC entry 1851 (class 0 OID 91167)
 -- Dependencies: 136
 -- Data for Name: authusershortcuts; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -159,7 +159,7 @@ INSERT INTO authusershortcuts (username, config) VALUES ('admin', '<shortcuts>
 
 
 --
--- TOC entry 1852 (class 0 OID 72531)
+-- TOC entry 1852 (class 0 OID 91173)
 -- Dependencies: 137
 -- Data for Name: jpsurvey; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -189,7 +189,7 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 
 
 --
--- TOC entry 1853 (class 0 OID 72537)
+-- TOC entry 1853 (class 0 OID 91179)
 -- Dependencies: 138
 -- Data for Name: jpsurvey_choices; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -232,7 +232,7 @@ INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (7, 
 
 
 --
--- TOC entry 1854 (class 0 OID 72543)
+-- TOC entry 1854 (class 0 OID 91185)
 -- Dependencies: 139
 -- Data for Name: jpsurvey_questions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -250,7 +250,7 @@ INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minre
 
 
 --
--- TOC entry 1855 (class 0 OID 72549)
+-- TOC entry 1855 (class 0 OID 91191)
 -- Dependencies: 140
 -- Data for Name: jpsurvey_responses; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -259,7 +259,7 @@ INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES 
 
 
 --
--- TOC entry 1856 (class 0 OID 72552)
+-- TOC entry 1856 (class 0 OID 91194)
 -- Dependencies: 141
 -- Data for Name: jpsurvey_voters; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -268,7 +268,7 @@ INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username
 
 
 --
--- TOC entry 1857 (class 0 OID 72555)
+-- TOC entry 1857 (class 0 OID 91197)
 -- Dependencies: 142
 -- Data for Name: jpuserprofile_authuserprofiles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -324,7 +324,7 @@ INSERT INTO jpuserprofile_authuserprofiles (username, profiletype, profilexml, p
 
 
 --
--- TOC entry 1858 (class 0 OID 72561)
+-- TOC entry 1858 (class 0 OID 91203)
 -- Dependencies: 143
 -- Data for Name: jpuserprofile_profilesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -356,7 +356,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1859 (class 0 OID 72564)
+-- TOC entry 1859 (class 0 OID 91206)
 -- Dependencies: 144
 -- Data for Name: jpwebdynamicform_messageanswers; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -364,7 +364,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1860 (class 0 OID 72570)
+-- TOC entry 1860 (class 0 OID 91212)
 -- Dependencies: 145
 -- Data for Name: jpwebdynamicform_messages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -372,14 +372,14 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1861 (class 0 OID 72576)
+-- TOC entry 1861 (class 0 OID 91218)
 -- Dependencies: 146
 -- Data for Name: jpwebdynamicform_messagesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
--- Completed on 2011-11-25 11:17:31 CET
+-- Completed on 2011-12-02 16:02:16 CET
 
 --
 -- PostgreSQL database dump complete

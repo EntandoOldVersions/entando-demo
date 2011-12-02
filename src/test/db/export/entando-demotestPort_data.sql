@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-25 11:17:30 CET
+-- Started on 2011-12-02 16:02:15 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1843 (class 0 OID 71979)
+-- TOC entry 1843 (class 0 OID 90621)
 -- Dependencies: 127
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -93,7 +93,7 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('resCat1', 'Image',
 
 
 --
--- TOC entry 1844 (class 0 OID 71985)
+-- TOC entry 1844 (class 0 OID 90627)
 -- Dependencies: 128
 -- Data for Name: contentmodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -147,7 +147,7 @@ $content.CorpoTesto.getTextAfterImage(0)
 
 
 --
--- TOC entry 1845 (class 0 OID 71991)
+-- TOC entry 1845 (class 0 OID 90633)
 -- Dependencies: 129
 -- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -198,7 +198,7 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 
 
 --
--- TOC entry 1846 (class 0 OID 71994)
+-- TOC entry 1846 (class 0 OID 90636)
 -- Dependencies: 130
 -- Data for Name: contents; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -332,7 +332,7 @@ INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, l
 
 
 --
--- TOC entry 1847 (class 0 OID 72000)
+-- TOC entry 1847 (class 0 OID 90642)
 -- Dependencies: 131
 -- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -392,7 +392,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1848 (class 0 OID 72003)
+-- TOC entry 1848 (class 0 OID 90645)
 -- Dependencies: 132
 -- Data for Name: jpcontentfeedback_comments; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -400,7 +400,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1849 (class 0 OID 72009)
+-- TOC entry 1849 (class 0 OID 90651)
 -- Dependencies: 133
 -- Data for Name: jpcontentfeedback_rating; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -408,7 +408,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1850 (class 0 OID 72012)
+-- TOC entry 1850 (class 0 OID 90654)
 -- Dependencies: 134
 -- Data for Name: jpmyportalplus_userpageconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -420,7 +420,7 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 
 
 --
--- TOC entry 1851 (class 0 OID 72019)
+-- TOC entry 1851 (class 0 OID 90661)
 -- Dependencies: 135
 -- Data for Name: localstrings; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -470,7 +470,7 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpcontentfeed
 
 
 --
--- TOC entry 1852 (class 0 OID 72025)
+-- TOC entry 1852 (class 0 OID 90667)
 -- Dependencies: 136
 -- Data for Name: pagemodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -536,7 +536,7 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('jpmyportalplus
 
 
 --
--- TOC entry 1853 (class 0 OID 72031)
+-- TOC entry 1853 (class 0 OID 90673)
 -- Dependencies: 137
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -682,7 +682,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1854 (class 0 OID 72037)
+-- TOC entry 1854 (class 0 OID 90679)
 -- Dependencies: 138
 -- Data for Name: resourcerelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -693,7 +693,7 @@ INSERT INTO resourcerelations (resid, refcategory) VALUES ('44', 'resCat1');
 
 
 --
--- TOC entry 1855 (class 0 OID 72040)
+-- TOC entry 1855 (class 0 OID 90682)
 -- Dependencies: 139
 -- Data for Name: resources; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -713,7 +713,7 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 
 
 --
--- TOC entry 1856 (class 0 OID 72046)
+-- TOC entry 1856 (class 0 OID 90688)
 -- Dependencies: 140
 -- Data for Name: showletcatalog; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -892,7 +892,7 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 
 
 --
--- TOC entry 1857 (class 0 OID 72052)
+-- TOC entry 1857 (class 0 OID 90694)
 -- Dependencies: 141
 -- Data for Name: showletconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -962,7 +962,7 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 
 --
--- TOC entry 1858 (class 0 OID 72058)
+-- TOC entry 1858 (class 0 OID 90700)
 -- Dependencies: 142
 -- Data for Name: sysconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1179,7 +1179,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('test', 'jpwebdynam
 
 
 --
--- TOC entry 1859 (class 0 OID 72064)
+-- TOC entry 1859 (class 0 OID 90706)
 -- Dependencies: 143
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1188,7 +1188,7 @@ INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 200);
 
 
 --
--- TOC entry 1860 (class 0 OID 72067)
+-- TOC entry 1860 (class 0 OID 90709)
 -- Dependencies: 144
 -- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1210,7 +1210,7 @@ INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('EVN193', 'gen
 
 
 --
--- TOC entry 1861 (class 0 OID 72070)
+-- TOC entry 1861 (class 0 OID 90712)
 -- Dependencies: 145
 -- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1270,7 +1270,7 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('EVN193', 'DataFine', NULL, '2017-09-12', NULL, NULL);
 
 
--- Completed on 2011-11-25 11:17:30 CET
+-- Completed on 2011-12-02 16:02:15 CET
 
 --
 -- PostgreSQL database dump complete

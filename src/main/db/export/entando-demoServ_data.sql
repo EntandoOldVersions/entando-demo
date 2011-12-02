@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-29 16:56:54 CET
+-- Started on 2011-12-02 16:01:03 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1842 (class 0 OID 71588)
+-- TOC entry 1842 (class 0 OID 90369)
 -- Dependencies: 127
 -- Data for Name: apicatalog_services; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -58,7 +58,7 @@ INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters,
 
 
 --
--- TOC entry 1843 (class 0 OID 71594)
+-- TOC entry 1843 (class 0 OID 90375)
 -- Dependencies: 128
 -- Data for Name: apicatalog_status; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -67,7 +67,7 @@ INSERT INTO apicatalog_status (method, isactive) VALUES ('getServices', 1);
 
 
 --
--- TOC entry 1844 (class 0 OID 71597)
+-- TOC entry 1844 (class 0 OID 90378)
 -- Dependencies: 129
 -- Data for Name: authgroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -80,7 +80,7 @@ INSERT INTO authgroups (groupname, descr) VALUES ('registered', 'Registered User
 
 
 --
--- TOC entry 1845 (class 0 OID 71600)
+-- TOC entry 1845 (class 0 OID 90381)
 -- Dependencies: 130
 -- Data for Name: authpermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -97,7 +97,7 @@ INSERT INTO authpermissions (permissionname, descr) VALUES ('jpuserprofile_profi
 
 
 --
--- TOC entry 1846 (class 0 OID 71603)
+-- TOC entry 1846 (class 0 OID 90384)
 -- Dependencies: 131
 -- Data for Name: authrolepermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -106,7 +106,7 @@ INSERT INTO authrolepermissions (rolename, permissionname) VALUES ('admin', 'sup
 
 
 --
--- TOC entry 1847 (class 0 OID 71606)
+-- TOC entry 1847 (class 0 OID 90387)
 -- Dependencies: 132
 -- Data for Name: authroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -115,7 +115,7 @@ INSERT INTO authroles (rolename, descr) VALUES ('admin', 'Administrator');
 
 
 --
--- TOC entry 1848 (class 0 OID 71609)
+-- TOC entry 1848 (class 0 OID 90390)
 -- Dependencies: 133
 -- Data for Name: authusergroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -130,7 +130,7 @@ INSERT INTO authusergroups (username, groupname) VALUES ('max', 'customers');
 
 
 --
--- TOC entry 1849 (class 0 OID 71612)
+-- TOC entry 1849 (class 0 OID 90393)
 -- Dependencies: 134
 -- Data for Name: authuserroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -140,7 +140,7 @@ INSERT INTO authuserroles (username, rolename) VALUES ('jeff', 'admin');
 
 
 --
--- TOC entry 1850 (class 0 OID 71615)
+-- TOC entry 1850 (class 0 OID 90396)
 -- Dependencies: 135
 -- Data for Name: authusers; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -148,11 +148,11 @@ INSERT INTO authuserroles (username, rolename) VALUES ('jeff', 'admin');
 INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('caroline', 'd6lFouRLMVSGYCQqiZnvMA==', '2011-09-26', '2011-11-18', '2011-09-26', 1);
 INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('max', 'oqYapx7mUieGYCQqiZnvMA==', '2011-09-26', '2011-11-18', '2011-09-26', 1);
 INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('jeff', 'M6a/uY1I0JDGWU/XU+dWTA==', '2011-09-26', '2011-11-20', NULL, 1);
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('admin', 'adminadmin', '2008-10-10', '2011-11-25', NULL, 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('admin', 'adminadmin', '2008-10-10', '2011-12-02', NULL, 1);
 
 
 --
--- TOC entry 1851 (class 0 OID 71618)
+-- TOC entry 1851 (class 0 OID 90399)
 -- Dependencies: 136
 -- Data for Name: authusershortcuts; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -190,7 +190,7 @@ INSERT INTO authusershortcuts (username, config) VALUES ('admin', '<?xml version
 
 
 --
--- TOC entry 1852 (class 0 OID 71624)
+-- TOC entry 1852 (class 0 OID 90405)
 -- Dependencies: 137
 -- Data for Name: jpsurvey; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -233,7 +233,7 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 
 
 --
--- TOC entry 1853 (class 0 OID 71630)
+-- TOC entry 1853 (class 0 OID 90411)
 -- Dependencies: 138
 -- Data for Name: jpsurvey_choices; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -385,7 +385,7 @@ INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (24,
 
 
 --
--- TOC entry 1854 (class 0 OID 71636)
+-- TOC entry 1854 (class 0 OID 90417)
 -- Dependencies: 139
 -- Data for Name: jpsurvey_questions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -433,7 +433,7 @@ INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minre
 
 
 --
--- TOC entry 1855 (class 0 OID 71642)
+-- TOC entry 1855 (class 0 OID 90423)
 -- Dependencies: 140
 -- Data for Name: jpsurvey_responses; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -451,7 +451,7 @@ INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES 
 
 
 --
--- TOC entry 1856 (class 0 OID 71645)
+-- TOC entry 1856 (class 0 OID 90426)
 -- Dependencies: 141
 -- Data for Name: jpsurvey_voters; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -461,7 +461,7 @@ INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username
 
 
 --
--- TOC entry 1857 (class 0 OID 71648)
+-- TOC entry 1857 (class 0 OID 90429)
 -- Dependencies: 142
 -- Data for Name: jpuserprofile_authuserprofiles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -481,7 +481,7 @@ INSERT INTO jpuserprofile_authuserprofiles (username, profiletype, profilexml, p
 
 
 --
--- TOC entry 1858 (class 0 OID 71654)
+-- TOC entry 1858 (class 0 OID 90435)
 -- Dependencies: 143
 -- Data for Name: jpuserprofile_profilesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -501,7 +501,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1859 (class 0 OID 71657)
+-- TOC entry 1859 (class 0 OID 90438)
 -- Dependencies: 144
 -- Data for Name: jpwebdynamicform_messageanswers; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -509,7 +509,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1860 (class 0 OID 71663)
+-- TOC entry 1860 (class 0 OID 90444)
 -- Dependencies: 145
 -- Data for Name: jpwebdynamicform_messages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -517,14 +517,14 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1861 (class 0 OID 71669)
+-- TOC entry 1861 (class 0 OID 90450)
 -- Dependencies: 146
 -- Data for Name: jpwebdynamicform_messagesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
--- Completed on 2011-11-29 16:56:54 CET
+-- Completed on 2011-12-02 16:01:03 CET
 
 --
 -- PostgreSQL database dump complete

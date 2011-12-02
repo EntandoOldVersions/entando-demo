@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-11-29 16:56:53 CET
+-- Started on 2011-12-02 16:01:02 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1843 (class 0 OID 70107)
+-- TOC entry 1843 (class 0 OID 88811)
 -- Dependencies: 127
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -39,59 +39,10 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('footerlinks', 'hom
 </properties>
 
 ');
-INSERT INTO categories (catcode, parentcode, titles) VALUES ('factes', 'home', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Facets</property>
-<property key="it">Faccette</property>
-</properties>
-
-');
-INSERT INTO categories (catcode, parentcode, titles) VALUES ('f1', 'factes', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">f1</property>
-<property key="it">f1</property>
-</properties>
-
-');
-INSERT INTO categories (catcode, parentcode, titles) VALUES ('f2', 'factes', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">f2</property>
-<property key="it">f2</property>
-</properties>
-
-');
-INSERT INTO categories (catcode, parentcode, titles) VALUES ('f3', 'factes', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">f3</property>
-<property key="it">f3</property>
-</properties>
-
-');
-INSERT INTO categories (catcode, parentcode, titles) VALUES ('f11', 'f1', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="it">f1-1</property>
-<property key="en">f1-1</property>
-</properties>
-
-');
-INSERT INTO categories (catcode, parentcode, titles) VALUES ('f111', 'f11', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="it">f1-1-1</property>
-<property key="en">f1-1-1</property>
-</properties>
-
-');
-INSERT INTO categories (catcode, parentcode, titles) VALUES ('f1111', 'f111', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="it">f1-1-1-1</property>
-<property key="en">f1-1-1-1</property>
-</properties>
-
-');
 
 
 --
--- TOC entry 1844 (class 0 OID 70113)
+-- TOC entry 1844 (class 0 OID 88817)
 -- Dependencies: 128
 -- Data for Name: contentmodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -408,7 +359,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 
 
 --
--- TOC entry 1845 (class 0 OID 70119)
+-- TOC entry 1845 (class 0 OID 88823)
 -- Dependencies: 129
 -- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -474,27 +425,10 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'administrators');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, '39', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG61', NULL, NULL, NULL, 'factes', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG61', NULL, NULL, NULL, 'f1', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG61', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG62', NULL, NULL, NULL, 'factes', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG62', NULL, NULL, NULL, 'f1', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG62', NULL, NULL, NULL, 'f2', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG62', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG63', NULL, NULL, NULL, 'factes', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG63', NULL, NULL, NULL, 'f3', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG63', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f11', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f1111', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'factes', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f1', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f111', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, 'f3', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG64', NULL, NULL, NULL, NULL, 'free');
 
 
 --
--- TOC entry 1846 (class 0 OID 70122)
+-- TOC entry 1846 (class 0 OID 88826)
 -- Dependencies: 130
 -- Data for Name: contents; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -841,30 +775,10 @@ The best ideas bubble up to the top. Provide your responses within Community, Do
 <p><strong>The best ideas bubble up to the top. </strong></p>
 <p>Provide your responses within these Entando categories: <strong>Community</strong>, <strong>Documentation</strong>, <strong>Core</strong> <strong>Features</strong> and <strong>Plugins</strong>.</p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="18" lang="en" /><text lang="it">Logo Ideascale</text><text lang="en">Ideascale Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="26" lang="en" /><text lang="it">Contribuisci</text><text lang="en">Contribute</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link"><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://japsplatform.ideascale.com/</urldest></link><text lang="it">Condividi la tua idea sul progetto Entando</text><text lang="en">Share your Idea for Entando Project</text></attribute></list></attributes><status>PUBLIC</status><version>4.0</version><lastEditor>jeff</lastEditor><created>20110926141219</created><lastModified>20110927183550</lastModified></content>
 ', 'free', '4.0', 'jeff');
-INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG61', 'CNG', 'facet test 1 - f1', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG61" typecode="CNG" typedescr="Generic Content"><descr>facet test 1 - f1</descr><groups mainGroup="free" /><categories><category id="f1" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 1 - f1</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104556</created><lastModified>20111125104556</lastModified></content>
-', '20111125104556', '20111125104556', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG61" typecode="CNG" typedescr="Generic Content"><descr>facet test 1 - f1</descr><groups mainGroup="free" /><categories><category id="f1" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 1 - f1</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104556</created><lastModified>20111125104556</lastModified></content>
-', 'free', '1.0', 'admin');
-INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG62', 'CNG', 'facet test 2 - f1/f2', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG62" typecode="CNG" typedescr="Generic Content"><descr>facet test 2 - f1/f2</descr><groups mainGroup="free" /><categories><category id="f1" /><category id="f2" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 1 - f1/f2</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104623</created><lastModified>20111125104623</lastModified></content>
-', '20111125104623', '20111125104623', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG62" typecode="CNG" typedescr="Generic Content"><descr>facet test 2 - f1/f2</descr><groups mainGroup="free" /><categories><category id="f1" /><category id="f2" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 1 - f1/f2</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104623</created><lastModified>20111125104623</lastModified></content>
-', 'free', '1.0', 'admin');
-INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG63', 'CNG', 'facet test 1 - f3', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG63" typecode="CNG" typedescr="Generic Content"><descr>facet test 1 - f3</descr><groups mainGroup="free" /><categories><category id="f3" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 3 - f3</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104711</created><lastModified>20111125104711</lastModified></content>
-', '20111125104711', '20111125104711', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG63" typecode="CNG" typedescr="Generic Content"><descr>facet test 1 - f3</descr><groups mainGroup="free" /><categories><category id="f3" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 3 - f3</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>admin</lastEditor><created>20111125104711</created><lastModified>20111125104711</lastModified></content>
-', 'free', '1.0', 'admin');
-INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG64', 'CNG', 'facet test 4 - f1-1-1-1', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG64" typecode="CNG" typedescr="Generic Content"><descr>facet test 4 - f1-1-1-1</descr><groups mainGroup="free" /><categories><category id="f1111" /><category id="f3" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 3 - f3</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>2.0</version><lastEditor>admin</lastEditor><created>20111125105503</created><lastModified>20111125112919</lastModified></content>
-', '20111125105503', '20111125112919', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG64" typecode="CNG" typedescr="Generic Content"><descr>facet test 4 - f1-1-1-1</descr><groups mainGroup="free" /><categories><category id="f1111" /><category id="f3" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="en">facet test 3 - f3</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>2.0</version><lastEditor>admin</lastEditor><created>20111125105503</created><lastModified>20111125112919</lastModified></content>
-', 'free', '2.0', 'admin');
 
 
 --
--- TOC entry 1847 (class 0 OID 70128)
+-- TOC entry 1847 (class 0 OID 88832)
 -- Dependencies: 131
 -- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -926,18 +840,10 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG61', 'Title', 'facet test 1 - f1', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG61', 'Title', 'facet test 1 - f1', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG62', 'Title', 'facet test 1 - f1/f2', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG62', 'Title', 'facet test 1 - f1/f2', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG63', 'Title', 'facet test 3 - f3', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG63', 'Title', 'facet test 3 - f3', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG64', 'Title', 'facet test 3 - f3', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG64', 'Title', 'facet test 3 - f3', NULL, NULL, 'it');
 
 
 --
--- TOC entry 1848 (class 0 OID 70131)
+-- TOC entry 1848 (class 0 OID 88835)
 -- Dependencies: 132
 -- Data for Name: jpcontentfeedback_comments; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -945,7 +851,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1849 (class 0 OID 70137)
+-- TOC entry 1849 (class 0 OID 88841)
 -- Dependencies: 133
 -- Data for Name: jpcontentfeedback_rating; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -953,7 +859,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1850 (class 0 OID 70140)
+-- TOC entry 1850 (class 0 OID 88844)
 -- Dependencies: 134
 -- Data for Name: jpmyportalplus_userpageconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1082,7 +988,7 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 
 
 --
--- TOC entry 1851 (class 0 OID 70147)
+-- TOC entry 1851 (class 0 OID 88851)
 -- Dependencies: 135
 -- Data for Name: localstrings; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1669,8 +1575,6 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LIST', 'en', 'List');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_COM', 'it', 'Form Azienda');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_COM', 'en', 'Company Form');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_PER', 'it', 'Form per Privati');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_PER', 'en', 'Private User Form');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_ATTACH', 'en', 'New File');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_ATTACH', 'it', 'Nuovo File');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_IMAGE', 'it', 'Nuovo File');
@@ -1687,20 +1591,34 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Title', 'it', 'Titolo');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Abstract', 'en', 'Abstract');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Abstract', 'it', 'Estratto');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_REMOVE_FILTER', 'it', 'Rimuovi');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_REMOVE_FILTER', 'en', 'Remove');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_TITLE_TREE', 'it', 'Albero delle Faccette');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_TITLE_TREE', 'en', 'Facet Tree');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_TITLE_FACET_RESULTS', 'it', 'Faccette');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_TITLE_FACET_RESULTS', 'en', 'Facets');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_OCCURRENCES_FOR', 'it', 'Numero occorrenze per');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_OCCURRENCES_FOR', 'en', 'Occurences for');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_EMPTY_TAG', 'it', 'Nussuna occorrenza per');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfacetnav_EMPTY_TAG', 'en', 'No items for');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('MESSAGE_TITLE_FIELDERRORS', 'en', 'Error');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('MESSAGE_TITLE_FIELDERRORS', 'it', 'Errore');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Name', 'en', 'Name');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Name', 'it', 'Nome');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Surname', 'en', 'Surname');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Surname', 'it', 'Cognome');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Address', 'en', 'Address');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Address', 'it', 'Indirizzo');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_eMail', 'en', 'Email');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_eMail', 'it', 'Email');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Date', 'en', 'Birthday');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Date', 'it', 'Data di nascita');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Number', 'en', 'Height (cm)');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Number', 'it', 'Altezza (cm)');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Text', 'en', 'Personal WebSite');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Text', 'it', 'Sito Personale');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Longtext', 'en', 'Note');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Longtext', 'it', 'Note');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_SAVE', 'en', 'Send');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_SAVE', 'it', 'Invia');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Enumerator', 'en', 'Contract Type');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Enumerator', 'it', 'Tipo Contratto');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_PER', 'en', 'User Form');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_PER', 'it', 'Form Utente');
 
 
 --
--- TOC entry 1852 (class 0 OID 70153)
+-- TOC entry 1852 (class 0 OID 88857)
 -- Dependencies: 136
 -- Data for Name: pagemodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2359,7 +2277,7 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('home', 'Home P
 
 
 --
--- TOC entry 1853 (class 0 OID 70159)
+-- TOC entry 1853 (class 0 OID 88863)
 -- Dependencies: 137
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2587,22 +2505,10 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 </config>
 
 ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('facetnav', 'homepage', 6, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Faceted Navigation</property>
-<property key="it">Navigazione Faccette</property>
-</properties>
-
-', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>true</useextratitles>
-</config>
-
-');
 
 
 --
--- TOC entry 1854 (class 0 OID 70165)
+-- TOC entry 1854 (class 0 OID 88869)
 -- Dependencies: 138
 -- Data for Name: resourcerelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2610,7 +2516,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1855 (class 0 OID 70168)
+-- TOC entry 1855 (class 0 OID 88872)
 -- Dependencies: 139
 -- Data for Name: resources; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2702,7 +2608,7 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 
 
 --
--- TOC entry 1856 (class 0 OID 70174)
+-- TOC entry 1856 (class 0 OID 88878)
 -- Dependencies: 140
 -- Data for Name: showletcatalog; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2991,26 +2897,6 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	</parameter> 
 <action name="viewerContentFeedbackConfig"/>
 </config>', 'jpcontentfeedback', NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_pollArchive', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Polls - Polls Archive</property>
-<property key="it">Sondaggi - Archivio dei Sondaggi</property>
-</properties>', NULL, 'jpsurvey', NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_pollList', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Polls - Active List</property>
-<property key="it">Sondaggi - Lista Sondaggi Attivi</property>
-</properties>', NULL, 'jpsurvey', NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_questionnaireArchive', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Questionnaires - Questionnaires Archive</property>
-<property key="it">Questionari - Archivio dei Questionari</property>
-</properties>', NULL, 'jpsurvey', NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_questionnaireList', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Questionnaires - Active List</property>
-<property key="it">Questionari - Lista Questionari Attivi</property>
-</properties>', NULL, 'jpsurvey', NULL, NULL, 1, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_detailsSurvey', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Questionnaire/Survey - Details</property>
@@ -3057,33 +2943,38 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 </properties>
 
 ', 0, 'free');
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfacetnav_results', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_pollList', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
-<property key="en">Results</property>
-<property key="it">Risultati Ricerca</property>
-</properties>', '<config>
-	<parameter name="contentTypesFilter">
-		Tipi di contenuto dei risultati da erogare (OPZIONALE)
-	</parameter>
-	<action name="facetNavResultConfig"/>
-</config>', 'jpfacetnav', NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfacetnav_tree', '<?xml version="1.0" encoding="UTF-8"?>
+<property key="en">Polls</property>
+<property key="it">Sondaggi</property>
+</properties>
+
+', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_questionnaireList', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
-<property key="en">Facets Tree</property>
-<property key="it">Albero delle faccette</property>
-</properties>', '<config>
-	<parameter name="facetRootNodes">
-		Facet Category Root
-	</parameter>
-	<parameter name="contentTypesFilter">
-		Content Type (optional)
-	</parameter>
-	<action name="facetNavTreeConfig"/>
-</config>', 'jpfacetnav', NULL, NULL, 1, NULL);
+<property key="en">Questionnaires</property>
+<property key="it">Questionari</property>
+</properties>
+
+', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_pollArchive', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Polls Archive</property>
+<property key="it">Archivio dei Sondaggi</property>
+</properties>
+
+', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_questionnaireArchive', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Questionnaires Archive</property>
+<property key="it">Archivio Questionari</property>
+</properties>
+
+', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
 
 
 --
--- TOC entry 1857 (class 0 OID 70180)
+-- TOC entry 1857 (class 0 OID 88884)
 -- Dependencies: 141
 -- Data for Name: showletconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3536,33 +3427,10 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 ', NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 36, 'jpsharewith', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 0, 'navigation_langbar', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 1, 'login_form', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 4, 'search_form', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 10, 'navigation_menu', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="navSpec">code(homepage).subtree(1)</property>
-</properties>
-
-', NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 36, 'jpsharewith', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 14, 'jpfacetnav_tree', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="facetRootNodes">factes</property>
-<property key="contentTypesFilter">CNG</property>
-</properties>
-
-', NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('facetnav', 15, 'jpfacetnav_results', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="contentTypesFilter">CNG</property>
-</properties>
-
-', NULL);
 
 
 --
--- TOC entry 1858 (class 0 OID 70186)
+-- TOC entry 1858 (class 0 OID 88890)
 -- Dependencies: 142
 -- Data for Name: sysconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3655,37 +3523,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpus
 </profiletypes>
 
 ');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpwebdynamicform_messageTypes', 'Definizione dei Tipi di Messaggio', '<messagetypes>
-    <messagetype typecode="PER" typedescr="Person Form" >
-        <attributes>
-            <attribute name="Name" attributetype="Monotext" searcheable="true" required="true" />
-            <attribute name="Surname" attributetype="Monotext" searcheable="true" required="true" />
-            <attribute name="Address" attributetype="Monotext" searcheable="false" required="false" />
-            <attribute name="eMail" attributetype="Monotext" searcheable="false" required="true" >
-                <regexp><![CDATA[(.*<.+@.+.[a-z]+>)|(.+@.+.[a-z]+)]]></regexp>
-            </attribute>
-            <attribute name="Note" attributetype="Monotext" searcheable="false" required="true" />
-            <attribute name="Date" attributetype="Date" searcheable="false" required="true" />
-            <attribute name="Number" attributetype="Number" searcheable="false" required="true" />
-            <attribute name="Enumerator" attributetype="Enumerator" searcheable="false" required="true" ><![CDATA[Opzione A,Opzione B,Opzione C,Opzione D,Opzione E,Opzione F,Opzione G]]></attribute>
-            <attribute name="Text" attributetype="Text" searcheable="false" required="true" />
-            <attribute name="Longtext" attributetype="Longtext" searcheable="false" required="true" />
-            <attribute name="Boolean" attributetype="Boolean" searcheable="false" required="true" />
-            <attribute name="CheckBox" attributetype="CheckBox" searcheable="false" required="true" />
-            <attribute name="ThreeState" attributetype="ThreeState" searcheable="false" required="true" />
-        </attributes>
-    </messagetype>
-    <messagetype typecode="COM" typedescr="Company Form" >
-        <attributes>
-            <attribute name="Company" attributetype="Monotext" searcheable="true" required="true" />
-            <attribute name="Address" attributetype="Monotext" searcheable="false" required="false" />
-            <attribute name="eMail" attributetype="Monotext" searcheable="false" required="true" >
-                <regexp><![CDATA[(.*<.+@.+.[a-z]+>)|(.+@.+.[a-z]+)]]></regexp>
-            </attribute>
-            <attribute name="Note" attributetype="Monotext" searcheable="false" required="true" />
-        </attributes>
-    </messagetype>
-</messagetypes>');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpwebdynamicform_messageNotifierConfig', 'Configurazione del servizio di notifica Messaggi', '<messagetypes>
     <messagetype typeCode="PER" senderCode="CODE1" mailAttrName="eMail" >
         <recipients>
@@ -3730,9 +3567,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpma
 		<password></password>
 	</smtp>
 </mailConfig>');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpmyportalplus_config', 'Definizione degli oggetti configurabili di My Portal', '<?xml version="1.0" encoding="UTF-8"?>
-<myportalConfig><showlets><showlet code="latest_video" /><showlet code="jpsurvey_questionnaireList" /><showlet code="form_list" /><showlet code="jpsurvey_pollList" /><showlet code="latest_events" /><showlet code="Task" /><showlet code="latest_news" /><showlet code="documents_list" /><showlet code="inEvidenza" /></showlets></myportalConfig>
-');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'contentTypes', 'Definition of the Content Types', '<?xml version="1.0" encoding="UTF-8"?>
 <contenttypes>
 	<contenttype typecode="CNG" typedescr="Generic Content" viewpage="contentsview" listmodel="31" defaultmodel="3">
@@ -3946,11 +3780,82 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 </contenttypes>
 
 ');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20111129161425');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20111202151052');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpmyportalplus_config', 'Definizione degli oggetti configurabili di My Portal', '<?xml version="1.0" encoding="UTF-8"?>
+<myportalConfig><showlets><showlet code="latest_video" /><showlet code="jpsurvey_questionnaireList" /><showlet code="form_list" /><showlet code="jpsurvey_pollList" /><showlet code="latest_events" /><showlet code="latest_news" /><showlet code="documents_list" /><showlet code="inEvidenza" /></showlets></myportalConfig>
+');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpwebdynamicform_messageTypes', 'Definizione dei Tipi di Messaggio', '<?xml version="1.0" encoding="UTF-8"?>
+<messagetypes>
+	<messagetype typecode="COM" typedescr="Company Form">
+		<attributes>
+			<attribute name="Company" attributetype="Monotext" searcheable="true">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="Address" attributetype="Monotext" />
+			<attribute name="eMail" attributetype="Monotext">
+				<validations>
+					<required>true</required>
+					<regexp><![CDATA[(.*<.+@.+.[a-z]+>)|(.+@.+.[a-z]+)]]></regexp>
+				</validations>
+			</attribute>
+			<attribute name="Note" attributetype="Monotext">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+		</attributes>
+	</messagetype>
+	<messagetype typecode="PER" typedescr="Person Form">
+		<attributes>
+			<attribute name="Name" attributetype="Monotext" searcheable="true">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="Surname" attributetype="Monotext" searcheable="true">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="Address" attributetype="Monotext" />
+			<attribute name="eMail" attributetype="Monotext">
+				<validations>
+					<required>true</required>
+					<regexp><![CDATA[(.*<.+@.+.[a-z]+>)|(.+@.+.[a-z]+)]]></regexp>
+				</validations>
+			</attribute>
+			<attribute name="Date" attributetype="Date">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="Number" attributetype="Number">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="Enumerator" attributetype="Enumerator" separator=",">
+				<validations>
+					<required>true</required>
+				</validations>
+				<![CDATA[Opzione A,Opzione B,Opzione C,Opzione D,Opzione E,Opzione F,Opzione G]]>
+			</attribute>
+			<attribute name="Longtext" attributetype="Longtext">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+		</attributes>
+	</messagetype>
+</messagetypes>
+
+');
 
 
 --
--- TOC entry 1859 (class 0 OID 70192)
+-- TOC entry 1859 (class 0 OID 88896)
 -- Dependencies: 143
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3959,30 +3864,17 @@ INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 64);
 
 
 --
--- TOC entry 1860 (class 0 OID 70195)
+-- TOC entry 1860 (class 0 OID 88899)
 -- Dependencies: 144
 -- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW15', 'events');
 INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW11', 'events');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG61', 'factes');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG61', 'f1');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG62', 'factes');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG62', 'f1');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG62', 'f2');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG63', 'factes');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG63', 'f3');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f11');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f1111');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'factes');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f1');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f111');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('CNG64', 'f3');
 
 
 --
--- TOC entry 1861 (class 0 OID 70198)
+-- TOC entry 1861 (class 0 OID 88902)
 -- Dependencies: 145
 -- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -4044,17 +3936,9 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG61', 'Title', 'facet test 1 - f1', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG61', 'Title', 'facet test 1 - f1', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG62', 'Title', 'facet test 1 - f1/f2', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG62', 'Title', 'facet test 1 - f1/f2', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG63', 'Title', 'facet test 3 - f3', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG63', 'Title', 'facet test 3 - f3', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG64', 'Title', 'facet test 3 - f3', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG64', 'Title', 'facet test 3 - f3', NULL, NULL, 'it');
 
 
--- Completed on 2011-11-29 16:56:53 CET
+-- Completed on 2011-12-02 16:01:02 CET
 
 --
 -- PostgreSQL database dump complete
