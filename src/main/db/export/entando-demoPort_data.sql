@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-12-02 16:01:02 CET
+-- Started on 2011-12-19 18:09:37 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1843 (class 0 OID 88811)
+-- TOC entry 1843 (class 0 OID 113873)
 -- Dependencies: 127
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -42,7 +42,7 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('footerlinks', 'hom
 
 
 --
--- TOC entry 1844 (class 0 OID 88817)
+-- TOC entry 1844 (class 0 OID 113879)
 -- Dependencies: 128
 -- Data for Name: contentmodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -359,19 +359,20 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 
 
 --
--- TOC entry 1845 (class 0 OID 88823)
+-- TOC entry 1845 (class 0 OID 113885)
 -- Dependencies: 129
 -- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, '54', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '13', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '28', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '28', NULL, NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST2', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST4', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST3', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '27', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '28', NULL, NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, 'events', NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '14', NULL, NULL);
@@ -380,10 +381,6 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '16', NULL, NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '25', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '13', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '27', NULL, NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, NULL, NULL, 'administrators');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, '32', NULL, NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'intranet');
@@ -399,9 +396,10 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '18', NULL, NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '26', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, '54', NULL, NULL);
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, '57', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG59', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG55', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('YTB58', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'intranet');
@@ -425,95 +423,15 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'free');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'administrators');
 INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, '39', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG59', NULL, NULL, NULL, NULL, 'free');
 
 
 --
--- TOC entry 1846 (class 0 OID 88826)
+-- TOC entry 1846 (class 0 OID 113888)
 -- Dependencies: 130
 -- Data for Name: contents; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('NEW17', 'NEW', 'Release of jAPS 2.0 Entando version 2.2.2', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="NEW17" typecode="NEW" typedescr="News"><descr>Release of jAPS 2.0 Entando version 2.2.2</descr><groups mainGroup="free"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Rilascio jAPS 2.0 Entando versione 2.2.2</text><text lang="en">Release of Entando version 2.2.2</text></attribute><attribute name="Date" attributetype="Date"><date>20110907</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Tzente è lieta di annunciare il rilascio della piattaforma Entando versione 2.2.2. La nuova release è disponibile per il download su Sourceforge.</text><text lang="en">Tzente S.r.l. is proud to announce the release of Entando, version 2.2.2. The new release is available for download on Sourceforge.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="it"><![CDATA[<p>Tzente &egrave; lieta di annunciare il rilascio di<strong> Entando versione 2.2.2</strong>. La nuova release &egrave; disponibile per il download su <a href="#!U;http://sourceforge.net/projects/japs/files/!#">Sourceforge</a>.</p>
-<p>Tra le principali novit&agrave; di questa nuova versione segnaliamo:</p>
-<ul>
-    <li>Nuova Interfaccia Area Amministrazione: Dettaglio Categoria</li>
-    <li>Nuova Interfaccia Area Amministrazione: Dettaglio Gruppo</li>
-    <li>Funzionalit&agrave; per modifica file delle singole risorse del CMS</li>
-    <li>Funzionalit&agrave; per ricaricare le istanze delle risorse immagine</li>
-    <li>Funzionalit&agrave; per la modifica dei parametri delle user showlet</li>
-    <li>Evoluzione dell''interfaccia gui per il modello di contenuto</li>
-    <li>Evoluzione della showlet &quot;Lista contenuti&quot;; aggiunta di nuovi parametri: titoli, extra link, opzioni per filtri utente</li>
-    <li>Evoluzione dell''interfaccia &quot;Modifica Risorsa&quot;; aggiunta interfaccia delle referenze dei contenuti</li>
-</ul>
-<p>In questa nuova versione abbiamo aggiunto anche la possibilit&agrave; di avere nuovi<strong> shortcut dal fornt-end verso l''area di amministrazione</strong>. Un esempio di come sia possibile realizzarli &egrave; disponibile nella distribuzione del PortalExample.</p>
-<p>Sono disponibili per il download i seguenti package:</p>
-<ul>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20src/jAPS2.0_entando-2.2.2-src/!#">jAPS 2.0 entando SRC</a></li>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20PortalExample%20Project/jAPS2.0_entando-2.2.2-PortalExample-Project/!#">jAPS 2.0 entando PortalExample Project</a></li>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20jAPSIntra%20Project/jAPS2.0_entando-2.2.2-jAPSIntra-Project/!#">jAPS 2.0 entando jAPSIntra Project</a></li>
-</ul>
-<p>Maggiori informazioni sulle funzionalit&agrave; della nuova versione sono disponibili nel file <strong>ChangeLog</strong> all''interno dei package.</p>]]></hypertext><hypertext lang="en"><![CDATA[<p>Tzente S.r.l. is proud to announce the release of<strong> Entando</strong>, <strong>version 2.2.2</strong>. The new release is available for download on <a href="#!U;http://sourceforge.net/projects/japs/files/!#">Sourceforge</a>.</p>
-<p>Here some of the main innovations of this new version:</p>
-<ul>
-    <li>New Admin Area Interface: Category Detail</li>
-    <li>New Admin Area Interface: Group Detail</li>
-    <li>Function for changing file for single cms resource</li>
-    <li>Function for reloading image resource instances</li>
-    <li>Function for changing the parameters of the user showlets</li>
-    <li>Improvement of content model gui interface</li>
-    <li>Improvement of &quot;content list&quot; showlet; added new parameters: titles, extra link, user filter options</li>
-    <li>Improvement of &quot;edit Resource&quot; interface; added content references interface</li>
-</ul>
-<p>In this new version we added the option to have new <strong>shortcut from the front-end to the administration area</strong>. An example of how to realize the shortcut is available in PortalExample package.</p>
-<p>On Sourceforge are available the following <strong>packages</strong>:</p>
-<ul>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20src/jAPS2.0_entando-2.2.2-src/!#">jAPS 2.0 entando SRC</a></li>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20PortalExample%20Project/jAPS2.0_entando-2.2.2-PortalExample-Project/!#">jAPS 2.0 entando PortalExample Project</a></li>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20jAPSIntra%20Project/jAPS2.0_entando-2.2.2-jAPSIntra-Project/!#">jAPS 2.0 entando jAPSIntra Project</a></li>
-</ul>
-<p>More information about the features of the new version are available in the<strong> ChangeLog file</strong> inside the package<strong>.</strong></p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="27" lang="en" /><text lang="en">Entando Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="28" lang="en" /><text lang="en">Entando Logo</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>3.0</version><lastEditor>jeff</lastEditor><created>20110926140558</created><lastModified>20110926155018</lastModified></content>
-', '20110926140558', '20110926155018', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="NEW17" typecode="NEW" typedescr="News"><descr>Release of jAPS 2.0 Entando version 2.2.2</descr><groups mainGroup="free"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Rilascio jAPS 2.0 Entando versione 2.2.2</text><text lang="en">Release of Entando version 2.2.2</text></attribute><attribute name="Date" attributetype="Date"><date>20110907</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Tzente è lieta di annunciare il rilascio della piattaforma Entando versione 2.2.2. La nuova release è disponibile per il download su Sourceforge.</text><text lang="en">Tzente S.r.l. is proud to announce the release of Entando, version 2.2.2. The new release is available for download on Sourceforge.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="it"><![CDATA[<p>Tzente &egrave; lieta di annunciare il rilascio di<strong> Entando versione 2.2.2</strong>. La nuova release &egrave; disponibile per il download su <a href="#!U;http://sourceforge.net/projects/japs/files/!#">Sourceforge</a>.</p>
-<p>Tra le principali novit&agrave; di questa nuova versione segnaliamo:</p>
-<ul>
-    <li>Nuova Interfaccia Area Amministrazione: Dettaglio Categoria</li>
-    <li>Nuova Interfaccia Area Amministrazione: Dettaglio Gruppo</li>
-    <li>Funzionalit&agrave; per modifica file delle singole risorse del CMS</li>
-    <li>Funzionalit&agrave; per ricaricare le istanze delle risorse immagine</li>
-    <li>Funzionalit&agrave; per la modifica dei parametri delle user showlet</li>
-    <li>Evoluzione dell''interfaccia gui per il modello di contenuto</li>
-    <li>Evoluzione della showlet &quot;Lista contenuti&quot;; aggiunta di nuovi parametri: titoli, extra link, opzioni per filtri utente</li>
-    <li>Evoluzione dell''interfaccia &quot;Modifica Risorsa&quot;; aggiunta interfaccia delle referenze dei contenuti</li>
-</ul>
-<p>In questa nuova versione abbiamo aggiunto anche la possibilit&agrave; di avere nuovi<strong> shortcut dal fornt-end verso l''area di amministrazione</strong>. Un esempio di come sia possibile realizzarli &egrave; disponibile nella distribuzione del PortalExample.</p>
-<p>Sono disponibili per il download i seguenti package:</p>
-<ul>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20src/jAPS2.0_entando-2.2.2-src/!#">jAPS 2.0 entando SRC</a></li>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20PortalExample%20Project/jAPS2.0_entando-2.2.2-PortalExample-Project/!#">jAPS 2.0 entando PortalExample Project</a></li>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20jAPSIntra%20Project/jAPS2.0_entando-2.2.2-jAPSIntra-Project/!#">jAPS 2.0 entando jAPSIntra Project</a></li>
-</ul>
-<p>Maggiori informazioni sulle funzionalit&agrave; della nuova versione sono disponibili nel file <strong>ChangeLog</strong> all''interno dei package.</p>]]></hypertext><hypertext lang="en"><![CDATA[<p>Tzente S.r.l. is proud to announce the release of<strong> Entando</strong>, <strong>version 2.2.2</strong>. The new release is available for download on <a href="#!U;http://sourceforge.net/projects/japs/files/!#">Sourceforge</a>.</p>
-<p>Here some of the main innovations of this new version:</p>
-<ul>
-    <li>New Admin Area Interface: Category Detail</li>
-    <li>New Admin Area Interface: Group Detail</li>
-    <li>Function for changing file for single cms resource</li>
-    <li>Function for reloading image resource instances</li>
-    <li>Function for changing the parameters of the user showlets</li>
-    <li>Improvement of content model gui interface</li>
-    <li>Improvement of &quot;content list&quot; showlet; added new parameters: titles, extra link, user filter options</li>
-    <li>Improvement of &quot;edit Resource&quot; interface; added content references interface</li>
-</ul>
-<p>In this new version we added the option to have new <strong>shortcut from the front-end to the administration area</strong>. An example of how to realize the shortcut is available in PortalExample package.</p>
-<p>On Sourceforge are available the following <strong>packages</strong>:</p>
-<ul>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20src/jAPS2.0_entando-2.2.2-src/!#">jAPS 2.0 entando SRC</a></li>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20PortalExample%20Project/jAPS2.0_entando-2.2.2-PortalExample-Project/!#">jAPS 2.0 entando PortalExample Project</a></li>
-    <li><a href="#!U;http://sourceforge.net/projects/japs/files/jAPS%202.0%20entando%20jAPSIntra%20Project/jAPS2.0_entando-2.2.2-jAPSIntra-Project/!#">jAPS 2.0 entando jAPSIntra Project</a></li>
-</ul>
-<p>More information about the features of the new version are available in the<strong> ChangeLog file</strong> inside the package<strong>.</strong></p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="27" lang="en" /><text lang="en">Entando Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="28" lang="en" /><text lang="en">Entando Logo</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>3.0</version><lastEditor>jeff</lastEditor><created>20110926140558</created><lastModified>20110926155018</lastModified></content>
-', 'free', '3.0', 'jeff');
 INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('NEW15', 'NEW', 'LIVE EVENT - Portal and Business Intelligence: across organizational boundaries', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
 <content id="NEW15" typecode="NEW" typedescr="News"><descr>LIVE EVENT - Portal and Business Intelligence: across organizational boundaries</descr><groups mainGroup="free"><group name="free" /></groups><categories><category id="events" /></categories><attributes><attribute name="Title" attributetype="Text"><text lang="it">EVENTO LIVE - Il Portale e la Business Intelligence: oltre i confini dell''organizzazione</text><text lang="en">LIVE EVENT - Portal and Business Intelligence: across organizational boundaries</text></attribute><attribute name="Date" attributetype="Date"><date>20110929</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Tzente, Pentaho e Bnova sono lieti di annunciare l''evento live dal titolo "Il Portale e la Business Intelligence: oltre i confini dell''organizzazione" che si svolgerà il 29 Settembre a Roma.</text><text lang="en">Tzente, Pentaho and Bnova are pleased to announce the live event "Portal and Business Intelligence: across organizational boundaries" which will be held on the 29th of September in Rome.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="it"><![CDATA[<p><strong>Tzente</strong>, <strong>Pentaho</strong> e <strong>Bnova</strong> sono liete di annunciare il primo evento congiunto in cui verranno presentati i benefici di un sistema integrato<strong> Portal &amp; BI</strong> per una moderna <strong>organizzazione 2.0</strong>.</p>
 <p>Immaginiamo un''organizzazione in cui l''accesso alle informazioni strutturate diventa pi&ugrave; semplice, immediato e personalizzato grazie all''utilizzo di <strong>Internet</strong> e <strong>dispositivi Mobile</strong>, pensiamo a un <strong>miglioramento</strong> <strong>della produttivit&agrave;</strong> e immaginiamo ancora una <strong>condivisione dei processi </strong>aziendali dinamica, veloce oltre i confini dell''organizzazione.</p>
@@ -635,6 +553,39 @@ INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, l
 ', '20111116175139', '20111116175139', '<?xml version="1.0" encoding="UTF-8"?>
 <content id="YTB58" typecode="YTB" typedescr="Youtube Video"><descr>Entando Backoffice</descr><groups mainGroup="free" /><categories /><attributes><attribute name="VideoCode" attributetype="Text"><text lang="en">sU7fHpQokW4</text></attribute><attribute name="Title" attributetype="Text"><text lang="en">Entando Backoffice Demo</text></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="en">Backoffice preview.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="en"><![CDATA[<p>Backoffice preview.</p>]]></hypertext></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>jeff</lastEditor><created>20111116175139</created><lastModified>20111116175139</lastModified></content>
 ', 'free', '1.0', 'jeff');
+INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('NEW17', 'NEW', 'Release of Entando version 2.4.0.1', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="NEW17" typecode="NEW" typedescr="News"><descr>Release of Entando version 2.4.0.1</descr><groups mainGroup="free"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Rilascio di Entando versione 2.4.0.1</text><text lang="en">Release of Entando version 2.4.0.1</text></attribute><attribute name="Date" attributetype="Date"><date>20111207</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Entando 2.4.0.1, la nuova versione della piattaforma web Entando è stata rilasciata oggi ed è disponibile su GitHub, che si è affermato come l’hosting di progetti open source più apprezzato dell''ultimo anno.</text><text lang="en">Entando 2.4.0.1, the new version of Entando web platform, has just been released and it is now available to download on GitHub.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="it"><![CDATA[<p><strong>Entando 2.4.0.1</strong>, la nuova versione della piattaforma web Entando <strong>&egrave;  stata rilasciata </strong>oggi ed &egrave; disponibile su <a href="#!U;http://github.com/entando/!#"><strong>GitHub</strong></a>, che si &egrave; affermato come l&rsquo;hosting di progetti open source pi&ugrave; apprezzato dell''ultimo anno.</p>
+<p>E'' caratterizzata dal nuovo <strong>sistema di API Services</strong> per implementare facilmente servizi web e sar&agrave; accompagnata a breve dall''uscita di <strong>MyEntando</strong>, l''applicazione mobile gratuita per un''esperienza di navigazione personalizzata.</p>
+<p>L''introduzione del sistema di API Services garantisce agli amministratori di un portale piena libert&agrave; di creare applicazioni, senza bisogno di competenze tecniche. La funzionalit&agrave; integrata di ''mapping'' consente di effettuare una ricerca sui contenuti esistenti e creare direttamente da essi l''applicazione corrispondente, con un significativo risparmio di tempo.<br />
+Inoltre, l''utilizzo del <strong>formato dati aperto</strong> estende le <strong>possibilit&agrave; di riuso</strong>, promuovendo ulteriori <strong>opportunit&agrave; di business</strong>.</p>
+<p>Dietro lo sviluppo di Entando 2.4.0.1 c''&egrave; una <strong>maggiore attenzione agli utenti e alle loro esigenze</strong> in un mondo sempre pi&ugrave; interconnesso. Questa stessa attenzione guida il futuro dell''intero progetto.<br />
+&quot; <em>A partire dal rilascio</em> - spiega Diana -<em> jAPS 2.0 Entando si chiamer&agrave; semplicemente Entando, per indicare un punto di svolta nella nostra evoluzione</em>.&quot; <br />
+La piattaforma open source si &egrave; infatti gradualmente spostata dal java agile portal system degli esordi, prima <strong>jAPS</strong> e poi <strong>jAPS 2.0</strong>, per arrivare a <strong>Entando</strong>, una soluzione che aiuta le organizzazioni pubbliche e private a sfruttare i vantaggi della network society.  <br />
+&quot;<em>La tecnologia</em>  - aggiunge Diana - <em>ha cambiato il modo di lavorare e trattare le informazioni di tutti noi, ha reso possibili forme di partecipazione e collaborazione impensabili sino a pochi anni fa. Entando raccoglie l''eredit&agrave; di jAPS per concentrarsi sugli scenari aperti dalle nuove tecnologie piuttosto che sulla tecnologia stessa</em>.&quot;</p>
+<p><strong>La nuova versione di Entando 2.4.0.1 &egrave; stata trasferita su GitHub e Maven, <a href="#!U;http://japsway.blogspot.com/!#">maggiori informazioni sono disponibili qui</a>.</strong></p>]]></hypertext><hypertext lang="en"><![CDATA[<p><strong>Entando 2.4.0.1</strong>, the new version of Entando web platform, has just been released and it is now available to download on <a href="#!U;http://github.com/entando/!#"><strong>GitHub</strong></a>.</p>
+<p>The 2.4.0.1 release features a new user-centered<strong> API Services</strong> <strong>system</strong> to implement web services and it is coupled with the free mobile application MyEntando, that caming soon, to enjoy a made-to-measure mobile experience.</p>
+<p>The introduction of the <strong>API Services system</strong> gives portal administrators full freedom to create web services with no need for technical skills. An integrated ''mapping'' functionality searches for matching content and allows to create the correspondent web application straight from it, with a significant save on time. In addition, the use of the <strong>open data </strong>format consents data re-use to a greater extent, <strong>boosting new business opportunities</strong>.</p>
+<p><strong>Behind the development of Entando 2.4.0.1</strong> there is a <strong>stronger attention to users and their needs</strong> in an interconnected world. The same attention shapes the future of the entire project. <br />
+&quot;<em>From the release</em> - explains Diana -<em> jAPS 2.0 Entando will be named simply Entando, to mark a turning point in our evolution</em>&quot;. The open source web platform has gradually moved on from the early stages of java agile portal system, known as <strong>jAPS</strong> and<strong> jAPS 2.0</strong>, to <strong>Entando</strong>, a solution that helps organisations leverage the opportunities of a network society.  <br />
+&quot;<em>Technology</em>  - adds Diana - <em>has changed the way all of us work and handle information, it has enabled new participation and collaboration practices, unimaginable until not long ago.  Entando collects the jAPS inheritance to focus more on the new scenarios technology opened rather than on technology itself</em>.&quot;</p>
+<p><strong>Entando 2.4.0.1 is also moving on GitHub and Maven, <a href="#!U;http://japsway.blogspot.com/!#">more details here</a>.</strong></p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="28" lang="en" /><text lang="en">Entando Logo</text></attribute><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>5.0</version><lastEditor>jeff</lastEditor><created>20110926140558</created><lastModified>20111207124531</lastModified></content>
+', '20110926140558', '20111207124531', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="NEW17" typecode="NEW" typedescr="News"><descr>Release of Entando version 2.4.0.1</descr><groups mainGroup="free"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Rilascio di Entando versione 2.4.0.1</text><text lang="en">Release of Entando version 2.4.0.1</text></attribute><attribute name="Date" attributetype="Date"><date>20111207</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Entando 2.4.0.1, la nuova versione della piattaforma web Entando è stata rilasciata oggi ed è disponibile su GitHub, che si è affermato come l’hosting di progetti open source più apprezzato dell''ultimo anno.</text><text lang="en">Entando 2.4.0.1, the new version of Entando web platform, has just been released and it is now available to download on GitHub.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="it"><![CDATA[<p><strong>Entando 2.4.0.1</strong>, la nuova versione della piattaforma web Entando <strong>&egrave;  stata rilasciata </strong>oggi ed &egrave; disponibile su <a href="#!U;http://github.com/entando/!#"><strong>GitHub</strong></a>, che si &egrave; affermato come l&rsquo;hosting di progetti open source pi&ugrave; apprezzato dell''ultimo anno.</p>
+<p>E'' caratterizzata dal nuovo <strong>sistema di API Services</strong> per implementare facilmente servizi web e sar&agrave; accompagnata a breve dall''uscita di <strong>MyEntando</strong>, l''applicazione mobile gratuita per un''esperienza di navigazione personalizzata.</p>
+<p>L''introduzione del sistema di API Services garantisce agli amministratori di un portale piena libert&agrave; di creare applicazioni, senza bisogno di competenze tecniche. La funzionalit&agrave; integrata di ''mapping'' consente di effettuare una ricerca sui contenuti esistenti e creare direttamente da essi l''applicazione corrispondente, con un significativo risparmio di tempo.<br />
+Inoltre, l''utilizzo del <strong>formato dati aperto</strong> estende le <strong>possibilit&agrave; di riuso</strong>, promuovendo ulteriori <strong>opportunit&agrave; di business</strong>.</p>
+<p>Dietro lo sviluppo di Entando 2.4.0.1 c''&egrave; una <strong>maggiore attenzione agli utenti e alle loro esigenze</strong> in un mondo sempre pi&ugrave; interconnesso. Questa stessa attenzione guida il futuro dell''intero progetto.<br />
+&quot; <em>A partire dal rilascio</em> - spiega Diana -<em> jAPS 2.0 Entando si chiamer&agrave; semplicemente Entando, per indicare un punto di svolta nella nostra evoluzione</em>.&quot; <br />
+La piattaforma open source si &egrave; infatti gradualmente spostata dal java agile portal system degli esordi, prima <strong>jAPS</strong> e poi <strong>jAPS 2.0</strong>, per arrivare a <strong>Entando</strong>, una soluzione che aiuta le organizzazioni pubbliche e private a sfruttare i vantaggi della network society.  <br />
+&quot;<em>La tecnologia</em>  - aggiunge Diana - <em>ha cambiato il modo di lavorare e trattare le informazioni di tutti noi, ha reso possibili forme di partecipazione e collaborazione impensabili sino a pochi anni fa. Entando raccoglie l''eredit&agrave; di jAPS per concentrarsi sugli scenari aperti dalle nuove tecnologie piuttosto che sulla tecnologia stessa</em>.&quot;</p>
+<p><strong>La nuova versione di Entando 2.4.0.1 &egrave; stata trasferita su GitHub e Maven, <a href="#!U;http://japsway.blogspot.com/!#">maggiori informazioni sono disponibili qui</a>.</strong></p>]]></hypertext><hypertext lang="en"><![CDATA[<p><strong>Entando 2.4.0.1</strong>, the new version of Entando web platform, has just been released and it is now available to download on <a href="#!U;http://github.com/entando/!#"><strong>GitHub</strong></a>.</p>
+<p>The 2.4.0.1 release features a new user-centered<strong> API Services</strong> <strong>system</strong> to implement web services and it is coupled with the free mobile application MyEntando, that caming soon, to enjoy a made-to-measure mobile experience.</p>
+<p>The introduction of the <strong>API Services system</strong> gives portal administrators full freedom to create web services with no need for technical skills. An integrated ''mapping'' functionality searches for matching content and allows to create the correspondent web application straight from it, with a significant save on time. In addition, the use of the <strong>open data </strong>format consents data re-use to a greater extent, <strong>boosting new business opportunities</strong>.</p>
+<p><strong>Behind the development of Entando 2.4.0.1</strong> there is a <strong>stronger attention to users and their needs</strong> in an interconnected world. The same attention shapes the future of the entire project. <br />
+&quot;<em>From the release</em> - explains Diana -<em> jAPS 2.0 Entando will be named simply Entando, to mark a turning point in our evolution</em>&quot;. The open source web platform has gradually moved on from the early stages of java agile portal system, known as <strong>jAPS</strong> and<strong> jAPS 2.0</strong>, to <strong>Entando</strong>, a solution that helps organisations leverage the opportunities of a network society.  <br />
+&quot;<em>Technology</em>  - adds Diana - <em>has changed the way all of us work and handle information, it has enabled new participation and collaboration practices, unimaginable until not long ago.  Entando collects the jAPS inheritance to focus more on the new scenarios technology opened rather than on technology itself</em>.&quot;</p>
+<p><strong>Entando 2.4.0.1 is also moving on GitHub and Maven, <a href="#!U;http://japsway.blogspot.com/!#">more details here</a>.</strong></p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="28" lang="en" /><text lang="en">Entando Logo</text></attribute><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>5.0</version><lastEditor>jeff</lastEditor><created>20110926140558</created><lastModified>20111207124531</lastModified></content>
+', 'free', '5.0', 'jeff');
 INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('DWN38', 'DWN', 'Entando System Requirements', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
 <content id="DWN38" typecode="DWN" typedescr="Scheda Download"><descr>Entando System Requirements</descr><groups mainGroup="administrators"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Entando - Requisiti di sistema</text><text lang="en">Entando System Requirements</text></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Questo documento descrive i dettagli e le versioni dei software che sono compatibili con la piattaforma Entando.</text><text lang="en">This document details hardware and software versions that are compatible with Entando Platform.</text></attribute><attribute name="File" attributetype="Attach"><resource resourcetype="Attach" id="37" lang="en" /><text lang="it">Entando - Requisiti di sistema</text><text lang="en">Entando System Requirements</text></attribute></attributes><status>PUBLIC</status><version>2.0</version><lastEditor>jeff</lastEditor><created>20110926153251</created><lastModified>20110926154813</lastModified></content>
 ', '20110926153251', '20110926154813', '<?xml version="1.0" encoding="UTF-8"?>
@@ -655,17 +606,6 @@ INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, l
 ', '20110926155822', '20110926155822', '<?xml version="1.0" encoding="UTF-8"?>
 <content id="DWN44" typecode="DWN" typedescr="Scheda Download"><descr>Business Plan</descr><groups mainGroup="administrators"><group name="intranet" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Business Plan</text><text lang="en">Business Plan</text></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Questo documento descrive il Business Plan dell''azienda.</text><text lang="en">This document is about the Business Plan of the company</text></attribute><attribute name="File" attributetype="Attach"><resource resourcetype="Attach" id="43" lang="en" /><text lang="it">Business Plan</text><text lang="en">Business Plan</text></attribute></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>jeff</lastEditor><created>20110926155822</created><lastModified>20110926155822</lastModified></content>
 ', 'administrators', '1.0', 'jeff');
-INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('NEW12', 'NEW', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="NEW12" typecode="NEW" typedescr="News"><descr>Entando on Osor.eu, the Open Source Observatory and Repository for the public administration</descr><groups mainGroup="administrators"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="en">Entando on Osor.eu, the Open Source Observatory and Repository for the public administration</text></attribute><attribute name="Date" attributetype="Date"><date>20111006</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="en">The Open Source Observatory and Repository (OSOR) is a website launched by the European Commission under the IDABC programme, to support the distribution and reuse of software developed by or for public sector administrations across Europe, connecting EU services and Member States.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="en"><![CDATA[<p>The <strong>Open Source Observatory and Repository</strong> (OSOR) is a website launched by the <strong>European Commission</strong> under the <strong>IDABC</strong> programme, to support the distribution and reuse of software developed by or for public sector administrations across Europe, connecting EU services and Member States.</p>
-<p>OSOR.eu is a platform for exchanging information, experiences and free, libre and open source software (F/OSS) applications.</p>
-<p>OSOR.eu supports and encourages the collaborative development and re-use of publicly-financed free, libre and open source software (F/OSS) applications developments for use in European public administrations. It also promotes and links to the work of national repositories, encouraging the emergence of a pan-European federation of open source software repositories.</p>
-<p><a href="#!U;http://www.osor.eu/projects/japs2!#">Entando project is published, among others, on OSOR.eu Repository</a>.</p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="13" lang="en" /><text lang="en">Osor Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="27" lang="en" /><text lang="en">Entando Logo</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>5.0</version><lastEditor>jeff</lastEditor><created>20110923185204</created><lastModified>20110927183718</lastModified></content>
-', '20110923185204', '20110927183718', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="NEW12" typecode="NEW" typedescr="News"><descr>Entando on Osor.eu, the Open Source Observatory and Repository for the public administration</descr><groups mainGroup="administrators"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="en">Entando on Osor.eu, the Open Source Observatory and Repository for the public administration</text></attribute><attribute name="Date" attributetype="Date"><date>20111006</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="en">The Open Source Observatory and Repository (OSOR) is a website launched by the European Commission under the IDABC programme, to support the distribution and reuse of software developed by or for public sector administrations across Europe, connecting EU services and Member States.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="en"><![CDATA[<p>The <strong>Open Source Observatory and Repository</strong> (OSOR) is a website launched by the <strong>European Commission</strong> under the <strong>IDABC</strong> programme, to support the distribution and reuse of software developed by or for public sector administrations across Europe, connecting EU services and Member States.</p>
-<p>OSOR.eu is a platform for exchanging information, experiences and free, libre and open source software (F/OSS) applications.</p>
-<p>OSOR.eu supports and encourages the collaborative development and re-use of publicly-financed free, libre and open source software (F/OSS) applications developments for use in European public administrations. It also promotes and links to the work of national repositories, encouraging the emergence of a pan-European federation of open source software repositories.</p>
-<p><a href="#!U;http://www.osor.eu/projects/japs2!#">Entando project is published, among others, on OSOR.eu Repository</a>.</p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="13" lang="en" /><text lang="en">Osor Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="27" lang="en" /><text lang="en">Entando Logo</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>5.0</version><lastEditor>jeff</lastEditor><created>20110923185204</created><lastModified>20110927183718</lastModified></content>
-', 'administrators', '5.0', 'jeff');
 INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('DWN51', 'DWN', 'Customer Agreement', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
 <content id="DWN51" typecode="DWN" typedescr="Scheda Download"><descr>Customer Agreement</descr><groups mainGroup="administrators"><group name="customers" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Contratto Clienti</text><text lang="en">Customer Agreement</text></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Questo documento contiene il contratto sottoscritto con il cliente</text><text lang="en">This document contains the agreement signed with the customer</text></attribute><attribute name="File" attributetype="Attach"><resource resourcetype="Attach" id="50" lang="en" /><text lang="it">Contratto Clienti</text><text lang="en">Customer Agreement</text></attribute></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>jeff</lastEditor><created>20110926161836</created><lastModified>20110926161836</lastModified></content>
 ', '20110926161836', '20110926161836', '<?xml version="1.0" encoding="UTF-8"?>
@@ -676,11 +616,6 @@ INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, l
 ', '20110926162601', '20110926162601', '<?xml version="1.0" encoding="UTF-8"?>
 <content id="DWN53" typecode="DWN" typedescr="Scheda Download"><descr>Entando Model</descr><groups mainGroup="administrators"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Il Modello Entando</text><text lang="en">Entando Model</text></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Descrive il modello concettuale che sta alla base del progetto Entando.</text><text lang="en">This document describes the conceptual model of Entando project</text></attribute><attribute name="File" attributetype="Attach"><resource resourcetype="Attach" id="52" lang="en" /><text lang="it">Il Modello Entando</text><text lang="en">Entando Model</text></attribute></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>jeff</lastEditor><created>20110926162601</created><lastModified>20110926162601</lastModified></content>
 ', 'administrators', '1.0', 'jeff');
-INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG59', 'CNG', 'Entando Links', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG59" typecode="CNG" typedescr="Generic Content"><descr>Entando Links</descr><groups mainGroup="free" /><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="en">Entando</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link"><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://www.entando.com/</urldest></link><text lang="en">entando.com</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://www.entando.org/</urldest></link><text lang="en">entando.org</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://dev.japsportal.org/trac/wiki</urldest></link><text lang="en">dev website</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://japsplatform.ideascale.com/</urldest></link><text lang="en">ideascale</text></attribute></list></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>jeff</lastEditor><created>20111117112633</created><lastModified>20111117112633</lastModified></content>
-', '20111117112633', '20111117112633', '<?xml version="1.0" encoding="UTF-8"?>
-<content id="CNG59" typecode="CNG" typedescr="Generic Content"><descr>Entando Links</descr><groups mainGroup="free" /><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="en">Entando</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link"><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://www.entando.com/</urldest></link><text lang="en">entando.com</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://www.entando.org/</urldest></link><text lang="en">entando.org</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://dev.japsportal.org/trac/wiki</urldest></link><text lang="en">dev website</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://japsplatform.ideascale.com/</urldest></link><text lang="en">ideascale</text></attribute></list></attributes><status>PUBLIC</status><version>1.0</version><lastEditor>jeff</lastEditor><created>20111117112633</created><lastModified>20111117112633</lastModified></content>
-', 'free', '1.0', 'jeff');
 INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('NEW33', 'NEW', 'New Customer Services', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
 <content id="NEW33" typecode="NEW" typedescr="News"><descr>New Customer Services</descr><groups mainGroup="administrators" /><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="it">Nuovi servizi per i clienti</text><text lang="en">New customer Services</text></attribute><attribute name="Date" attributetype="Date"><date>20111201</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="it">Nuovi servizi per i clienti sono disponibili nell''area riservata</text><text lang="en">New services for customers are available in the reserved area.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="it"><![CDATA[<p>Nuovi servizi per i clienti sono disponibili nell''area riservata.</p>]]></hypertext><hypertext lang="en"><![CDATA[<p>New services for customers are available in the reserved area.<br />
 &nbsp;</p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="32" lang="en" /><text lang="it">Servizi clienti</text><text lang="en">Customer Services</text></attribute><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>6.0</version><lastEditor>jeff</lastEditor><created>20110926151115</created><lastModified>20110927183315</lastModified></content>
@@ -775,34 +710,48 @@ The best ideas bubble up to the top. Provide your responses within Community, Do
 <p><strong>The best ideas bubble up to the top. </strong></p>
 <p>Provide your responses within these Entando categories: <strong>Community</strong>, <strong>Documentation</strong>, <strong>Core</strong> <strong>Features</strong> and <strong>Plugins</strong>.</p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="18" lang="en" /><text lang="it">Logo Ideascale</text><text lang="en">Ideascale Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="26" lang="en" /><text lang="it">Contribuisci</text><text lang="en">Contribute</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link"><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://japsplatform.ideascale.com/</urldest></link><text lang="it">Condividi la tua idea sul progetto Entando</text><text lang="en">Share your Idea for Entando Project</text></attribute></list></attributes><status>PUBLIC</status><version>4.0</version><lastEditor>jeff</lastEditor><created>20110926141219</created><lastModified>20110927183550</lastModified></content>
 ', 'free', '4.0', 'jeff');
+INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('CNG59', 'CNG', 'Entando Links', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG59" typecode="CNG" typedescr="Generic Content"><descr>Entando Links</descr><groups mainGroup="free" /><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="en">Entando</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link"><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://www.entando.com/</urldest></link><text lang="en">Entando Portal</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://github.com/entando/</urldest></link><text lang="en">Entando on GitHub</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://japsplatform.ideascale.com/</urldest></link><text lang="en">Ideascale</text></attribute></list></attributes><status>PUBLIC</status><version>2.0</version><lastEditor>jeff</lastEditor><created>20111117112633</created><lastModified>20111207120206</lastModified></content>
+', '20111117112633', '20111207120206', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="CNG59" typecode="CNG" typedescr="Generic Content"><descr>Entando Links</descr><groups mainGroup="free" /><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="en">Entando</text></attribute><attribute name="Abstract" attributetype="Longtext" /><attribute name="Body" attributetype="Hypertext" /><attribute name="Image1" attributetype="Image" /><attribute name="Image2" attributetype="Image" /><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link"><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://www.entando.com/</urldest></link><text lang="en">Entando Portal</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://github.com/entando/</urldest></link><text lang="en">Entando on GitHub</text></attribute><attribute name="Links" attributetype="Link"><link type="external"><urldest>http://japsplatform.ideascale.com/</urldest></link><text lang="en">Ideascale</text></attribute></list></attributes><status>PUBLIC</status><version>2.0</version><lastEditor>jeff</lastEditor><created>20111117112633</created><lastModified>20111207120206</lastModified></content>
+', 'free', '2.0', 'jeff');
+INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, lastmodified, onlinexml, maingroup, currentversion, lasteditor) VALUES ('NEW12', 'NEW', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', 'PUBLIC', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="NEW12" typecode="NEW" typedescr="News"><descr>Entando on Osor.eu, the Open Source Observatory and Repository for the public administration</descr><groups mainGroup="administrators"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="en">Entando on Osor.eu, the Open Source Observatory and Repository for the public administration</text></attribute><attribute name="Date" attributetype="Date"><date>20111006</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="en">The Open Source Observatory and Repository (OSOR) is a website launched by the European Commission under the IDABC programme, to support the distribution and reuse of software developed by or for public sector administrations across Europe, connecting EU services and Member States.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="en"><![CDATA[<p>The <strong>Open Source Observatory and Repository</strong> (OSOR) is a website launched by the <strong>European Commission</strong> under the <strong>IDABC</strong> programme, to support the distribution and reuse of software developed by or for public sector administrations across Europe, connecting EU services and Member States.</p>
+<p>OSOR.eu is a platform for exchanging information, experiences and free, libre and open source software (F/OSS) applications.</p>
+<p>OSOR.eu supports and encourages the collaborative development and re-use of publicly-financed free, libre and open source software (F/OSS) applications developments for use in European public administrations. It also promotes and links to the work of national repositories, encouraging the emergence of a pan-European federation of open source software repositories.</p>
+<p><a href="#!U;http://www.osor.eu/projects/japs2!#">Entando project is published, among others, on OSOR.eu Repository</a>.</p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="13" lang="en" /><text lang="en">Osor Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="28" lang="en" /><text lang="en">Entando Logo</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>6.0</version><lastEditor>jeff</lastEditor><created>20110923185204</created><lastModified>20111207124456</lastModified></content>
+', '20110923185204', '20111207124456', '<?xml version="1.0" encoding="UTF-8"?>
+<content id="NEW12" typecode="NEW" typedescr="News"><descr>Entando on Osor.eu, the Open Source Observatory and Repository for the public administration</descr><groups mainGroup="administrators"><group name="free" /></groups><categories /><attributes><attribute name="Title" attributetype="Text"><text lang="en">Entando on Osor.eu, the Open Source Observatory and Repository for the public administration</text></attribute><attribute name="Date" attributetype="Date"><date>20111006</date></attribute><attribute name="Abstract" attributetype="Longtext"><text lang="en">The Open Source Observatory and Repository (OSOR) is a website launched by the European Commission under the IDABC programme, to support the distribution and reuse of software developed by or for public sector administrations across Europe, connecting EU services and Member States.</text></attribute><attribute name="Body" attributetype="Hypertext"><hypertext lang="en"><![CDATA[<p>The <strong>Open Source Observatory and Repository</strong> (OSOR) is a website launched by the <strong>European Commission</strong> under the <strong>IDABC</strong> programme, to support the distribution and reuse of software developed by or for public sector administrations across Europe, connecting EU services and Member States.</p>
+<p>OSOR.eu is a platform for exchanging information, experiences and free, libre and open source software (F/OSS) applications.</p>
+<p>OSOR.eu supports and encourages the collaborative development and re-use of publicly-financed free, libre and open source software (F/OSS) applications developments for use in European public administrations. It also promotes and links to the work of national repositories, encouraging the emergence of a pan-European federation of open source software repositories.</p>
+<p><a href="#!U;http://www.osor.eu/projects/japs2!#">Entando project is published, among others, on OSOR.eu Repository</a>.</p>]]></hypertext></attribute><attribute name="Image1" attributetype="Image"><resource resourcetype="Image" id="13" lang="en" /><text lang="en">Osor Logo</text></attribute><attribute name="Image2" attributetype="Image"><resource resourcetype="Image" id="28" lang="en" /><text lang="en">Entando Logo</text></attribute><list attributetype="Monolist" name="Attach" nestedtype="Attach" /><list attributetype="Monolist" name="Links" nestedtype="Link" /></attributes><status>PUBLIC</status><version>6.0</version><lastEditor>jeff</lastEditor><created>20110923185204</created><lastModified>20111207124456</lastModified></content>
+', 'administrators', '6.0', 'jeff');
 
 
 --
--- TOC entry 1847 (class 0 OID 88832)
+-- TOC entry 1847 (class 0 OID 113894)
 -- Dependencies: 131
 -- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'My Entando APP', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'APP My Entando', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Date', NULL, '2011-10-06', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Release of Entando version 2.4.0.1', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Rilascio di Entando versione 2.4.0.1', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Date', NULL, '2011-12-07', NULL, NULL);
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Release of Entando version 2.2.2', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Rilascio jAPS 2.0 Entando versione 2.2.2', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Date', NULL, '2011-09-07', NULL, NULL);
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'LIVE EVENT - Portal and Business Intelligence: across organizational boundaries', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'EVENTO LIVE - Il Portale e la Business Intelligence: oltre i confini dell''organizzazione', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Date', NULL, '2011-09-29', NULL, NULL);
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast: "Portal Meets Business Intelligence: 3A Latte Arborea, a Case Study about Dairy and Farming in Italy"', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast sull''integrazione della piattaforma jAPS 2.0 entando e Pentaho Business Intelligence', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Date', NULL, '2011-05-24', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Date', NULL, '2011-10-06', NULL, NULL);
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'New customer Services', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'Nuovi servizi per i clienti', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Date', NULL, '2011-12-01', NULL, NULL);
@@ -818,10 +767,10 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribute to Entando Project: submit your Idea and Suggestion', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribuisci al progetto Entando: proponi la tua idea', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Date', NULL, '2011-10-20', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'My Entando APP', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'APP My Entando', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Welcome to Entando Portal Demo', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Benvenuto in Entando Portal Demo', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Some useful links', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Collegamenti utili', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'en');
@@ -840,10 +789,12 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
 INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
 
 
 --
--- TOC entry 1848 (class 0 OID 88835)
+-- TOC entry 1848 (class 0 OID 113897)
 -- Dependencies: 132
 -- Data for Name: jpcontentfeedback_comments; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -851,7 +802,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1849 (class 0 OID 88841)
+-- TOC entry 1849 (class 0 OID 113903)
 -- Dependencies: 133
 -- Data for Name: jpcontentfeedback_rating; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -859,7 +810,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1850 (class 0 OID 88844)
+-- TOC entry 1850 (class 0 OID 113906)
 -- Dependencies: 134
 -- Data for Name: jpmyportalplus_userpageconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -871,34 +822,11 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 14, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="maxElemForItem">1</property>
-<property key="pageLink">news_style1</property>
-<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">26</property>
-<property key="contentType">NEW</property>
-</properties>
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 15, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="pageLink">configure_latest_documents</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">42</property>
-<property key="contentType">DWN</property>
-</properties>
-
-', 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 14, 'jpsurvey_questionnaireList', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 66, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 67, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 116, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 117, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 14, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
@@ -915,80 +843,63 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 125, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 19, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 15, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="pageLink">configure_latest_documents</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">42</property>
-<property key="contentType">DWN</property>
-</properties>
-
-', 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 16, 'latest_events', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="maxElemForItem">2</property>
-<property key="categories">events</property>
-<property key="pageLink">events</property>
-<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">26</property>
-<property key="contentType">NEW</property>
-</properties>
-
-', 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 114, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 16, 'documents_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="pageLink">configure_latest_documents</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">42</property>
-<property key="contentType">DWN</property>
-</properties>
-
-', 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 125, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 22, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 76, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 20, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 21, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 23, 'latest_news', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 14, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 115, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 15, 'latest_news', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="linkDescr_it">Configura</property>
-<property key="maxElemForItem">1</property>
-<property key="pageLink">news_style1</property>
-<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
-<property key="linkDescr_en">Configure</property>
-<property key="modelId">26</property>
-<property key="contentType">NEW</property>
-</properties>
-
-', 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 64, 'inEvidenza', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 64, 'inEvidenza', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 75, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 115, 'latest_events', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 65, 'latest_video', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 66, 'form_list', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 20, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 19, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 117, 'jpsurvey_pollList', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 16, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 15, 'latest_news', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 16, 'documents_list', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 64, 'form_list', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 19, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 65, 'jpsurvey_questionnaireList', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 14, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 125, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 20, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 114, 'latest_video', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 66, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 115, 'jpsurvey_pollList', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 64, 'latest_events', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 19, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 115, 'latest_video', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 114, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 65, 'form_list', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 15, 'inEvidenza', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 16, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 116, 'documents_list', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 67, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 64, 'documents_list', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 114, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 116, 'jpmyportalplus_void', NULL, 0);
+INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 15, 'inEvidenza', NULL, 0);
 
 
 --
--- TOC entry 1851 (class 0 OID 88851)
+-- TOC entry 1851 (class 0 OID 113913)
 -- Dependencies: 135
 -- Data for Name: localstrings; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1153,8 +1064,6 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCH_RESULT
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCH_RESULTS_OUTRO', 'it', 'risultati');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('WELCOME', 'it', 'Benvenuto');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('WELCOME', 'en', 'Welcome');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_TITLE', 'it', 'Welcome Next Generation Portal');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_TITLE', 'en', 'Welcome Next Generation Portal');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_DESCRIPTION', 'it', 'Entando is the next generation information management platform. It''s the open source alternative to classic proprietary and open source portal and content management systems.');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_DESCRIPTION', 'en', 'Entando is the next generation information management platform. It''s the open source alternative to classic proprietary and open source portal and content management systems.');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('LINKS', 'en', 'Links');
@@ -1302,6 +1211,7 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LAST_EDIT', 'it', 'Ultima Modifica');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LAST_EDIT', 'en', 'Last Edit');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_MAKE_CONTENT_ON_PAGE', 'it', 'Prosegui scegliendo anche una Pagina di pubblicazione temporanea');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_COM_eMail', 'en', 'Email');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_MAKE_CONTENT_ON_PAGE', 'en', 'Continue choosing a Page for on-the-fly publishing');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_CONFIGURE_LINK_TO_PAGE', 'it', 'Scegli una  Pagina');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_CONFIGURE_LINK_TO_PAGE', 'en', 'Choose a Page');
@@ -1394,7 +1304,6 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicf
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_COM_Address', 'it', 'Indirizzo');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_COM_Address', 'en', 'Address');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_COM_eMail', 'it', 'Email');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_COM_eMail', 'en', 'Email');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_COM_Note', 'it', 'Messaggio');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_COM_Note', 'en', 'Message');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_COM_SAVE', 'it', 'Invia');
@@ -1615,10 +1524,12 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicf
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_PER_Enumerator', 'it', 'Tipo Contratto');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_PER', 'en', 'User Form');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_PER', 'it', 'Form Utente');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_TITLE', 'en', 'Welcome to Entando Portal Demo');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_TITLE', 'it', 'Benvenuto nel Portale Demo di Entando');
 
 
 --
--- TOC entry 1852 (class 0 OID 88857)
+-- TOC entry 1852 (class 0 OID 113919)
 -- Dependencies: 136
 -- Data for Name: pagemodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2277,7 +2188,7 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('home', 'Home P
 
 
 --
--- TOC entry 1853 (class 0 OID 88863)
+-- TOC entry 1853 (class 0 OID 113925)
 -- Dependencies: 137
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2380,18 +2291,6 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 </config>
 
 ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('news_archive', 'homepage', 2, 'home', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">News Archive</property>
-<property key="it">News Archive</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-</config>
-
-');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('configure_latest_documents', 'service', 7, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Latest Documents</property>
@@ -2428,35 +2327,11 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 </config>
 
 ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('surveys_list', 'quest_suveys', 1, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
-<property key="en">Active Questionnaires</property> 
-<property key="it">Questionari Attivi</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('surveys_archive', 'quest_suveys', 2, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
-<property key="en">Questionnaires Archive</property> 
-<property key="it">Archivio Questionari</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('survey_detail', 'quest_suveys', 3, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
-<property key="en">Questionnaire Details</property> 
-<property key="it">Dettaglio Questionario</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('survey_results', 'quest_suveys', 4, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
-<property key="en">Questionnaire Results</property> 
-<property key="it">Risultati Questionario</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('polls_list', 'quest_suveys', 5, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
-<property key="en">Active Polls</property> 
-<property key="it">Sondaggi Attivi</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('polls_archive', 'quest_suveys', 6, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
-<property key="en">Polls Archive</property> 
-<property key="it">Archivio Sondaggi</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('service', 'homepage', 3, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="it">Pagine di Servizio</property>
 <property key="en">Service</property>
 </properties>', 'free', 0, NULL);
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('poll_detail', 'quest_suveys', 7, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
-<property key="en">Poll Details</property> 
-<property key="it">Dettaglio Sondaggi</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('poll_results', 'quest_suveys', 8, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
-<property key="en">Poll Details</property> 
-<property key="it">Dettaglio Sondaggi</property> </properties> ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('formview', 'service', 10, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Dynamic Form</property>
@@ -2469,10 +2344,10 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 </config>
 
 ');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('quest_suveys', 'homepage', 5, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('news_archive', 'homepage', 2, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
-<property key="en">Questionnaires and Surveys</property>
-<property key="it">Questionari e Sondaggi</property>
+<property key="en">News</property>
+<property key="it">News</property>
 </properties>
 
 ', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
@@ -2481,6 +2356,9 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 </config>
 
 ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('surveys_list', 'quest_suveys', 1, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
+<property key="en">Active Questionnaires</property> 
+<property key="it">Questionari Attivi</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('video_archive', 'homepage', 5, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Video Archive</property>
@@ -2505,10 +2383,43 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 </config>
 
 ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('surveys_archive', 'quest_suveys', 2, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
+<property key="en">Questionnaires Archive</property> 
+<property key="it">Archivio Questionari</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('survey_detail', 'quest_suveys', 3, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
+<property key="en">Questionnaire Details</property> 
+<property key="it">Dettaglio Questionario</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('survey_results', 'quest_suveys', 4, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
+<property key="en">Questionnaire Results</property> 
+<property key="it">Risultati Questionario</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('polls_list', 'quest_suveys', 5, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
+<property key="en">Active Polls</property> 
+<property key="it">Sondaggi Attivi</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('polls_archive', 'quest_suveys', 6, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
+<property key="en">Polls Archive</property> 
+<property key="it">Archivio Sondaggi</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('poll_detail', 'quest_suveys', 7, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
+<property key="en">Poll Details</property> 
+<property key="it">Dettaglio Sondaggi</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('poll_results', 'quest_suveys', 8, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
+<property key="en">Poll Details</property> 
+<property key="it">Dettaglio Sondaggi</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('quest_suveys', 'homepage', 5, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Questionnaires and Surveys</property>
+<property key="it">Questionari e Sondaggi</property>
+</properties>
+
+', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>true</useextratitles>
+</config>
+
+');
 
 
 --
--- TOC entry 1854 (class 0 OID 88869)
+-- TOC entry 1854 (class 0 OID 113931)
 -- Dependencies: 138
 -- Data for Name: resourcerelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2516,7 +2427,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1855 (class 0 OID 88872)
+-- TOC entry 1855 (class 0 OID 113934)
 -- Dependencies: 139
 -- Data for Name: resources; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2560,9 +2471,6 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('27', 'Image', 'Entando Logo', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="27"><descr>Entando Logo</descr><groups mainGroup="free" /><categories /><masterfile>entando-square.png</masterfile><instance><size>3</size><filename>entando-square_d3.png</filename><mimetype>image/png</mimetype><weight>3 Kb</weight></instance><instance><size>2</size><filename>entando-square_d2.png</filename><mimetype>image/png</mimetype><weight>3 Kb</weight></instance><instance><size>1</size><filename>entando-square_d1.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>entando-square_d0.png</filename><mimetype>image/png</mimetype><weight>4 Kb</weight></instance></resource>
 ', 'entando-square.png');
-INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('28', 'Image', 'Entando Logo', 'free', '<?xml version="1.0" encoding="UTF-8"?>
-<resource typecode="Image" id="28"><descr>Entando Logo</descr><groups mainGroup="free" /><categories /><masterfile>entando-logo.png</masterfile><instance><size>3</size><filename>entando-logo_d3.png</filename><mimetype>image/png</mimetype><weight>3 Kb</weight></instance><instance><size>2</size><filename>entando-logo_d2.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>1</size><filename>entando-logo_d1.png</filename><mimetype>image/png</mimetype><weight>1 Kb</weight></instance><instance><size>0</size><filename>entando-logo_d0.png</filename><mimetype>image/png</mimetype><weight>5 Kb</weight></instance></resource>
-', 'entando-logo.png');
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('29', 'Image', 'Live Event', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="29"><descr>Live Event</descr><groups mainGroup="free" /><categories /><masterfile>Live_Event.jpg</masterfile><instance><size>3</size><filename>Live_Event_d3.jpg</filename><mimetype>image/jpeg</mimetype><weight>10 Kb</weight></instance><instance><size>2</size><filename>Live_Event_d2.jpg</filename><mimetype>image/jpeg</mimetype><weight>5 Kb</weight></instance><instance><size>1</size><filename>Live_Event_d1.jpg</filename><mimetype>image/jpeg</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>Live_Event_d0.jpg</filename><mimetype>image/jpeg</mimetype><weight>497 Kb</weight></instance></resource>
 ', 'Live_Event.jpg');
@@ -2596,19 +2504,22 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('52', 'Attach', 'Entando Model', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Attach" id="52"><descr>Entando Model</descr><groups mainGroup="free" /><categories /><masterfile>Entando_Model.pdf</masterfile><instance><size>0</size><filename>Entando_Model.pdf</filename><mimetype>application/pdf</mimetype><weight>78 Kb</weight></instance></resource>
 ', 'Entando_Model.pdf');
-INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('54', 'Image', 'My Entando APP', 'free', '<?xml version="1.0" encoding="UTF-8"?>
-<resource typecode="Image" id="54"><descr>My Entando APP</descr><groups mainGroup="free" /><categories /><masterfile>APP_MyEntando.png</masterfile><instance><size>3</size><filename>APP_MyEntando_d3.png</filename><mimetype>image/png</mimetype><weight>31 Kb</weight></instance><instance><size>2</size><filename>APP_MyEntando_d2.png</filename><mimetype>image/png</mimetype><weight>14 Kb</weight></instance><instance><size>1</size><filename>APP_MyEntando_d1.png</filename><mimetype>image/png</mimetype><weight>5 Kb</weight></instance><instance><size>0</size><filename>APP_MyEntando_d0.png</filename><mimetype>image/png</mimetype><weight>245 Kb</weight></instance></resource>
-', 'APP_MyEntando.png');
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('57', 'Image', 'What is Entando', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="57"><descr>What is Entando</descr><groups mainGroup="free" /><categories /><masterfile>What_is_Entando.png</masterfile><instance><size>3</size><filename>What_is_Entando_d3.png</filename><mimetype>image/png</mimetype><weight>8 Kb</weight></instance><instance><size>2</size><filename>What_is_Entando_d2.png</filename><mimetype>image/png</mimetype><weight>4 Kb</weight></instance><instance><size>1</size><filename>What_is_Entando_d1.png</filename><mimetype>image/png</mimetype><weight>1 Kb</weight></instance><instance><size>0</size><filename>What_is_Entando_d0.png</filename><mimetype>image/png</mimetype><weight>43 Kb</weight></instance></resource>
 ', 'What_is_Entando.png');
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('60', 'Image', 'weeeeeeeee', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="60"><descr>weeeeeeeee</descr><groups mainGroup="free" /><categories /><masterfile>webforms.png</masterfile><instance><size>3</size><filename>webforms_d3.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>2</size><filename>webforms_d2.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>1</size><filename>webforms_d1.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>webforms_d0.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance></resource>
 ', 'webforms.png');
+INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('54', 'Image', 'My Entando APP', 'free', '<?xml version="1.0" encoding="UTF-8"?>
+<resource typecode="Image" id="54"><descr>My Entando APP</descr><groups mainGroup="free" /><categories /><masterfile>APP.jpg</masterfile><instance><size>3</size><filename>APP_d3.jpg</filename><mimetype>image/jpeg</mimetype><weight>8 Kb</weight></instance><instance><size>2</size><filename>APP_d2.jpg</filename><mimetype>image/jpeg</mimetype><weight>4 Kb</weight></instance><instance><size>1</size><filename>APP_d1.jpg</filename><mimetype>image/jpeg</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>APP_d0.jpg</filename><mimetype>image/jpeg</mimetype><weight>45 Kb</weight></instance></resource>
+', 'APP.jpg');
+INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('28', 'Image', 'Entando Logo', 'free', '<?xml version="1.0" encoding="UTF-8"?>
+<resource typecode="Image" id="28"><descr>Entando Logo</descr><groups mainGroup="free" /><categories /><masterfile>Entando_green_logo.png</masterfile><instance><size>3</size><filename>Entando_green_logo_d3.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>2</size><filename>Entando_green_logo_d2.png</filename><mimetype>image/png</mimetype><weight>1 Kb</weight></instance><instance><size>1</size><filename>Entando_green_logo_d1.png</filename><mimetype>image/png</mimetype><weight>0 Kb</weight></instance><instance><size>0</size><filename>Entando_green_logo_d0.png</filename><mimetype>image/png</mimetype><weight>5 Kb</weight></instance></resource>
+', 'Entando_green_logo.png');
 
 
 --
--- TOC entry 1856 (class 0 OID 88878)
+-- TOC entry 1856 (class 0 OID 113940)
 -- Dependencies: 140
 -- Data for Name: showletcatalog; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2897,22 +2808,6 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	</parameter> 
 <action name="viewerContentFeedbackConfig"/>
 </config>', 'jpcontentfeedback', NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_detailsSurvey', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Questionnaire/Survey - Details</property>
-<property key="it">Questionari/Sondaggi - Dettaglio</property>
-</properties>', NULL, 'jpsurvey', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="actionPath">/ExtStr2/do/jpsurvey/Front/Survey/entryPoint.action</property>
-</properties>', 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_resultsSurvey', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Questionnaire/Survey - Show Results</property>
-<property key="it">Questionario/Sondaggio - Mostra Risultati</property>
-</properties>', NULL, 'jpsurvey', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="actionPath">/ExtStr2/do/jpsurvey/Front/SurveyDetail/entryPoint.action</property>
-</properties>', 1, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('latest_video', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Latest Video</property>
@@ -2971,10 +2866,34 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 </properties>
 
 ', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_detailsSurvey', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Questionnaire/Survey - Details</property>
+<property key="it">Questionari/Sondaggi - Dettaglio</property>
+</properties>
+
+', NULL, 'jpsurvey', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="actionPath">/ExtStr2/do/jpsurvey/Front/Survey/entryPoint.action</property>
+</properties>
+
+', 1, 'intranet');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_resultsSurvey', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Questionnaire/Survey - Show Results</property>
+<property key="it">Questionario/Sondaggio - Mostra Risultati</property>
+</properties>
+
+', NULL, 'jpsurvey', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="actionPath">/ExtStr2/do/jpsurvey/Front/SurveyDetail/entryPoint.action</property>
+</properties>
+
+', 1, 'intranet');
 
 
 --
--- TOC entry 1857 (class 0 OID 88884)
+-- TOC entry 1857 (class 0 OID 113946)
 -- Dependencies: 141
 -- Data for Name: showletconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3138,10 +3057,6 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('contentsview', 36, 'jpsharewith', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 23, 'latest_news', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 73, 'inEvidenza', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 24, 'latest_events', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 124, 'documents_list', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 14, 'jpmyportalplus_void', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 15, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 16, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 17, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 18, 'jpmyportalplus_void', NULL, NULL);
@@ -3235,7 +3150,6 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 120, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 121, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 122, 'jpmyportalplus_void', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 125, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 126, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 127, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 128, 'jpmyportalplus_void', NULL, NULL);
@@ -3409,7 +3323,6 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 </properties>
 
 ', NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 74, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 123, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 0, 'navigation_langbar', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 1, 'login_form', NULL, NULL);
@@ -3427,10 +3340,36 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 ', NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 36, 'jpsharewith', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 14, 'jpmyportalplus_void', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 15, 'jpmyportalplus_void', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 24, 'latest_video', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 74, 'documents_list', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 124, 'form_list', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 125, 'latest_events', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('news_archive', 0, 'navigation_langbar', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('news_archive', 1, 'login_form', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('news_archive', 4, 'search_form', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('news_archive', 10, 'navigation_menu', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="navSpec">code(homepage).subtree(1)</property>
+</properties>
+
+', NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('news_archive', 14, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="maxElemForItem">3</property>
+<property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
+<property key="contentType">NEW</property>
+<property key="modelId">22</property>
+</properties>
+
+', NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('news_archive', 15, 'news_choose_style', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('news_archive', 36, 'jpsharewith', NULL, NULL);
 
 
 --
--- TOC entry 1858 (class 0 OID 88890)
+-- TOC entry 1858 (class 0 OID 113952)
 -- Dependencies: 142
 -- Data for Name: sysconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3780,7 +3719,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 </contenttypes>
 
 ');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20111202151052');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpmyportalplus_config', 'Definizione degli oggetti configurabili di My Portal', '<?xml version="1.0" encoding="UTF-8"?>
 <myportalConfig><showlets><showlet code="latest_video" /><showlet code="jpsurvey_questionnaireList" /><showlet code="form_list" /><showlet code="jpsurvey_pollList" /><showlet code="latest_events" /><showlet code="latest_news" /><showlet code="documents_list" /><showlet code="inEvidenza" /></showlets></myportalConfig>
 ');
@@ -3852,10 +3790,11 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpwe
 </messagetypes>
 
 ');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20111219180528');
 
 
 --
--- TOC entry 1859 (class 0 OID 88896)
+-- TOC entry 1859 (class 0 OID 113958)
 -- Dependencies: 143
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3864,7 +3803,7 @@ INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 64);
 
 
 --
--- TOC entry 1860 (class 0 OID 88899)
+-- TOC entry 1860 (class 0 OID 113961)
 -- Dependencies: 144
 -- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3874,31 +3813,29 @@ INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW11', 'even
 
 
 --
--- TOC entry 1861 (class 0 OID 88902)
+-- TOC entry 1861 (class 0 OID 113964)
 -- Dependencies: 145
 -- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'My Entando APP', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'APP My Entando', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Date', NULL, '2011-10-06', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Release of Entando version 2.4.0.1', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Rilascio di Entando versione 2.4.0.1', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Date', NULL, '2011-12-07', NULL, NULL);
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Release of Entando version 2.2.2', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Rilascio jAPS 2.0 Entando versione 2.2.2', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Date', NULL, '2011-09-07', NULL, NULL);
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'LIVE EVENT - Portal and Business Intelligence: across organizational boundaries', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'EVENTO LIVE - Il Portale e la Business Intelligence: oltre i confini dell''organizzazione', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Date', NULL, '2011-09-29', NULL, NULL);
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast: "Portal Meets Business Intelligence: 3A Latte Arborea, a Case Study about Dairy and Farming in Italy"', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast sull''integrazione della piattaforma jAPS 2.0 entando e Pentaho Business Intelligence', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Date', NULL, '2011-05-24', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Date', NULL, '2011-10-06', NULL, NULL);
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'New customer Services', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'Nuovi servizi per i clienti', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Date', NULL, '2011-12-01', NULL, NULL);
@@ -3914,10 +3851,10 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribute to Entando Project: submit your Idea and Suggestion', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribuisci al progetto Entando: proponi la tua idea', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Date', NULL, '2011-10-20', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'My Entando APP', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'APP My Entando', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Welcome to Entando Portal Demo', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Benvenuto in Entando Portal Demo', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Some useful links', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Collegamenti utili', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'en');
@@ -3936,9 +3873,11 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
 
 
--- Completed on 2011-12-02 16:01:02 CET
+-- Completed on 2011-12-19 18:09:37 CET
 
 --
 -- PostgreSQL database dump complete

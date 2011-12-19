@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-12-02 16:01:03 CET
+-- Started on 2011-12-19 18:09:37 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,30 +13,64 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1842 (class 0 OID 90369)
+-- TOC entry 1842 (class 0 OID 115403)
 -- Dependencies: 127
 -- Data for Name: apicatalog_services; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('contents', 'getContents', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('ListGenericContents', 'getContents', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
-<property key="en">List news</property>
-<property key="it">Lista news</property>
+<property key="en">Generic Contents</property>
+<property key="it">Contenuti generici</property>
+<property key="de">Generic Contents</property>
 </properties>
 
 ', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
-<property key="onlyHtml">false</property>
-<property key="modelId">25</property>
-<property key="contentType">NEW</property>
+<property key="contentType">CNG</property>
+<property key="modelId">36</property>
 </properties>
 
-', 'myentando_contents', '<?xml version="1.0" encoding="UTF-8"?>
+', 'jacms:contents', NULL, 1, 1, 1);
+INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('NEW17', 'getContent', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">erogazione NEW17</property>
+<property key="it">erogazione NEW17</property>
+<property key="de">erogazione NEW17</property>
+</properties>
+
+', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="id">NEW17</property>
+<property key="modelId">2</property>
+</properties>
+
+', 'jacms:contents', '<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <freeparameters>
+    <parameter name="modelId" />
+  </freeparameters>
+</config>
+
+', 1, 1, 1);
+INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('contents', 'getContents', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">List news</property>
+<property key="it">Lista news</property>
+<property key="de">List news</property>
+</properties>
+
+', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="contentType">NEW</property>
+<property key="modelId">25</property>
+</properties>
+
+', 'jacms:contents', '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <freeparameters>
     <parameter name="contentType" />
     <parameter name="categories" />
-    <parameter name="onlyHtml" />
   </freeparameters>
 </config>
 
@@ -45,20 +79,27 @@ INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters,
 <properties>
 <property key="en">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
 <property key="it">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
+<property key="de">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
 </properties>
 
 ', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
-<property key="onlyHtml">true</property>
 <property key="id">NEW11</property>
 <property key="modelId">2</property>
 </properties>
 
-', 'myentando_content', NULL, 1, 1, 1);
+', 'jacms:content', '<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <freeparameters>
+    <parameter name="id" />
+  </freeparameters>
+</config>
+
+', 1, 1, 1);
 
 
 --
--- TOC entry 1843 (class 0 OID 90375)
+-- TOC entry 1843 (class 0 OID 115409)
 -- Dependencies: 128
 -- Data for Name: apicatalog_status; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -67,7 +108,7 @@ INSERT INTO apicatalog_status (method, isactive) VALUES ('getServices', 1);
 
 
 --
--- TOC entry 1844 (class 0 OID 90378)
+-- TOC entry 1844 (class 0 OID 115412)
 -- Dependencies: 129
 -- Data for Name: authgroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -80,7 +121,7 @@ INSERT INTO authgroups (groupname, descr) VALUES ('registered', 'Registered User
 
 
 --
--- TOC entry 1845 (class 0 OID 90381)
+-- TOC entry 1845 (class 0 OID 115415)
 -- Dependencies: 130
 -- Data for Name: authpermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -97,7 +138,7 @@ INSERT INTO authpermissions (permissionname, descr) VALUES ('jpuserprofile_profi
 
 
 --
--- TOC entry 1846 (class 0 OID 90384)
+-- TOC entry 1846 (class 0 OID 115418)
 -- Dependencies: 131
 -- Data for Name: authrolepermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -106,7 +147,7 @@ INSERT INTO authrolepermissions (rolename, permissionname) VALUES ('admin', 'sup
 
 
 --
--- TOC entry 1847 (class 0 OID 90387)
+-- TOC entry 1847 (class 0 OID 115421)
 -- Dependencies: 132
 -- Data for Name: authroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -115,7 +156,7 @@ INSERT INTO authroles (rolename, descr) VALUES ('admin', 'Administrator');
 
 
 --
--- TOC entry 1848 (class 0 OID 90390)
+-- TOC entry 1848 (class 0 OID 115424)
 -- Dependencies: 133
 -- Data for Name: authusergroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -130,7 +171,7 @@ INSERT INTO authusergroups (username, groupname) VALUES ('max', 'customers');
 
 
 --
--- TOC entry 1849 (class 0 OID 90393)
+-- TOC entry 1849 (class 0 OID 115427)
 -- Dependencies: 134
 -- Data for Name: authuserroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -140,19 +181,19 @@ INSERT INTO authuserroles (username, rolename) VALUES ('jeff', 'admin');
 
 
 --
--- TOC entry 1850 (class 0 OID 90396)
+-- TOC entry 1850 (class 0 OID 115430)
 -- Dependencies: 135
 -- Data for Name: authusers; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('caroline', 'd6lFouRLMVSGYCQqiZnvMA==', '2011-09-26', '2011-11-18', '2011-09-26', 1);
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('max', 'oqYapx7mUieGYCQqiZnvMA==', '2011-09-26', '2011-11-18', '2011-09-26', 1);
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('jeff', 'M6a/uY1I0JDGWU/XU+dWTA==', '2011-09-26', '2011-11-20', NULL, 1);
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('admin', 'adminadmin', '2008-10-10', '2011-12-02', NULL, 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('caroline', 'd6lFouRLMVSGYCQqiZnvMA==', '2011-09-26', '2011-12-07', '2011-09-26', 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('max', 'oqYapx7mUieGYCQqiZnvMA==', '2011-09-26', '2011-12-07', '2011-09-26', 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('jeff', 'M6a/uY1I0JDGWU/XU+dWTA==', '2011-09-26', '2011-12-07', NULL, 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('admin', 'adminadmin', '2008-10-10', '2011-12-19', NULL, 1);
 
 
 --
--- TOC entry 1851 (class 0 OID 90399)
+-- TOC entry 1851 (class 0 OID 115433)
 -- Dependencies: 136
 -- Data for Name: authusershortcuts; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -190,28 +231,11 @@ INSERT INTO authusershortcuts (username, config) VALUES ('admin', '<?xml version
 
 
 --
--- TOC entry 1852 (class 0 OID 90405)
+-- TOC entry 1852 (class 0 OID 115439)
 -- Dependencies: 137
 -- Data for Name: jpsurvey; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, publicpartialresult, publicresult, questionnaire, gatheruserinfo, title, restrictedaccess, checkcookie, checkipaddress, imageid, imagedescr) VALUES (1, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Just some testing here...</property>
-</properties>
-
-', 'free', '2011-11-01', '2012-12-21', 1, 0, 0, 1, 0, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Questionnaire 1</property>
-<property key="it">Questionario 1</property>
-</properties>
-
-', 0, 1, 0, '23', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Questionnaire</property>
-</properties>
-
-');
 INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, publicpartialresult, publicresult, questionnaire, gatheruserinfo, title, restrictedaccess, checkcookie, checkipaddress, imageid, imagedescr) VALUES (2, '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Testing Pool</property>
@@ -230,14 +254,61 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 </properties>
 
 ');
+INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, publicpartialresult, publicresult, questionnaire, gatheruserinfo, title, restrictedaccess, checkcookie, checkipaddress, imageid, imagedescr) VALUES (1, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Just some testing here...</property>
+</properties>
+
+', 'intranet', '2011-11-01', '2012-12-21', 1, 0, 0, 1, 0, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Questionnaire 1</property>
+<property key="it">Questionario 1</property>
+</properties>
+
+', 0, 1, 0, '23', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Questionnaire</property>
+</properties>
+
+');
 
 
 --
--- TOC entry 1853 (class 0 OID 90411)
+-- TOC entry 1853 (class 0 OID 115445)
 -- Dependencies: 138
 -- Data for Name: jpsurvey_choices; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (7, 3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">1</property>
+</properties>
+
+', 0, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (8, 3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">2</property>
+</properties>
+
+', 1, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (9, 3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">3</property>
+</properties>
+
+', 2, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (10, 3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">4</property>
+</properties>
+
+', 3, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (11, 3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">5</property>
+</properties>
+
+', 4, 0);
 INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (12, 3, '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">6</property>
@@ -292,6 +363,30 @@ INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (20,
 </properties>
 
 ', 1, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (21, 5, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">30+</property>
+</properties>
+
+', 2, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (22, 6, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">aa</property>
+</properties>
+
+', 0, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (23, 6, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">bb</property>
+</properties>
+
+', 1, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (24, 6, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">cc</property>
+</properties>
+
+', 2, 0);
 INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (1, 1, '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">a</property>
@@ -328,80 +423,14 @@ INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (6, 
 </properties>
 
 ', 2, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (7, 3, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">1</property>
-</properties>
-
-', 0, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (8, 3, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">2</property>
-</properties>
-
-', 1, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (21, 5, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">30+</property>
-</properties>
-
-', 2, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (22, 6, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">aa</property>
-</properties>
-
-', 0, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (23, 6, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">bb</property>
-</properties>
-
-', 1, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (9, 3, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">3</property>
-</properties>
-
-', 2, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (10, 3, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">4</property>
-</properties>
-
-', 3, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (11, 3, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">5</property>
-</properties>
-
-', 4, 0);
-INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (24, 6, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">cc</property>
-</properties>
-
-', 2, 0);
 
 
 --
--- TOC entry 1854 (class 0 OID 90417)
+-- TOC entry 1854 (class 0 OID 115451)
 -- Dependencies: 139
 -- Data for Name: jpsurvey_questions; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (2, 1, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Question two</property>
-</properties>
-
-', 1, 1, 0, 0);
-INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (3, 1, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Question three, multiple choices</property>
-</properties>
-
-', 2, 0, 2, 4);
 INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (4, 2, '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Question 1</property>
@@ -430,10 +459,22 @@ INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minre
 </properties>
 
 ', 0, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (2, 1, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Question two</property>
+</properties>
+
+', 1, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (3, 1, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Question three, multiple choices</property>
+</properties>
+
+', 2, 0, 2, 4);
 
 
 --
--- TOC entry 1855 (class 0 OID 90423)
+-- TOC entry 1855 (class 0 OID 115457)
 -- Dependencies: 140
 -- Data for Name: jpsurvey_responses; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -451,7 +492,7 @@ INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES 
 
 
 --
--- TOC entry 1856 (class 0 OID 90426)
+-- TOC entry 1856 (class 0 OID 115460)
 -- Dependencies: 141
 -- Data for Name: jpsurvey_voters; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -461,7 +502,7 @@ INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username
 
 
 --
--- TOC entry 1857 (class 0 OID 90429)
+-- TOC entry 1857 (class 0 OID 115463)
 -- Dependencies: 142
 -- Data for Name: jpuserprofile_authuserprofiles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -481,7 +522,7 @@ INSERT INTO jpuserprofile_authuserprofiles (username, profiletype, profilexml, p
 
 
 --
--- TOC entry 1858 (class 0 OID 90435)
+-- TOC entry 1858 (class 0 OID 115469)
 -- Dependencies: 143
 -- Data for Name: jpuserprofile_profilesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -501,7 +542,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1859 (class 0 OID 90438)
+-- TOC entry 1859 (class 0 OID 115472)
 -- Dependencies: 144
 -- Data for Name: jpwebdynamicform_messageanswers; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -509,7 +550,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1860 (class 0 OID 90444)
+-- TOC entry 1860 (class 0 OID 115478)
 -- Dependencies: 145
 -- Data for Name: jpwebdynamicform_messages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -517,14 +558,14 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1861 (class 0 OID 90450)
+-- TOC entry 1861 (class 0 OID 115484)
 -- Dependencies: 146
 -- Data for Name: jpwebdynamicform_messagesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
--- Completed on 2011-12-02 16:01:03 CET
+-- Completed on 2011-12-19 18:09:38 CET
 
 --
 -- PostgreSQL database dump complete
