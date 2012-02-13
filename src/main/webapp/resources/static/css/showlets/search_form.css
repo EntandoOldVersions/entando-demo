@@ -15,9 +15,6 @@
 	-webkit-border-radius: 21px;
 	-moz-border-radius: 21px;
 	border-radius: 21px;
-	-webkit-box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
-	-moz-box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
-	box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
 	color: rgba(0,0,0, 0.8);
 	/*background-image: url("../../img/icon-search.png");*/
 	background-position: 6px center;

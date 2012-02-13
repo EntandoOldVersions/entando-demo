@@ -28,7 +28,7 @@ ul li {
 a:link,
 a:visited {
 	text-decoration: underline;
-	color: #0079C6;
+	color: #74961B;
 }
 a:hover,
 a:active,
@@ -54,9 +54,9 @@ a:focus {
 }
 
 .dragdrop_box.dragdrop_hover {
-	-webkit-box-shadow:  3px 3px 2px 1px rgba(0, 100, 200, 0.6);
-	-moz-box-shadow:  3px 3px 2px 1px rgba(0, 100, 200, 0.6);
-	box-shadow:  3px 3px 2px 1px rgba(0, 100, 200, 0.6);
+	-webkit-box-shadow:  3px 3px 2px 1px rgba(116, 150, 27, 0.9);
+	-moz-box-shadow:  3px 3px 2px 1px rgba(116, 150, 27, 0.9)
+	box-shadow:  3px 3px 2px 1px rgba(116, 150, 27, 0.9)
 }
 
 .left {
@@ -82,10 +82,9 @@ a img {
 input[type="text"],
 input[type="password"],
 textarea {
-	border: 0px;
-	background-color: #A1EEFD;
-	color: #000;
-	color: rgba(0,0,0, 0.9);
+	border-color: rgba(116, 150, 27, 0.9);
+	border-style: solid;
+	border-width: 0.1em;
 	-webkit-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, 0.4);
 	-moz-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, 0.4);
 	box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, 0.4);
@@ -103,7 +102,7 @@ textarea {
 	height: 100px;
 	padding: 5px 8px;
 }
-
+/*
 input[type="text"]:hover,
 textarea:hover {
 	color: #A1EEFD;
@@ -117,12 +116,12 @@ textarea:focus {
 	color: #A1EEFD;
 	background-color: #083242;
 }
-
+*/
 
 select,
 input[type="submit"] {
 	border: 1px solid #000;
-	background-color: #A1EEFD;
+	/*background-color: #A1EEFD;*/
 	color: #000;
 	color: rgba(0,0,0, 0.9);
 	-webkit-border-radius: 2px;
@@ -139,8 +138,9 @@ select {
 }
 
 input[type="submit"]:hover {
-	color: #A1EEFD;
-	background-color: #13799F;
+	border-color: rgba(116, 150, 27, 0.4) #74961B #74961B rgba(116, 150, 27, 0.6);
+	border-style: solid;
+	border-width: 0.0625em;
 }
 
 /*************/
