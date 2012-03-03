@@ -19,7 +19,6 @@
 		<link rel="stylesheet" type="text/css" href="<wp:cssURL />pagemodels/home.css" />
 
 		<!-- JS_JQUERY -->
-			<wp:internalServlet actionPath="/ExtStr2/do/jpcmsshortcut/introHeader" />
 			<wp:outputHeadInfo type="JS_JQUERY">
 				<wp:printHeadInfo />
 			</wp:outputHeadInfo>

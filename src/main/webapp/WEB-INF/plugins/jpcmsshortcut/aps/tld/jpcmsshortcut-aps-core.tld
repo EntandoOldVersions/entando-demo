@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+    <description><![CDATA["jpcmsshortcut aps core tag library"]]>
+    </description>
+    <display-name>"jpcmsshortcut aps core tag library"</display-name>
+    <tlib-version>2.2</tlib-version>
+    <short-name>jpcmsshortcut</short-name>
+    <uri>/jpcmsshortcut-aps-core</uri>
+    
+    <tag>
+        <description><![CDATA[]]>
+        </description>
+        <name>staticInternalServlet</name>
+        <tag-class>com.agiletec.plugins.jpcmsshortcut.aps.tags.StaticInternalServletTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <description><![CDATA[The init action path.]]>
+            </description>
+            <name>actionPath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+</taglib>

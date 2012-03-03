@@ -7,10 +7,6 @@
     
     <package name="entandoDemo_jpfastcontentedit_do/jpfastcontentedit/Content" namespace="/do/jpfastcontentedit/Content" extends="jpfastcontentedit_do/jpfastcontentedit/Content">
 	
-        <result-types>	
-            <result-type name="frontRedirectAction" class="com.agiletec.plugins.jpfastcontentedit.aps.system.dispatcher.FrontServletActionRedirectResult" />
-        </result-types>
-        
         <global-results>
             <result name="userNotAllowed" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/userNotAllowed.jsp</result>
             <result name="failure" type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/errors.jsp</result>

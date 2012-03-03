@@ -11,9 +11,8 @@
 		</title>
 		<link rel="icon" href="<wp:info key="systemParam" paramName="applicationBaseURL" />favicon.png" type="image/png" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-
+                
 		<!-- JS_JQUERY -->
-			<wp:internalServlet actionPath="/ExtStr2/do/jpcmsshortcut/introHeader" />
 			<wp:outputHeadInfo type="JS_JQUERY">
 				<wp:printHeadInfo />
 			</wp:outputHeadInfo>

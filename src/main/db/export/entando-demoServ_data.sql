@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-12-19 18:09:37 CET
+-- Started on 2012-02-27 22:37:13 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,12 +13,37 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1842 (class 0 OID 115403)
+-- TOC entry 1895 (class 0 OID 110391)
+-- Dependencies: 147
+-- Data for Name: api_oauth_consumers; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+
+
+--
+-- TOC entry 1896 (class 0 OID 110399)
+-- Dependencies: 148
+-- Data for Name: api_oauth_tokens; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+
+
+--
+-- TOC entry 1876 (class 0 OID 110175)
+-- Dependencies: 128
+-- Data for Name: apicatalog_methods; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO apicatalog_methods (resource, httpmethod, isactive, authenticationrequired, authorizationrequired) VALUES ('getServices', 'GET', 1, NULL, NULL);
+
+
+--
+-- TOC entry 1875 (class 0 OID 110169)
 -- Dependencies: 127
 -- Data for Name: apicatalog_services; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('ListGenericContents', 'getContents', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('ListGenericContents', 'getContents', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Generic Contents</property>
 <property key="it">Contenuti generici</property>
@@ -32,7 +57,7 @@ INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters,
 </properties>
 
 ', 'jacms:contents', NULL, 1, 1, 1);
-INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('NEW17', 'getContent', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('NEW17', 'getContent', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">erogazione NEW17</property>
 <property key="it">erogazione NEW17</property>
@@ -53,7 +78,7 @@ INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters,
 </config>
 
 ', 1, 1, 1);
-INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('contents', 'getContents', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('contents', 'getContents', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">List news</property>
 <property key="it">Lista news</property>
@@ -75,7 +100,7 @@ INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters,
 </config>
 
 ', 1, 1, 1);
-INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('contenuto', 'getContent', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, ispublic, myentando) VALUES ('contenuto', 'getContent', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
 <property key="it">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
@@ -99,16 +124,7 @@ INSERT INTO apicatalog_services (servicekey, parentapi, description, parameters,
 
 
 --
--- TOC entry 1843 (class 0 OID 115409)
--- Dependencies: 128
--- Data for Name: apicatalog_status; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO apicatalog_status (method, isactive) VALUES ('getServices', 1);
-
-
---
--- TOC entry 1844 (class 0 OID 115412)
+-- TOC entry 1877 (class 0 OID 110178)
 -- Dependencies: 129
 -- Data for Name: authgroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -121,7 +137,7 @@ INSERT INTO authgroups (groupname, descr) VALUES ('registered', 'Registered User
 
 
 --
--- TOC entry 1845 (class 0 OID 115415)
+-- TOC entry 1878 (class 0 OID 110181)
 -- Dependencies: 130
 -- Data for Name: authpermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -138,7 +154,7 @@ INSERT INTO authpermissions (permissionname, descr) VALUES ('jpuserprofile_profi
 
 
 --
--- TOC entry 1846 (class 0 OID 115418)
+-- TOC entry 1879 (class 0 OID 110184)
 -- Dependencies: 131
 -- Data for Name: authrolepermissions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -147,7 +163,7 @@ INSERT INTO authrolepermissions (rolename, permissionname) VALUES ('admin', 'sup
 
 
 --
--- TOC entry 1847 (class 0 OID 115421)
+-- TOC entry 1880 (class 0 OID 110187)
 -- Dependencies: 132
 -- Data for Name: authroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -156,7 +172,7 @@ INSERT INTO authroles (rolename, descr) VALUES ('admin', 'Administrator');
 
 
 --
--- TOC entry 1848 (class 0 OID 115424)
+-- TOC entry 1881 (class 0 OID 110190)
 -- Dependencies: 133
 -- Data for Name: authusergroups; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -171,7 +187,7 @@ INSERT INTO authusergroups (username, groupname) VALUES ('max', 'customers');
 
 
 --
--- TOC entry 1849 (class 0 OID 115427)
+-- TOC entry 1882 (class 0 OID 110193)
 -- Dependencies: 134
 -- Data for Name: authuserroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -181,7 +197,7 @@ INSERT INTO authuserroles (username, rolename) VALUES ('jeff', 'admin');
 
 
 --
--- TOC entry 1850 (class 0 OID 115430)
+-- TOC entry 1883 (class 0 OID 110196)
 -- Dependencies: 135
 -- Data for Name: authusers; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -193,7 +209,7 @@ INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpassw
 
 
 --
--- TOC entry 1851 (class 0 OID 115433)
+-- TOC entry 1884 (class 0 OID 110199)
 -- Dependencies: 136
 -- Data for Name: authusershortcuts; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -231,7 +247,7 @@ INSERT INTO authusershortcuts (username, config) VALUES ('admin', '<?xml version
 
 
 --
--- TOC entry 1852 (class 0 OID 115439)
+-- TOC entry 1885 (class 0 OID 110205)
 -- Dependencies: 137
 -- Data for Name: jpsurvey; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -274,7 +290,7 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 
 
 --
--- TOC entry 1853 (class 0 OID 115445)
+-- TOC entry 1886 (class 0 OID 110211)
 -- Dependencies: 138
 -- Data for Name: jpsurvey_choices; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -426,7 +442,7 @@ INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (6, 
 
 
 --
--- TOC entry 1854 (class 0 OID 115451)
+-- TOC entry 1887 (class 0 OID 110217)
 -- Dependencies: 139
 -- Data for Name: jpsurvey_questions; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -474,7 +490,7 @@ INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minre
 
 
 --
--- TOC entry 1855 (class 0 OID 115457)
+-- TOC entry 1888 (class 0 OID 110223)
 -- Dependencies: 140
 -- Data for Name: jpsurvey_responses; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -492,7 +508,7 @@ INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES 
 
 
 --
--- TOC entry 1856 (class 0 OID 115460)
+-- TOC entry 1889 (class 0 OID 110226)
 -- Dependencies: 141
 -- Data for Name: jpsurvey_voters; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -502,7 +518,7 @@ INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username
 
 
 --
--- TOC entry 1857 (class 0 OID 115463)
+-- TOC entry 1890 (class 0 OID 110229)
 -- Dependencies: 142
 -- Data for Name: jpuserprofile_authuserprofiles; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -522,7 +538,7 @@ INSERT INTO jpuserprofile_authuserprofiles (username, profiletype, profilexml, p
 
 
 --
--- TOC entry 1858 (class 0 OID 115469)
+-- TOC entry 1891 (class 0 OID 110235)
 -- Dependencies: 143
 -- Data for Name: jpuserprofile_profilesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -542,7 +558,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1859 (class 0 OID 115472)
+-- TOC entry 1892 (class 0 OID 110238)
 -- Dependencies: 144
 -- Data for Name: jpwebdynamicform_messageanswers; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -550,7 +566,7 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1860 (class 0 OID 115478)
+-- TOC entry 1893 (class 0 OID 110244)
 -- Dependencies: 145
 -- Data for Name: jpwebdynamicform_messages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -558,14 +574,14 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 
 
 --
--- TOC entry 1861 (class 0 OID 115484)
+-- TOC entry 1894 (class 0 OID 110250)
 -- Dependencies: 146
 -- Data for Name: jpwebdynamicform_messagesearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 
--- Completed on 2011-12-19 18:09:38 CET
+-- Completed on 2012-02-27 22:37:13 CET
 
 --
 -- PostgreSQL database dump complete

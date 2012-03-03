@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-12-19 18:09:37 CET
+-- Started on 2012-02-27 22:37:13 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1843 (class 0 OID 113873)
+-- TOC entry 1862 (class 0 OID 108639)
 -- Dependencies: 127
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -42,7 +42,7 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('footerlinks', 'hom
 
 
 --
--- TOC entry 1844 (class 0 OID 113879)
+-- TOC entry 1863 (class 0 OID 108645)
 -- Dependencies: 128
 -- Data for Name: contentmodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -359,7 +359,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 
 
 --
--- TOC entry 1845 (class 0 OID 113885)
+-- TOC entry 1864 (class 0 OID 108651)
 -- Dependencies: 129
 -- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -427,7 +427,7 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 
 
 --
--- TOC entry 1846 (class 0 OID 113888)
+-- TOC entry 1865 (class 0 OID 108654)
 -- Dependencies: 130
 -- Data for Name: contents; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -729,7 +729,7 @@ INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, l
 
 
 --
--- TOC entry 1847 (class 0 OID 113894)
+-- TOC entry 1866 (class 0 OID 108660)
 -- Dependencies: 131
 -- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -794,7 +794,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1848 (class 0 OID 113897)
+-- TOC entry 1867 (class 0 OID 108663)
 -- Dependencies: 132
 -- Data for Name: jpcontentfeedback_comments; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -802,7 +802,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1849 (class 0 OID 113903)
+-- TOC entry 1868 (class 0 OID 108669)
 -- Dependencies: 133
 -- Data for Name: jpcontentfeedback_rating; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -810,7 +810,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1850 (class 0 OID 113906)
+-- TOC entry 1869 (class 0 OID 108672)
 -- Dependencies: 134
 -- Data for Name: jpmyportalplus_userpageconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -899,7 +899,7 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 
 
 --
--- TOC entry 1851 (class 0 OID 113913)
+-- TOC entry 1870 (class 0 OID 108679)
 -- Dependencies: 135
 -- Data for Name: localstrings; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1529,7 +1529,7 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_TITLE'
 
 
 --
--- TOC entry 1852 (class 0 OID 113919)
+-- TOC entry 1871 (class 0 OID 108685)
 -- Dependencies: 136
 -- Data for Name: pagemodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2188,7 +2188,7 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('home', 'Home P
 
 
 --
--- TOC entry 1853 (class 0 OID 113925)
+-- TOC entry 1872 (class 0 OID 108691)
 -- Dependencies: 137
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2419,7 +2419,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1854 (class 0 OID 113931)
+-- TOC entry 1873 (class 0 OID 108697)
 -- Dependencies: 138
 -- Data for Name: resourcerelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2427,7 +2427,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1855 (class 0 OID 113934)
+-- TOC entry 1874 (class 0 OID 108700)
 -- Dependencies: 139
 -- Data for Name: resources; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2519,7 +2519,7 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 
 
 --
--- TOC entry 1856 (class 0 OID 113940)
+-- TOC entry 1875 (class 0 OID 108706)
 -- Dependencies: 140
 -- Data for Name: showletcatalog; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2893,7 +2893,7 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 
 
 --
--- TOC entry 1857 (class 0 OID 113946)
+-- TOC entry 1876 (class 0 OID 108712)
 -- Dependencies: 141
 -- Data for Name: showletconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3369,7 +3369,7 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 
 --
--- TOC entry 1858 (class 0 OID 113952)
+-- TOC entry 1877 (class 0 OID 108718)
 -- Dependencies: 142
 -- Data for Name: sysconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3794,7 +3794,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subI
 
 
 --
--- TOC entry 1859 (class 0 OID 113958)
+-- TOC entry 1878 (class 0 OID 108724)
 -- Dependencies: 143
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3803,7 +3803,7 @@ INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 64);
 
 
 --
--- TOC entry 1860 (class 0 OID 113961)
+-- TOC entry 1879 (class 0 OID 108727)
 -- Dependencies: 144
 -- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3813,7 +3813,7 @@ INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW11', 'even
 
 
 --
--- TOC entry 1861 (class 0 OID 113964)
+-- TOC entry 1880 (class 0 OID 108730)
 -- Dependencies: 145
 -- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3877,7 +3877,7 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
 
 
--- Completed on 2011-12-19 18:09:37 CET
+-- Completed on 2012-02-27 22:37:13 CET
 
 --
 -- PostgreSQL database dump complete

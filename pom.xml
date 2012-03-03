@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<version>1.0</version>
 	<name>entando-demo</name>
-	<url>http://demo.entando.com/</url>
+	<url>http://maven.apache.org/</url>
 	<repositories>
 		<repository>
 			<id>Apache Snapshots</id>
@@ -76,7 +76,7 @@
 			<properties>
 				<env>exewar</env>
 			</properties>
-		</profile>
+		</profile>		
 		<profile>
 			<id>windows</id>
 			<activation>
@@ -96,7 +96,7 @@
 		<test.database.password>agile</test.database.password>
 		<test.database.basename>entando-core-engine</test.database.basename>
 		<test.database.basepath>${project.build.directory}/test/sql</test.database.basepath>
-		<skipDerby>true</skipDerby>
+		<skipDerby>true</skipDerby>	
 	</properties>
 	<build>
 		<finalName>entando-demo</finalName>
@@ -118,7 +118,7 @@
 				<includes>
 					<include>**/*.tld</include>
 				</includes>
-			</resource>
+			</resource>			
 		</resources>
 		<filters>
 			<filter>src/main/filters/filter-${env}.properties</filter>
@@ -173,7 +173,7 @@
 							<overWriteReleases>false</overWriteReleases>
 							<overWriteSnapshots>false</overWriteSnapshots>
 							<appendOutput>true</appendOutput>
-							<includeGroupIds>org.entando.entando.plugins</includeGroupIds>
+							<includeGroupIds>org.entando.entando.plugins,org.entando.entando.bundles</includeGroupIds>
 							<includeClassifiers>misc</includeClassifiers>
 							<excludeTypes>war,jar</excludeTypes>
 							<includeTypes>zip</includeTypes>
@@ -221,7 +221,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.5</version>
 				<executions>
 					<execution>
 						<id>prepare-config-test</id>
@@ -240,6 +240,27 @@
 							</resources>
 						</configuration>
 					</execution>
+					<execution>
+						<id>prepare-config-test-override-config</id>
+						<phase>process-test-classes</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/test/conf</outputDirectory>
+							<encoding>UTF-8</encoding>
+							<overwrite>true</overwrite>
+							<resources>
+								<resource>
+									<directory>src/test/config</directory>
+									<includes>
+										<include>contextTestParams.properties</include>
+									</includes>									
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>					
 					<execution>
 						<id>copy-resources-conf</id>
 						<!-- here the phase you need -->
@@ -340,7 +361,7 @@
 								</resource>
 							</resources>
 						</configuration>
-					</execution>
+					</execution>					
 				</executions>
 			</plugin>
 			<plugin>
@@ -364,7 +385,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="^REVOKE.*$"/>
 										  <substitution expression=""/>
@@ -372,15 +393,15 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="^GRANT.*$"/>
 										  <substitution expression=""/>
 										  <fileset dir="${project.build.directory}/derby/sql">
 										    <include name="*.sql"/>
 										  </fileset>
-										</replaceregexp>
-
+										</replaceregexp>																	
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="ALTER TABLE ONLY"/>
 										  <substitution expression="ALTER TABLE"/>
@@ -388,7 +409,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="CREATE PROCEDURAL LANGUAGE plpgsql;"/>
 										  <substitution expression=""/>
@@ -396,7 +417,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="character varying "/>
 										  <substitution expression="LONG VARCHAR "/>
@@ -404,7 +425,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="character varying,"/>
 										  <substitution expression="LONG VARCHAR,"/>
@@ -412,7 +433,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="character varying$"/>
 										  <substitution expression="LONG VARCHAR"/>
@@ -420,7 +441,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern=" USING btree"/>
 										  <substitution expression=""/>
@@ -428,7 +449,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="timestamp without time zone"/>
 										  <substitution expression="timestamp"/>
@@ -436,15 +457,15 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-
+										
 										<replaceregexp byline="true">
 										  <regexp pattern="DEFAULT ''::LONG VARCHAR NOT NULL"/>
 										  <substitution expression="NOT NULL WITH DEFAULT ''"/>
 										  <fileset dir="${project.build.directory}/derby/sql">
 										    <include name="*.sql"/>
 										  </fileset>
-										</replaceregexp>
-
+										</replaceregexp>										
+										
 									</then>
 								</if>
 							</target>
@@ -461,7 +482,7 @@
 						<version>20020829</version>
 					</dependency>
 				</dependencies>
-			</plugin>
+			</plugin>				
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>sql-maven-plugin</artifactId>
@@ -527,7 +548,7 @@
 							<password>${test.database.password}</password>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/template1</url>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>
+							<keepFormat>false</keepFormat>						
 							<autocommit>true</autocommit>
 							<sqlCommand>create database "${project.artifactId}testPort"</sqlCommand>
 						</configuration>
@@ -544,7 +565,7 @@
 							<password>${test.database.password}</password>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/template1</url>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>
+							<keepFormat>false</keepFormat>						
 							<autocommit>true</autocommit>
 							<sqlCommand>create database "${project.artifactId}testServ"</sqlCommand>
 						</configuration>
@@ -560,7 +581,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>
+							<keepFormat>false</keepFormat>						
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testPort</url>
 							<onError>continue</onError>
 							<autocommit>true</autocommit>
@@ -580,7 +601,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>
+							<keepFormat>false</keepFormat>						
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testServ</url>
 							<onError>continue</onError>
 							<autocommit>true</autocommit>
@@ -600,7 +621,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>
+							<keepFormat>false</keepFormat>						
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testPort</url>
 							<escapeProcessing>false</escapeProcessing>
 							<enableBlockMode>true</enableBlockMode>
@@ -622,7 +643,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>
+							<keepFormat>false</keepFormat>						
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testServ</url>
 							<escapeProcessing>false</escapeProcessing>
 							<enableBlockMode>true</enableBlockMode>
@@ -644,7 +665,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>
+							<keepFormat>false</keepFormat>						
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testPort</url>
 							<escapeProcessing>false</escapeProcessing>
 							<enableBlockMode>true</enableBlockMode>
@@ -670,7 +691,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>
+							<keepFormat>false</keepFormat>						
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testServ</url>
 							<escapeProcessing>false</escapeProcessing>
 							<enableBlockMode>true</enableBlockMode>
@@ -695,8 +716,8 @@
 						<configuration>
 							<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
 							<username>${test.database.username}</username>
-							<password>${test.database.password}</password>
-							<keepFormat>false</keepFormat>
+							<password>${test.database.password}</password>							
+							<keepFormat>false</keepFormat>			
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Port;create=true</url>
 							<skip>${skipDerby}</skip>
 							<skipOnConnectionError>true</skipOnConnectionError>
@@ -716,10 +737,10 @@
 						<configuration>
 							<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
 							<username>${test.database.username}</username>
-							<password>${test.database.password}</password>
-							<keepFormat>false</keepFormat>
+							<password>${test.database.password}</password>							
+							<keepFormat>false</keepFormat>			
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Port</url>
-							<skip>${skipDerby}</skip>
+							<skip>${skipDerby}</skip>							
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -727,7 +748,7 @@
 								<srcFile>${project.build.directory}/derby/sql/${project.artifactId}Port_data.sql</srcFile>
 							</srcFiles>
 						</configuration>
-					</execution>
+					</execution>					
 					<execution>
 						<id>derby-create-schema-serv</id>
 						<phase>prepare-package</phase>
@@ -737,10 +758,10 @@
 						<configuration>
 							<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
 							<username>${test.database.username}</username>
-							<password>${test.database.password}</password>
-							<keepFormat>false</keepFormat>
+							<password>${test.database.password}</password>							
+							<keepFormat>false</keepFormat>			
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Serv;create=true</url>
-							<skip>${skipDerby}</skip>
+							<skip>${skipDerby}</skip>							
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -758,10 +779,10 @@
 						<configuration>
 							<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
 							<username>${test.database.username}</username>
-							<password>${test.database.password}</password>
-							<keepFormat>false</keepFormat>
+							<password>${test.database.password}</password>							
+							<keepFormat>false</keepFormat>			
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Serv</url>
-							<skip>${skipDerby}</skip>
+							<skip>${skipDerby}</skip>							
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -769,7 +790,7 @@
 								<srcFile>${project.build.directory}/derby/sql/${project.artifactId}Serv_data.sql</srcFile>
 							</srcFiles>
 						</configuration>
-					</execution>
+					</execution>														
 				</executions>
 			</plugin>
 			<plugin>
@@ -808,6 +829,11 @@
 						<version>9.1-901.jdbc4</version>
 					</dependency>
 					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.18</version>
+					</dependency>					
+					<dependency>
 						<groupId>commons-dbcp</groupId>
 						<artifactId>commons-dbcp</artifactId>
 						<version>1.2.2</version>
@@ -828,7 +854,7 @@
 						<configuration>
 							<path>/${project.artifactId}</path>
 							<!-- Not working... waiting for the plugin...
-							<tomcatWebXml>${basedir}/src/main/config/tomcat-exewar-web.xml</tomcatWebXml>
+							<tomcatWebXml>${basedir}/src/main/config/tomcat-exewar-web.xml</tomcatWebXml> 
 							-->
 							<enableNaming>true</enableNaming>
 							<extraDependencies>
@@ -845,7 +871,7 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -924,27 +950,27 @@
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-webapp</artifactId>
-			<version>2.4.0.1</version>
+			<version>2.4.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>2.4.0.1</version>
+			<version>2.4.1-SNAPSHOT</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>2.4.0.1</version>
+			<version>2.4.1-SNAPSHOT</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>2.4.0.1</version>
+			<version>2.4.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc-test</classifier>
 			<scope>test</scope>
@@ -964,7 +990,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>3.0.5.RELEASE</version>
+			<version>3.0.6.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -979,109 +1005,112 @@
 			<version>4.8.2</version>
 			<scope>test</scope>
 		</dependency>
-
+                
+                <!-- User Profile Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>1.8.0.1</version>
+			<version>1.8.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>1.8.0.1</version>
+			<version>1.8.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
-
+                
+                <!-- My Portal Plus Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>1.1.0.1</version>
+			<version>1.1.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>1.1.0.1</version>
+			<version>1.1.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
-
+                
+                <!-- Share With Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>1.4.0.1</version>
+			<version>1.4.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>1.4.0.1</version>
+			<version>1.4.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
-
+                
+                <!-- Fast Content Edit Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>1.4.0.1</version>
+			<version>1.4.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
                 <dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>1.4.0.1</version>
+			<version>1.4.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
-
+                
+                <!-- Web Dynamic Form Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>1.2.0.1</version>
+			<version>1.2.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>1.2.0.1</version>
+			<version>1.2.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
-
-		<!-- jpcontentfeedback -->
+                
+		<!-- Content Feedback Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>1.2.0.1</version>
+			<version>1.2.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>1.2.0.1</version>
+			<version>1.2.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
-		<!-- jpcontentfeedback -->
-
-		<!-- entando-plugin-jpsurvey -->
+                
+		<!-- Survey Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>1.4.0.1</version>
+			<version>1.4.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>1.4.0.1</version>
+			<version>1.4.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
-		<!-- entando-plugin-jpsurvey -->
-
+                
                 <!-- jpcmsshortcut plugin -->
                 <dependency>
                     <groupId>com.jgeppert.struts2.jquery</groupId>
@@ -1161,6 +1190,6 @@
                     </exclusions>
                 </dependency>
                 <!-- jpcmsshortcut plugin -->
-
+                
 	</dependencies>
 </project>
