@@ -154,21 +154,21 @@ INSERT INTO authpermissions (permissionname, descr) VALUES ('jpuserprofile_profi
 
 
 --
--- TOC entry 1879 (class 0 OID 110184)
--- Dependencies: 131
--- Data for Name: authrolepermissions; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO authrolepermissions (rolename, permissionname) VALUES ('admin', 'superuser');
-
-
---
 -- TOC entry 1880 (class 0 OID 110187)
 -- Dependencies: 132
 -- Data for Name: authroles; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 INSERT INTO authroles (rolename, descr) VALUES ('admin', 'Administrator');
+
+
+--
+-- TOC entry 1879 (class 0 OID 110184)
+-- Dependencies: 131
+-- Data for Name: authrolepermissions; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO authrolepermissions (rolename, permissionname) VALUES ('admin', 'superuser');
 
 
 --
@@ -287,6 +287,54 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 </properties>
 
 ');
+
+
+--
+-- TOC entry 1887 (class 0 OID 110217)
+-- Dependencies: 139
+-- Data for Name: jpsurvey_questions; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (4, 2, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Question 1</property>
+<property key="it">Domanda 1</property>
+</properties>
+
+', 0, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (5, 2, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Question two</property>
+<property key="it">Seconda domanda</property>
+</properties>
+
+', 1, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (6, 2, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Last Question</property>
+<property key="it">Ultima Domanda</property>
+</properties>
+
+', 2, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (1, 1, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Question number one</property>
+<property key="it">Domanda numero 1</property>
+</properties>
+
+', 0, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (2, 1, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Question two</property>
+</properties>
+
+', 1, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (3, 1, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Question three, multiple choices</property>
+</properties>
+
+', 2, 0, 2, 4);
 
 
 --
@@ -442,51 +490,13 @@ INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (6, 
 
 
 --
--- TOC entry 1887 (class 0 OID 110217)
--- Dependencies: 139
--- Data for Name: jpsurvey_questions; Type: TABLE DATA; Schema: public; Owner: agile
+-- TOC entry 1889 (class 0 OID 110226)
+-- Dependencies: 141
+-- Data for Name: jpsurvey_voters; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (4, 2, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Question 1</property>
-<property key="it">Domanda 1</property>
-</properties>
-
-', 0, 1, 0, 0);
-INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (5, 2, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Question two</property>
-<property key="it">Seconda domanda</property>
-</properties>
-
-', 1, 1, 0, 0);
-INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (6, 2, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Last Question</property>
-<property key="it">Ultima Domanda</property>
-</properties>
-
-', 2, 1, 0, 0);
-INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (1, 1, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Question number one</property>
-<property key="it">Domanda numero 1</property>
-</properties>
-
-', 0, 1, 0, 0);
-INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (2, 1, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Question two</property>
-</properties>
-
-', 1, 1, 0, 0);
-INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (3, 1, '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Question three, multiple choices</property>
-</properties>
-
-', 2, 0, 2, 4);
+INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username, ipaddress) VALUES (1, 0, NULL, NULL, '2011-11-17', 1, 'admin', '127.0.0.1');
+INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username, ipaddress) VALUES (2, 0, NULL, NULL, '2011-11-18', 1, 'guest', '192.168.1.245');
 
 
 --
@@ -505,16 +515,6 @@ INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES 
 INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES (2, 2, 5, NULL);
 INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES (2, 3, 9, NULL);
 INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES (2, 3, 13, NULL);
-
-
---
--- TOC entry 1889 (class 0 OID 110226)
--- Dependencies: 141
--- Data for Name: jpsurvey_voters; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username, ipaddress) VALUES (1, 0, NULL, NULL, '2011-11-17', 1, 'admin', '127.0.0.1');
-INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username, ipaddress) VALUES (2, 0, NULL, NULL, '2011-11-18', 1, 'guest', '192.168.1.245');
 
 
 --
