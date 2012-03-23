@@ -379,99 +379,99 @@
 									<available file="${project.build.directory}/derby/sql" type="dir" />
 									<then>
 										<replaceregexp byline="true">
-										  <regexp pattern="^SET.*$"/>
-										  <substitution expression=""/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="^SET.*$"/>
+											<substitution expression=""/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="^REVOKE.*$"/>
-										  <substitution expression=""/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="^REVOKE.*$"/>
+											<substitution expression=""/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="^GRANT.*$"/>
-										  <substitution expression=""/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="^GRANT.*$"/>
+											<substitution expression=""/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>																	
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="ALTER TABLE ONLY"/>
-										  <substitution expression="ALTER TABLE"/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="ALTER TABLE ONLY"/>
+											<substitution expression="ALTER TABLE"/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="CREATE PROCEDURAL LANGUAGE plpgsql;"/>
-										  <substitution expression=""/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="CREATE PROCEDURAL LANGUAGE plpgsql;"/>
+											<substitution expression=""/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="character varying "/>
-										  <substitution expression="LONG VARCHAR "/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="character varying "/>
+											<substitution expression="LONG VARCHAR "/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="character varying,"/>
-										  <substitution expression="LONG VARCHAR,"/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="character varying,"/>
+											<substitution expression="LONG VARCHAR,"/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="character varying$"/>
-										  <substitution expression="LONG VARCHAR"/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="character varying$"/>
+											<substitution expression="LONG VARCHAR"/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern=" USING btree"/>
-										  <substitution expression=""/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern=" USING btree"/>
+											<substitution expression=""/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="timestamp without time zone"/>
-										  <substitution expression="timestamp"/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="timestamp without time zone"/>
+											<substitution expression="timestamp"/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-										  <regexp pattern="DEFAULT ''::LONG VARCHAR NOT NULL"/>
-										  <substitution expression="NOT NULL WITH DEFAULT ''"/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern="DEFAULT ''::LONG VARCHAR NOT NULL"/>
+											<substitution expression="NOT NULL WITH DEFAULT ''"/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>									
 										
 										<replaceregexp byline="true">
-										  <regexp pattern='"char",'/>
-										  <substitution expression="CHAR(2),"/>
-										  <fileset dir="${project.build.directory}/derby/sql">
-										    <include name="*.sql"/>
-										  </fileset>
+											<regexp pattern='"char",'/>
+											<substitution expression="CHAR(2),"/>
+											<fileset dir="${project.build.directory}/derby/sql">
+												<include name="*.sql"/>
+											</fileset>
 										</replaceregexp>										
 										
 									</then>
@@ -1018,13 +1018,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>1.8.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>1.8.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1033,13 +1033,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>1.1.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>1.1.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1048,13 +1048,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>1.4.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>1.4.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1063,13 +1063,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>1.4.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
-                <dependency>
+		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>1.4.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1078,13 +1078,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>1.2.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>1.2.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1093,13 +1093,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>1.2.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>1.2.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1108,96 +1108,96 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>1.4.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>1.4.1-SNAPSHOT</version>
+			<version>3.0.0-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
                 
-                <!-- jpcmsshortcut plugin -->
-                <dependency>
-                    <groupId>com.jgeppert.struts2.jquery</groupId>
-                    <artifactId>struts2-jquery-plugin</artifactId>
-                    <version>3.2.0</version>
-                    <exclusions>
-                    	<exclusion>
-                    		<artifactId>struts2-core</artifactId>
-                    		<groupId>org.apache.struts</groupId>
-                    	</exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.struts</groupId>
-                    <artifactId>struts2-convention-plugin</artifactId>
-                    <version>2.2.3.1</version>
-                    <exclusions>
-                    	<exclusion>
-                    		<artifactId>struts2-core</artifactId>
-                    		<groupId>org.apache.struts</groupId>
-                    	</exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-                    <groupId>com.jgeppert.struts2.jquery</groupId>
-                    <artifactId>struts2-jquery-chart-plugin</artifactId>
-                    <version>3.2.0</version>
-                    <exclusions>
-                    	<exclusion>
-                    		<artifactId>struts2-core</artifactId>
-                    		<groupId>org.apache.struts</groupId>
-                    	</exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-                    <groupId>com.jgeppert.struts2.jquery</groupId>
-                    <artifactId>struts2-jquery-grid-plugin</artifactId>
-                    <version>3.2.0</version>
-                    <exclusions>
-                    	<exclusion>
-                    		<artifactId>struts2-core</artifactId>
-                    		<groupId>org.apache.struts</groupId>
-                    	</exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-                    <groupId>com.jgeppert.struts2.jquery</groupId>
-                    <artifactId>struts2-jquery-richtext-plugin</artifactId>
-                    <version>3.2.0</version>
-                    <exclusions>
-                    	<exclusion>
-                    		<artifactId>struts2-core</artifactId>
-                    		<groupId>org.apache.struts</groupId>
-                    	</exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-                    <groupId>com.jgeppert.struts2.jquery</groupId>
-                    <artifactId>struts2-jquery-tree-plugin</artifactId>
-                    <version>3.2.0</version>
-                    <exclusions>
-                    	<exclusion>
-                    		<artifactId>struts2-core</artifactId>
-                    		<groupId>org.apache.struts</groupId>
-                    	</exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.struts</groupId>
-                    <artifactId>struts2-json-plugin</artifactId>
-                    <version>2.2.3.1</version>
-                    <exclusions>
-                    	<exclusion>
-                    		<artifactId>struts2-core</artifactId>
-                    		<groupId>org.apache.struts</groupId>
-                    	</exclusion>
-                    </exclusions>
-                </dependency>
-                <!-- jpcmsshortcut plugin -->
+        <!-- jpcmsshortcut plugin -->
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-plugin</artifactId>
+			<version>3.2.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>struts2-core</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-convention-plugin</artifactId>
+			<version>2.2.3.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>struts2-core</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-chart-plugin</artifactId>
+			<version>3.2.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>struts2-core</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-grid-plugin</artifactId>
+			<version>3.2.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>struts2-core</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-richtext-plugin</artifactId>
+			<version>3.2.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>struts2-core</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-tree-plugin</artifactId>
+			<version>3.2.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>struts2-core</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-json-plugin</artifactId>
+			<version>2.2.3.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>struts2-core</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+        <!-- jpcmsshortcut plugin -->
                 
 	</dependencies>
 </project>

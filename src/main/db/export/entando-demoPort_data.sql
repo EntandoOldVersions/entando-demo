@@ -2349,6 +2349,7 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	<parameter name="userFilters">Front-End user filter options</parameter>
 	<parameter name="category">Content Category **deprecated**</parameter>
 	<parameter name="categories">Content Category codes (comma separeted)</parameter>
+    <parameter name="orClauseCategoryFilter" />
 	<parameter name="maxElemForItem">Contents for each page</parameter>
 	<parameter name="filters" />
 	<parameter name="title_{lang}">Showlet Title in lang {lang}</parameter>
@@ -3568,6 +3569,13 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpwe
 
 ');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20111219180528');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpcontentfeedback_config', 'Content Feedback global configuration', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentFeedbackConfig>
+		<anonymousComment>false</anonymousComment>
+		<comment>true</comment>
+		<rateComment>true</rateComment>
+		<rateContent>true</rateContent>
+</contentFeedbackConfig>');
 
 
 --
