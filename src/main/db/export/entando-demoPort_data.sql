@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-02-27 22:37:13 CET
+-- Started on 2012-03-24 19:47:31 CET
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1862 (class 0 OID 108639)
+-- TOC entry 1862 (class 0 OID 560333)
 -- Dependencies: 127
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -42,7 +42,7 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('footerlinks', 'hom
 
 
 --
--- TOC entry 1863 (class 0 OID 108645)
+-- TOC entry 1863 (class 0 OID 560339)
 -- Dependencies: 128
 -- Data for Name: contentmodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -359,7 +359,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 
 
 --
--- TOC entry 1865 (class 0 OID 108654)
+-- TOC entry 1865 (class 0 OID 560348)
 -- Dependencies: 130
 -- Data for Name: contents; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -661,7 +661,7 @@ INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, l
 
 
 --
--- TOC entry 1867 (class 0 OID 108663)
+-- TOC entry 1867 (class 0 OID 560357)
 -- Dependencies: 132
 -- Data for Name: jpcontentfeedback_comments; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -669,14 +669,14 @@ INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, l
 
 
 --
--- TOC entry 1868 (class 0 OID 108669)
+-- TOC entry 1868 (class 0 OID 560363)
 -- Dependencies: 133
 -- Data for Name: jpcontentfeedback_rating; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 --
--- TOC entry 1870 (class 0 OID 108679)
+-- TOC entry 1870 (class 0 OID 560373)
 -- Dependencies: 135
 -- Data for Name: localstrings; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1306,7 +1306,7 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_TITLE'
 
 
 --
--- TOC entry 1871 (class 0 OID 108685)
+-- TOC entry 1871 (class 0 OID 560379)
 -- Dependencies: 136
 -- Data for Name: pagemodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1965,7 +1965,7 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('home', 'Home P
 
 
 --
--- TOC entry 1872 (class 0 OID 108691)
+-- TOC entry 1872 (class 0 OID 560385)
 -- Dependencies: 137
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2196,7 +2196,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1873 (class 0 OID 108697)
+-- TOC entry 1873 (class 0 OID 560391)
 -- Dependencies: 138
 -- Data for Name: resourcerelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2204,17 +2204,11 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1874 (class 0 OID 108700)
+-- TOC entry 1874 (class 0 OID 560394)
 -- Dependencies: 139
 -- Data for Name: resources; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
-INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('5', 'Image', 'test1', 'free', '<?xml version="1.0" encoding="UTF-8"?>
-<resource typecode="Image" id="5"><descr>test1</descr><groups mainGroup="free" /><categories /><masterfile>test.png</masterfile><instance><size>3</size><filename>test_d3.png</filename><mimetype>image/png</mimetype><weight>55 Kb</weight></instance><instance><size>2</size><filename>test_d2.png</filename><mimetype>image/png</mimetype><weight>24 Kb</weight></instance><instance><size>1</size><filename>test_d1.png</filename><mimetype>image/png</mimetype><weight>9 Kb</weight></instance><instance><size>0</size><filename>test_d0.png</filename><mimetype>image/png</mimetype><weight>877 Kb</weight></instance></resource>
-', 'test.png');
-INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('7', 'Attach', 'test', 'free', '<?xml version="1.0" encoding="UTF-8"?>
-<resource typecode="Attach" id="7"><descr>test</descr><groups mainGroup="free" /><categories /><masterfile>web-designers-vs-developers.pdf</masterfile><instance><size>0</size><filename>web-designers-vs-developers.pdf</filename><mimetype>application/pdf</mimetype><weight>171 Kb</weight></instance></resource>
-', 'web-designers-vs-developers.pdf');
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('13', 'Image', 'Logo Osor', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="13"><descr>Logo Osor</descr><groups mainGroup="free" /><categories /><masterfile>OSOR-logo.png</masterfile><instance><size>3</size><filename>OSOR-logo_d3.png</filename><mimetype>image/png</mimetype><weight>4 Kb</weight></instance><instance><size>2</size><filename>OSOR-logo_d2.png</filename><mimetype>image/png</mimetype><weight>4 Kb</weight></instance><instance><size>1</size><filename>OSOR-logo_d1.png</filename><mimetype>image/png</mimetype><weight>4 Kb</weight></instance><instance><size>0</size><filename>OSOR-logo_d0.png</filename><mimetype>image/png</mimetype><weight>5 Kb</weight></instance></resource>
 ', 'OSOR-logo.png');
@@ -2245,9 +2239,6 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('26', 'Image', 'Contribute', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="26"><descr>Contribute</descr><groups mainGroup="free" /><categories /><masterfile>Contribute.jpg</masterfile><instance><size>3</size><filename>Contribute_d3.jpg</filename><mimetype>image/jpeg</mimetype><weight>4 Kb</weight></instance><instance><size>2</size><filename>Contribute_d2.jpg</filename><mimetype>image/jpeg</mimetype><weight>2 Kb</weight></instance><instance><size>1</size><filename>Contribute_d1.jpg</filename><mimetype>image/jpeg</mimetype><weight>1 Kb</weight></instance><instance><size>0</size><filename>Contribute_d0.jpg</filename><mimetype>image/jpeg</mimetype><weight>124 Kb</weight></instance></resource>
 ', 'Contribute.jpg');
-INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('27', 'Image', 'Entando Logo', 'free', '<?xml version="1.0" encoding="UTF-8"?>
-<resource typecode="Image" id="27"><descr>Entando Logo</descr><groups mainGroup="free" /><categories /><masterfile>entando-square.png</masterfile><instance><size>3</size><filename>entando-square_d3.png</filename><mimetype>image/png</mimetype><weight>3 Kb</weight></instance><instance><size>2</size><filename>entando-square_d2.png</filename><mimetype>image/png</mimetype><weight>3 Kb</weight></instance><instance><size>1</size><filename>entando-square_d1.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>entando-square_d0.png</filename><mimetype>image/png</mimetype><weight>4 Kb</weight></instance></resource>
-', 'entando-square.png');
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('29', 'Image', 'Live Event', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="29"><descr>Live Event</descr><groups mainGroup="free" /><categories /><masterfile>Live_Event.jpg</masterfile><instance><size>3</size><filename>Live_Event_d3.jpg</filename><mimetype>image/jpeg</mimetype><weight>10 Kb</weight></instance><instance><size>2</size><filename>Live_Event_d2.jpg</filename><mimetype>image/jpeg</mimetype><weight>5 Kb</weight></instance><instance><size>1</size><filename>Live_Event_d1.jpg</filename><mimetype>image/jpeg</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>Live_Event_d0.jpg</filename><mimetype>image/jpeg</mimetype><weight>497 Kb</weight></instance></resource>
 ', 'Live_Event.jpg');
@@ -2257,9 +2248,6 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('32', 'Image', 'Customer Services', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="32"><descr>Customer Services</descr><groups mainGroup="free" /><categories /><masterfile>Customer_services.jpg</masterfile><instance><size>3</size><filename>Customer_services_d3.jpg</filename><mimetype>image/jpeg</mimetype><weight>4 Kb</weight></instance><instance><size>2</size><filename>Customer_services_d2.jpg</filename><mimetype>image/jpeg</mimetype><weight>2 Kb</weight></instance><instance><size>1</size><filename>Customer_services_d1.jpg</filename><mimetype>image/jpeg</mimetype><weight>1 Kb</weight></instance><instance><size>0</size><filename>Customer_services_d0.jpg</filename><mimetype>image/jpeg</mimetype><weight>346 Kb</weight></instance></resource>
 ', 'Customer_services.jpg');
-INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('35', 'Image', 'Customers', 'free', '<?xml version="1.0" encoding="UTF-8"?>
-<resource typecode="Image" id="35"><descr>Customers</descr><groups mainGroup="free" /><categories /><masterfile>Customers.jpg</masterfile><instance><size>3</size><filename>Customers_d3.jpg</filename><mimetype>image/jpeg</mimetype><weight>8 Kb</weight></instance><instance><size>2</size><filename>Customers_d2.jpg</filename><mimetype>image/jpeg</mimetype><weight>4 Kb</weight></instance><instance><size>1</size><filename>Customers_d1.jpg</filename><mimetype>image/jpeg</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>Customers_d0.jpg</filename><mimetype>image/jpeg</mimetype><weight>405 Kb</weight></instance></resource>
-', 'Customers.jpg');
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('37', 'Attach', 'Entando System Requirements', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Attach" id="37"><descr>Entando System Requirements</descr><groups mainGroup="free" /><categories /><masterfile>Entando_System_Requirements.pdf</masterfile><instance><size>0</size><filename>Entando_System_Requirements.pdf</filename><mimetype>application/pdf</mimetype><weight>43 Kb</weight></instance></resource>
 ', 'Entando_System_Requirements.pdf');
@@ -2284,9 +2272,6 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('57', 'Image', 'What is Entando', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="57"><descr>What is Entando</descr><groups mainGroup="free" /><categories /><masterfile>What_is_Entando.png</masterfile><instance><size>3</size><filename>What_is_Entando_d3.png</filename><mimetype>image/png</mimetype><weight>8 Kb</weight></instance><instance><size>2</size><filename>What_is_Entando_d2.png</filename><mimetype>image/png</mimetype><weight>4 Kb</weight></instance><instance><size>1</size><filename>What_is_Entando_d1.png</filename><mimetype>image/png</mimetype><weight>1 Kb</weight></instance><instance><size>0</size><filename>What_is_Entando_d0.png</filename><mimetype>image/png</mimetype><weight>43 Kb</weight></instance></resource>
 ', 'What_is_Entando.png');
-INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('60', 'Image', 'weeeeeeeee', 'free', '<?xml version="1.0" encoding="UTF-8"?>
-<resource typecode="Image" id="60"><descr>weeeeeeeee</descr><groups mainGroup="free" /><categories /><masterfile>webforms.png</masterfile><instance><size>3</size><filename>webforms_d3.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>2</size><filename>webforms_d2.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>1</size><filename>webforms_d1.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>webforms_d0.png</filename><mimetype>image/png</mimetype><weight>2 Kb</weight></instance></resource>
-', 'webforms.png');
 INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfilename) VALUES ('54', 'Image', 'My Entando APP', 'free', '<?xml version="1.0" encoding="UTF-8"?>
 <resource typecode="Image" id="54"><descr>My Entando APP</descr><groups mainGroup="free" /><categories /><masterfile>APP.jpg</masterfile><instance><size>3</size><filename>APP_d3.jpg</filename><mimetype>image/jpeg</mimetype><weight>8 Kb</weight></instance><instance><size>2</size><filename>APP_d2.jpg</filename><mimetype>image/jpeg</mimetype><weight>4 Kb</weight></instance><instance><size>1</size><filename>APP_d1.jpg</filename><mimetype>image/jpeg</mimetype><weight>2 Kb</weight></instance><instance><size>0</size><filename>APP_d0.jpg</filename><mimetype>image/jpeg</mimetype><weight>45 Kb</weight></instance></resource>
 ', 'APP.jpg');
@@ -2296,7 +2281,7 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 
 
 --
--- TOC entry 1875 (class 0 OID 108706)
+-- TOC entry 1875 (class 0 OID 560400)
 -- Dependencies: 140
 -- Data for Name: showletcatalog; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2339,24 +2324,6 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	</parameter>
 	<action name="configSimpleParameter"/>
 </config>', NULL, NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Contents - Publish a List of Contents</property>
-<property key="it">Contenuti - Pubblica una Lista di Contenuti</property>
-</properties>', '<config>
-	<parameter name="contentType">Content Type (mandatory)</parameter>
-	<parameter name="modelId">Content Model</parameter>
-	<parameter name="userFilters">Front-End user filter options</parameter>
-	<parameter name="category">Content Category **deprecated**</parameter>
-	<parameter name="categories">Content Category codes (comma separeted)</parameter>
-    <parameter name="orClauseCategoryFilter" />
-	<parameter name="maxElemForItem">Contents for each page</parameter>
-	<parameter name="filters" />
-	<parameter name="title_{lang}">Showlet Title in lang {lang}</parameter>
-	<parameter name="pageLink">The code of the Page to link</parameter>
-	<parameter name="linkDescr_{lang}">Link description in lang {lang}</parameter>
-	<action name="listViewerConfig"/>
-</config>', 'jacms', NULL, NULL, 1, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpmyportalplus_void', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">My Portal - Void</property>
@@ -2668,10 +2635,28 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 </properties>
 
 ', 1, 'intranet');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Contents - Publish a List of Contents</property>
+<property key="it">Contenuti - Pubblica una Lista di Contenuti</property>
+</properties>', '<config>
+	<parameter name="contentType">Content Type (mandatory)</parameter>
+	<parameter name="modelId">Content Model</parameter>
+	<parameter name="userFilters">Front-End user filter options</parameter>
+	<parameter name="category">Content Category **deprecated**</parameter>
+	<parameter name="categories">Content Category codes (comma separeted)</parameter>
+    <parameter name="orClauseCategoryFilter" />
+	<parameter name="maxElemForItem">Contents for each page</parameter>
+	<parameter name="filters" />
+	<parameter name="title_{lang}">Showlet Title in lang {lang}</parameter>
+	<parameter name="pageLink">The code of the Page to link</parameter>
+	<parameter name="linkDescr_{lang}">Link description in lang {lang}</parameter>
+	<action name="listViewerConfig"/>
+</config>', 'jacms', NULL, NULL, 1, NULL);
 
 
 --
--- TOC entry 1876 (class 0 OID 108712)
+-- TOC entry 1876 (class 0 OID 560406)
 -- Dependencies: 141
 -- Data for Name: showletconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3147,7 +3132,7 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 
 --
--- TOC entry 1877 (class 0 OID 108718)
+-- TOC entry 1877 (class 0 OID 560412)
 -- Dependencies: 142
 -- Data for Name: sysconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3568,7 +3553,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpwe
 </messagetypes>
 
 ');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20111219180528');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpcontentfeedback_config', 'Content Feedback global configuration', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentFeedbackConfig>
 		<anonymousComment>false</anonymousComment>
@@ -3576,10 +3560,11 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpco
 		<rateComment>true</rateComment>
 		<rateContent>true</rateContent>
 </contentFeedbackConfig>');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20120324194258');
 
 
 --
--- TOC entry 1878 (class 0 OID 108724)
+-- TOC entry 1878 (class 0 OID 560418)
 -- Dependencies: 143
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3587,217 +3572,9 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpco
 INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 64);
 
 
---
--- TOC entry 1864 (class 0 OID 108651)
--- Dependencies: 129
--- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '13', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '28', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '28', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST2', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST4', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST3', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, 'events', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '14', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '29', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, 'events', NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '16', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '25', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, '32', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'intranet');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, '20', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, NULL, NULL, 'intranet');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, '10', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, '24', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, NULL, NULL, 'customers');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, '31', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '18', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '26', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, '54', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, '57', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG55', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('YTB58', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'intranet');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, '48', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, NULL, NULL, 'customers');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, '46', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, '37', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, NULL, NULL, 'intranet');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, '43', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, NULL, NULL, 'customers');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, '50', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, '52', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'free');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'administrators');
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, '39', NULL, NULL);
-INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG59', NULL, NULL, NULL, NULL, 'free');
-
 
 --
--- TOC entry 1866 (class 0 OID 108660)
--- Dependencies: 131
--- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Date', NULL, '2011-10-06', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Release of Entando version 2.4.0.1', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Rilascio di Entando versione 2.4.0.1', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Date', NULL, '2011-12-07', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'LIVE EVENT - Portal and Business Intelligence: across organizational boundaries', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'EVENTO LIVE - Il Portale e la Business Intelligence: oltre i confini dell''organizzazione', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Date', NULL, '2011-09-29', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast: "Portal Meets Business Intelligence: 3A Latte Arborea, a Case Study about Dairy and Farming in Italy"', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast sull''integrazione della piattaforma jAPS 2.0 entando e Pentaho Business Intelligence', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Date', NULL, '2011-05-24', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'New customer Services', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'Nuovi servizi per i clienti', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Date', NULL, '2011-12-01', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Title', 'Welcome to the Intranet Area for co-workers', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Title', 'Benvenuti nell''area Intranet dedicata ai collaboratori', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Date', NULL, '2011-12-14', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Title', 'Meeting reserved for co-workers', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Title', 'Incontro riservato ai collaboratori', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Date', NULL, '2011-11-24', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Title', 'New reports for customers now available', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Title', 'Ora sono disponibili i report per i clienti', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Date', NULL, '2011-11-16', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribute to Entando Project: submit your Idea and Suggestion', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribuisci al progetto Entando: proponi la tua idea', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Date', NULL, '2011-10-20', NULL, NULL);
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'My Entando APP', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'APP My Entando', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Welcome to Entando Portal Demo', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Benvenuto in Entando Portal Demo', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Some useful links', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Collegamenti utili', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN49', 'Title', 'Intranet Documentation', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN49', 'Title', 'Documentazione per Intranet', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN47', 'Title', 'Customer Best Practice', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN47', 'Title', 'Customer Best Practice', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN38', 'Title', 'Entando System Requirements', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN38', 'Title', 'Entando - Requisiti di sistema', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN44', 'Title', 'Business Plan', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN44', 'Title', 'Business Plan', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN51', 'Title', 'Customer Agreement', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN51', 'Title', 'Contratto Clienti', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Entando Model', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'en');
-INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
-
-
---
--- TOC entry 1879 (class 0 OID 108727)
--- Dependencies: 144
--- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW15', 'events');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW11', 'events');
-
-
---
--- TOC entry 1880 (class 0 OID 108730)
--- Dependencies: 145
--- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
---
-
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Date', NULL, '2011-10-06', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Release of Entando version 2.4.0.1', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Rilascio di Entando versione 2.4.0.1', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Date', NULL, '2011-12-07', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'LIVE EVENT - Portal and Business Intelligence: across organizational boundaries', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'EVENTO LIVE - Il Portale e la Business Intelligence: oltre i confini dell''organizzazione', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Date', NULL, '2011-09-29', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast: "Portal Meets Business Intelligence: 3A Latte Arborea, a Case Study about Dairy and Farming in Italy"', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast sull''integrazione della piattaforma jAPS 2.0 entando e Pentaho Business Intelligence', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Date', NULL, '2011-05-24', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'New customer Services', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'Nuovi servizi per i clienti', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Date', NULL, '2011-12-01', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Title', 'Welcome to the Intranet Area for co-workers', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Title', 'Benvenuti nell''area Intranet dedicata ai collaboratori', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Date', NULL, '2011-12-14', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Title', 'Meeting reserved for co-workers', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Title', 'Incontro riservato ai collaboratori', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Date', NULL, '2011-11-24', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Title', 'New reports for customers now available', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Title', 'Ora sono disponibili i report per i clienti', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Date', NULL, '2011-11-16', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribute to Entando Project: submit your Idea and Suggestion', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribuisci al progetto Entando: proponi la tua idea', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Date', NULL, '2011-10-20', NULL, NULL);
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'My Entando APP', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'APP My Entando', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Welcome to Entando Portal Demo', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Benvenuto in Entando Portal Demo', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Some useful links', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Collegamenti utili', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN49', 'Title', 'Intranet Documentation', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN49', 'Title', 'Documentazione per Intranet', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN47', 'Title', 'Customer Best Practice', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN47', 'Title', 'Customer Best Practice', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN38', 'Title', 'Entando System Requirements', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN38', 'Title', 'Entando - Requisiti di sistema', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN44', 'Title', 'Business Plan', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN44', 'Title', 'Business Plan', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN51', 'Title', 'Customer Agreement', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN51', 'Title', 'Contratto Clienti', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Entando Model', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'en');
-INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
-
-
-
---
--- TOC entry 1869 (class 0 OID 108672)
+-- TOC entry 1869 (class 0 OID 560366)
 -- Dependencies: 134
 -- Data for Name: jpmyportalplus_userpageconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3885,7 +3662,215 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 15, 'inEvidenza', NULL, 0);
 
 
--- Completed on 2012-02-27 22:37:13 CET
+--
+-- TOC entry 1866 (class 0 OID 560354)
+-- Dependencies: 131
+-- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Date', NULL, '2011-10-06', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Release of Entando version 2.4.0.1', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Rilascio di Entando versione 2.4.0.1', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Date', NULL, '2011-12-07', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'LIVE EVENT - Portal and Business Intelligence: across organizational boundaries', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'EVENTO LIVE - Il Portale e la Business Intelligence: oltre i confini dell''organizzazione', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Date', NULL, '2011-09-29', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast: "Portal Meets Business Intelligence: 3A Latte Arborea, a Case Study about Dairy and Farming in Italy"', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast sull''integrazione della piattaforma jAPS 2.0 entando e Pentaho Business Intelligence', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Date', NULL, '2011-05-24', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'New customer Services', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'Nuovi servizi per i clienti', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Date', NULL, '2011-12-01', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Title', 'Welcome to the Intranet Area for co-workers', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Title', 'Benvenuti nell''area Intranet dedicata ai collaboratori', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Date', NULL, '2011-12-14', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Title', 'Meeting reserved for co-workers', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Title', 'Incontro riservato ai collaboratori', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Date', NULL, '2011-11-24', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Title', 'New reports for customers now available', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Title', 'Ora sono disponibili i report per i clienti', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Date', NULL, '2011-11-16', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribute to Entando Project: submit your Idea and Suggestion', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribuisci al progetto Entando: proponi la tua idea', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Date', NULL, '2011-10-20', NULL, NULL);
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'My Entando APP', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'APP My Entando', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Welcome to Entando Portal Demo', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Benvenuto in Entando Portal Demo', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Some useful links', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Collegamenti utili', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN49', 'Title', 'Intranet Documentation', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN49', 'Title', 'Documentazione per Intranet', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN47', 'Title', 'Customer Best Practice', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN47', 'Title', 'Customer Best Practice', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN38', 'Title', 'Entando System Requirements', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN38', 'Title', 'Entando - Requisiti di sistema', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN44', 'Title', 'Business Plan', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN44', 'Title', 'Business Plan', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN51', 'Title', 'Customer Agreement', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN51', 'Title', 'Contratto Clienti', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Entando Model', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'en');
+INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
+
+
+--
+-- TOC entry 1864 (class 0 OID 560345)
+-- Dependencies: 129
+-- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '13', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW12', NULL, NULL, '28', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW17', NULL, NULL, '28', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST2', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST4', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('TST3', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, 'events', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '14', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW15', NULL, NULL, '29', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, 'events', NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '16', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW11', NULL, NULL, '25', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW33', NULL, NULL, '32', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'intranet');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW21', NULL, NULL, '20', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, NULL, NULL, 'intranet');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, '10', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW22', NULL, NULL, '24', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, NULL, NULL, 'customers');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW30', NULL, NULL, '31', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '18', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('NEW19', NULL, NULL, '26', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG45', NULL, NULL, '54', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG56', NULL, NULL, '57', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG55', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('YTB58', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'intranet');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN49', NULL, NULL, '48', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, NULL, NULL, 'customers');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN47', NULL, NULL, '46', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN38', NULL, NULL, '37', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, NULL, NULL, 'intranet');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN44', NULL, NULL, '43', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, NULL, NULL, 'customers');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN51', NULL, NULL, '50', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN53', NULL, NULL, '52', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'free');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, NULL, NULL, 'administrators');
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('DWN40', NULL, NULL, '39', NULL, NULL);
+INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refcategory, refgroup) VALUES ('CNG59', NULL, NULL, NULL, NULL, 'free');
+
+
+--
+-- TOC entry 1879 (class 0 OID 560421)
+-- Dependencies: 144
+-- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW15', 'events');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW11', 'events');
+
+
+--
+-- TOC entry 1880 (class 0 OID 560424)
+-- Dependencies: 145
+-- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
+--
+
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Title', 'Entando on Osor.eu, the Open Source Observatory and Repository for the public administration', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW12', 'Date', NULL, '2011-10-06', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Release of Entando version 2.4.0.1', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Title', 'Rilascio di Entando versione 2.4.0.1', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW17', 'Date', NULL, '2011-12-07', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST2', 'Title', 'Contenuto 1', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST4', 'Title', 'Contenuto 3', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('TST3', 'Title', 'Contenuto 2', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'LIVE EVENT - Portal and Business Intelligence: across organizational boundaries', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Title', 'EVENTO LIVE - Il Portale e la Business Intelligence: oltre i confini dell''organizzazione', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW15', 'Date', NULL, '2011-09-29', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast: "Portal Meets Business Intelligence: 3A Latte Arborea, a Case Study about Dairy and Farming in Italy"', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Title', 'Webcast sull''integrazione della piattaforma jAPS 2.0 entando e Pentaho Business Intelligence', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW11', 'Date', NULL, '2011-05-24', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'New customer Services', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Title', 'Nuovi servizi per i clienti', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW33', 'Date', NULL, '2011-12-01', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Title', 'Welcome to the Intranet Area for co-workers', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Title', 'Benvenuti nell''area Intranet dedicata ai collaboratori', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW21', 'Date', NULL, '2011-12-14', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Title', 'Meeting reserved for co-workers', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Title', 'Incontro riservato ai collaboratori', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW22', 'Date', NULL, '2011-11-24', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Title', 'New reports for customers now available', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Title', 'Ora sono disponibili i report per i clienti', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW30', 'Date', NULL, '2011-11-16', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribute to Entando Project: submit your Idea and Suggestion', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Title', 'Contribuisci al progetto Entando: proponi la tua idea', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('NEW19', 'Date', NULL, '2011-10-20', NULL, NULL);
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'My Entando APP', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG45', 'Title', 'APP My Entando', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Welcome to Entando Portal Demo', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG56', 'Title', 'Benvenuto in Entando Portal Demo', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Some useful links', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG55', 'Title', 'Collegamenti utili', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('YTB58', 'Title', 'Entando Backoffice Demo', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN49', 'Title', 'Intranet Documentation', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN49', 'Title', 'Documentazione per Intranet', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN47', 'Title', 'Customer Best Practice', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN47', 'Title', 'Customer Best Practice', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN38', 'Title', 'Entando System Requirements', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN38', 'Title', 'Entando - Requisiti di sistema', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN44', 'Title', 'Business Plan', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN44', 'Title', 'Business Plan', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN51', 'Title', 'Customer Agreement', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN51', 'Title', 'Contratto Clienti', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Entando Model', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN53', 'Title', 'Il Modello Entando', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Product Details', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('DWN40', 'Title', 'Scheda Prodotto', NULL, NULL, 'it');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'en');
+INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
+
+
+-- Completed on 2012-03-24 19:47:31 CET
 
 --
 -- PostgreSQL database dump complete
