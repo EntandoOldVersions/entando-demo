@@ -140,7 +140,7 @@ select {
 input[type="submit"]:hover {
 	border-color: rgba(116, 150, 27, 0.4) #74961B #74961B rgba(116, 150, 27, 0.6);
 	border-style: solid;
-	border-width: 0.0625em;
+	border-width: 1px;
 }
 
 /*************/
