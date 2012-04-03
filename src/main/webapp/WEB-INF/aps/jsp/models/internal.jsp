@@ -11,15 +11,18 @@
 		</title>
 		<link rel="icon" href="<wp:info key="systemParam" paramName="applicationBaseURL" />favicon.png" type="image/png" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-                
+
 		<!-- JS_JQUERY -->
 			<wp:outputHeadInfo type="JS_JQUERY">
+				<c:set var="outputHeadInfo_JS_JQUERY_isHere" value="${true}" />
 				<wp:printHeadInfo />
 			</wp:outputHeadInfo>
-			<!-- This file includes necessary functions/topics for validation and all topic examples -->
-			<script type="text/javascript" src="<wp:resourceURL />showcase.js"></script>
-			<!-- Extend the Struts2 jQuery Plugin with an richtext editor -->
-			<script type="text/javascript" src="<wp:resourceURL />extendplugin.js"></script>
+			<c:if test="${outputHeadInfo_JS_JQUERY_isHere}">
+				<!-- This file includes necessary functions/topics for validation and all topic examples -->
+				<script type="text/javascript" src="<wp:resourceURL />showcase.js"></script>
+				<!-- Extend the Struts2 jQuery Plugin with an richtext editor -->
+				<script type="text/javascript" src="<wp:resourceURL />extendplugin.js"></script>
+			</c:if>
 		<!--  -->
 
 		<script type="text/javascript" src="<wp:resourceURL />plugins/jpmyportalplus/static/js/lib/mootools-1.2-core.js"></script>
@@ -257,8 +260,10 @@
 				</div>
 			</div></div></div>
 		</div>
-					
-		<jsp:include page="inc/widget_popup_init.jsp" />		
+
+		<c:if test="${outputHeadInfo_JS_JQUERY_isHere}">
+			<jsp:include page="inc/widget_popup_init.jsp" />
+		</c:if>
 
 	</body>
 </html>
