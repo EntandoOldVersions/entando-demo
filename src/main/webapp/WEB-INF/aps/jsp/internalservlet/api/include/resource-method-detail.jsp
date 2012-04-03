@@ -9,12 +9,14 @@
 </s:if>
 <s:else>
 	<dl class="table-display">
+		<%--
 		<dt>
 			<wp:i18n key="ENTANDO_API_METHOD" />
 		</dt>
 			<dd>
 				<wp:i18n key="ENTANDO_API_METHOD_OK" />
 			</dd>
+		--%>
 		<s:if test="#methodVar != null">
 			<dt>
 				<wp:i18n key="ENTANDO_API_DESCRIPTION" />
@@ -44,10 +46,7 @@
 							<wp:parameter name="namespace"><s:property value="#methodVar.namespace" /></wp:parameter>
 							<wp:parameter name="httpMethod"><s:property value="#methodVar.httpMethod" /></wp:parameter>
 						</wp:action>
-						<a href="<c:out value="${requestSchemaURLVar}" escapeXml="false" />" >
-							<wp:i18n key="ENTANDO_API_METHOD_SCHEMA_REQ" />
-						</a>
-						<br />
+						<a href="<c:out value="${requestSchemaURLVar}" escapeXml="false" />" ><wp:i18n key="ENTANDO_API_METHOD_SCHEMA_REQ" /></a>&#32;|&#32;
 					</s:if>
 						<wp:action path="/ExtStr2/do/Front/Api/Resource/responseSchema.action" var="responseSchemaURLVar" >
 							<wp:parameter name="resourceName"><s:property value="#methodVar.resourceName" /></wp:parameter>
