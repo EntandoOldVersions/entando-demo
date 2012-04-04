@@ -21,7 +21,7 @@
         <action name="findResource" class="jpfastcontenteditExtendedResourceFinderAction">
             <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/resource/${resourceTypeCode}Archive.jsp</result>
             <interceptor-ref name="requestAuth"><param name="requiredPermission">jpfastcontentedit_editContents</param></interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" ><param name="chain.includeParameters">attributeName,elementIndex,resourceTypeCode,resourceLangCode</param></interceptor-ref>
+            <interceptor-ref name="entandoFrontEndFreeStack" ><param name="chain.includeParameters">attributeName,elementIndex,resourceTypeCode,resourceLangCode</param></interceptor-ref>
         </action>
         
         <action name="search*" class="jpfastcontenteditExtendedResourceFinderAction">
@@ -29,7 +29,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="openCloseCategoryTreeNodeOnResourceFinding*" class="jpfastcontenteditExtendedResourceFinderAction" method="buildTree">
@@ -37,7 +37,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="joinResource*" class="jpfastcontenteditExtendedResourceFinderAction" method="joinResource">
@@ -48,7 +48,7 @@
     		<param name="anchorDest">${langTabAnchorDest}</param>
             </result>
             <interceptor-ref name="requestAuth"><param name="requiredPermission">jpfastcontentedit_editContents</param></interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <!-- ######## FINE GESTIONE RICERCA ATTRIBUTI RISORSA ######## -->
@@ -60,7 +60,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">manageResources</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
     	
         <action name="openCloseCategoryTreeNodeOnEntryResource*" class="jpfastcontenteditExtendedResourceAction" method="buildTree">
@@ -68,7 +68,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">manageResources</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="joinCategory*" class="jpfastcontenteditExtendedResourceAction" method="joinCategory">
@@ -76,7 +76,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">manageResources</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
     	
         <action name="removeCategory*" class="jpfastcontenteditExtendedResourceAction" method="removeCategory">
@@ -84,7 +84,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">manageResources</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="save" class="jpfastcontenteditExtendedResourceAction" method="save">
@@ -97,7 +97,7 @@
             </result>
             <interceptor-ref name="fileUpload"><param name="maximumSize">10485760</param></interceptor-ref><!-- maximun Size = 10 Mb -->
             <interceptor-ref name="requestAuth"><param name="requiredPermission">manageResources</param></interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+            <interceptor-ref name="entandoFrontEndFreeValidationStack" />
         </action>
         
         <!-- ######## FINE GESTIONE NUOVO ATTRIBUTO RISORSA ######## -->
@@ -109,7 +109,7 @@
     		<param name="anchorDest">${entryContentAnchorDest}</param>
             </result>
             <interceptor-ref name="requestAuth"><param name="requiredPermission">jpfastcontentedit_editContents</param></interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
     </package>
@@ -131,7 +131,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" >
+            <interceptor-ref name="entandoFrontEndFreeStack" >
                 <param name="chain.includeParameters">attributeName,elementIndex,langCode</param>
             </interceptor-ref>
         </action>
@@ -143,7 +143,7 @@
             <result name="configContentLink" type="chain">configContentLink</result>
             <result type="dispatcher">/WEB-INF/plugins/jpfastcontentedit/aps/jsp/internalservlet/content/modules/include/linkAttribute/chooseLink.jsp</result>
             <interceptor-ref name="requestAuth"><param name="requiredPermission">jpfastcontentedit_editContents</param></interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+            <interceptor-ref name="entandoFrontEndFreeValidationStack" />
         </action>
 	
         <action name="configUrlLink" class="jpfastcontenteditUrlLinkAttributeAction">
@@ -151,7 +151,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
 	
         <action name="joinUrlLink" class="jpfastcontenteditUrlLinkAttributeAction" method="joinUrlLink">
@@ -165,7 +165,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+            <interceptor-ref name="entandoFrontEndFreeValidationStack" />
         </action>
 	
         <action name="configPageLink" class="jpfastcontenteditPageLinkAttributeAction">
@@ -173,7 +173,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
 	
         <action name="joinPageLink" class="jpfastcontenteditPageLinkAttributeAction" method="joinLink">
@@ -187,7 +187,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+            <interceptor-ref name="entandoFrontEndFreeValidationStack" />
         </action>
 	
         <action name="configContentLink" class="jpfastcontenteditContentLinkAttributeAction" >
@@ -195,7 +195,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="search*" class="jpfastcontenteditContentLinkAttributeAction">
@@ -203,7 +203,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="changeOrder*" class="jpfastcontenteditContentLinkAttributeAction" method="changeOrder">
@@ -211,7 +211,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="joinContentLink*" class="jpfastcontenteditContentLinkAttributeAction" method="joinContentLink" >
@@ -226,7 +226,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeValidationStack" />
+            <interceptor-ref name="entandoFrontEndFreeValidationStack" />
         </action>
 		
     </package>
@@ -239,11 +239,11 @@
         </global-results>
     	
         <action name="configInternalLink" class="jacmsHypertextAttributeAction">
-            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/fck_japslink.jsp</result>
+            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/fck_entandolink.jsp</result>
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="introPageLink" class="jacmsPageLinkHypertextAttributeAction" method="buildTree">
@@ -251,7 +251,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="introContentLink" class="jacmsContentLinkHypertextAttributeAction">
@@ -259,7 +259,7 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="search" class="jacmsContentLinkHypertextAttributeAction">
@@ -267,15 +267,15 @@
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
         
         <action name="changeOrder" class="jacmsHypertextAttributeAction" method="changeOrder">
-            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/fck_japslink.jsp</result>
+            <result type="dispatcher">/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/hypertextAttribute/fck_entandolink.jsp</result>
             <interceptor-ref name="requestAuth">
                 <param name="requiredPermission">jpfastcontentedit_editContents</param>
             </interceptor-ref>
-            <interceptor-ref name="japsFrontEndFreeStack" />
+            <interceptor-ref name="entandoFrontEndFreeStack" />
         </action>
     	
     </package>
