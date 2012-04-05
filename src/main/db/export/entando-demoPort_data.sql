@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-04-01 12:10:55 CEST
+-- Started on 2012-04-06 00:31:06 CEST
 
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = off;
@@ -13,7 +13,7 @@ SET escape_string_warning = off;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 1862 (class 0 OID 585911)
+-- TOC entry 1862 (class 0 OID 661169)
 -- Dependencies: 127
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -42,7 +42,7 @@ INSERT INTO categories (catcode, parentcode, titles) VALUES ('footerlinks', 'hom
 
 
 --
--- TOC entry 1863 (class 0 OID 585917)
+-- TOC entry 1863 (class 0 OID 661175)
 -- Dependencies: 128
 -- Data for Name: contentmodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -359,7 +359,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 
 
 --
--- TOC entry 1865 (class 0 OID 585926)
+-- TOC entry 1865 (class 0 OID 661184)
 -- Dependencies: 130
 -- Data for Name: contents; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -661,7 +661,7 @@ INSERT INTO contents (contentid, contenttype, descr, status, workxml, created, l
 
 
 --
--- TOC entry 1866 (class 0 OID 585932)
+-- TOC entry 1866 (class 0 OID 661190)
 -- Dependencies: 131
 -- Data for Name: contentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -726,7 +726,7 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1867 (class 0 OID 585935)
+-- TOC entry 1867 (class 0 OID 661193)
 -- Dependencies: 132
 -- Data for Name: jpcontentfeedback_comments; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -734,14 +734,14 @@ INSERT INTO contentsearch (contentid, attrname, textvalue, datevalue, numvalue, 
 
 
 --
--- TOC entry 1868 (class 0 OID 585941)
+-- TOC entry 1868 (class 0 OID 661199)
 -- Dependencies: 133
 -- Data for Name: jpcontentfeedback_rating; Type: TABLE DATA; Schema: public; Owner: agile
 --
 
 
 --
--- TOC entry 1870 (class 0 OID 585951)
+-- TOC entry 1870 (class 0 OID 661209)
 -- Dependencies: 135
 -- Data for Name: localstrings; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -1368,10 +1368,82 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicf
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_PER', 'it', 'Form Utente');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_TITLE', 'en', 'Welcome to Entando Portal Demo');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SLOGAN_TITLE', 'it', 'Benvenuto nel Portale Demo di Entando');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCES', 'it', 'Risorse API');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCES', 'en', 'API Resources');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_ERROR', 'it', 'Errore');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_ERROR', 'en', 'Errors');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE', 'it', 'Risorsa');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE', 'en', 'Resource');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_DESCRIPTION', 'it', 'Descrizione');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_DESCRIPTION', 'en', 'Description');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_GOTO_DETAILS', 'it', 'Vai al dettaglio');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_GOTO_DETAILS', 'en', 'Go to details');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_OFF', 'it', 'Non Attivo');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_OFF', 'en', 'Not Active');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_FREE', 'it', 'Attivo, Accesso Libero');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_FREE', 'en', 'Active, Free Access');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_AUTH', 'it', 'Attivo, Utenti Registrati');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_AUTH', 'en', 'Active, Registered Users');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_LOCK', 'it', 'Metodo Attivo, Utenti Registrati con Autorizzazione');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_LOCK', 'en', 'Active, Registered Users with Permission');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_NA', 'it', 'Metodo Non Disponibile');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_STATUS_NA', 'en', 'Method Not Available');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_NO_RESOURCES', 'it', 'Non ci sono Risorse API disponibili.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_NO_RESOURCES', 'en', 'No API Resources available at the moment.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_TABLE_SUMMARY', 'it', 'La tabella elenaca le Risorse API disponibile nel sistema. Nome della risorsa, la sua descrizione e lo stato di ciascun metodo.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_TABLE_SUMMARY', 'en', 'The table lists the API Resources available in the system. Method name, description, group and the status of each method.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE_NAME', 'it', 'Nome');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE_NAME', 'en', 'Name');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE_NAMESPACE', 'it', 'Namespace');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE_NAMESPACE', 'en', 'Namespace');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE_SOURCE', 'it', 'Sorgente');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE_SOURCE', 'en', 'Source');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE_URI', 'it', 'URI');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_RESOURCE_URI', 'en', 'URI');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_EXTENSION', 'it', 'Estensione');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_EXTENSION', 'en', 'Extension');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_EXTENSION_NOTE', 'it', '''.xml'' per la risposta in formato xml e ''.json'' per la risposta in formato json.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_EXTENSION_NOTE', 'en', '''.xml'' for response in xml format and ''.json'' for json.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_KO', 'it', 'Non disponibile');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_KO', 'en', 'Not available');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD', 'it', 'Metodo');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD', 'en', 'Method');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_OK', 'it', 'Disponibile');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_OK', 'en', 'Available');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_AUTHORIZATION', 'it', 'Autorizzazione');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_AUTHORIZATION', 'en', 'Authorization');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_AUTH_FREE', 'it', 'Nessuna, questo metodo è pubblico');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_AUTH_FREE', 'en', 'None, this method is public');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_AUTH_WITH_PERM', 'it', 'Utenti registrati con permesso');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_AUTH_WITH_PERM', 'en', 'Registered users with permission');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_AUTH_SIMPLE', 'it', 'Utenti registrati');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_AUTH_SIMPLE', 'en', 'Registered users');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_SCHEMAS', 'it', 'Schema XML');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_SCHEMAS', 'en', 'XML Schemas');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_SCHEMA_REQ', 'it', 'Richiesta');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_SCHEMA_REQ', 'en', 'Request');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_SCHEMA_RESP', 'it', 'Risposta');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_SCHEMA_RESP', 'en', 'Response');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_PARAMS_SUMM', 'it', 'Questa tabella mostra i parametri per la richiesta del metodo. Per ciascuno di essi ci sono tre colonne: il nome del parametro, la descrizione del parametro e l''indicazione di obbligatorietà.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_PARAMS_SUMM', 'en', 'This table shows the request parameters for this method. For each of them there are three columns: the parameter name, the parameter description and whether if it''s mandatory or not.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_REQUEST_PARAMS', 'it', 'Parametri');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_METHOD_REQUEST_PARAMS', 'en', 'Parameters');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_PARAM_NAME', 'it', 'Nome');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_PARAM_NAME', 'en', 'Name');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_PARAM_DESCRIPTION', 'it', 'Descrizione');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_PARAM_DESCRIPTION', 'en', 'Description');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_PARAM_REQUIRED', 'it', 'Obbligatorio');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_PARAM_REQUIRED', 'en', 'Mandatory');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('YES', 'it', 'Si');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('YES', 'en', 'Yes');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NO', 'it', 'No');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('NO', 'en', 'No');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_GOTO_LIST', 'it', 'Lista delle Risorse API');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('ENTANDO_API_GOTO_LIST', 'en', 'API Resource List');
 
 
 --
--- TOC entry 1871 (class 0 OID 585957)
+-- TOC entry 1871 (class 0 OID 661215)
 -- Dependencies: 136
 -- Data for Name: pagemodels; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2030,7 +2102,7 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('home', 'Home P
 
 
 --
--- TOC entry 1872 (class 0 OID 585963)
+-- TOC entry 1872 (class 0 OID 661221)
 -- Dependencies: 137
 -- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2273,7 +2345,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1873 (class 0 OID 585969)
+-- TOC entry 1873 (class 0 OID 661227)
 -- Dependencies: 138
 -- Data for Name: resourcerelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2281,7 +2353,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 
 
 --
--- TOC entry 1874 (class 0 OID 585972)
+-- TOC entry 1874 (class 0 OID 661230)
 -- Dependencies: 139
 -- Data for Name: resources; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2358,7 +2430,7 @@ INSERT INTO resources (resid, restype, descr, maingroup, resourcexml, masterfile
 
 
 --
--- TOC entry 1875 (class 0 OID 585978)
+-- TOC entry 1875 (class 0 OID 661236)
 -- Dependencies: 140
 -- Data for Name: showletcatalog; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -2546,23 +2618,6 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 </properties>
 
 ', 0, 'free');
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfastcontentedit_content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Contents - Publish a List of Contents Editables from Front-End</property>
-<property key="it">Contenuti - Pubblica una Lista di contenuti editabili da Front-End</property>
-</properties>', '<config>
-	<parameter name="contentType">Content Type (mandatory)</parameter>
-	<parameter name="modelId">Content Model</parameter>
-	<parameter name="userFilters">Front-End user filter options</parameter>
-	<parameter name="category">Content Category **deprecated**</parameter>
-	<parameter name="categories">Content Category codes (comma separeted)</parameter>
-	<parameter name="maxElemForItem">Contents for each page</parameter>
-	<parameter name="filters" />
-	<parameter name="title_{lang}">Showlet Title in lang {lang}</parameter>
-	<parameter name="pageLink">The code of the Page to link</parameter>
-	<parameter name="linkDescr_{lang}">Link description in lang {lang}</parameter>
-	<action name="listViewerConfig"/>
-</config>', 'jpfastcontentedit', NULL, NULL, 1, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfastcontentedit_formAction', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Content Editing Form</property>
@@ -2580,19 +2635,6 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	<parameter name="typeCode">Code of the Message Type</parameter>
 	<action name="webdynamicformConfig"/>
 </config>', 'jpwebdynamicform', NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpwebdynamicform_message_choice', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Dynamic Web Forms - Choice of a type of Message</property>
-<property key="it">Dynamic Web Forms - Scelta tipo di Messaggio</property>
-</properties>', '<config>
-	<parameter name="actionPath">
-		Relative path of an action or a JSP (ex: /ExtStr2/do/jpwebdynamicform/Message/User/listTypes).
-	</parameter>
-	<action name="configSimpleParameter"/>
-</config>', 'jpwebdynamicform', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="actionPath">/ExtStr2/do/jpwebdynamicform/Message/User/listTypes</property>
-</properties>', 0, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('form_list', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">WebForms</property>
@@ -2730,6 +2772,18 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	<parameter name="linkDescr_{lang}">Link description in lang {lang}</parameter>
 	<action name="listViewerConfig"/>
 </config>', 'jacms', NULL, NULL, 1, NULL);
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpwebdynamicform_message_choice', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Dynamic Web Forms - Choice of a type of Message</property>
+<property key="it">Dynamic Web Forms - Scelta tipo di Messaggio</property>
+</properties>
+
+', NULL, 'jpwebdynamicform', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="actionPath">/ExtStr2/do/jpwebdynamicform/Message/User/listTypes</property>
+</properties>
+
+', 1, 'intranet');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('entando_apis', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">APIs</property>
@@ -2740,10 +2794,28 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <property key="actionPath">/ExtStr2/do/Front/Api/Resource/list.action</property>
 </properties>
 ', 1, 'free');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfastcontentedit_content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Contents - Publish a List of Contents Editables from Front-End</property>
+<property key="it">Contenuti - Pubblica una Lista di contenuti editabili da Front-End</property>
+</properties>', '<config>
+	<parameter name="contentType">Content Type (mandatory)</parameter>
+	<parameter name="modelId">Content Model</parameter>
+	<parameter name="userFilters">Front-End user filter options</parameter>
+	<parameter name="category">Content Category **deprecated**</parameter>
+	<parameter name="categories">Content Category codes (comma separeted)</parameter>
+	<parameter name="orClauseCategoryFilter" />
+	<parameter name="maxElemForItem">Contents for each page</parameter>
+	<parameter name="filters" />
+	<parameter name="title_{lang}">Showlet Title in lang {lang}</parameter>
+	<parameter name="pageLink">The code of the Page to link</parameter>
+	<parameter name="linkDescr_{lang}">Link description in lang {lang}</parameter>
+	<action name="listViewerConfig"/>
+</config>', 'jpfastcontentedit', NULL, NULL, 1, NULL);
 
 
 --
--- TOC entry 1876 (class 0 OID 585984)
+-- TOC entry 1876 (class 0 OID 661242)
 -- Dependencies: 141
 -- Data for Name: showletconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3230,7 +3302,7 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 
 --
--- TOC entry 1877 (class 0 OID 585990)
+-- TOC entry 1877 (class 0 OID 661248)
 -- Dependencies: 142
 -- Data for Name: sysconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3580,9 +3652,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 </contenttypes>
 
 ');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpmyportalplus_config', 'Definizione degli oggetti configurabili di My Portal', '<?xml version="1.0" encoding="UTF-8"?>
-<myportalConfig><showlets><showlet code="latest_video" /><showlet code="jpsurvey_questionnaireList" /><showlet code="form_list" /><showlet code="jpsurvey_pollList" /><showlet code="latest_events" /><showlet code="latest_news" /><showlet code="documents_list" /><showlet code="inEvidenza" /></showlets></myportalConfig>
-');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpwebdynamicform_messageTypes', 'Definizione dei Tipi di Messaggio', '<?xml version="1.0" encoding="UTF-8"?>
 <messagetypes>
 	<messagetype typecode="COM" typedescr="Company Form">
@@ -3658,21 +3727,23 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpco
 		<rateComment>true</rateComment>
 		<rateContent>true</rateContent>
 </contentFeedbackConfig>');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20120401120738');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20120406001751');
+INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpmyportalplus_config', 'Definizione degli oggetti configurabili di My Portal', '<?xml version="1.0" encoding="UTF-8"?>
+<myportalConfig><showlets><showlet code="documents_list" /><showlet code="form_list" /><showlet code="inEvidenza" /><showlet code="jpsurvey_pollList" /><showlet code="jpsurvey_questionnaireList" /><showlet code="jpwebdynamicform_message_choice" /><showlet code="latest_events" /><showlet code="latest_news" /><showlet code="latest_video" /></showlets></myportalConfig>
+');
 
 
 --
--- TOC entry 1878 (class 0 OID 585996)
+-- TOC entry 1878 (class 0 OID 661254)
 -- Dependencies: 143
 -- Data for Name: uniquekeys; Type: TABLE DATA; Schema: public; Owner: agile
---
 --
 
 INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 64);
 
 
 --
--- TOC entry 1869 (class 0 OID 585944)
+-- TOC entry 1869 (class 0 OID 661202)
 -- Dependencies: 134
 -- Data for Name: jpmyportalplus_userpageconfig; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3684,7 +3755,6 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 14, 'jpsurvey_questionnaireList', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 66, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
@@ -3707,29 +3777,9 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 124, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 125, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 22, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 76, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 24, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 123, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 21, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 23, 'latest_news', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 23, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('admin', 'homepage', 64, 'inEvidenza', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 73, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 75, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 74, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 115, 'latest_events', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 65, 'latest_video', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 66, 'form_list', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 17, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 20, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 19, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 117, 'jpsurvey_pollList', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 16, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 15, 'latest_news', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 16, 'documents_list', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('caroline', 'homepage', 18, 'jpmyportalplus_void', NULL, 0);
@@ -3753,17 +3803,10 @@ INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showlet
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 15, 'inEvidenza', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 16, 'jpmyportalplus_void', NULL, 0);
 INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('max', 'homepage', 116, 'documents_list', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 67, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 64, 'documents_list', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 114, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 116, 'jpmyportalplus_void', NULL, 0);
-INSERT INTO jpmyportalplus_userpageconfig (username, pagecode, framepos, showletcode, config, closed) VALUES ('jeff', 'homepage', 15, 'inEvidenza', NULL, 0);
-
-INSERT INTO uniquekeys (id, keyvalue) VALUES (1, 64);
 
 
 --
--- TOC entry 1864 (class 0 OID 585923)
+-- TOC entry 1864 (class 0 OID 661181)
 -- Dependencies: 129
 -- Data for Name: contentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3831,7 +3874,7 @@ INSERT INTO contentrelations (contentid, refpage, refcontent, refresource, refca
 
 
 --
--- TOC entry 1879 (class 0 OID 585999)
+-- TOC entry 1879 (class 0 OID 661257)
 -- Dependencies: 144
 -- Data for Name: workcontentrelations; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3841,7 +3884,7 @@ INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW11', 'even
 
 
 --
--- TOC entry 1880 (class 0 OID 586002)
+-- TOC entry 1880 (class 0 OID 661260)
 -- Dependencies: 145
 -- Data for Name: workcontentsearch; Type: TABLE DATA; Schema: public; Owner: agile
 --
@@ -3905,7 +3948,7 @@ INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numval
 INSERT INTO workcontentsearch (contentid, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('CNG59', 'Title', 'Entando', NULL, NULL, 'it');
 
 
--- Completed on 2012-04-01 12:10:55 CEST
+-- Completed on 2012-04-06 00:31:06 CEST
 
 --
 -- PostgreSQL database dump complete
