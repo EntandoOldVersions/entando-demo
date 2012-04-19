@@ -1,2 +1,4 @@
 target
-derby.log
+*.log
+.ant-targets-build.xml
+src/main/webapp/WEB-INF/*.tld
