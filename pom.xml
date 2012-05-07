@@ -5,7 +5,7 @@
 	<groupId>org.entando.entando</groupId>
 	<artifactId>entando-demo</artifactId>
 	<packaging>war</packaging>
-	<version>2.0-TP1</version>
+	<version>3.0.1-SNAPSHOT</version>
 	<name>entando-demo</name>
 	<url>http://maven.apache.org/</url>
 	<repositories>
@@ -977,27 +977,27 @@
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-webapp</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc-test</classifier>
 			<scope>test</scope>
@@ -1037,13 +1037,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1052,13 +1052,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1067,13 +1067,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1082,13 +1082,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1097,13 +1097,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1112,13 +1112,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1127,13 +1127,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>3.0.0</version>
+			<version>3.0.1-SNAPSHOT</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
