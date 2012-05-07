@@ -5,7 +5,7 @@
 	<groupId>org.entando.entando</groupId>
 	<artifactId>entando-demo</artifactId>
 	<packaging>war</packaging>
-	<version>2.0-TP1</version>
+	<version>3.0.0</version>
 	<name>entando-demo</name>
 	<url>http://maven.apache.org/</url>
 	<repositories>
