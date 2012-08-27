@@ -90,13 +90,17 @@
 		</profile>
 	</profiles>
 	<properties>
+		<test.database.driver>org.postgresql.Driver</test.database.driver>
 		<test.database.hostname>localhost</test.database.hostname>
 		<test.database.port>5432</test.database.port>
 		<test.database.username>agile</test.database.username>
 		<test.database.password>agile</test.database.password>
 		<test.database.basename>entando-core-engine</test.database.basename>
 		<test.database.basepath>${project.build.directory}/test/sql</test.database.basepath>
-		<skipDerby>true</skipDerby>	
+		<skipDerby>true</skipDerby>
+		<entando.version>3.0.1-SNAPSHOT</entando.version>
+		<spring.version>3.0.6.RELEASE</spring.version>
+		<struts2.version>2.3.4.1</struts2.version>
 	</properties>
 	<build>
 		<finalName>entando-demo</finalName>
@@ -977,27 +981,27 @@
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-webapp</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-engine</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc-test</classifier>
 			<scope>test</scope>
@@ -1017,7 +1021,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>3.0.6.RELEASE</version>
+			<version>${spring.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -1033,77 +1037,77 @@
 			<scope>test</scope>
 		</dependency>
                 
-                <!-- User Profile Plugin -->
+        <!-- User Profile Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpuserprofile</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
                 
-                <!-- My Portal Plus Plugin -->
+        <!-- My Portal Plus Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpmyportalplus</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
                 
-                <!-- Share With Plugin -->
+        <!-- Share With Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsharewith</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
                 
-                <!-- Fast Content Edit Plugin -->
+        <!-- Fast Content Edit Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpfastcontentedit</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
                 
-                <!-- Web Dynamic Form Plugin -->
+        <!-- Web Dynamic Form Plugin -->
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpwebdynamicform</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1112,13 +1116,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpcontentfeedback</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1127,13 +1131,13 @@
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando.plugins</groupId>
 			<artifactId>entando-plugin-jpsurvey</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
+			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
@@ -1153,7 +1157,7 @@
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-convention-plugin</artifactId>
-			<version>2.2.3.1</version>
+			<version>${struts2.version}</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>struts2-core</artifactId>
@@ -1208,7 +1212,7 @@
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-json-plugin</artifactId>
-			<version>2.2.3.1</version>
+			<version>${struts2.version}</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>struts2-core</artifactId>
@@ -1217,6 +1221,6 @@
 			</exclusions>
 		</dependency>
         <!-- jpcmsshortcut plugin -->
-                
+        
 	</dependencies>
 </project>
