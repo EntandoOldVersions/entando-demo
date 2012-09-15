@@ -85,10 +85,12 @@ DROP TABLE IF EXISTS `apicatalog_methods`;
 CREATE TABLE `apicatalog_methods` (
   `resource` varchar(100) NOT NULL,
   `httpmethod` varchar(6) NOT NULL,
-  `isactive` tinyint(4) DEFAULT NULL,
+  `isactive` tinyint(4) NOT NULL,
+  `ishidden` tinyint(4) NOT NULL,
   `authenticationrequired` tinyint(4) DEFAULT NULL,
   `authorizationrequired` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`resource`,`httpmethod`)
+  PRIMARY KEY (`resource`,`httpmethod`),
+  CONSTRAINT `apicatalog_methods_authorizationrequired_fkey` FOREIGN KEY (`authorizationrequired`) REFERENCES `authpermissions` (`permissionname`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -98,7 +100,6 @@ CREATE TABLE `apicatalog_methods` (
 
 LOCK TABLES `apicatalog_methods` WRITE;
 /*!40000 ALTER TABLE `apicatalog_methods` DISABLE KEYS */;
-INSERT INTO `apicatalog_methods` VALUES ('getServices','GET',1,NULL,NULL);
 /*!40000 ALTER TABLE `apicatalog_methods` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,9 +118,14 @@ CREATE TABLE `apicatalog_services` (
   `tag` varchar(100) DEFAULT NULL,
   `freeparameters` longtext,
   `isactive` tinyint(4) NOT NULL,
-  `ispublic` tinyint(4) NOT NULL,
+  `ishidden` tinyint(4) NOT NULL,
   `myentando` tinyint(4) NOT NULL,
-  PRIMARY KEY (`servicekey`)
+  `authenticationrequired` tinyint(4),
+  `requiredpermission` varchar(30),
+  `requiredgroup` varchar(30),
+  PRIMARY KEY (`servicekey`),
+  CONSTRAINT `apicatalog_services_requiredpermission_fkey` FOREIGN KEY (`requiredpermission`) REFERENCES `authpermissions` (`permissionname`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `apicatalog_services_requiredgroup_fkey` FOREIGN KEY (`requiredgroup`) REFERENCES `authgroups` (`groupname`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -129,7 +135,6 @@ CREATE TABLE `apicatalog_services` (
 
 LOCK TABLES `apicatalog_services` WRITE;
 /*!40000 ALTER TABLE `apicatalog_services` DISABLE KEYS */;
-INSERT INTO `apicatalog_services` VALUES ('contents','getContents','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<properties>\n<property key=\"en\">List news</property>\n<property key=\"it\">Lista news</property>\n<property key=\"de\">List news</property>\n</properties>\n\n','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<properties>\n<property key=\"contentType\">NEW</property>\n<property key=\"modelId\">25</property>\n</properties>\n\n','jacms:contents','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<config>\n  <freeparameters>\n    <parameter name=\"contentType\" />\n    <parameter name=\"categories\" />\n  </freeparameters>\n</config>\n\n',1,1,1),('contenuto','getContent','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<properties>\n<property key=\"en\">Webinar sull\'integrazione della piattaforma Entando e Pentaho Business Intelligence</property>\n<property key=\"it\">Webinar sull\'integrazione della piattaforma Entando e Pentaho Business Intelligence</property>\n<property key=\"de\">Webinar sull\'integrazione della piattaforma Entando e Pentaho Business Intelligence</property>\n</properties>\n\n','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<properties>\n<property key=\"id\">NEW11</property>\n<property key=\"modelId\">2</property>\n</properties>\n\n','jacms:content','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<config>\n  <freeparameters>\n    <parameter name=\"id\" />\n  </freeparameters>\n</config>\n\n',1,1,1),('ListGenericContents','getContents','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<properties>\n<property key=\"en\">Generic Contents</property>\n<property key=\"it\">Contenuti generici</property>\n<property key=\"de\">Generic Contents</property>\n</properties>\n\n','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<properties>\n<property key=\"contentType\">CNG</property>\n<property key=\"modelId\">36</property>\n</properties>\n\n','jacms:contents',NULL,1,1,1),('NEW17','getContent','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<properties>\n<property key=\"en\">erogazione NEW17</property>\n<property key=\"it\">erogazione NEW17</property>\n<property key=\"de\">erogazione NEW17</property>\n</properties>\n\n','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<properties>\n<property key=\"id\">NEW17</property>\n<property key=\"modelId\">2</property>\n</properties>\n\n','jacms:contents','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<config>\n  <freeparameters>\n    <parameter name=\"modelId\" />\n  </freeparameters>\n</config>\n\n',1,1,1);
 /*!40000 ALTER TABLE `apicatalog_services` ENABLE KEYS */;
 UNLOCK TABLES;
 

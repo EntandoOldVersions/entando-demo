@@ -350,6 +350,27 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>copy-resources-tld</id>
+						<!-- here the phase you need -->
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>src/main/webapp/WEB-INF</outputDirectory>
+							<encoding>UTF-8</encoding>
+							<resources>
+								<resource>
+									<directory>src/main/tld</directory>
+									<includes>
+										<include>**/*.tld</include>
+									</includes>                                 
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution> 
+					<execution>
 						<id>derby-copy-sql</id>
 						<phase>prepare-package</phase>
 						<goals>
@@ -383,7 +404,7 @@
 								</resource>
 							</resources>
 						</configuration>
-					</execution>				
+					</execution>					
 				</executions>
 			</plugin>
 			<plugin>
@@ -392,6 +413,7 @@
 				<version>1.6</version><!--$NO-MVN-MAN-VER$ -->
 				<executions>
 					<execution>
+						<id>prepare-derby-db</id>
 						<phase>prepare-package</phase>
 						<configuration>
 							<target>
@@ -401,99 +423,99 @@
 									<available file="${project.build.directory}/derby/sql" type="dir" />
 									<then>
 										<replaceregexp byline="true">
-											<regexp pattern="^SET.*$"/>
-											<substitution expression=""/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="^SET.*$"/>
+										  <substitution expression=""/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern="^REVOKE.*$"/>
-											<substitution expression=""/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="^REVOKE.*$"/>
+										  <substitution expression=""/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern="^GRANT.*$"/>
-											<substitution expression=""/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="^GRANT.*$"/>
+										  <substitution expression=""/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>																	
 										
 										<replaceregexp byline="true">
-											<regexp pattern="ALTER TABLE ONLY"/>
-											<substitution expression="ALTER TABLE"/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="ALTER TABLE ONLY"/>
+										  <substitution expression="ALTER TABLE"/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern="CREATE PROCEDURAL LANGUAGE plpgsql;"/>
-											<substitution expression=""/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="CREATE PROCEDURAL LANGUAGE plpgsql;"/>
+										  <substitution expression=""/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern="character varying "/>
-											<substitution expression="LONG VARCHAR "/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="character varying "/>
+										  <substitution expression="LONG VARCHAR "/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern="character varying,"/>
-											<substitution expression="LONG VARCHAR,"/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="character varying,"/>
+										  <substitution expression="LONG VARCHAR,"/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern="character varying$"/>
-											<substitution expression="LONG VARCHAR"/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="character varying$"/>
+										  <substitution expression="LONG VARCHAR"/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern=" USING btree"/>
-											<substitution expression=""/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern=" USING btree"/>
+										  <substitution expression=""/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern="timestamp without time zone"/>
-											<substitution expression="timestamp"/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern="timestamp without time zone"/>
+										  <substitution expression="timestamp"/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>
 										
 										<replaceregexp byline="true">
-											<regexp pattern="DEFAULT ''::LONG VARCHAR NOT NULL"/>
-											<substitution expression="NOT NULL WITH DEFAULT ''"/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
-										</replaceregexp>									
+										  <regexp pattern="DEFAULT ''::LONG VARCHAR NOT NULL"/>
+										  <substitution expression="NOT NULL WITH DEFAULT ''"/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
+										</replaceregexp>										
 										
 										<replaceregexp byline="true">
-											<regexp pattern='"char",'/>
-											<substitution expression="CHAR(2),"/>
-											<fileset dir="${project.build.directory}/derby/sql">
-												<include name="*.sql"/>
-											</fileset>
+										  <regexp pattern='"char",'/>
+										  <substitution expression="CHAR(2),"/>
+										  <fileset dir="${project.build.directory}/derby/sql">
+										    <include name="*.sql"/>
+										  </fileset>
 										</replaceregexp>										
 										
 									</then>
@@ -823,21 +845,21 @@
 					</execution>														
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.12</version>
-				<configuration>
-					<argLine>-Xms512m -Xmx1024m</argLine>
-					<testFailureIgnore>false</testFailureIgnore>
-					<excludes>
-						<exclude>**/*BaseTestCase*</exclude>
-					</excludes>
-					<includes> 
-						<include>**/AllTests.java</include>
-					</includes>
-				</configuration>			
-			</plugin>
+                        <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-surefire-plugin</artifactId>
+                                <version>2.12</version>
+                                <configuration>
+                                        <argLine>-Xms512m -Xmx1024m</argLine>
+                                        <testFailureIgnore>false</testFailureIgnore>
+                                        <excludes>
+                                                <exclude>**/*BaseTestCase*</exclude>
+                                        </excludes>
+                                        <includes>
+                                                <include>**/AllTests.java</include>
+                                        </includes>
+                                </configuration>
+                        </plugin>
 			<!-- mvn jetty:run (with hot-redeploy) -->
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
@@ -874,7 +896,7 @@
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.0-SNAPSHOT</version>
+				<version>2.0</version>
 				<executions>
 					<execution>
 						<id>tomcat-run</id>
@@ -898,6 +920,14 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<packagingExcludes>WEB-INF/**.tld</packagingExcludes>
+				</configuration>
 			</plugin>
 		</plugins>
 		<pluginManagement>
@@ -1221,6 +1251,6 @@
 			</exclusions>
 		</dependency>
         <!-- jpcmsshortcut plugin -->
-        
+		
 	</dependencies>
 </project>
