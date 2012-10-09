@@ -65,9 +65,9 @@
 	<property name="project.src.branch" value="main" />
 
 	<!-- List here all the tables of the *Port db, ordered the way you want them to be restored with referential integrity -->
-	<property name="db.backup.tables.port" value="categories,contentmodels,contents,contentsearch,localstrings,pagemodels,pages,resources,resourcerelations,contentrelations,showletcatalog,showletconfig,sysconfig,uniquekeys,workcontentrelations,workcontentsearch" />
+	<property name="db.backup.tables.port" value="categories,contentmodels,contents,contentsearch,localstrings,pagemodels,pages,resources,resourcerelations,contentrelations,showletcatalog,showletconfig,sysconfig,uniquekeys,workcontentrelations,workcontentsearch,jpcontentfeedback_comments,jpcontentfeedback_rating,jpmyportalplus_userpageconfig" />
 
 	<!-- List here all the tables of the *Serv db, ordered the way you want them to be restored with referential integrity -->
-	<property name="db.backup.tables.serv" value="api_oauth_consumers,api_oauth_tokens,authgroups,authpermissions,authroles,authrolepermissions,authusers,authuserroles,authusergroups,authusershortcuts,apicatalog_methods,apicatalog_services" />
+	<property name="db.backup.tables.serv" value="api_oauth_consumers,api_oauth_tokens,authgroups,authpermissions,authroles,authrolepermissions,authusers,authuserroles,authusergroups,authusershortcuts,apicatalog_methods,apicatalog_services,jpsurvey,jpsurvey_questions,jpsurvey_choices,jpsurvey_voters,jpsurvey_responses,jpuserprofile_authuserprofiles,jpuserprofile_profilesearch,jpwebdynamicform_messages,jpwebdynamicform_messagesearch,jpwebdynamicform_messageanswers" />	
 
 </project>
