@@ -1,0 +1,244 @@
+.jpcontentfeedback {
+	float: left;
+	width: 100%;
+	margin-top: 2em;
+}
+
+.jpcontentfeedback .jpcontentfeedback_title {
+	margin: 1em 0;
+	padding: 0.5em 0;
+	/*border-bottom: 2px solid #0F4780;*/
+	background-color: #EAEDEE;
+	background-color: rgba(0,0,0, 0.06);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+
+} 
+.jpcontentfeedback .jpcontentfeedback_title span{
+	padding-left: 0.5em;
+}
+.jpcontentfeedback .centerText { 
+	text-align: center; 
+}
+
+.jpcontentfeedback fieldset {
+	border: 1px dashed 	rgba(0,0,0, 0.03);
+}
+
+.jpcontentfeedback legend {
+	/*font-size: 0.8em;*/
+}
+.jpcontentfeedback .content_rating {
+	padding-bottom: 1em;
+}
+
+.jpcontentfeedback .content_rating,
+.jpcontentfeedback .content_comments {
+	margin: 0 0 1em 0;
+	float: left;
+	width: 100%;
+	/*border-bottom: 1px dashed #333333;*/
+}
+
+.jpcontentfeedback .rate_values {
+	list-style-type: none;
+	text-align: left;
+	display: block;
+	margin: 0.5em 0;
+	padding: 0.5em 0;
+	text-align: center;
+}
+.jpcontentfeedback .rate_values .rate_value { 
+	display: inline;
+	border: 1px solid #B2DF28; 
+	border: 1px solid rgba(178, 223, 40, 0.8); 
+	padding: 0.5em 0 0.5em 0.5em;
+	margin-right: 0.5em;
+	
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.jpcontentfeedback .rate_values .rate_value label {
+	padding: 0 1em 0 0;
+	margin: 0;
+	text-align: left;
+	color: #74961B;
+	cursor: pointer;
+} 
+
+.jpcontentfeedback .rate_values .rate_value:hover {
+	background-color: #B2DF28;
+} 
+
+.jpcontentfeedback .rate_values .rate_value:hover label {
+	color: 	#fff;
+} 
+
+
+.jpcontentfeedback .rate_values .rate_value input { 
+	padding: 0 0 0 0; 
+	margin: 0; 
+	cursor: pointer;
+}
+
+.jpcontentfeedback .content_comments .paginazione {
+	float: left; 
+	width: 100%;
+	text-align: center;
+	/*border-bottom: 1px dashed #333333;*/
+}
+.jpcontentfeedback .content_comments ol {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+.jpcontentfeedback .content_comments li { 
+	float: left;
+	width: 100%;
+	margin: 10px 0 1em 0;
+	padding: 0 0 0.5em 0; 
+	border-bottom: 1px dashed rgba(0,0,0, 0.06);
+}
+.jpcontentfeedback .content_comments li.last_comment {
+	border-bottom: 1px dashed #fff;
+} 
+
+/********************/
+.jpcontentfeedback .comment_info  {
+	float: left;
+	width: 70%;
+	margin: 0;
+	padding: 0;
+}
+
+.jpcontentfeedback .comment_info p > a > img {
+	float: right;
+}
+
+
+.jpcontentfeedback .comment_rating  {
+	margin: 20px 0 0 70%;
+	padding: 0;
+	width: 29%;
+	text-align: right;
+	font-size: 12px;
+}
+
+.jpcontentfeedback .comment_rating h4 {
+	margin: 0;
+	padding: 5px 0 0 0 ; 
+	font-size: 12px;
+}
+
+.jpcontentfeedback .comment_info >  p {
+	margin-bottom: 2px;
+	margin-top: 5px;
+}
+
+.jpcontentfeedback .comment_info .comment_text {
+	position: absolute;
+	top: -1000em;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+} 
+.jpcontentfeedback .comment_rating  select {
+	background-color: #fff;
+	color: #000;
+}
+
+.jpcontentfeedback .comment_info blockquote {
+	margin: 0;
+	padding: 0.25em;
+	line-height: 170%;
+	/*background-color: #EEF6FC;*/
+	color: #000;
+	overflow: scroll;
+	overflow-y: visible;
+	overflow-x: auto;
+	
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.jpcontentfeedback .comment_info dl {
+	margin: 0;
+	padding: 0;
+}
+.jpcontentfeedback .comment_info dt {
+	/*background-color: #D7E5F2;*/
+	float: left;
+	/*width: 8em;*/
+	margin: 0 0 0.25em 0;
+	padding:  0.25em  0;
+	clear: left;
+}
+
+.jpcontentfeedback .comment_info dd { 
+	/*background-color: #EEF6FC;*/
+	margin: 0 0 0.25em 0;
+	padding:  0.25em 0;
+	text-indent: 0.25em;
+}
+.jpcontentfeedback .comment_actions {
+	text-align: right;
+	margin: 0;
+}
+.jpcontentfeedback .comment_current_average_vote {
+	font-weight: bold;
+	/*font-size: 1.5em;*/
+	color: #B2DF28;
+}
+/***********************************************************/
+.jpcontentfeedback .comment_form {
+	margin: 1em 0;
+	float: left;
+	width: 100%;
+}
+.jpcontentfeedback .comment_form textarea {
+	border: 1px solid rgba(0,0,0, 0.04);
+	width: 76%;
+}
+
+
+.dragdrop_box .jpcontentfeedback .rate_values .rate_value {
+	margin: 0 2px 0 0;
+	padding: 2px 0;
+}
+
+.dragdrop_box .jpcontentfeedback .rate_values .rate_value label {
+	margin: 0 2px 0 0;
+	padding: 0;	
+}
+
+.dragdrop_box .jpcontentfeedback .comment_info {
+	display: block;
+	float: left;
+	width: 100%;
+	margin: 0;
+}
+.dragdrop_box .jpcontentfeedback .comment_info blockquote {
+	width: 98%;
+}
+
+.dragdrop_box .jpcontentfeedback .comment_rating {
+	display: block;
+	float: left;
+	width: 100%;
+	margin: 0;
+}
+
+.dragdrop_box .jpcontentfeedback .comment_rating p {
+	display: inline;
+}
+
+
+

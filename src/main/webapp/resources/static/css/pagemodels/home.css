@@ -1,0 +1,31 @@
+.column-widget {
+	float: left;
+	min-height: 30px;
+	width: 100%;
+}
+
+/******************************************************************************/
+
+#configure-page {
+	background-color: #fff;
+}
+
+.spacer-border {
+	background-color: #fff;
+	padding-top: 17px;
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid #C1C2C4;
+}
+
+.page-space-collapsed {
+	background-color: #fff;
+	height: 14px;
+}
+
+#widget-columns-container {
+	margin-top: 23px;
+}
+
+/******************************************************************************/

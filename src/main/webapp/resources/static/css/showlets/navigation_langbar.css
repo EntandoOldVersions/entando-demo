@@ -1,0 +1,15 @@
+#header-login .navigation_langbar {
+	float: left;
+	margin: 11px 0 0 20px;
+}
+
+#header-login .navigation_langbar a:link,
+#header-login .navigation_langbar a:visited {
+	text-decoration: none;
+}
+
+#header-login .navigation_langbar a:hover,
+#header-login .navigation_langbar a:visited,
+#header-login .navigation_langbar a:focus {
+	text-decoration: underline;
+}

@@ -90,6 +90,7 @@
 </s:if>
 <s:else>
 	<p><wp:i18n key="ENTANDO_API_NO_SERVICES" /></p>
+	<a href="<wp:action path="/ExtStr2/do/Front/Api/Resource/list.action" />"><wp:i18n key="ENTANDO_API_GOTO_LIST" /></a>
 </s:else>
 	<p class="back">
 		<a href="<wp:action path="/ExtStr2/do/Front/Api/Resource/list.action" />">

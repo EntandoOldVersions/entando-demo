@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<package name="jpcmsshortcut_do/jpcmsshortcut" namespace="/do/jpcmsshortcut" extends="entando-front-default">
+		
+		<interceptors>
+			<interceptor name="i18nInterceptor" class="com.agiletec.plugins.jpcmsshortcut.aps.internalservlet.I18nInterceptor" />
+		</interceptors>
+        
+		<action name="introHeader">
+			<result>/WEB-INF/plugins/jpcmsshortcut/aps/internalservlet/header.jsp</result>
+		</action>
+        
+		<action name="intro" class="jpcmsshortcutFrontContentAction" method="edit">
+			<result>/WEB-INF/plugins/jpcmsshortcut/aps/internalservlet/frontEntryContent.jsp</result>
+			<interceptor-ref name="entandoFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
+			<interceptor-ref name="i18nInterceptor" />
+		</action>
+        
+		<action name="save" class="jpcmsshortcutFrontContentAction" method="saveAndApprove">
+			<result name="input">/WEB-INF/plugins/jpcmsshortcut/aps/internalservlet/frontEntryContent.jsp</result>
+			<result>/WEB-INF/plugins/jpcmsshortcut/aps/internalservlet/success-reload.jsp</result>
+			<interceptor-ref name="entandoFrontEndValidationStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
+		</action>
+		
+	</package>
+	
+</struts>

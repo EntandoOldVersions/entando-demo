@@ -12,6 +12,9 @@
 			classpath*:spring/apsadmin/**/**.xml 
 			classpath*:spring/plugins/**/aps/**/**.xml 
 			classpath*:spring/plugins/**/apsadmin/**/**.xml 
+        	classpath*:spring/plugins/jpcmsshortcut/aps/**/**.xml 
+			classpath*:spring/plugins/jpcmsshortcut/apsadmin/**/**.xml 
+			classpath*:spring/demo/aps/**/**.xml 
 		</param-value>
 	</context-param>
     <context-param>

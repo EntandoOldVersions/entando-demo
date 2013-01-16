@@ -1,0 +1,109 @@
+#header-login .login_form {
+	float: right;
+	margin: 9px 13px 0 0;
+}
+/************/
+
+#header-login .login_form input[type="text"],
+#header-login .login_form input[type="password"],
+#header-login .login_form textarea {
+	border: 0px;
+	background-color: #3D3D3D;
+	color: #fff;
+	color: rgba(255,255,255, 0.9);
+	-webkit-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, 0.4);
+	-moz-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, 0.4);
+	box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, 0.4);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin: 0 7px 0 0;
+	padding: 0 8px;
+	height: 20px;
+	float: left;
+	width: 163px;
+}
+#header-login .login_form .important {
+	color: #ACDC28;
+	font-weight: bold;
+}
+#header-login .login_form .button:link,
+#header-login .login_form .button:visited {
+	margin: 0;
+	padding: 0 8px;
+	border: 1px solid rgba(43, 63, 28, 1);
+	background-color: #ACDC28;
+	color: rgba(57, 62, 58, 0.9);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	height: 21px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#header-login .login_form .button:hover,
+#header-login .login_form .button:active,
+#header-login .login_form .button:focus {
+	color: #ACDC28;
+	background-color: rgba(57, 62, 58, 0.9);
+	text-decoration: none;
+}
+
+#header-login .login_form .error{
+	margin: 5px 7px 0 0;
+	padding: 0 8px;
+	height: 20px;
+	float: left;
+	font-size: 10px;
+	color: #ACDC28;
+}
+
+#header-login .login_form input[type="text"]:hover,
+#header-login .login_form input[type="text"]:active,
+#header-login .login_form input[type="password"]:hover,
+#header-login .login_form input[type="password"]:active,
+#header-login .login_form textarea:hover,
+#header-login .login_form textarea:active {
+	background-color: #9A9A9A;
+}
+
+#header-login .login_form input[type="text"]:focus,
+#header-login .login_form input[type="password"]:focus,
+#header-login .login_form textarea:focus {
+	background-color: #525252;
+}
+
+#header-login .login_form input[type="password"] {
+	margin: 0 4px 0 0;
+}
+
+#header-login .login_form input[type="submit"] {
+	margin: 0;
+	padding: 0 8px;
+	border: 1px solid rgba(43, 63, 28, 1);
+	background-color: #ACDC28;
+	color: rgba(57, 62, 58, 0.9);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	height: 21px;
+	vertical-align: middle;
+	float: left;
+	cursor: pointer;
+}
+
+#header-login .login_form input[type="submit"]:hover {
+	color: #ACDC28;
+	background-color: rgba(57, 62, 58, 0.9);
+}
+
+
+
+#header-login .login_form label {
+	display: none;
+}
+
+#header-login .login_form.logged {
+	margin-top: 12px;
+}

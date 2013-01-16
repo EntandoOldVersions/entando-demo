@@ -1,0 +1,47 @@
+.jpwebdynamicform .threestate,
+.jpwebdynamicform .threestate > li,
+.jpwebdynamicform .boolean,
+.jpwebdynamicform .boolean > li {
+	list-style-type: none;
+}
+
+.jpwebdynamicform .threestate,
+.jpwebdynamicform .boolean {
+	margin: 0 10px ;
+	padding: 10px;
+}
+
+.jpwebdynamicform .fieldError-false { }
+
+.jpwebdynamicform .fieldError-true {
+	padding-left: 0px;
+	/*border-left: 4px solid red;*/
+	color: #FF2876;
+}
+
+.jpwebdynamicform .fieldError-false, 
+.jpwebdynamicform .fieldError-true {
+	margin-bottom: 25px;
+}
+
+.jpwebdynamicform {
+	float: left;
+	width: 100%;
+	background-image: url(../img/webforms.png);
+	background-position: right 20px;
+	background-repeat: no-repeat;
+}
+.dragdrop_box .jpwebdynamicform {
+	background-position: right 5px;
+	background-image: url(../img/webforms-small.png);
+}
+
+.dragdrop_box .jpwebdynamicform ul {
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+.dragdrop_box .jpwebdynamicform li {
+	margin: 0 0 10px 0;
+	padding: 0;
+}

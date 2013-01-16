@@ -1,0 +1,76 @@
+#header-content-container .search_form {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#header-content-container .search_form p,
+#header-content-container .search_form form {
+	margin: 0 0 5px 0;
+}
+
+
+#header-content-container .search_form .input-container {
+	border: 0px;
+	background-color: rgba(255, 255, 255, 0.8);
+	-webkit-border-radius: 21px;
+	-moz-border-radius: 21px;
+	border-radius: 21px;
+	color: rgba(0,0,0, 0.8);
+	/*background-image: url("../../img/icon-search.png");*/
+	background-position: 6px center;
+	background-repeat: no-repeat;
+	width: 170px;
+	height: 21px;
+	margin: 0 0 0 30px;
+	padding: 0 6px;
+	display: block;
+	text-align: left;
+}
+
+#header-content-container .search_form .input-container:hover {
+	-webkit-box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+	box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+#header-content-container .search_form .input-container input,
+#header-content-container .search_form .input-container input[type="image"],
+#header-content-container .search_form .input-container input[type="text"] {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	width: 150px;
+	text-align: left;
+	display: inline;
+	vertical-align: middle;
+	color: rgba(0,0,0, 0.8);
+
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+
+	-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	-moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+#header-content-container .search_form .input-container input[type="text"]:hover,
+#header-content-container .search_form .input-container input[type="text"]:active,
+#header-content-container .search_form .input-container input[type="text"]:focus {
+	border: 0;
+	outline: none;
+	outline-color: transparent;
+	outline-width: 0px;
+}
+
+
+#header-content-container .search_form .input-container input[type="image"] {
+	height: auto;
+	width: auto;
+	border: 0;
+	margin: 0;
+	padding: 7px 0 5px 0 ;
+}
+

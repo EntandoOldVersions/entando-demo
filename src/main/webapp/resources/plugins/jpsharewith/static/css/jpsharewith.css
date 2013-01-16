@@ -1,0 +1,44 @@
+#footer .jpsharewith {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .jpsharewith .title {
+	display: none;
+}
+
+#footer #jpsharewith {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#jpsharewith a img {
+	vertical-align: middle;
+	line-height: 20px;
+	margin-right: 10px;
+	float: left;
+}
+
+#jpsharewith a:link,
+#jpsharewith a:visited {
+	display: block;
+	width: 100px;
+	margin-left: 200px;
+	text-align: left;
+	text-decoration: none;
+	height: 20px;
+	margin-bottom: 4px;
+	vertical-align: middle;
+	color: #000;
+	font-size: 11px;
+}
+
+#jpsharewith a:hover,
+#jpsharewith a:active,
+#jpsharewith a:focus {
+	text-decoration: none;
+	color: #74961b;
+}
