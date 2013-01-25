@@ -58,7 +58,7 @@ public class FrontContentAction extends ContentAction {
 			}
 			//System.out.println(model.getId());
 			this.extractAttributesToEdit(model.getContentShape());
-			System.out.println(this.getAttributeName());
+			//System.out.println(this.getAttributeName());
 		} catch (Throwable t) {
 			ApsSystemUtils.logThrowable(t, this, "editView");
 			return FAILURE;
