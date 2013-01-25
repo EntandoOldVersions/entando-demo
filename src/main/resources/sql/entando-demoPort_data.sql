@@ -46,7 +46,6 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 	#if ( $content.Image1.getImagePath("2")!="" )
 	<img src="$content.Image1.getImagePath("2")" alt="$content.Image1.text" class="left"/>
 	#end
-
 	#if ($content.Links.size()>0)
   	<ul>
 	  #foreach ($item in $content.Links)
@@ -57,17 +56,13 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 </div>', 'contentmodels/generic.css');
 INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUES (3, 'CNG', 'Complete def. (title, text, attach, links)', '<div class="news-2">
 	<h2>$content.Title.text</h2>
-
 	#if ( $content.Image1.getImagePath("3")!="" )
 	<img src="$content.Image1.getImagePath("3")" alt="$content.Image1.text" />
 	#end
-
 	$content.Body.text
-
 	#if ( $content.Image2.getImagePath("2")!="" )
 	<img src="$content.Image2.getImagePath("2")" alt="$content.Image2.text" />
 	#end
-
 	#if ($content.Attach.size()>0)
 	<h3>$i18n.getLabel("ATTACHMENTS")</h3>
 	<ul>
@@ -89,13 +84,10 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUES (51, 'YTB', 'for Lists (title)', '<p><a href="$content.getContentLink()">$content.Title.text</a></p>', NULL);
 INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUES (5, 'YTB', 'Complete def. (title, video, text, attach, links)', '<div class="ytb-5">
 	<h2>$content.Title.text</h2>
-
 	<div class="video">
 		<iframe width="640" height="360" src="http://www.youtube.com/embed/$content.VideoCode.text?wmode=transparent"" frameborder="0" allowfullscreen></iframe>
 	</div>
-
 	$content.Body.text
-
 	#if ($content.Attach.size()>0)
 	<h3>$i18n.getLabel("ATTACHMENTS")</h3>
 	<ul>
@@ -120,6 +112,8 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 </div>
 </div>
 #if ($content.isUserAllowed("editContents"))
+#set ($frontEndEditingParam = $content.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
+#if ($frontEndEditingParam && $frontEndEditingParam == "true") 
 <!-- modal popup start-->
 <p class="vai">
 <a id="options_anchor_$content.getId()" href="javascript:void(0)">$i18n.getLabel("EDIT_CONTENT")</a>
@@ -129,13 +123,14 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 "opendialog": "widgetDialog",
 "jqueryaction": "anchor",
 "id": "anchor_config_$content.getId()",
-"href": "$content.getConfigParameter("applicationBaseURL")do/jpcmsshortcut/intro?contentId=$content.getId()&attributeName=VideoCode&attributeName=Title",
+"href": "$content.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=52&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
 "button": false
 });
  });  
 </script>
 </p>
 <!-- modal popup end -->
+#end
 #end', NULL);
 INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUES (23, 'NEW', 'for Archive - style 2', '<div class="news">
   <p>$content.Date.getFormattedDate("dd/MM/yyyy")</p>
@@ -147,14 +142,12 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 #if ($content.Image1.imagePath("2") != "")
 <img src="$content.Image1.imagePath("2")" alt="$content.Image1.text" class="left" />
 #end
-
 <div class="box">
   <h3>$content.Title.text</h3>
   <p>$content.Date.getFormattedDate("dd/MM/yyyy")</p>
   <p>$content.Abstract.text</p>
   <p class="alignRight"><a href="$content.contentLink">Read More &raquo;</a></p>
   </div>
-
 </div>', 'contentmodels/NEW.css');
 INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUES (24, 'NEW', 'for Archive - style 3', '<div class="news_2images clear">
 <div class="box_2images">
@@ -165,31 +158,25 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 <img src="$content.Image2.imagePath("1")" alt="$content.Image2.text" />
 #end
 </div>
-
 <div class="box">
   <h3>$content.Title.text</h3>
   <p class="alignRight">$content.Date.getFormattedDate("dd/MM/yyyy")</p>
   <p>$content.Abstract.text</p>
   <p class="alignRight"><a href="$content.contentLink">Read More &raquo;</a></p>
 </div>
-
 </div>', 'contentmodels/NEW.css');
 INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUES (2, 'NEW', 'Complete def. (title, date, text, attach, links)', '<div class="news-2">
 	<h2>$content.Title.text</h2>
 	<p>
 	  $content.Date.fullDate
 	</p>
-  	
 	#if ( $content.Image1.getImagePath("2")!="" )
 	<img src="$content.Image1.getImagePath("2")" alt="$content.Image1.text" />
 	#end
-
 	$content.Body.text
-
 	#if ( $content.Image2.getImagePath("2")!="" )
 	<img src="$content.Image2.getImagePath("2")" alt="$content.Image2.text" />
 	#end
-
 	#if ($content.Attach.size()>0)
 	<h3>$i18n.getLabel("ATTACHMENTS")</h3>
 	<ul>
@@ -236,9 +223,7 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 	<fb:like href="$content.contentLink" send="false" layout="button_count" width="120" show_faces="false" font="arial"></fb:like>
 	<!-- fb end -->
 </p>
-
 </div>
-
 ', 'contentmodels/NEW.css');
 INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUES (53, 'YTB', 'preview', '<div class="video video53">
   <iframe width="290" height="177" src="http://www.youtube.com/embed/$content.VideoCode.text?wmode=transparent"" frameborder="0" allowfullscreen></iframe>
@@ -247,7 +232,6 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
       <p>
       $content.Abstract.text
       </p>
-      
   </div>
 </div>', 'contentmodels/YTB.css');
 INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUES (21, 'NEW', 'for lists', '<div class="new-21">
@@ -265,6 +249,8 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 <p>$content.Abstract.text</p>
 </div>
 #if ($content.isUserAllowed("editContents"))
+#set ($frontEndEditingParam = $content.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
+#if ($frontEndEditingParam && $frontEndEditingParam == "true") 
 <!-- modal popup start-->
 <p class="vai">
 <a id="options_anchor_$content.getId()" href="javascript:void(0)">$i18n.getLabel("EDIT_CONTENT")</a>
@@ -274,13 +260,14 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 "opendialog": "widgetDialog",
 "jqueryaction": "anchor",
 "id": "anchor_config_$content.getId()",
-"href": "$content.getConfigParameter("applicationBaseURL")do/jpcmsshortcut/intro?langCode=$content.getLangCode()&contentId=$content.getId()&attributeName=Title&attributeName=Abstract",
+"href": "$content.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=34&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
 "button": false
 });
  });  
 </script>
 </p>
 <!-- modal popup end -->
+#end
 #if ($content.isUserAllowed("enterBackend"))
 <p class="vai">
   <a href="$content.getConfigParameter("applicationBaseURL")do/jacms/Content/edit.action?request_locale=$content.getLangCode()&contentId=$content.getId()">$i18n.getLabel("EDIT_CONTENT_BACKOFFICE")</a>
@@ -309,6 +296,8 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 	<!-- fb end -->
 </p>
 #if ($content.isUserAllowed("editContents"))
+#set ($frontEndEditingParam = $content.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
+#if ($frontEndEditingParam && $frontEndEditingParam == "true") 
 <!-- modal popup start-->
 <p class="vai">
 <a id="options_anchor_$content.getId()" href="javascript:void(0)">$i18n.getLabel("EDIT_CONTENT")</a>
@@ -318,13 +307,14 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 "opendialog": "widgetDialog",
 "jqueryaction": "anchor",
 "id": "anchor_config_$content.getId()",
-  "href": "$content.getConfigParameter("applicationBaseURL")do/jpcmsshortcut/intro?request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()&attributeName=Title&attributeName=Abstract",
+  "href": "$content.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=27&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
 "button": false
 });
  });  
 </script>
 </p>
 <!-- modal popup end -->
+#end
 #if ($content.isUserAllowed("enterBackend"))
 <p class="vai">
 <a href="$content.getConfigParameter("applicationBaseURL")do/jacms/Content/edit.action?request_locale=$content.getLangCode()&contentId=$content.getId()">$i18n.getLabel("EDIT_CONTENT_BACKOFFICE")</a>
@@ -777,8 +767,8 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USER_STATUS_C
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USER_STATUS_CREDENTIALS_INVALID', 'en', 'Username/Password not valid.');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USERNAME', 'it', 'Utente');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USERNAME', 'en', 'Username');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('COPYRIGHT', 'it', 'Copyright &copy; Tzente S.r.l. 2011');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('COPYRIGHT', 'en', 'Copyright &copy; Tzente S.r.l. 2011');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('COPYRIGHT', 'it', 'Copyright &copy; Entando S.r.l. 2013');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('COPYRIGHT', 'en', 'Copyright &copy; Entando S.r.l. 2013');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCHED_FOR', 'en', 'You searched for');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCHED_FOR', 'it', 'Hai cercato');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('SEARCH_FORM_TITLE', 'en', 'Search');
@@ -3254,6 +3244,10 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'para
 		<Param name="maxMonthsSinceLastAccess">6</Param>
 		<Param name="maxMonthsSinceLastPasswordChange">3</Param>        
 	</ExtendendPrivacyModule>
+	<ExtraParams>
+		<Param name="jpfrontshortcut_activeFrameFrontEndEditing">false</Param>
+		<Param name="jpfrontshortcut_activeContentFrontEndEditing">true</Param>
+	</ExtraParams>
 </Params>
 ');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpuserprofileProfileType', 'Definizione del profilo utente', '<?xml version="1.0" encoding="UTF-8"?>
@@ -3344,51 +3338,23 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 				<validations>
 					<required>true</required>
 				</validations>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 				<roles>
 					<role>jacms:title</role>
 				</roles>
 			</attribute>
-			<attribute name="Abstract" attributetype="Longtext" indexingtype="TEXT">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-			<attribute name="Body" attributetype="Hypertext" indexingtype="TEXT">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-
-			<attribute name="Image1" attributetype="Image">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-
-			<attribute name="Image2" attributetype="Image">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-
+			<attribute name="Abstract" attributetype="Longtext" indexingtype="TEXT" />
+			<attribute name="Body" attributetype="Hypertext" indexingtype="TEXT" />
+			<attribute name="Image1" attributetype="Image" />
+			<attribute name="Image2" attributetype="Image" />
 			<list name="Attach" attributetype="Monolist">
 				<nestedtype>
 					<attribute name="Attach" attributetype="Attach" indexingtype="TEXT" />
 				</nestedtype>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</list>
 			<list name="Links" attributetype="Monolist">
 				<nestedtype>
 					<attribute name="Links" attributetype="Link" indexingtype="TEXT" />
 				</nestedtype>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</list>
 		</attributes>
 	</contenttype>
@@ -3401,23 +3367,12 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 				<roles>
 					<role>jacms:title</role>
 				</roles>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</attribute>
-			<attribute name="Abstract" attributetype="Longtext" indexingtype="TEXT">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-
+			<attribute name="Abstract" attributetype="Longtext" indexingtype="TEXT" />
 			<attribute name="File" attributetype="Attach">
 				<validations>
 					<required>true</required>
 				</validations>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</attribute>
 		</attributes>
 	</contenttype>
@@ -3430,53 +3385,25 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 				<roles>
 					<role>jacms:title</role>
 				</roles>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</attribute>
 			<attribute name="Date" attributetype="Date" searcheable="true" indexingtype="TEXT">
 				<validations>
 					<required>true</required>
 				</validations>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</attribute>
-			<attribute name="Abstract" attributetype="Longtext" indexingtype="TEXT">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-			<attribute name="Body" attributetype="Hypertext" indexingtype="TEXT">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-			<attribute name="Image1" attributetype="Image">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-			<attribute name="Image2" attributetype="Image">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
+			<attribute name="Abstract" attributetype="Longtext" indexingtype="TEXT" />
+			<attribute name="Body" attributetype="Hypertext" indexingtype="TEXT" />
+			<attribute name="Image1" attributetype="Image" />
+			<attribute name="Image2" attributetype="Image" />
 			<list name="Attach" attributetype="Monolist">
 				<nestedtype>
 					<attribute name="Attach" attributetype="Attach" indexingtype="TEXT" />
 				</nestedtype>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</list>
 			<list name="Links" attributetype="Monolist">
 				<nestedtype>
 					<attribute name="Links" attributetype="Link" indexingtype="TEXT" />
 				</nestedtype>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</list>
 		</attributes>
 	</contenttype>
@@ -3489,9 +3416,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 				<roles>
 					<role>jacms:title</role>
 				</roles>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</attribute>
 		</attributes>
 	</contenttype>
@@ -3506,9 +3430,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 						<helpmessage><![CDATA[Insert the id of the video. Example, it the page is "http://www.youtube.com/watch?v=012345678901" the VideoCode is 012345678901.]]></helpmessage>
 					</expression>
 				</validations>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</attribute>
 			<attribute name="Title" attributetype="Text" searcheable="true" indexingtype="TEXT">
 				<validations>
@@ -3518,31 +3439,17 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'cont
 					<role>jacms:title</role>
 				</roles>
 			</attribute>
-			<attribute name="Abstract" attributetype="Longtext" indexingtype="TEXT">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
-			<attribute name="Body" attributetype="Hypertext" indexingtype="TEXT">
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
-			</attribute>
+			<attribute name="Abstract" attributetype="Longtext" indexingtype="TEXT" />
+			<attribute name="Body" attributetype="Hypertext" indexingtype="TEXT" />
 			<list name="Attach" attributetype="Monolist">
 				<nestedtype>
 					<attribute name="Attach" attributetype="Attach" indexingtype="TEXT" />
 				</nestedtype>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</list>
 			<list name="Links" attributetype="Monolist">
 				<nestedtype>
 					<attribute name="Links" attributetype="Link" indexingtype="TEXT" />
 				</nestedtype>
-				<disablingCodes>
-					<code>jpcmsshortcut:editOnWidget</code>
-				</disablingCodes>
 			</list>
 		</attributes>
 	</contenttype>
@@ -3628,125 +3535,6 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpmy
 <myportalConfig><showlets><showlet code="documents_list" /><showlet code="form_list" /><showlet code="inEvidenza" /><showlet code="jpsurvey_pollList" /><showlet code="jpsurvey_questionnaireList" /><showlet code="jpwebdynamicform_message_choice" /><showlet code="latest_events" /><showlet code="latest_news" /><showlet code="latest_video" /></showlets></myportalConfig>
 ');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20130115185332');
-INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'entandoComponentsReport', 'The component installation report', '<?xml version="1.0" encoding="UTF-8"?>
-<reports status="OK">
-	<creation>2013-01-15 18:53:30</creation>
-	<lastupdate>2013-01-15 18:53:30</lastupdate>
-	<components>
-		<component name="entandoCore" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jacms" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="NOT_AVAILABLE" />
-				<datasource name="portDataSource" status="PORTING" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jpcontentfeedback" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="NOT_AVAILABLE" />
-				<datasource name="portDataSource" status="PORTING" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jpfastcontentedit" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="NOT_AVAILABLE" />
-				<datasource name="portDataSource" status="NOT_AVAILABLE" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jpmail" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="NOT_AVAILABLE" />
-				<datasource name="portDataSource" status="NOT_AVAILABLE" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jpmyportalplus" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="NOT_AVAILABLE" />
-				<datasource name="portDataSource" status="PORTING" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jpsharewith" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="NOT_AVAILABLE" />
-				<datasource name="portDataSource" status="NOT_AVAILABLE" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jpsurvey" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="NOT_AVAILABLE" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jpuserprofile" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="NOT_AVAILABLE" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-		<component name="jpwebdynamicform" date="2013-01-15 18:53:30" status="OK">
-			<schema status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="NOT_AVAILABLE" />
-			</schema>
-			<data status="OK">
-				<datasource name="servDataSource" status="PORTING" />
-				<datasource name="portDataSource" status="PORTING" />
-			</data>
-			<postProcess status="NOT_AVAILABLE" />
-		</component>
-	</components>
-</reports>
-
-');
 
 
 

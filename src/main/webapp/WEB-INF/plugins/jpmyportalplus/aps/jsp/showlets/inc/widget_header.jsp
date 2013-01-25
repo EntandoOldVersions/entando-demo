@@ -1,10 +1,12 @@
 <%@ taglib prefix="mppl" uri="/jpmyportalplus-core" %>
+<%--
 <%@ taglib prefix="wpcs" uri="/WEB-INF/plugins/jpcmsshortcut/aps/tld/jpcmsshortcut-aps-core.tld" %>
+--%>
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="charset=UTF-8" %>
 
-<wpcs:staticInternalServlet actionPath="/ExtStr2/do/jpcmsshortcut/introHeader" />
+<%-- <wpcs:staticInternalServlet actionPath="/ExtStr2/do/jpcmsshortcut/introHeader" /> --%>
 
 <%-- variabile showletId: il prefisso showlet id "__s__" è referenziato in jpmyportalplus.js --%>
 <c:set var="showletId" scope="request"><wp:currentShowlet param="code" />__s__<mppl:requestContextParam param="currentFrame" /></c:set>
