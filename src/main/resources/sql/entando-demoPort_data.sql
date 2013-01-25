@@ -112,7 +112,7 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 </div>
 </div>
 #if ($content.isUserAllowed("editContents"))
-#set ($frontEndEditingParam = $content.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
+#set ($frontEndEditingParam = $info.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
 #if ($frontEndEditingParam && $frontEndEditingParam == "true") 
 <!-- modal popup start-->
 <p class="vai">
@@ -123,7 +123,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 "opendialog": "widgetDialog",
 "jqueryaction": "anchor",
 "id": "anchor_config_$content.getId()",
-"href": "$content.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=52&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
+"href": "$info.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=52&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
 "button": false
 });
  });  
@@ -249,7 +249,7 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 <p>$content.Abstract.text</p>
 </div>
 #if ($content.isUserAllowed("editContents"))
-#set ($frontEndEditingParam = $content.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
+#set ($frontEndEditingParam = $info.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
 #if ($frontEndEditingParam && $frontEndEditingParam == "true") 
 <!-- modal popup start-->
 <p class="vai">
@@ -260,7 +260,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 "opendialog": "widgetDialog",
 "jqueryaction": "anchor",
 "id": "anchor_config_$content.getId()",
-"href": "$content.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=34&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
+"href": "$info.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=34&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
 "button": false
 });
  });  
@@ -270,7 +270,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 #end
 #if ($content.isUserAllowed("enterBackend"))
 <p class="vai">
-  <a href="$content.getConfigParameter("applicationBaseURL")do/jacms/Content/edit.action?request_locale=$content.getLangCode()&contentId=$content.getId()">$i18n.getLabel("EDIT_CONTENT_BACKOFFICE")</a>
+  <a href="$info.getConfigParameter("applicationBaseURL")do/jacms/Content/edit.action?request_locale=$content.getLangCode()&contentId=$content.getId()">$i18n.getLabel("EDIT_CONTENT_BACKOFFICE")</a>
 </p>
 #end
 #end', 'contentmodels/generic.css');
@@ -296,7 +296,7 @@ INSERT INTO contentmodels (modelid, contenttype, descr, model, stylesheet) VALUE
 	<!-- fb end -->
 </p>
 #if ($content.isUserAllowed("editContents"))
-#set ($frontEndEditingParam = $content.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
+#set ($frontEndEditingParam = $info.getConfigParameter("jpfrontshortcut_activeContentFrontEndEditing"))
 #if ($frontEndEditingParam && $frontEndEditingParam == "true") 
 <!-- modal popup start-->
 <p class="vai">
@@ -307,7 +307,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 "opendialog": "widgetDialog",
 "jqueryaction": "anchor",
 "id": "anchor_config_$content.getId()",
-  "href": "$content.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=27&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
+  "href": "$info.getConfigParameter("applicationBaseURL")do/jpfrontshortcut/Content/introView?modelId=27&request_locale=$content.getLangCode()&langCode=$content.getLangCode()&contentId=$content.getId()",
 "button": false
 });
  });  
@@ -317,7 +317,7 @@ jQuery.struts2_jquery.bind(jQuery(''#options_anchor_$content.getId()''),{
 #end
 #if ($content.isUserAllowed("enterBackend"))
 <p class="vai">
-<a href="$content.getConfigParameter("applicationBaseURL")do/jacms/Content/edit.action?request_locale=$content.getLangCode()&contentId=$content.getId()">$i18n.getLabel("EDIT_CONTENT_BACKOFFICE")</a>
+<a href="$info.getConfigParameter("applicationBaseURL")do/jacms/Content/edit.action?request_locale=$content.getLangCode()&contentId=$content.getId()">$i18n.getLabel("EDIT_CONTENT_BACKOFFICE")</a>
 </p>
 #end
 #end
