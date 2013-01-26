@@ -10,6 +10,6 @@
 </c:set> 
 <wp:headInfo type="JS_JQUERY" var="jquery_libraries" />
 <c:set var="jquery_css">
-	<link rel="stylesheet" type="text/css" href="<wp:resourceURL />plugins/jpcmsshortcut/static/css/ui.css" />
+	<link rel="stylesheet" type="text/css" href="<wp:resourceURL />plugins/jpfrontshortcut/static/css/ui.css" />
 </c:set>
 <wp:headInfo type="JS_JQUERY" var="jquery_css" />
