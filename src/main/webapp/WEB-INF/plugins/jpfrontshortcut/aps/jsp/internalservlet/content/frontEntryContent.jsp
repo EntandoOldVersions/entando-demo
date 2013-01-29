@@ -69,13 +69,13 @@
 
 			<s:elseif test="#attribute.type == 'Image'">
 				<%-- ############# ATTRIBUTO Image ############# --%>
-				<s:include value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/imageAttribute.jsp" />
+				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/imageAttribute.jsp" />
 				</p>
 			</s:elseif>
 
 			<s:elseif test="#attribute.type == 'Attach'">
 				<%-- ############# ATTRIBUTO Attach ############# --%>
-				<s:include value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/attachAttribute.jsp" />
+				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/attachAttribute.jsp" />
 				</p>
 			</s:elseif>
 
@@ -111,7 +111,7 @@
 
 			<s:elseif test="#attribute.type == 'Link'">
 				<%-- ############# ATTRIBUTO Link ############# --%>
-				<s:include value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/linkAttribute.jsp" />
+				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/linkAttribute.jsp" />
 				</p>
 			</s:elseif>
 

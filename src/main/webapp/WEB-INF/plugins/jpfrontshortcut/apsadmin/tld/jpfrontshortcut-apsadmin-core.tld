@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
-	<description><![CDATA["jpfrontshortcut apsadmin core tag library"]]>
-	</description>
+	<description><![CDATA["jpfrontshortcut apsadmin core tag library"]]></description>
 	<display-name>"jpfrontshortcut apsadmin core tag library"</display-name>
 	<tlib-version>2.2</tlib-version>
 	<short-name>wpfssa</short-name>
@@ -22,8 +21,7 @@
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 		<attribute>
-			<description><![CDATA[Name of the variable in the value stack where to store the result.]]>
-			</description>
+			<description><![CDATA[Name of the variable in the value stack where to store the result.]]></description>
 			<name>var</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
@@ -38,15 +36,13 @@
 		<tag-class>org.entando.entando.plugins.jpfrontshortcut.apsadmin.tags.ApsAjaxActionParamSubTag</tag-class>
 		<body-content>JSP</body-content>
 		<attribute>
-			<description><![CDATA[Name of the parameter.]]>
-			</description>
+			<description><![CDATA[Name of the parameter.]]></description>
 			<name>name</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 		<attribute>
-			<description><![CDATA[Value of the parameter.]]>
-			</description>
+			<description><![CDATA[Value of the parameter.]]></description>
 			<name>value</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
