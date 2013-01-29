@@ -15,13 +15,6 @@
 		<property name="contentModelManager" ref="jacmsContentModelManager" />
   	</bean>
   	
-	
-	<bean id="jpfrontshortcutExtendedResourceFinderAction" scope="prototype" 
-			class="org.entando.entando.plugins.jpfrontshortcut.aps.internalservlet.content.attribute.action.ExtendedResourceFinderAction" parent="jacmsExtendedResourceFinderAction">
-	</bean>
-	
-
-
 	<bean id="jpfrontshortcutFrontPageAction" scope="prototype" 
 			class="org.entando.entando.plugins.jpfrontshortcut.aps.internalservlet.portal.FrontPageAction" parent="abstractPortalAction">
 		<property name="pageModelManager" ref="PageModelManager" />

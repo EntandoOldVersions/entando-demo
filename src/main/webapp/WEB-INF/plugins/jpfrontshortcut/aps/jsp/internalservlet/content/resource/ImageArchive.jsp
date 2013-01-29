@@ -40,13 +40,10 @@ window.addEvent('domready', function(){
 
 <h3><wp:i18n key="jpfastcontentedit_CHOOSE_IMAGE" /></h3>
 
-<s:form action="search" namespace="/do/jpfrontshortcut/Content/Resource" theme="simple">
-<%--
-<form action="<wp:action path="/ExtStr2/do/jpfastcontentedit/Content/Resource/search.action" />" method="post">
---%>
+<s:form id="formform" action="search" namespace="/do/jpfrontshortcut/Content/Resource" theme="simple">
+
 <fieldset><legend><wp:i18n key="jpfastcontentedit_SEARCH_FILTERS" /></legend>
-	
-	<wpsf:textfield useTabindexAutoIncrement="true" name="resourceTypeCode" id="resourceTypeCode" cssClass="text" />
+<p class="noscreen"><wpsf:hidden name="resourceTypeCode" /></p>
 <p>
 	<label for="text"><wp:i18n key="jpfastcontentedit_DESCRIPTION" />:</label><br />
 	<wpsf:textfield useTabindexAutoIncrement="true" name="text" id="text" cssClass="text" />
@@ -70,17 +67,16 @@ window.addEvent('domready', function(){
 	<s:set name="search_label"><wp:i18n key="jpfastcontentedit_SEARCH" /></s:set>
 	<s:url var="executeSearchUrlVar" namespace="/do/jpfrontshortcut/Content/Resource" action="search" />
 	<sj:submit targets="form-container" indicator="indicator" href="%{#executeSearchUrlVar}" 
-			   value="aaaaaaaaaaa" button="true" />
+			   value="%{#search_label}" button="true" />
 </p>
 
-<wpsa:subset source="resources" count="10" objectName="groupResource" advanced="true" offset="5">
+<wpfssa:subset source="resources" count="10" objectName="groupResource" advanced="true" offset="5">
 <s:set name="group" value="#groupResource" />
-<%-- <s:set var="pagerSubmitUrlVar" value="#executeSearchUrlVar" /> --%>
-<s:set var="pagerSubmitActionNameVar" value="#executeSearchUrlVar" />
+<s:set var="pagerSubmitActionNameVar" value="'search'" />
 
 <div class="pager">
 	<s:include value="/WEB-INF/apsadmin/jsp/common/inc/pagerInfo.jsp" />
-	
+	<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 </div>
 
 <s:iterator id="resourceid">
@@ -93,12 +89,8 @@ window.addEvent('domready', function(){
 			<wpfssa:actionSubParam name="resourceId" value="%{#resourceid}" />
 		</wpfssa:actionParam>
 		<s:url var="joinResourceActionVar" action="%{#joinResourceActionNameVar}" />
-		<sj:submit targets="form-container" value="%{getText('label.join')}" button="true" href="%{#joinResourceActionVar}" />
-	<%--
-		<a href="<wp:action path="/ExtStr2/do/jpfastcontentedit/Content/Resource/joinResource.action" >
-			   <wp:parameter name="resourceId"><s:property value="%{#resourceid}"/></wp:parameter>
-		   </wp:action>#<s:property value="currentAttributeLang" />_tab" title="<wp:i18n key="jpfastcontentedit_JOIN_TO" />: <s:property value="content.descr" />" ><wp:i18n key="jpfastcontentedit_JOIN" /></a>
-	--%>
+		<sj:submit targets="form-container" value="%{getText('label.join')}" 
+				   button="true" href="%{#joinResourceActionVar}" />
 	</dt>
 	<dd>
 		<p><s:property value="#resource.descr" /></p>
@@ -108,9 +100,9 @@ window.addEvent('domready', function(){
 </s:iterator>
 
 <div class="pager clear">
-	
+	<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 </div>
 
-</wpsa:subset>
+</wpfssa:subset>
 
 </s:form>

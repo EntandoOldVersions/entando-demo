@@ -9,33 +9,32 @@
 		
 		<!-- ######## INIZIO GESTIONE RICERCA ATTRIBUTI RISORSA ######## -->
 		
-		<action name="findResource" class="jpfrontshortcutExtendedResourceFinderAction" method="entryFindResource">
+		<action name="findResource" class="jacmsExtendedResourceFinderAction" method="entryFindResource">
 			<!-- <result type="tiles">admin.jacms.content.findResource.${resourceTypeCode}</result> -->
 			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/resource/${resourceTypeCode}Archive.jsp</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
 
-		<action name="openCloseCategoryTreeNodeOnResourceFinding*" class="jpfrontshortcutExtendedResourceFinderAction" method="buildTree">
+		<action name="openCloseCategoryTreeNodeOnResourceFinding*" class="jacmsExtendedResourceFinderAction" method="buildTree">
 			<!-- <result type="tiles">admin.jacms.content.findResource.${resourceTypeCode}</result> -->
 			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/resource/${resourceTypeCode}Archive.jsp</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
 
-		<action name="search*" class="jpfrontshortcutExtendedResourceFinderAction">
+		<action name="search*" class="jacmsExtendedResourceFinderAction">
 			<!-- <result type="tiles">admin.jacms.content.findResource.${resourceTypeCode}</result> -->
 			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/resource/${resourceTypeCode}Archive.jsp</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
 		
-		<action name="joinResource*" class="jpfrontshortcutExtendedResourceFinderAction" method="joinResource">
+		<action name="joinResource*" class="jacmsExtendedResourceFinderAction" method="joinResource">
 			<result type="chain">
 				<param name="namespace">/do/jpfrontshortcut/Content</param>
 				<param name="actionName">entryContent</param>
-				<!-- <param name="anchorDest">${entryContentAnchorDest}</param> -->
 			</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
-		
+		<!--
 		<action name="new" class="jacmsExtendedResourceAction" method="newResource">
 			<result type="tiles">admin.jacms.resource.entry</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">manageResources</param></interceptor-ref>
@@ -61,17 +60,15 @@
 			<result type="chain">
 				<param name="namespace">/do/jpfrontshortcut/Content</param>
 				<param name="actionName">entryContent</param>
-				<!-- <param name="anchorDest">${entryContentAnchorDest}</param> -->
 			</result>
-			<interceptor-ref name="fileUpload"><param name="maximumSize">10485760</param></interceptor-ref><!-- maximun Size = 10 Mb -->
+			<interceptor-ref name="fileUpload"><param name="maximumSize">10485760</param></interceptor-ref>
 			<interceptor-ref name="jpfrontshortcutFrontEndValidationStack"><param name="requestAuth.requiredPermission">manageResources</param></interceptor-ref>
 		</action>
-
+		-->
 		<action name="backToEntryContent" class="jacmsResourceAttributeAction" method="backToEntryContent">
 			<result type="chain">
 				<param name="namespace">/do/jpfrontshortcut/Content</param>
 				<param name="actionName">entryContent</param>
-				<!-- <param name="anchorDest">${entryContentAnchorDest}</param> -->
 			</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>

@@ -3,6 +3,7 @@
 <%@ taglib uri="/apsadmin-core" prefix="wpsa" %>
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
 <%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
 
 <%--
@@ -40,10 +41,8 @@ window.addEvent('domready', function(){
 
 <h3><wp:i18n key="jpfastcontentedit_CHOOSE_ATTACH" /></h3>
 
-<s:form action="search" namespace="/do/jpfrontshortcut/Content/Resource">
-<%--
-<form action="<wp:action path="/ExtStr2/do/jpfastcontentedit/Content/Resource/search.action" />" method="post">
---%>
+<s:form id="formform" action="search" namespace="/do/jpfrontshortcut/Content/Resource" theme="simple">
+
 <fieldset><legend><wp:i18n key="jpfastcontentedit_SEARCH_FILTERS" /></legend>
 <p class="noscreen"><wpsf:hidden name="resourceTypeCode" /></p>
 <p>
@@ -65,18 +64,22 @@ window.addEvent('domready', function(){
 
 </fieldset>
 
-<s:set name="search_label"><wp:i18n key="jpfastcontentedit_SEARCH" /></s:set>
-<p><wpsf:submit useTabindexAutoIncrement="true" value="%{#search_label}" cssClass="button" /></p>
+<p>
+	<s:set name="search_label"><wp:i18n key="jpfastcontentedit_SEARCH" /></s:set>
+	<s:url var="executeSearchUrlVar" namespace="/do/jpfrontshortcut/Content/Resource" action="search" />
+	<sj:submit targets="form-container" indicator="indicator" href="%{#executeSearchUrlVar}" 
+			   value="%{#search_label}" button="true" />
+</p>
 
-<wpsa:subset source="resources" count="10" objectName="groupResource" advanced="true" offset="5">
+<wpfssa:subset source="resources" count="10" objectName="groupResource" advanced="true" offset="5">
 <s:set name="group" value="#groupResource" />
+<s:set var="pagerSubmitActionNameVar" value="'search'" />
 
-<%--
 <div class="pager">
 	<s:include value="/WEB-INF/apsadmin/jsp/common/inc/pagerInfo.jsp" />
-	<s:include value="/WEB-INF/apsadmin/jsp/common/inc/pager_formBlock.jsp" />
+	<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 </div>
---%>
+	
 <s:iterator id="resourceid">
 <s:set name="resource" value="%{loadResource(#resourceid)}"></s:set>
 <s:set name="resourceInstance" value="%{#resource.getInstance()}"></s:set>
@@ -84,10 +87,12 @@ window.addEvent('domready', function(){
 <dl class="gallery">
 <dt class="image"><a href="<s:property value="%{#resource.documentPath}" />" ><img src="<wp:resourceURL/>administration/img/icons/resourceTypes/<s:property value="%{getIconFile(#resourceInstance.fileName)}"/>" alt="<s:property value="%{#resourceInstance.fileName}"/>" title="<s:property value="%{#resourceInstance.fileName}"/>" /></a><br /><s:property value="%{#resourceInstance.fileLenght}"/></dt>
 <dt class="options">
-	<a href="<wp:action path="/ExtStr2/do/jpfastcontentedit/Content/Resource/joinResource.action" >
-		   <wp:parameter name="resourceId"><s:property value="%{#resourceid}"/></wp:parameter>
-	   </wp:action>#<s:property value="currentAttributeLang" />_tab" 
-	   title="<wp:i18n key="jpfastcontentedit_JOIN_TO" />: <s:property value="content.descr" />" ><wp:i18n key="jpfastcontentedit_JOIN" /></a>
+	<wpfssa:actionParam action="joinResource" var="joinResourceActionNameVar" >
+			<wpfssa:actionSubParam name="resourceId" value="%{#resourceid}" />
+		</wpfssa:actionParam>
+		<s:url var="joinResourceActionVar" action="%{#joinResourceActionNameVar}" />
+		<sj:submit targets="form-container" value="%{getText('label.join')}" 
+				   button="true" href="%{#joinResourceActionVar}" />
 </dt>
 <dd>
 	<p><s:property value="#resource.descr" /></p>
@@ -96,11 +101,10 @@ window.addEvent('domready', function(){
 
 </s:iterator>
 
-<%--
 <div class="pager clear">
-	<s:include value="/WEB-INF/apsadmin/jsp/common/inc/pager_formBlock.jsp" />
+	<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 </div>
---%>
-</wpsa:subset>
+
+</wpfssa:subset>
 
 </s:form>

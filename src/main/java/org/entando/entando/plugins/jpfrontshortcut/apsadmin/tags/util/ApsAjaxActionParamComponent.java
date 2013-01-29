@@ -17,6 +17,7 @@
 */
 package org.entando.entando.plugins.jpfrontshortcut.apsadmin.tags.util;
 
+import org.entando.entando.plugins.jpfrontshortcut.apsadmin.util.ApsAjaxActionParamsUtil;
 import com.agiletec.apsadmin.tags.util.ApsActionParamComponent;
 
 import com.opensymphony.xwork2.util.ValueStack;
