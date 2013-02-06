@@ -33,7 +33,8 @@
         <!-- ######## List Attribute ######## -->
         
         <action name="addListElement*" class="jacmsListAttributeAction" method="addListElement">
-        	<result name="chooseResource" type="redirectAction">
+        	<!--
+			<result name="chooseResource" type="redirectAction">
         		<param name="actionName">chooseResource</param>
         		<param name="attributeName">${attributeName}</param>
         		<param name="elementIndex">${elementIndex}</param>
@@ -50,7 +51,17 @@
         		<param name="actionName">entryContent</param>
         		<param name="anchorDest">${entryContentAnchorDest}</param>
         	</result>
-        	<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
+			-->
+        	<result name="chooseResource" type="chain">
+        		<param name="actionName">entryContent</param>
+        	</result>
+        	<result name="chooseLink" type="chain">
+        		<param name="actionName">entryContent</param>
+        	</result>
+        	<result type="chain">
+        		<param name="actionName">entryContent</param>
+        	</result>
+			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
         </action>
         
         <action name="removeListElement*" class="jacmsListAttributeAction" method="removeListElement">

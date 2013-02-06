@@ -118,11 +118,11 @@
 				<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/enumeratorAttribute.jsp" />
 				</p>
 			</s:elseif>
-
+			
 			<s:elseif test="#attribute.type == 'Monolist'">
 				<%-- ############# ATTRIBUTO Monolist ############# --%>
 				</p>
-				<s:include value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/monolistAttribute.jsp" />
+				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/monolistAttribute.jsp" />
 			</s:elseif>
 
 			<s:elseif test="#attribute.type == 'List'">
