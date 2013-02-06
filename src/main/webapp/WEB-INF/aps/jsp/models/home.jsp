@@ -42,8 +42,6 @@
 		<jsp:include page="/WEB-INF/plugins/jpmyportalplus/aps/jsp/models/inc/jpmyportalplus_javascript_variables.jsp" />
 		<script type="text/javascript" src="<wp:resourceURL />plugins/jpmyportalplus/static/js/jpmyportalplus.js"></script>
 		<link rel="stylesheet" type="text/css" href="<wp:resourceURL />plugins/jpmyportalplus/static/css/jpmyportalplus.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="<wp:resourceURL />plugins/jpfrontshortcut/static/css/jpfrontshortcut.css" media="screen" />
-	
 		<%-- jpmyportal plus - static resources end --%>
 
 		<script type="text/javascript" src="<wp:resourceURL />static/js/twitter.js"></script>
