@@ -65,7 +65,7 @@ window.addEvent('domready', function(){
 			button="true" />
 	</p>
 
-	<wpfssa:subset source="resources" count="10" objectName="groupResource" advanced="true" offset="5">
+	<wpfssa:subset source="resources" count="12" objectName="groupResource" advanced="true" offset="5">
 		<s:set name="group" value="#groupResource" />
 		<s:set var="pagerSubmitActionNameVar" value="'search'" />
 
@@ -94,4 +94,9 @@ window.addEvent('domready', function(){
 			<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 		</div>
 	</wpfssa:subset>
+
+	<%-- //FIXME insert cancel action here --%>
+	<p class="lower-actions">
+		<sj:submit value="Cancel, Back to Edit Content"  button="true"  targets="form-container" />
+	</p>
 </s:form>
