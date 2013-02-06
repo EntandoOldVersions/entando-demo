@@ -6,8 +6,7 @@
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
-<div id="form-container" class="widget_form"> 
+<div id="form-container" class="widget_form jpfrontshortcut"> 
 	<s:if test="hasFieldErrors()">
 		<div class="message message_error">
 			<h3><s:text name="message.title.FieldErrors" /></h3>	
@@ -22,17 +21,16 @@
 	</s:if>	
 
 <s:form action="save" id="formform" theme="simple">
-	<s:set var="lang" value="currentLang" />
-
+	<s:set var="lang" value="currentLang" scope="action" />
 	<%-- START CICLO ATTRIBUTI --%>
 	<c:set var="i18n_prefix">jpfastcontentedit_<s:property value="content.typeCode" /></c:set>
 	<s:iterator value="content.attributeList" var="attribute">
 	
 	<s:if test="#attribute.active">
-		<div class="attribute">
+		<div class="attribute <s:property value="#attribute.type.toLowerCase()"/>">
 			<wpsa:tracerFactory var="attributeTracer" lang="%{#lang.code}" />
 			<p>
-				<label>
+				<label class="attribute-label">
 					<s:set  var="attributeName" value="#attribute.name" scope="page"/>
 					<wp:i18n key="${i18n_prefix}_${attributeName}" />
 					<%--
@@ -41,7 +39,7 @@
 					
 					<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/include/attributeInfo.jsp" />
 				</label>
- 				<br />
+ 				<br class="attribute-label-separator" />
  				
 			<s:if test="#attribute.type == 'Monotext'">
 				<%-- ############# ATTRIBUTO TESTO MONOLINGUA ############# --%>
@@ -143,7 +141,7 @@
 </s:iterator>
 <%-- END CICLO ATTRIBUTI --%>
 
-<s:set var="saveLabel"><wp:i18n key="SAVE" /></s:set>
+<s:set var="saveLabel"><wp:i18n key="SAVE"  /></s:set>
 <p class="save">
 	<sj:submit 
 			targets="form-container" 
