@@ -83,6 +83,26 @@
 	max-height: 72px;
 }
 
+/* error and messages */
+.jpfrontshortcut .message {
+	float: left;
+	width: 100%;
+	margin: 0 0 2.5em 0;
+	background-color: #f0f0f0;
+	box-shadow:  0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.jpfrontshortcut .message h3,
+.jpfrontshortcut .message h2 {
+	text-align: center;
+	font-size: 14px;
+	margin: 0.5em 0 1em 0;
+}
+
+.jpfrontshortcut .message.message_error {
+	background-color: #FFA4A4;
+}
+
 /*attach*/
 .jpfrontshortcut .attribute.attach p,
 .jpfrontshortcut .attribute.attach img {
