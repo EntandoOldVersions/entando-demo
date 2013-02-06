@@ -84,30 +84,30 @@
 			<result name="configure">/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/success-reload.jsp</result>
     	</global-results>
     	
-		<action name="searchContents" class="jacmsContentFinderViewerShowletAction">
+		<action name="searchContents*" class="jacmsContentFinderViewerShowletAction">
             <result name="input">/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/page/specialshowlet/contentViewer/contentFinding.jsp</result>
         	<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/page/specialshowlet/contentViewer/contentFinding.jsp</result>
         	<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
         </action>
         
-        <action name="changeContentListOrder" class="jacmsContentFinderViewerShowletAction" method="changeOrder">
+        <action name="changeContentListOrder*" class="jacmsContentFinderViewerShowletAction" method="changeOrder">
             <result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/page/specialshowlet/contentViewer/contentFinding.jsp</result>
         	<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
         </action>
 		
-		<action name="joinContent" class="jacmsContentFinderViewerShowletAction" method="joinContent">
+		<action name="joinContent*" class="jacmsContentFinderViewerShowletAction" method="joinContent">
 			<result name="input">/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/page/specialshowlet/contentViewer/contentFinding.jsp</result>
             <result type="chain">executeJoinContent</result>
         	<interceptor-ref name="jpfrontshortcutFrontEndValidationStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
         </action>
 		
-		<action name="executeJoinContent" class="jacmsContentViewerShowletAction" method="joinContent">
+		<action name="executeJoinContent*" class="jacmsContentViewerShowletAction" method="joinContent">
         	<result name="input">/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/page/specialshowlet/contentViewer/contentFinding.jsp</result>
             <result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/page/specialshowlet/contentViewer/configContentViewer.jsp</result>
         	<interceptor-ref name="jpfrontshortcutFrontEndValidationStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
         </action>
 		
-		<action name="saveViewerConfig" class="jacmsContentViewerShowletAction" method="save">
+		<action name="saveViewerConfig*" class="jacmsContentViewerShowletAction" method="save">
     		<result name="input">/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/page/specialshowlet/contentViewer/configContentViewer.jsp</result>
         	<interceptor-ref name="jpfrontshortcutFrontEndValidationStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
         </action>

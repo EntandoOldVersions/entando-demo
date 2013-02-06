@@ -3,6 +3,7 @@
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
+<%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
 
 <div id="form-container" class="widget_form">
 <h2><s:text name="title.configPage" /></h2>
@@ -63,17 +64,18 @@
 </fieldset>
 <p>
 	<s:url var="searchContentsUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/Viewer" action="searchContents" />
-	<sj:submit targets="form-container" href="%{searchContentsUrlVar}" value="%{getText('label.search')}" indicator="indicator" button="true" cssClass="button" />
+	<sj:submit targets="form-container" href="%{#searchContentsUrlVar}" value="%{getText('label.search')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 
-<wpsa:subset source="contents" count="10" objectName="groupContent" advanced="true" offset="5">
+<wpfssa:subset source="contents" count="10" objectName="groupContent" advanced="true" offset="5">
 <s:set name="group" value="#groupContent" />
-<%--
-<div class="pager">
+<s:set var="pagerSubmitActionNameVar" value="'searchContents'" />
+
+<div class="archive-pager">
 	<s:include value="/WEB-INF/apsadmin/jsp/common/inc/pagerInfo.jsp" />
-	<s:include value="/WEB-INF/apsadmin/jsp/common/inc/pager_formBlock.jsp" />
+	<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 </div>
---%>
+
 <p class="noscreen">
 	<wpsf:hidden name="lastGroupBy" />
 	<wpsf:hidden name="lastOrder" />
@@ -224,17 +226,15 @@
 </s:iterator>
 </table>
 
-<%--
 <div class="pager">
-	<s:include value="/WEB-INF/apsadmin/jsp/common/inc/pager_formBlock.jsp" />
+	<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 </div>
---%>
 
-</wpsa:subset>
+</wpfssa:subset>
 
 <p class="centerText margin-more-top">
 	<s:url var="executeJoinContentUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/Viewer" action="executeJoinContent" />
-	<sj:submit targets="form-container" href="%{executeJoinContentUrlVar}" value="%{getText('label.confirm')}" indicator="indicator" button="true" cssClass="button" />
+	<sj:submit targets="form-container" href="%{#executeJoinContentUrlVar}" value="%{getText('label.confirm')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 </s:form>
 
