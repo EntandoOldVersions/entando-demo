@@ -1196,7 +1196,7 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Image1', 'it', 'Immagine 1');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Image1', 'en', 'Image 1');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Image2', 'it', 'Immagine 2');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Image2', 'en', 'Image 1');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Image2', 'en', 'Image 2');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Attach', 'it', 'Allegati');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Attach', 'en', 'Attachments');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_Links', 'it', 'Link correlati');
