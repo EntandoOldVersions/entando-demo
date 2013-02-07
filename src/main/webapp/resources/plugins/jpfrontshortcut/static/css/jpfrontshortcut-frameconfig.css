@@ -41,3 +41,16 @@
     margin-left: 1px;
     margin-right: 1px;
 }
+
+
+/* jpfrontshortcut-frameconfig-configSimpleParameter */
+.jpfrontshortcut-frameconfig-configSimpleParameter fieldset p {
+	line-height: 1.8;
+	margin-bottom: 1.8em;
+}
+.jpfrontshortcut-frameconfig-configSimpleParameter fieldset label {
+	font-weight: bold;
+	font-size: 14px;
+	color: silver;
+	display: block;
+}
