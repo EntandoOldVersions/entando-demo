@@ -2,6 +2,8 @@
 	border: 0;
 	margin: 1em 0;
 	padding: 0;
+	float: left;
+	width: 100%;
 }
 
 .jpfrontshortcut-frameconfig-contentFinding th {
@@ -10,13 +12,18 @@
 
 .jpfrontshortcut-frameconfig-contentFinding td {
     border-bottom: 1px solid silver;
+    padding: 3px 0;
 }
+
+.jpfrontshortcut-frameconfig-contentFinding  td input {
+	vertical-align: sub;
+}
+
 
 .jpfrontshortcut-frameconfig-contentFinding .archive-pager {
     text-align: center;
     padding: 1em 0 0 0;
     border: 0;
-    border-top: 1px solid silver;
     vertical-align: middle;
 }
 

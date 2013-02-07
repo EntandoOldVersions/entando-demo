@@ -70,6 +70,7 @@
 					<wpsf:hidden name="lastGroupBy" />
 					<wpsf:hidden name="lastOrder" />
 				</p>
+				<s:if test="%{#group.size>0}">
 				<table class="generic" summary="<s:text name="note.page.contentViewer.summary" />">
 					<caption><span><s:text name="title.contentList" /></span></caption>
 					<tr>
@@ -221,7 +222,7 @@
 							</a>
 						</th>
 					</tr>
-					<s:iterator id="contentId">
+					<s:iterator var="contentId">
 						<s:set name="content" value="%{getContentVo(#contentId)}"></s:set>
 						<tr>
 							<td>
@@ -240,6 +241,7 @@
 				<div class="archive-pager">
 					<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 				</div>
+				</s:if>
 			</wpfssa:subset>
 			<p class="centerText margin-more-top">
 				<s:url var="executeJoinContentUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/Viewer" action="executeJoinContent" />
