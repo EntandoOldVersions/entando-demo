@@ -84,7 +84,7 @@ window.addEvent('domready', function(){
 					<s:url var="joinResourceActionVar" action="%{#joinResourceActionNameVar}" />
 					<sj:submit targets="form-container" value="%{getText('label.join')}" 
 							   button="true" href="%{#joinResourceActionVar}" />
-					<a href="<s:property value="%{#resource.getImagePath(0)}" />" ><img class="item-image" src="<s:property value="%{#resource.getImagePath(1)}"/>" alt=" " /></a>
+					<img class="item-image" src="<s:property value="%{#resource.getImagePath(1)}"/>" alt=" " />
 					<span class="description"><s:property value="#resource.descr" /></span>
 				</p>
 			</li>

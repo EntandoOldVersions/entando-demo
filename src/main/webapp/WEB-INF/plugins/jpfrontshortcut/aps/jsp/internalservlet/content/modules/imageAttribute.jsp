@@ -22,8 +22,7 @@
 			</s:include>
 		</s:if>
 		<span class="imageAttribute-img">
-		<a href="<s:property value="#defaultResource.getImagePath('0')" />"><img class="alignTop" src="<s:property value="#defaultResource.getImagePath('1')"/>" 
-			alt="<s:property value="#defaultResource.descr"/>" /></a>
+			<img src="<s:property value="#defaultResource.getImagePath('1')"/>" alt="<s:property value="#defaultResource.descr"/>" />
 		</span>
 		<%-- CAMPO DI TESTO --%>
 		<span class="imageAttribute-text">
