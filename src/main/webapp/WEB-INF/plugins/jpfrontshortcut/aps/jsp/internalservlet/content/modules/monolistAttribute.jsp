@@ -3,7 +3,7 @@
 <p class="noscreen"><s:text name="note.monolist.intro" /></p>
 
 <s:if test="#attribute.attributes.size() != 0">
-<ul>
+<ul class="list-container">
 </s:if>
 <s:set name="masterListAttributeTracer" value="#attributeTracer" />
 <s:set name="masterListAttribute" value="#attribute" />
@@ -13,7 +13,7 @@
 <s:set name="elementIndex" value="#elementStatus.index" />
 
 	<s:if test="#attribute.type == 'Composite'">
-<li>	
+<li class="list-item">	
 		<span class="important" title="<s:text name="label.compositeAttribute.element" />"><s:property value="#elementStatus.index + 1" /></span>
 		<s:if test="!#lang.default">
 			<s:set var="operationButtonDisabled" value="true" />
@@ -21,7 +21,7 @@
 			<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/include/listAttributes/allList_operationModule.jsp" />
 	</s:if>
 	<s:else>
-<li>	
+<li class="list-item">		
 		<label for="<s:property value="%{#attributeTracer.getFormFieldName(#attribute)}" />"><s:property value="#elementStatus.index + 1" /></label>
 		<s:if test="!#lang.default">
 			<s:set var="operationButtonDisabled" value="true" />
