@@ -3,7 +3,10 @@
 <%@ taglib uri="/apsadmin-core" prefix="wpsa" %>
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
 <%@ taglib prefix="wp" uri="/aps-core" %>
-<div id="form-container" class="widget_form"> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% pageContext.setAttribute("random", (int) (Math.random() * 999999)); %>
+<s:set var="random"><c:out value="${random}" /></s:set>
+<div id="form-container" class="widget_form jpfrontshortcut-frameconfig-editFrame"> 
 	<s:if test="showlet != null">
 		<%--
 		<s:include value="/WEB-INF/apsadmin/jsp/portal/include/frameInfo.jsp" />
@@ -37,8 +40,8 @@
 			<fieldset>
 				<legend><s:text name="title.editFrame.chooseAShowlet" /></legend>
 				<p>
-				<label for="showletCode" class="basic-mint-label"><s:text name="name.showlet" />:</label>
-				<select name="showletTypeCode" tabindex="<wpsa:counter />" id="showletCode">
+				<label for="<c:out value="showletCode${random}" />" class="basic-mint-label"><s:text name="name.showlet" />:</label>
+				<select name="showletTypeCode" tabindex="<wpsa:counter />" id="<c:out value="showletCode${random}" />">
 				<s:iterator var="showletFlavour" value="showletFlavours">
 					
 					<wpsa:set var="tmpShowletType">tmpShowletTypeValue</wpsa:set>

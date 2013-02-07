@@ -54,3 +54,9 @@
 	color: silver;
 	display: block;
 }
+
+/* choose showlet / editFrame */
+.jpfrontshortcut-frameconfig-editFrame select {
+	padding: 4px;
+	background-color: #fff;
+}

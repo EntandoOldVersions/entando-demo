@@ -4,6 +4,9 @@
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
 <%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% pageContext.setAttribute("random", (int) (Math.random() * 999999)); %>
+<s:set var="random"><c:out value="${random}" /></s:set>
 <div id="form-container" class="widget_form jpfrontshortcut-frameconfig-contentFinding">
 	<h2><s:text name="title.editFrame" />: <s:property value="frame" /> &ndash; <s:property value="currentPage.getModel().getFrames()[frame]"/></h2>
 	<div class="subsection-light">
@@ -31,26 +34,26 @@
 				</div>
 			</s:if>
 			<p>
-				<label for="text" class="basic-mint-label label-search"><s:text name="label.search.by"/>&#32;
+				<label for="<c:out value="text${random}" />"><s:text name="label.search.by"/>&#32;
 				<s:text name="label.description"/>:</label>
-				<wpsf:textfield useTabindexAutoIncrement="true" name="text" id="text" cssClass="text" />
+				<wpsf:textfield useTabindexAutoIncrement="true" name="text" id="%{'text'+#random}" cssClass="text" />
 			</p>
 			<fieldset>
 				<legend class="accordion_toggler"><s:text name="title.searchFilters" /></legend>
 				<div class="accordion_element">
 					<p>
-						<label for="contentIdToken"><s:text name="label.code"/>:</label><br />
-						<wpsf:textfield useTabindexAutoIncrement="true" name="contentIdToken" id="contentIdToken" cssClass="text" />
+						<label for="<c:out value="contentIdToken${random}" />"><s:text name="label.code"/>:</label><br />
+						<wpsf:textfield useTabindexAutoIncrement="true" name="contentIdToken" id="%{'contentIdToken'+#random}" cssClass="text" />
 					</p>
 					<p>
-						<label for="contentType"><s:text name="label.type"/>:</label><br />
-						<wpsf:select useTabindexAutoIncrement="true" name="contentType" id="contentType" 
+						<label for="<c:out value="contentType${random}" />"><s:text name="label.type"/>:</label><br />
+						<wpsf:select useTabindexAutoIncrement="true" name="contentType" id="%{'contentType'+#random}" 
 							list="contentTypes" listKey="code" listValue="descr" 
 							headerKey="" headerValue="%{getText('label.all')}" cssClass="text"></wpsf:select>
 					</p>
 					<p>
-						<label for="state"><s:text name="label.state"/>:</label><br />
-						<wpsf:select useTabindexAutoIncrement="true" name="state" id="state" list="avalaibleStatus" 
+						<label for="<c:out value="state${random}" />"><s:text name="label.state"/>:</label><br />
+						<wpsf:select useTabindexAutoIncrement="true" name="state" id="%{'state'+#random}" list="avalaibleStatus" 
 							headerKey="" headerValue="%{getText('label.all')}" cssClass="text" listKey="key" listValue="%{getText(value)}" />
 					</p>
 				</div>
@@ -226,8 +229,8 @@
 						<s:set name="content" value="%{getContentVo(#contentId)}"></s:set>
 						<tr>
 							<td>
-								<input type="radio" name="contentId" id="contentId_<s:property value="#content.id"/>" value="<s:property value="#content.id"/>" />
-								<label for="contentId_<s:property value="#content.id"/>"><s:property value="#content.descr" /></label>
+								<input type="radio" name="contentId" id="contentId_<s:property value="#content.id+#random"/>" value="<s:property value="#content.id"/>" />
+								<label for="contentId_<s:property value="#content.id+#random"/>"><s:property value="#content.descr" /></label>
 							</td>
 							<td><span class="monospace"><s:property value="#content.id" /></span></td>
 							<td><s:property value="%{getGroup(#content.mainGroupCode).descr}" /></td>
