@@ -2,7 +2,8 @@
 <%@ taglib prefix="wpcs" uri="/WEB-INF/plugins/jpfrontshortcut/aps/tld/jpfrontshortcut-aps-core.tld" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<wp:headInfo type="CSS" info="../../plugins/jpfrontshortcut/static/css/jpfrontshortcut.css" />
+<wp:headInfo type="CSS" info="../../plugins/jpfrontshortcut/static/css/jpfrontshortcut-editcontent.css" />
+<wp:headInfo type="CSS" info="../../plugins/jpfrontshortcut/static/css/jpfrontshortcut-frameconfig.css" />
 
 <wpcs:staticInternalServlet actionPath="/ExtStr2/do/jpfrontshortcut/introHeader" />
 
