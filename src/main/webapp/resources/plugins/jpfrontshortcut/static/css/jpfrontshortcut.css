@@ -140,6 +140,11 @@
 	margin: 4px 0;
 }
 
+.jpfrontshortcut .archive-item .size {
+	color: gray;
+	font-size: 80%;
+}
+
 /* archive category list */
 .jpfrontshortcut  .archive-category-list {
 	margin: 0;

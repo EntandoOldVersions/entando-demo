@@ -82,7 +82,9 @@ window.addEvent('domready', function(){
 						<s:url var="joinResourceActionVar" action="%{#joinResourceActionNameVar}" />
 						<sj:submit targets="form-container" value="%{getText('label.join')}" 
 								   button="true" href="%{#joinResourceActionVar}" />
-						<a href="<s:property value="%{#resource.documentPath}" />" ><img src="<wp:resourceURL/>administration/img/icons/resourceTypes/<s:property value="%{getIconFile(#resourceInstance.fileName)}"/>" alt="<s:property value="%{#resourceInstance.fileName}"/>" title="<s:property value="%{#resourceInstance.fileName}"/>" /></a><br /><s:property value="%{#resourceInstance.fileLenght}"/></dt>
+						<a href="<s:property value="%{#resource.documentPath}" />" ><img src="<wp:resourceURL/>administration/common/img/icons/resourceTypes/<s:property value="%{getIconFile(#resourceInstance.fileName)}"/>" alt="<s:property value="%{#resourceInstance.fileName}"/>" title="<s:property value="%{#resourceInstance.fileName}"/>" /></a>
+						<br />
+						<span class="size">(<s:property value="%{#resourceInstance.fileLength}"/>)</span>
 						<span class="description"><s:property value="#resource.descr" /></span>
 					</p>
 			</s:iterator>
