@@ -2,29 +2,27 @@
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
-
-<h2><s:text name="title.showletManagement.position.clear" /></h2>
-
+<h2>
+	<s:text name="title.showletManagement.position.clear" />&#32;
+	<s:property value="frame" /> &ndash; <s:property value="currentPage.getModel().getFrames()[frame]"/>
+</h2>
 <div id="form-container" class="widget_form"> 
-
-<s:form action="deleteShowletFromPage" id="formform" theme="simple">
-<p class="noscreen">
-	<wpsf:hidden name="pageCode"/>
-	<wpsf:hidden name="frame" />
-	<wpsf:hidden name="showletTypeCode" />
-</p>
-
-<p>
-	<s:text name="note.clearPosition.areYouSure.position" />&#32;<em class="important">&#32;<s:property value="frame" />&#32;&ndash;&#32;<s:property value="%{getPage(pageCode).model.getFrames()[frame]}"/></em>
-	<s:text name="note.clearPosition.areYouSure.page" />&#32;<em class="important"><s:property value="%{getPage(pageCode).getTitle(currentLang.getCode())}" /></em>
-	<s:set var="showletTypeVar" value="%{showlet.type}"></s:set>
-	<s:if test="null != #showletTypeVar">
-		<s:text name="note.clearPosition.areYouSure.showlet" />&#32;<em class="important"><s:property value="%{getTitle(#showletTypeVar.getCode(), #showletTypeVar.getTitles())}" /></em>
-	</s:if>	
-	?
-	<s:set var="clearLabel"><wp:i18n key="CLEAR" /></s:set>
-	<sj:submit targets="form-container" value="%{#clearLabel}" indicator="indicator" button="true" />
-</p>
-</s:form>
-
+	<s:form action="deleteShowletFromPage" id="formform" theme="simple">
+		<p>
+			<wpsf:hidden name="pageCode"/>
+			<wpsf:hidden name="frame" />
+			<wpsf:hidden name="showletTypeCode" />
+			<s:text name="note.clearPosition.areYouSure.position" />&#32;<em class="important">&#32;<s:property value="frame" />&#32;&ndash;&#32;<s:property value="%{getPage(pageCode).model.getFrames()[frame]}"/></em>
+			<s:text name="note.clearPosition.areYouSure.page" />&#32;<em class="important"><s:property value="%{getPage(pageCode).getTitle(currentLang.getCode())}" /></em>
+			<s:set var="showletTypeVar" value="%{showlet.type}"></s:set>
+			<s:if test="null != #showletTypeVar">
+				<s:text name="note.clearPosition.areYouSure.showlet" />&#32;<em class="important"><s:property value="%{getTitle(#showletTypeVar.getCode(), #showletTypeVar.getTitles())}" /></em>
+			</s:if>	
+			?
+			<s:set var="clearLabel"><wp:i18n key="CLEAR" /></s:set>
+		</p>
+		<p>
+			<sj:submit targets="form-container" value="%{#clearLabel}" indicator="indicator" button="true" />
+		</p>
+	</s:form>
 </div>
