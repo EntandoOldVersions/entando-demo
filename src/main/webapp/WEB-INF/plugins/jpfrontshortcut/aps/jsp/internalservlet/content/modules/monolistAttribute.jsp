@@ -57,10 +57,10 @@
 		<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/attachAttribute.jsp" />
 	</s:elseif>
 	<s:elseif test="#attribute.type == 'Link'">
-		<s:include value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/linkAttribute.jsp" />
+		<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/linkAttribute.jsp" />
 	</s:elseif>
 	<s:elseif test="#attribute.type == 'Composite'">
-		<s:include value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/compositeAttribute.jsp" />
+		<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/compositeAttribute.jsp" />
 	</s:elseif>
 	<s:elseif test="#attribute.type == 'Boolean'">
 		<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/booleanAttribute.jsp" />

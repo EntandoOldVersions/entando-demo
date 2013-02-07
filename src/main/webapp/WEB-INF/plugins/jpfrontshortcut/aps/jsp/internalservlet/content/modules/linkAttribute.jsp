@@ -2,6 +2,8 @@
 <%@ taglib uri="/aps-core" prefix="wp" %>
 <%@ taglib uri="/apsadmin-core" prefix="wpsa" %>
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
+<%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
 
 <span class="noscreen"><s:text name="note.linkContent" /></span>
 
@@ -54,6 +56,20 @@
 
 <s:if test="#lang.default">
 <%-- Lingua di DEFAULT --%>
+	
+	
+	<wpfssa:actionParam action="chooseLink" var="chooseLinkActionNameVar" >
+		<wpfssa:actionSubParam name="parentAttributeName" value="%{#parentAttribute.name}" />
+		<wpfssa:actionSubParam name="attributeName" value="%{#attribute.name}" />
+		<wpfssa:actionSubParam name="elementIndex" value="%{#elementIndex}" />
+		<wpfssa:actionSubParam name="langCode" value="%{#lang.code}" />
+	</wpfssa:actionParam>
+	<s:url var="chooseLinkActionVar" action="%{#chooseLinkActionNameVar}" />
+	<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL/>administration/common/img/icons/22x22/link.png</s:set>
+	<sj:submit type="image" targets="form-container" value="%{getText('label.configure')}" title="%{#attribute.name + ': ' + getText('label.configure')}" 
+			   button="true" href="%{#chooseLinkActionVar}" src="%{#iconImagePath}" />
+	
+	<%--
 	<wpsa:actionParam action="chooseLink" var="chooseLinkActionName" >
 		<wpsa:actionSubParam name="parentAttributeName" value="%{#parentAttribute.name}" />
 		<wpsa:actionSubParam name="attributeName" value="%{#attribute.name}" />
@@ -63,6 +79,9 @@
 	<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL/>administration/common/img/icons/22x22/link.png</s:set>	
 	<wpsf:submit useTabindexAutoIncrement="true" action="%{#chooseLinkActionName}" type="image"
 		value="%{getText('label.configure')}" title="%{#attribute.name + ': ' + getText('label.configure')}" src="%{#iconImagePath}" />
+	--%>
+	
+	
 	<s:if test="#attribute.symbolicLink != null && ((!#attributeTracer.monoListElement) || (#attributeTracer.monoListElement && #attributeTracer.compositeElement))">
 	<%-- LINK VALORIZZATO --%>
 		<%-- PULSANTE RIMUOVI --%>

@@ -76,15 +76,16 @@
 		<!-- ######## FINE GESTIONE RICERCA ATTRIBUTI RISORSA ######## -->
 
 	</package>
-	<!--
-	<package name="jacms_do/jacms/Content/Link" namespace="/do/jacms/Content/Link" extends="entando-default">
-
-		<action name="chooseLink" class="jacmsLinkAttributeAction" method="chooseLinkType">
-			<result type="tiles">admin.jacms.content.chooseLinkType</result>
+	
+	<package name="jpfrontshortcut_do/jpfrontshortcut/Content/Link" namespace="/do/jpfrontshortcut/Content/Link" extends="jpfrontshortcut_do/jpfrontshortcut">
+		
+		<action name="chooseLink*" class="jacmsLinkAttributeAction" method="chooseLinkType">
+			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/include/linkAttribute/chooseLink.jsp</result>
+			<!-- <result type="tiles">admin.jacms.content.chooseLinkType</result> -->
 			<interceptor-ref name="entandoDefaultStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
-
-		<action name="configLink" class="jacmsLinkAttributeAction" method="configLink">
+		
+		<action name="configLink*" class="jacmsLinkAttributeAction" method="configLink">
 			<result name="input" type="tiles">admin.jacms.content.chooseLinkType</result>
 			<result name="configUrlLink" type="redirectAction">configUrlLink</result>
 			<result name="configPageLink" type="redirectAction">configPageLink</result>
@@ -167,9 +168,8 @@
 			</result>
 			<interceptor-ref name="entandoDefaultStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
-
+		
 	</package>
-	-->
 	
 	<!--
 	<package name="jacms_do/jacms/Content/Hypertext" namespace="/do/jacms/Content/Hypertext" extends="entando-default">
