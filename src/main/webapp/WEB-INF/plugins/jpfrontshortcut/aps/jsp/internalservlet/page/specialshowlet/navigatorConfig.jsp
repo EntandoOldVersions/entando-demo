@@ -143,7 +143,7 @@
 			<s:url var="addExpressionUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/Navigator" action="addExpression" />
 			<sj:submit targets="form-container" href="%{addExpressionUrlVar}" value="%{getText('label.add')}" indicator="indicator" button="true" cssClass="button" />
 		</p>
-		<p>
+		<p class="save-action">
 			<s:set var="saveLabel"><wp:i18n key="SAVE" /></s:set>
 			<sj:submit targets="form-container" value="%{#saveLabel}" indicator="indicator" button="true" cssClass="button" />
 		</p>
