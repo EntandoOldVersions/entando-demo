@@ -63,6 +63,26 @@
 				<%-- ############# ATTRIBUTO HYPERTEXT ############# --%>
 				<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/hypertextAttribute.jsp" />
 				</p>
+
+				<%-- hypertext javascript editor --%>
+				<script type="text/javascript">
+					jQuery(document).ready(function () { 
+						var textareaOriginalWidth = jQuery("#<s:property value="%{#attributeTracer.getFormFieldName(#attribute)}" />").width()+"px";
+						try {
+							CKEDITOR.remove(CKEDITOR.instances["<s:property value="%{#attributeTracer.getFormFieldName(#attribute)}" />"]);
+						} catch(e) {}
+						try {
+							CKEDITOR.editor.prototype.destroy(CKEDITOR.instances["<s:property value="%{#attributeTracer.getFormFieldName(#attribute)}" />"]);
+						} catch(e) {}
+						var ofckeditor = CKEDITOR.replace("<s:property value="%{#attributeTracer.getFormFieldName(#attribute)}" />", {
+							customConfig : '<wp:resourceURL />plugins/jpfrontshortcut/static/js/ckeditor/entando-ckeditor_config.js',
+							EntandoLinkActionPath: "<wp:info key="systemParam" paramName="applicationBaseURL" />do/jacms/Content/Hypertext/entandoInternalLink.action",
+							language: '<s:property value="locale" />',
+							width: textareaOriginalWidth
+						});
+					});
+				</script>
+
 			</s:elseif>
 
 			<s:elseif test="#attribute.type == 'Image'">

@@ -4,7 +4,7 @@
 
 <wp:headInfo type="CSS" info="../../plugins/jpfrontshortcut/static/css/jpfrontshortcut-editcontent.css" />
 <wp:headInfo type="CSS" info="../../plugins/jpfrontshortcut/static/css/jpfrontshortcut-frameconfig.css" />
-
+<wp:headInfo type="JS" info="../../plugins/jpfrontshortcut/static/js/ckeditor/ckeditor.js" />
 <wpcs:staticInternalServlet actionPath="/ExtStr2/do/jpfrontshortcut/introHeader" />
 
 <wp:info key="systemParam" paramName="jpfrontshortcut_activeFrameFrontEndEditing" var="frontEditingActiveVar" /> 

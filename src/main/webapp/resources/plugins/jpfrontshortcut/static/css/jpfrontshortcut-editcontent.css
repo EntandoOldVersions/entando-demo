@@ -193,6 +193,7 @@
 	display: none;
 }
 
+/* other actions */
 .jpfrontshortcut .lower-actions {
 	float: left;
 	width: 100%;
@@ -242,3 +243,8 @@
 	vertical-align: middle;
 }
 
+/* hypertext */
+.jpfrontshortcut .attribute.hypertext textarea {
+	float: left;
+	width: 98%;
+}
