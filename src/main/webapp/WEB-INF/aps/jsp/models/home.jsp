@@ -30,7 +30,10 @@
 				<script type="text/javascript" src="<wp:resourceURL />extendplugin.js"></script>
 			</c:if>
 		<!--  -->
-
+		<script type="text/javascript">
+			<!-- firefox compatiblity fix with mootools 1.2 -->
+			try { delete String.prototype.contains; } catch(e) {}
+		</script>
 		<script type="text/javascript" src="<wp:resourceURL />plugins/jpmyportalplus/static/js/lib/mootools-1.2-core.js"></script>
 		<script type="text/javascript" src="<wp:resourceURL />plugins/jpmyportalplus/static/js/lib/mootools-1.2-more.js"></script>
 		<%-- jpmyportal plus - static resources start --%>
@@ -541,11 +544,10 @@
 				</div>
 			</div></div></div>
 		</div>
-
+		
 		<c:if test="${outputHeadInfo_JS_JQUERY_isHere}">
 			<jsp:include page="inc/widget_popup_init.jsp" />
 		</c:if>
-
-
+		
 	</body>
 </html>
