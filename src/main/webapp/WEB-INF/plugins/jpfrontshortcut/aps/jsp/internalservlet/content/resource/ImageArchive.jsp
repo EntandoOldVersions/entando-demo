@@ -5,34 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
 <%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
-<%--
-<wp:headInfo type="JS" info="../../plugins/jpfastcontentedit/static/js/moo-japs/moo-jAPS-0.2.js" />
 
-<s:set name="js_for_tab">
-
-//per categorie
-window.addEvent('domready', function(){
-	var catTree  = new Wood({
-		menuToggler: "subTreeToggler",
-		rootId: "categoryTree",
-		openClass: "node_open",
-		closedClass: "node_closed",
-		showTools: "true",
-		expandAllLabel: "<s:text name="label.expandAll" />",
-		collapseAllLabel: "<s:text name="label.collapseAll" />",
-		type: "tree",
-		<s:if test="%{selectedNode != null && !(selectedNode.equalsIgnoreCase(''))}">
-		startIndex: "fagianonode_<s:property value="selectedNode" />",
-		</s:if>
-		toolTextIntro: "<s:text name="label.introExpandAll" />",
-		toolexpandAllLabelTitle: "<s:text name="label.expandAllTitle" />",
-		toolcollapseLabelTitle: "<s:text name="label.collapseAllTitle" />"
-	});
-
-});
-</s:set>
-<wp:headInfo type="JS_RAW" info="${js_for_tab}" />
---%>
 <h3><wp:i18n key="jpfastcontentedit_CHOOSE_IMAGE" /></h3>
 <s:form id="formform" action="search" namespace="/do/jpfrontshortcut/Content/Resource" theme="simple">
 	<fieldset>
@@ -43,15 +16,12 @@ window.addEvent('domready', function(){
 			<wpsf:textfield useTabindexAutoIncrement="true" name="text" id="text" cssClass="text" />
 		</p>
 		<p>
-			<wp:i18n key="jpfastcontentedit_CATEGORY" />:<br />
-		</p>
-		<ul id="categoryTree" class="archive-category-list">
-			<s:set name="inputFieldName" value="'categoryCode'" />
-			<s:set name="selectedTreeNode" value="selectedNode" />
-			<s:set name="liClassName" value="'category'" />
+			<label for="category"><wp:i18n key="jpfastcontentedit_CATEGORY" />:</label><br />
 			<s:set name="currentRoot" value="categoryRoot" />
-			<s:include value="/WEB-INF/apsadmin/jsp/common/treeBuilder.jsp" />
-		</ul>
+			<select name="categoryCode" id="category" >
+<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/resource/inc/category-selectItem.jsp" />
+			</select>
+		</p>
 	</fieldset>
 
 	<p>
@@ -94,9 +64,9 @@ window.addEvent('domready', function(){
 			<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/include/pager_formBlock.jsp" />
 		</div>
 	</wpfssa:subset>
-
-	<%-- //FIXME insert cancel action here --%>
+	
 	<p class="lower-actions">
-		<sj:submit value="Cancel, Back to Edit Content"  button="true"  targets="form-container" />
+		<s:url var="entryContentActionVar" action="backToEntryContent" />
+		<sj:submit value="Cancel, Back to Edit Content" href="%{#entryContentActionVar}" button="true" targets="form-container" />
 	</p>
 </s:form>

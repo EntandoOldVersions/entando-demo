@@ -109,18 +109,17 @@
 			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/include/linkAttribute/configPageLinkType.jsp</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
-
+		<!--
 		<action name="openCloseTreeOnConfigPageLink*" class="jacmsPageLinkAttributeAction" method="buildTree" >
 			<result type="tiles">admin.jacms.content.link.configPageLinkType</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
-		
-		<action name="joinPageLink" class="jacmsPageLinkAttributeAction" method="joinLink">
-			<result name="input" type="tiles">admin.jacms.content.link.configPageLinkType</result>
-			<result type="redirectActionWithAnchor">
-				<param name="namespace">/do/jacms/Content</param>
+		-->
+		<action name="joinPageLink*" class="jacmsPageLinkAttributeAction" method="joinLink">
+			<result name="input">/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/include/linkAttribute/configPageLinkType.jsp</result>
+			<result type="chain">
+				<param name="namespace">/do/jpfrontshortcut/Content</param>
 				<param name="actionName">entryContent</param>
-				<param name="anchorDest">${entryContentAnchorDest}</param>
 			</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndValidationStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
@@ -130,23 +129,22 @@
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
 		
-		<action name="search" class="jacmsContentLinkAttributeAction">
-			<result type="tiles">admin.jacms.content.link.configContentLinkType</result>
+		<action name="search*" class="jacmsContentLinkAttributeAction">
+			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/include/linkAttribute/configContentLinkType.jsp</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
 
 		<action name="changeOrder" class="jacmsContentLinkAttributeAction" method="changeOrder">
-			<result type="tiles">admin.jacms.content.link.configContentLinkType</result>
+			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/include/linkAttribute/configContentLinkType.jsp</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
-
+		
 		<action name="joinContentLink" class="jacmsContentLinkAttributeAction" method="joinContentLink" >
-			<result name="input" type="tiles">admin.jacms.content.link.configContentLinkType</result>
+			<result name="input">/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/include/linkAttribute/configContentLinkType.jsp</result>
 			<result name="configContentOnPageLink" type="chain">configPageLink</result>
-			<result type="redirectActionWithAnchor">
-				<param name="namespace">/do/jacms/Content</param>
+			<result type="chain">
+				<param name="namespace">/do/jpfrontshortcut/Content</param>
 				<param name="actionName">entryContent</param>
-				<param name="anchorDest">${entryContentAnchorDest}</param>
 			</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndValidationStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
@@ -171,12 +169,11 @@
 			</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndValidationStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
-
+		
 		<action name="backToEntryContent" class="jacmsLinkAttributeAction" method="backToEntryContent">
-			<result type="redirectActionWithAnchor">
-				<param name="namespace">/do/jacms/Content</param>
+			<result type="chain">
+				<param name="namespace">/do/jpfrontshortcut/Content</param>
 				<param name="actionName">entryContent</param>
-				<param name="anchorDest">${entryContentAnchorDest}</param>
 			</result>
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
