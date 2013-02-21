@@ -3,11 +3,12 @@
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
 <%@ taglib uri="/apsadmin-core" prefix="wpsa" %>
 
-<s:include value="linkAttributeConfigIntro.jsp"></s:include>
+<%-- <s:include value="linkAttributeConfigIntro.jsp"></s:include> --%>
 <h3 class="margin-more-bottom"><s:text name="title.configureLinkAttribute" />&#32;(<s:text name="title.step2of2" />)</h3>
-<s:include value="linkAttributeConfigReminder.jsp"></s:include>
+<%-- <s:include value="linkAttributeConfigReminder.jsp"></s:include> --%>
 
-<s:form>
+<s:form id="formform" action="joinUrlLink" namespace="/do/jpfrontshortcut/Content/Link" theme="simple">
+
 <s:if test="hasFieldErrors()">
 	<div class="message message_error">
 	<h4><s:text name="message.title.FieldErrors" /></h4>

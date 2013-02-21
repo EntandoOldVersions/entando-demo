@@ -1,6 +1,8 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="/aps-core" prefix="wp" %>
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
+<%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
 
 <%--
 <s:include value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/linkAttribute/linkAttributeConfigIntro.jsp" />
@@ -8,7 +10,8 @@
 <h3 class="margin-more-bottom"><s:text name="title.configureLinkAttribute" />&#32;(<s:text name="title.step1of2" />)</h3>
 <s:include value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/modules/include/linkAttribute/linkAttributeConfigReminder.jsp"/>
 
-<s:form action="configLink">
+<s:form id="formform" action="configLink" namespace="/do/jpfrontshortcut/Content/Link" theme="simple">
+
 <s:if test="hasFieldErrors()">
 	<div class="message message_error">
 	<h4><s:text name="message.title.FieldErrors" /></h4>	
@@ -41,13 +44,22 @@
 			<s:set name="linkDestination" value="%{getText('note.contentLinkTo')}" />
 		</s:if>
 		
-		<li><input type="radio" <s:if test="#typeId == symbolicLink.destType">checked="checked"</s:if> name="linkType" id="linkType_<s:property value="#typeId"/>" value="<s:property value="#typeId"/>" /><label for="linkType_<s:property value="#typeId"/>"><img src="<s:property value="iconImagePath" />" alt=" " /> <s:property value="linkDestination" /></label></li>
+		<li>
+			<input type="radio" <s:if test="#typeId == symbolicLink.destType">checked="checked"</s:if> name="linkType" id="linkType_<s:property value="#typeId"/>" value="<s:property value="#typeId"/>" />
+			<label for="linkType_<s:property value="#typeId"/>">
+				<img src="<s:property value="iconImagePath" />" alt=" " /> <s:property value="linkDestination" />
+			</label>
+		</li>
 		
 	</s:if>	
 </s:iterator>
 </ul>
 
-<p class="centerText"><wpsf:submit useTabindexAutoIncrement="true" value="%{getText('label.continue')}" title="%{getText('label.continue')}" cssClass="button" /></p>
+<p class="centerText">
+	<s:url var="configLinkActionVar" action="configLink" namespace="/do/jpfrontshortcut/Content/Link" />
+	<sj:submit targets="form-container" value="%{getText('label.continue')}" title="%{getText('label.continue')}" 
+			   button="true" href="%{#configLinkActionVar}" cssClass="button" />
+</p>
 
 </fieldset>
 </s:form>
