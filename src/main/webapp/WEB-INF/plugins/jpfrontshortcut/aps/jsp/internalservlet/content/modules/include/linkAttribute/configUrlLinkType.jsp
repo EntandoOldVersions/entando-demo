@@ -2,6 +2,8 @@
 <%@ taglib uri="/aps-core" prefix="wp" %>
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
 <%@ taglib uri="/apsadmin-core" prefix="wpsa" %>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
+<%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
 
 <%-- <s:include value="linkAttributeConfigIntro.jsp"></s:include> --%>
 <h3 class="margin-more-bottom"><s:text name="title.configureLinkAttribute" />&#32;(<s:text name="title.step2of2" />)</h3>
@@ -30,9 +32,16 @@
 </p>
 
 <p class="centerText">
-	<wpsf:submit useTabindexAutoIncrement="true" action="joinUrlLink" value="%{getText('label.confirm')}" cssClass="button" />
+	<s:url var="joinUrlLinkActionVar" action="joinUrlLink" />
+	<sj:submit value="%{getText('label.confirm')}" href="%{#joinUrlLinkActionVar}" button="true" targets="form-container" />
 </p>
-</fieldset>
-</s:form>
 
-</div>
+
+</fieldset>
+
+<p class="lower-actions">
+	<s:url var="entryContentActionVar" action="backToEntryContent" />
+	<sj:submit value="Cancel, Back to Edit Content" href="%{#entryContentActionVar}" button="true" targets="form-container" />
+</p>
+
+</s:form>
