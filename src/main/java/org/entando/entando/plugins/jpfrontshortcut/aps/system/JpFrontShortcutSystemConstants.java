@@ -24,4 +24,6 @@ public interface JpFrontShortcutSystemConstants {
 	
 	public static final String WIDGET_DISABLING_CODE = "jpfrontshortcut:editOnWidget";
 	
+	public static final String CONTENT_LANG_SESSION_PARAM = "jpfrontshortcut_content_lang_session_param";
+	
 }

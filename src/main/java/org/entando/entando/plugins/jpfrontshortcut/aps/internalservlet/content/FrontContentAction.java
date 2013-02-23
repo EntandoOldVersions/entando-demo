@@ -131,6 +131,9 @@ public class FrontContentAction extends ContentAction {
 						attribute.disable(JpFrontShortcutSystemConstants.WIDGET_DISABLING_CODE);
 					}
 				}
+				Lang currentLang = super.getCurrentLang();
+				this.getRequest().getSession()
+						.setAttribute(JpFrontShortcutSystemConstants.CONTENT_LANG_SESSION_PARAM, currentLang);
 			}
 		} catch (Throwable t) {
             ApsSystemUtils.logThrowable(t, this, "edit");
@@ -177,6 +180,8 @@ public class FrontContentAction extends ContentAction {
 				this.wait(1000);
 			}
 			this.waitNotifyingThread();
+			this.getRequest().getSession()
+					.removeAttribute(JpFrontShortcutSystemConstants.CONTENT_LANG_SESSION_PARAM);
 		} catch (Throwable t) {
 			ApsSystemUtils.logThrowable(t, this, "saveAndApprove");
 			return FAILURE;

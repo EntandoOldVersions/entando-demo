@@ -7,6 +7,10 @@
 	
 	<package name="jpfrontshortcut_do/jpfrontshortcut/Content" namespace="/do/jpfrontshortcut/Content" extends="jpfrontshortcut_do/jpfrontshortcut">
 		
+		<interceptors>
+            <interceptor name="backToEntryContent" class="org.entando.entando.plugins.jpfrontshortcut.aps.internalservlet.content.EntryContentInterceptor" />
+		</interceptors>
+    	
 		<action name="intro" class="jpfrontshortcutFrontContentAction" method="edit">
 			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/frontEntryContent.jsp</result>
 			<interceptor-ref name="i18nInterceptor" />
@@ -27,6 +31,7 @@
 		
 		<action name="entryContent" class="jpfrontshortcutFrontContentAction" method="forwardToEntryContent">
 			<result>/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/frontEntryContent.jsp</result>
+			<interceptor-ref name="backToEntryContent" />
 			<interceptor-ref name="jpfrontshortcutFrontEndStack"><param name="requestAuth.requiredPermission">editContents</param></interceptor-ref>
 		</action>
 		
