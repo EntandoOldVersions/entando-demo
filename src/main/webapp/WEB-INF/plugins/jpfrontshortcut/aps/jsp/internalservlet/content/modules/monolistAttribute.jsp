@@ -82,10 +82,10 @@
 		<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/compositeAttribute.jsp" />
 	</s:elseif>
 	<s:elseif test="#attribute.type == 'Boolean'">
-		<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/booleanAttribute.jsp" />
+		<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/booleanAttribute.jsp" />
 	</s:elseif>
 	<s:elseif test="#attribute.type == 'ThreeState'">
-		<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/threeStateAttribute.jsp" />
+		<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/threeStateAttribute.jsp" />
 	</s:elseif>
 	<s:elseif test="#attribute.type == 'CheckBox'">
 		<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/checkBoxAttribute.jsp" />

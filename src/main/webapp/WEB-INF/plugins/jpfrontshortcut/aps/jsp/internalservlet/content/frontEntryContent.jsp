@@ -7,18 +7,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div id="form-container" class="widget_form jpfrontshortcut"> 
-	<s:if test="hasFieldErrors()">
-		<div class="message message_error">
-			<h3><s:text name="message.title.FieldErrors" /></h3>	
-			<ul>
-			<s:iterator value="fieldErrors">
-				<s:iterator value="value">
-				<li><s:property escape="false" /></li>
-				</s:iterator>
+<s:if test="hasFieldErrors()">
+	<div class="message message_error">
+		<h3><s:text name="message.title.FieldErrors" /></h3>	
+		<ul>
+		<s:iterator value="fieldErrors">
+			<s:iterator value="value">
+			<li><s:property escape="false" /></li>
 			</s:iterator>
-			</ul>
-		</div>
-	</s:if>	
+		</s:iterator>
+		</ul>
+	</div>
+</s:if>	
 
 <s:form action="save" id="formform" theme="simple">
 	<s:set var="lang" value="currentLang" scope="action" />
@@ -33,10 +33,6 @@
 				<label class="attribute-label">
 					<s:set  var="attributeName" value="#attribute.name" scope="page"/>
 					<wp:i18n key="${i18n_prefix}_${attributeName}" />
-					<%--
-					<s:property value="#attribute.name" />&#32;
-					--%>
-					
 					<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/include/attributeInfo.jsp" />
 				</label>
  				<br class="attribute-label-separator" />
@@ -148,7 +144,7 @@
 			<s:elseif test="#attribute.type == 'List'">
 				<%-- ############# ATTRIBUTO List ############# --%>
 				</p>
-				<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/listAttribute.jsp" />
+				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/listAttribute.jsp" />
 			</s:elseif>
 
 			<s:elseif test="#attribute.type == 'Composite'">
@@ -161,7 +157,7 @@
 </s:iterator>
 <%-- END CICLO ATTRIBUTI --%>
 
-<s:set var="saveLabel"><wp:i18n key="SAVE"  /></s:set>
+<s:set var="saveLabel"><wp:i18n key="SAVE" /></s:set>
 <p class="save">
 	<sj:submit 
 			targets="form-container" 
