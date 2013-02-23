@@ -13,6 +13,7 @@
 		<property name="configManager" ref="BaseConfigManager" />
 		<property name="resourceIconUtil" ref="jacmsResourceIconUtil" />
 		<property name="contentModelManager" ref="jacmsContentModelManager" />
+		<property name="i18nManager" ref="I18nManager" />
   	</bean>
   	
 	<bean id="jpfrontshortcutFrontPageAction" scope="prototype" 

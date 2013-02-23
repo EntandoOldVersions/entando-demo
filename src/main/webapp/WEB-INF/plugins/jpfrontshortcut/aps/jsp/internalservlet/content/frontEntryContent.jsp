@@ -23,7 +23,7 @@
 <s:form action="save" id="formform" theme="simple">
 	<s:set var="lang" value="currentLang" scope="action" />
 	<%-- START CICLO ATTRIBUTI --%>
-	<c:set var="i18n_prefix">jpfastcontentedit_<s:property value="content.typeCode" /></c:set>
+	<c:set var="i18n_prefix">jpfrontshortcut_<s:property value="content.typeCode" /></c:set>
 	<s:iterator value="content.attributeList" var="attribute">
 	
 	<s:if test="#attribute.active">
@@ -105,14 +105,14 @@
 
 			<s:elseif test="#attribute.type == 'Boolean'">
 				<%-- ############# ATTRIBUTO Boolean ############# --%>
-				<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/booleanAttribute.jsp" />
+				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/booleanAttribute.jsp" />
 				</p>
 			</s:elseif>
 
 			<s:elseif test="#attribute.type == 'ThreeState'">
 				<%-- ############# ATTRIBUTO ThreeState ############# --%>
 				</p>
-				<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/threeStateAttribute.jsp" />
+				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/threeStateAttribute.jsp" />
 			</s:elseif>
 
 			<s:elseif test="#attribute.type == 'Number'">

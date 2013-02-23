@@ -21,6 +21,9 @@ import com.agiletec.aps.system.ApsSystemUtils;
 import com.agiletec.aps.system.common.entity.model.attribute.AttributeInterface;
 import com.agiletec.aps.system.common.notify.NotifyManager;
 import com.agiletec.aps.system.exception.ApsSystemException;
+import com.agiletec.aps.system.services.i18n.II18nManager;
+import com.agiletec.aps.system.services.lang.Lang;
+import com.agiletec.aps.util.ApsProperties;
 
 import com.agiletec.plugins.jacms.aps.system.services.content.model.Content;
 import com.agiletec.plugins.jacms.aps.system.services.contentmodel.ContentModel;
@@ -118,6 +121,11 @@ public class FrontContentAction extends ContentAction {
 				List<AttributeInterface> attributes = content.getAttributeList();
 				for (int i = 0; i < attributes.size(); i++) {
 					AttributeInterface attribute = attributes.get(i);
+					//jpfrontshortcut_${typeCodeKey}_${attributeNameI18nKey}
+					String attributeLabelKey = "jpfrontshortcut_" + content.getTypeCode() + "_" + attribute.getName();
+					if (null == this.getI18nManager().getLabelGroup(attributeLabelKey)) {
+						this.addLabelGroups(attributeLabelKey, attribute.getName());
+					}
 					attribute.setDisablingCodes(this.createNewCodes(attribute.getDisablingCodes()));
 					if (!this.getAttributeName().contains(attribute.getName())) {
 						attribute.disable(JpFrontShortcutSystemConstants.WIDGET_DISABLING_CODE);
@@ -131,6 +139,18 @@ public class FrontContentAction extends ContentAction {
         return result;
     }
     
+	protected void addLabelGroups(String key, String defaultValue) throws ApsSystemException {
+		try {
+			ApsProperties properties = new ApsProperties();
+			Lang defaultLang = super.getLangManager().getDefaultLang();
+			properties.put(defaultLang.getCode(), defaultValue);
+			this.getI18nManager().addLabelGroup(key, properties);
+		} catch (Throwable t) {
+			ApsSystemUtils.logThrowable(t, this, "addLabelGroups");
+			throw new RuntimeException("Error adding label groups - key '" + key + "'", t);
+		}
+	}
+	
 	private String[] createNewCodes(String[] oldDisablingCodes) {
 		if (null == oldDisablingCodes) {
 			String[] newCodes = new String[1];
@@ -212,11 +232,18 @@ public class FrontContentAction extends ContentAction {
 		this._contentModelManager = contentModelManager;
 	}
     
+	protected II18nManager getI18nManager() {
+		return _i18nManager;
+	}
+	public void setI18nManager(II18nManager i18nManager) {
+		this._i18nManager = i18nManager;
+	}
+	
     private List<String> _attributeName;
     private String _langCode;
 	
 	private ContentModel _contentModel;
-	
 	private IContentModelManager _contentModelManager;
+	private II18nManager _i18nManager;
 	
 }
