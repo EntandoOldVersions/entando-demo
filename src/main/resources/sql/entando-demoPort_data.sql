@@ -1488,6 +1488,38 @@ INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('internal', 'In
 		<descr>Footer IV</descr>
 	</frame>
 </frames>', NULL);
+INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('jpfrontshortcut_test', 'jpfrontshortcut plugin - Test', '<frames>
+	<frame locked="true" pos="0">
+		<descr>Frame I</descr>
+	</frame>
+	<frame locked="true" pos="1">
+		<descr>Frame II</descr>
+	</frame>
+	<frame locked="true" pos="2">
+		<descr>Frame III</descr>
+	</frame>
+	<frame locked="true" pos="3">
+		<descr>Frame IV</descr>
+	</frame>
+	<frame locked="true" pos="4">
+		<descr>Frame V</descr>
+	</frame>
+	<frame locked="true" pos="5">
+		<descr>Frame VI</descr>
+	</frame>
+	<frame locked="true" pos="6">
+		<descr>Frame VII</descr>
+	</frame>
+	<frame locked="true" pos="7">
+		<descr>Frame VIII</descr>
+	</frame>
+	<frame locked="true" pos="8">
+		<descr>Frame IX</descr>
+	</frame>
+	<frame locked="true" pos="9">
+		<descr>Frame X</descr>
+	</frame>
+</frames>', 'jpfrontshortcut');
 INSERT INTO pagemodels (code, descr, frames, plugincode) VALUES ('home', 'Home Page', '<frames>
 	<frame locked="true" pos="0">
 		<descr>Top Header I</descr>
@@ -2022,9 +2054,7 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 <properties>
 <property key="en">Home</property>
 <property key="it">Home</property>
-</properties>
-
-', 'free', 1, NULL);
+</properties>', 'free', 1, NULL);
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('login', 'service', 5, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="it">Pagina di login</property>
@@ -2034,124 +2064,84 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 <properties>
 <property key="en">Error page</property>
 <property key="it">Pagina di errore</property>
-</properties>
-
-', 'free', 1, NULL);
+</properties>', 'free', 1, NULL);
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('notfound', 'service', 3, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Page not found</property>
 <property key="it">Pagina non trovata</property>
-</properties>
-
-', 'free', 1, NULL);
+</properties>', 'free', 1, NULL);
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('search', 'service', 5, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Search Results</property>
 <property key="it">Risultati della Ricerca</property>
-</properties>
-
-', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('newsview', 'service', 5, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Read the News</property>
 <property key="it">Leggi la Notizia</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('profile', 'service', 6, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Profile Edit</property>
 <property key="it">Modifica Profile</property>
-</properties>
-
-', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('news_style1', 'news_archive', 1, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">News Archive</property>
 <property key="it">News Archive</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('news_style2', 'news_archive', 2, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">News Archive</property>
 <property key="it">News Archive</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('news_style3', 'news_archive', 3, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">News Archive</property>
 <property key="it">News Archive</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('configure_latest_documents', 'service', 7, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Latest Documents</property>
 <property key="it">Ultimi documenti</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>false</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('events', 'homepage', 3, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Events</property>
 <property key="it">Eventi</property>
-</properties>
-
-', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('contentsview', 'service', 8, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Read the content</property>
 <property key="it">Leggi il Contenuto</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>false</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('service', 'homepage', 3, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="it">Pagine di Servizio</property>
@@ -2161,26 +2151,18 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 <properties>
 <property key="en">Dynamic Form</property>
 <property key="it">Form Dinamico</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('news_archive', 'homepage', 2, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">News</property>
 <property key="it">News</property>
-</properties>
-
-', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('surveys_list', 'quest_suveys', 1, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
 <property key="en">Active Questionnaires</property> 
 <property key="it">Questionari Attivi</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
@@ -2188,26 +2170,18 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 <properties>
 <property key="en">Video Archive</property>
 <property key="it">Archivio Video</property>
-</properties>
-
-', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 0, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('fastcontentedit', 'service', 9, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Frontent Content Editing</property>
 <property key="it">Modifica Contenuto da Frontend</property>
-</properties>
-
-', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('surveys_archive', 'quest_suveys', 2, 'internal', '<?xml version="1.0" encoding="UTF-8"?> <properties> 
 <property key="en">Questionnaires Archive</property> 
 <property key="it">Archivio Questionari</property> </properties> ', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?> <config> <useextratitles>true</useextratitles> </config> ');
@@ -2233,26 +2207,26 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 <properties>
 <property key="en">Questionnaires and Surveys</property>
 <property key="it">Questionari e Sondaggi</property>
-</properties>
-
-', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'intranet', 1, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>true</useextratitles>
-</config>
-
-');
+</config>');
 INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('apis', 'homepage', 6, 'internal', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">APIs</property>
 <property key="it">APIs</property>
-</properties>
-
-', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
 <config>
   <useextratitles>false</useextratitles>
-</config>
-
-');
+</config>');
+INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('jpfrontshortcut_test', 'homepage', 7, 'jpfrontshortcut_test', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Front shortcut Test Page</property>
+<property key="it">Front shortcut Test Page</property>
+</properties>', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <useextratitles>false</useextratitles>
+</config>');
 
 
 
@@ -2335,12 +2309,8 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <property key="en">Contents - Publish a Content</property>
 <property key="it">Contenuti - Pubblica un Contenuto</property>
 </properties>', '<config>
-	<parameter name="contentId">
-		Content ID
-	</parameter>
-	<parameter name="modelId">
-		Content Model ID
-	</parameter>
+	<parameter name="contentId">Content ID</parameter>
+	<parameter name="modelId">Content Model ID</parameter>
 	<action name="viewerConfig"/>
 </config>', 'jacms', NULL, NULL, 1, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('messages_system', '<?xml version="1.0" encoding="UTF-8"?>
@@ -2377,9 +2347,7 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <properties>
 <property key="en">My Portal - Sample Showlet</property>
 <property key="it">My Portal - Showlet di Esempio</property>
-</properties>
-
-', NULL, 'jpmyportalplus', NULL, NULL, 1, NULL);
+</properties>', NULL, 'jpmyportalplus', NULL, NULL, 1, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpuserprofile_editCurrentUser', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Edit Current User</property>
@@ -2413,9 +2381,7 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <properties>
 <property key="en">Search - Search Form</property>
 <property key="it">Ricerca - Form di Ricerca</property>
-</properties>
-
-', NULL, NULL, NULL, NULL, 1, NULL);
+</properties>', NULL, NULL, NULL, NULL, 1, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('navigation_menu', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Navigation - Navigation Menu</property>
@@ -2433,25 +2399,19 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <properties>
 <property key="en">Latest Documents</property>
 <property key="it">Documenti recenti</property>
-</properties>
-
-', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="linkDescr_it">Configura</property>
 <property key="pageLink">configure_latest_documents</property>
 <property key="linkDescr_en">Configure</property>
 <property key="contentType">DWN</property>
 <property key="modelId">42</property>
-</properties>
-
-', 0, 'free');
+</properties>', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('latest_news', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Latest News</property>
 <property key="it">Ultime Notizie</property>
-</properties>
-
-', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="maxElemForItem">1</property>
 <property key="linkDescr_it">Configura</property>
@@ -2460,9 +2420,7 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <property key="linkDescr_en">Configure</property>
 <property key="contentType">NEW</property>
 <property key="modelId">27</property>
-</properties>
-
-', 0, 'free');
+</properties>', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsharewith', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Share With...</property>
@@ -2472,35 +2430,25 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <properties>
 <property key="en">My Entando Showcase</property>
 <property key="it">My Entando Showcase</property>
-</properties>
-
-', NULL, NULL, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, NULL, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="contentId">CNG45</property>
 <property key="modelId">33</property>
-</properties>
-
-', 0, 'free');
+</properties>', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('inEvidenza', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Top Story</property>
 <property key="it">In Evidenza</property>
-</properties>
-
-', NULL, NULL, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, NULL, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="contentId">CNG45</property>
 <property key="modelId">34</property>
-</properties>
-
-', 0, 'free');
+</properties>', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('latest_events', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Latest Events</property>
 <property key="it">Ultimi Eventi</property>
-</properties>
-
-', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="maxElemForItem">2</property>
 <property key="linkDescr_it">Configura</property>
@@ -2510,9 +2458,7 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <property key="linkDescr_en">Configure</property>
 <property key="contentType">NEW</property>
 <property key="modelId">26</property>
-</properties>
-
-', 0, 'free');
+</properties>', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfastcontentedit_formAction', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Content Editing Form</property>
@@ -2534,46 +2480,28 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <properties>
 <property key="en">WebForms</property>
 <property key="it">WebForms</property>
-</properties>
-
-', NULL, NULL, 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, NULL, 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="actionPath">/ExtStr2/do/jpwebdynamicform/Message/User/listTypes?doSimpleList=true</property>
-</properties>
-
-', 0, 'free');
+</properties>', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('content_feedback_viewer', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Content Feedback - Publish a Content</property>
 <property key="it">Feedback Contenuti - Pubblica un Contenuto</property>
 </properties>', '<config>
-	<parameter name="contentId">
-		Content ID
-	</parameter>
-	<parameter name="modelId">
-		Content Model ID
-	</parameter>
-	<parameter name="usedContentRating">
-		Enable content rating (true|false)
-	</parameter>
-<parameter name="usedComment">
-		Enable user comments (true|false)
-	</parameter>
-<parameter name="usedCommentWithRating">
-		Enable rating on comments (true|false)
-	</parameter>
-<parameter name="commentValidation">
-		Enable administrator moderation of comments (true|false)
-	</parameter> 
+	<parameter name="contentId">Content ID</parameter>
+	<parameter name="modelId">Content Model ID</parameter>
+	<parameter name="usedContentRating">Enable content rating (true|false)</parameter>
+	<parameter name="usedComment">Enable user comments (true|false)</parameter>
+	<parameter name="usedCommentWithRating">Enable rating on comments (true|false)</parameter>
+	<parameter name="commentValidation">Enable administrator moderation of comments (true|false)</parameter> 
 <action name="viewerContentFeedbackConfig"/>
 </config>', 'jpcontentfeedback', NULL, NULL, 1, NULL);
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('latest_video', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Latest Video</property>
 <property key="it">Ultimi Video</property>
-</properties>
-
-', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="maxElemForItem">1</property>
 <property key="linkDescr_it">Archivio</property>
@@ -2582,73 +2510,51 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <property key="linkDescr_en">Archive</property>
 <property key="contentType">YTB</property>
 <property key="modelId">52</property>
-</properties>
-
-', 0, 'free');
+</properties>', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('form_new', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Dynamic Web Forms - Form Viewer</property>
 <property key="it">Dynamic Web Forms - Form Viewer</property>
-</properties>
-
-', NULL, NULL, 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, NULL, 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="actionPath">/ExtStr2/do/jpwebdynamicform/Message/User/new</property>
-</properties>
-
-', 0, 'free');
+</properties>', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_pollList', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Polls</property>
 <property key="it">Sondaggi</property>
-</properties>
-
-', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
+</properties>', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_questionnaireList', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Questionnaires</property>
 <property key="it">Questionari</property>
-</properties>
-
-', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
+</properties>', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_pollArchive', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Polls Archive</property>
 <property key="it">Archivio dei Sondaggi</property>
-</properties>
-
-', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
+</properties>', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_questionnaireArchive', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Questionnaires Archive</property>
 <property key="it">Archivio Questionari</property>
-</properties>
-
-', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
+</properties>', NULL, 'jpsurvey', NULL, NULL, 1, 'intranet');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_detailsSurvey', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Questionnaire/Survey - Details</property>
 <property key="it">Questionari/Sondaggi - Dettaglio</property>
-</properties>
-
-', NULL, 'jpsurvey', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, 'jpsurvey', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="actionPath">/ExtStr2/do/jpsurvey/Front/Survey/entryPoint.action</property>
-</properties>
-
-', 1, 'intranet');
+</properties>', 1, 'intranet');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsurvey_resultsSurvey', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Questionnaire/Survey - Show Results</property>
 <property key="it">Questionario/Sondaggio - Mostra Risultati</property>
-</properties>
-
-', NULL, 'jpsurvey', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, 'jpsurvey', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="actionPath">/ExtStr2/do/jpsurvey/Front/SurveyDetail/entryPoint.action</property>
-</properties>
-
-', 1, 'intranet');
+</properties>', 1, 'intranet');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Contents - Publish a List of Contents</property>
@@ -2671,14 +2577,10 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <properties>
 <property key="en">Dynamic Web Forms - Choice of a type of Message</property>
 <property key="it">Dynamic Web Forms - Scelta tipo di Messaggio</property>
-</properties>
-
-', NULL, 'jpwebdynamicform', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>', NULL, 'jpwebdynamicform', 'formAction', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="actionPath">/ExtStr2/do/jpwebdynamicform/Message/User/listTypes</property>
-</properties>
-
-', 1, 'intranet');
+</properties>', 1, 'intranet');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('entando_apis', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">APIs</property>
@@ -2707,7 +2609,15 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	<parameter name="linkDescr_{lang}">Link description in lang {lang}</parameter>
 	<action name="listViewerConfig"/>
 </config>', 'jpfastcontentedit', NULL, NULL, 1, NULL);
-
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfrontshortcut_content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Contents - Publish a Content</property>
+<property key="it">Contenuti - Pubblica un Contenuto</property>
+</properties>', '<config>
+	<parameter name="contentId">Content ID</parameter>
+	<parameter name="modelId">Content Model ID</parameter>
+	<action name="viewerConfig"/>
+</config>', 'jpfrontshortcut', NULL, NULL, 1, NULL);
 
 
 

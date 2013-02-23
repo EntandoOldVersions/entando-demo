@@ -11,6 +11,7 @@
 
 <c:if test="${frontEditingActiveVar == 'true'}" >
 
+<c:set var="showletCodeVar" value="${null}" />
 <wp:currentPage param="owner" var="ownerGroupVar" />
 <wp:ifauthorized permission="managePages" groupName="${ownerGroupVar}">
 <wp:info key="currentLang" var="currentLang" />
