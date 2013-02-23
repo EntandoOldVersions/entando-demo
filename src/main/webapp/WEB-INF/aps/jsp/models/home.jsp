@@ -546,7 +546,7 @@
 		</div>
 		
 		<c:if test="${outputHeadInfo_JS_JQUERY_isHere}">
-			<jsp:include page="inc/widget_popup_init.jsp" />
+			<jsp:include page="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/models/inc/widget_popup_init.jsp" />
 		</c:if>
 		
 	</body>
