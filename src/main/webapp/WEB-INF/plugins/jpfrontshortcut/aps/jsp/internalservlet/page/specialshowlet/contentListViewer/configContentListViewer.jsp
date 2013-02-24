@@ -2,23 +2,15 @@
 <%@ taglib uri="/aps-core" prefix="wp" %>
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
 <%@ taglib uri="/apsadmin-core" prefix="wpsa" %>
-<h1><a href="<s:url action="viewTree" namespace="/do/Page" />" title="<s:text name="note.goToSomewhere" />: <s:text name="title.pageManagement" />"><s:text name="title.pageManagement" /></a></h1>
+<%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
 
-<div id="main">
-<h2><s:text name="title.configPage" /></h2>
+<div id="form-container" class="widget_form jpfrontshortcut-frameconfig-navigatorConfig">
+<h2 class="margin-more-top"><s:text name="name.showlet" />:&#32;<s:property value="%{getTitle(showlet.type.code, showlet.type.titles)}" /></h2>
 
-<s:set var="breadcrumbs_pivotPageCode" value="pageCode" />
-<s:include value="/WEB-INF/apsadmin/jsp/portal/include/pageInfo_breadcrumbs.jsp" />
+<h3><s:text name="title.editFrame" />: <s:property value="frame" /> &ndash; <s:property value="currentPage.getModel().getFrames()[frame]"/></h3>
 
-<div class="subsection-light">
-<h3><s:text name="title.configPage.youAreDoing" /></h3>
-
-<s:action namespace="/do/Page" name="printPageDetails" executeResult="true" ignoreContextParams="true"><s:param name="selectedNode" value="pageCode"></s:param></s:action>
-<s:include value="/WEB-INF/apsadmin/jsp/portal/include/frameInfo.jsp" />
-
-<h3 class="margin-more-top margin-more-bottom"><s:text name="name.showlet" />:&#32;<s:property value="%{getTitle(showlet.type.code, showlet.type.titles)}" /></h3>
-
-<s:form action="saveListViewerConfig" namespace="/do/jacms/Page/SpecialShowlet/ListViewer">
+<s:form action="saveListViewerConfig" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" id="formform" theme="simple">
 <p class="noscreen">
 	<wpsf:hidden name="pageCode" />
 	<wpsf:hidden name="frame" />
@@ -44,7 +36,9 @@
 <p>
 	<label for="contentType" class="basic-mint-label"><s:text name="label.type"/>:</label>
 	<wpsf:select useTabindexAutoIncrement="true" name="contentType" id="contentType" list="contentTypes" listKey="code" listValue="descr" cssClass="text" />
-	<wpsf:submit useTabindexAutoIncrement="true" action="configListViewer" value="%{getText('label.continue')}" cssClass="button" />	
+	<s:url var="configListViewerUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="configListViewer" />
+	<s:property value="#configListViewerUrlVar" />
+	<sj:submit targets="form-container" href="%{#configListViewerUrlVar}" value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 </fieldset>
 </s:if>
@@ -54,7 +48,8 @@
 <p>
 	<label for="contentType" class="basic-mint-label"><s:text name="label.type"/>:</label>
 	<wpsf:select useTabindexAutoIncrement="true" name="contentType" id="contentType" list="contentTypes" listKey="code" listValue="descr" disabled="true" value="%{getShowlet().getConfig().get('contentType')}" cssClass="text" />
-	<wpsf:submit useTabindexAutoIncrement="true" action="changeContentType" value="%{getText('label.change')}" cssClass="button" />	
+	<s:url var="changeContentTypeUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="changeContentType" />
+	<sj:submit targets="form-container" href="%{#changeContentTypeUrlVar}" value="%{getText('label.change')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 <p class="noscreen">
 	<wpsf:hidden name="contentType" value="%{getShowlet().getConfig().get('contentType')}" />
@@ -63,13 +58,12 @@
 	<input type="hidden" name="categoryCodes" value="<s:property value="#categoryCodeVar" />" id="categoryCodes-<s:property value="#rowstatus.index" />"/>
 	</s:iterator>
 </p>
-
 	<p>
 		<label for="category" class="basic-mint-label"><s:text name="label.categories" />:</label>
 		<wpsf:select useTabindexAutoIncrement="true" name="categoryCode" id="category" list="categories" listKey="code" listValue="getShortFullTitle(currentLang.code)" headerKey="" headerValue="%{getText('label.all')}" cssClass="text" />
-		<wpsf:submit useTabindexAutoIncrement="true" action="addCategory" value="%{getText('label.join')}" cssClass="button" />
+		<s:url var="addCategoryUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="addCategory" />
+		<sj:submit targets="form-container" href="%{#addCategoryUrlVar}" value="%{getText('label.join')}" indicator="indicator" button="true" cssClass="button" />
 	</p>
-	
 	<s:if test="null != categoryCodes && categoryCodes.size() > 0">
 		<table class="generic" summary="<s:text name="note.resourceCategories.summary"/>">
 		<caption><span><s:text name="title.resourceCategories.list"/></span></caption>
@@ -82,11 +76,13 @@
 		<tr>
 			<td><s:property value="#showletCategory.getFullTitle(currentLang.code)"/></td>
 			<td class="icon">
-				<wpsa:actionParam action="removeCategory" var="actionName" >
-					<wpsa:actionSubParam name="categoryCode" value="%{#categoryCodeVar}" />
-				</wpsa:actionParam>
-				<wpsa:set name="iconImagePath" id="iconImagePath"><wp:resourceURL />administration/common/img/icons/22x22/delete.png</wpsa:set>
-				<wpsf:submit useTabindexAutoIncrement="true" type="image" src="%{#iconImagePath}" action="%{#actionName}" value="%{getText('label.remove')}" title="%{getText('label.remove') + ': ' + #showletCategory.getFullTitle(currentLang.code)}" />
+				<wpfssa:actionParam action="removeCategory" var="removeCategoryActionNameVar" >
+					<wpfssa:actionSubParam name="categoryCode" value="%{#categoryCodeVar}" />
+				</wpfssa:actionParam>
+				<s:url var="removeCategoryActionVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="%{#removeCategoryActionNameVar}" />
+				<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL />administration/common/img/icons/22x22/delete.png</s:set>
+				<sj:submit type="image" targets="form-container" value="%{getText('label.remove')}" button="true" 
+					href="%{#removeCategoryActionVar}" src="%{#iconImagePath}" title="%{getText('label.remove') + ': ' + #showletCategory.getFullTitle(currentLang.code)}" />
 			</td>
 		</tr>
 		</s:iterator>
@@ -108,12 +104,15 @@
 <p>
 	<label for="filterKey" class="basic-mint-label"><s:text name="label.filter" />:</label>
 	<wpsf:select useTabindexAutoIncrement="true" name="filterKey" id="filterKey" list="allowedFilterTypes" listKey="key" listValue="value" cssClass="text" />
-	<wpsf:submit useTabindexAutoIncrement="true" action="setFilterType" value="%{getText('label.add')}" cssClass="button" />
+	<s:url var="setFilterTypeUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="setFilterType" />
+	<sj:submit targets="form-container" href="%{#setFilterTypeUrlVar}" value="%{getText('label.add')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 
 <p class="noscreen">
 	<wpsf:hidden name="filters" value="%{getShowlet().getConfig().get('filters')}" />
 </p>
+
+<s:property value="%{getShowlet().getConfig().get('filters')}" />
 
 <s:if test="null != filtersProperties && filtersProperties.size()>0" >
 <table class="generic margin-bit-top" summary="<s:text name="note.page.contentListViewer.summary" />">
@@ -184,28 +183,34 @@
 	<s:if test="#filter['order'] == 'DESC'"><s:text name="label.order.descendant" /></s:if>
 	</td>
 	<td class="icon">
-		<wpsa:actionParam action="moveFilter" var="actionName" >
-			<wpsa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
-			<wpsa:actionSubParam name="movement" value="UP" />
-		</wpsa:actionParam>
-		<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL/>administration/common/img/icons/go-up.png</s:set>		
-		<wpsf:submit useTabindexAutoIncrement="true" action="%{#actionName}" type="image" src="%{#iconImagePath}" value="%{getText('label.moveUp')}" title="%{getText('label.moveUp')}" />
+		<wpfssa:actionParam action="moveFilter" var="moveFilterActionNameVar" >
+			<wpfssa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
+			<wpfssa:actionSubParam name="movement" value="UP" />
+		</wpfssa:actionParam>
+		<s:url var="moveFilterActionVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="%{#moveFilterActionNameVar}" />
+		<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL />administration/common/img/icons/go-up.png</s:set>
+		<sj:submit type="image" targets="form-container" value="%{getText('label.moveUp')}" button="true" 
+			href="%{#moveFilterActionVar}" src="%{#iconImagePath}" title="%{getText('label.moveUp')}" />
 	</td>
 	<td class="icon">	
-		<wpsa:actionParam action="moveFilter" var="actionName" >
-			<wpsa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
-			<wpsa:actionSubParam name="movement" value="DOWN" />
-		</wpsa:actionParam>
-		<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL/>administration/common/img/icons/go-down.png</s:set>
-		<wpsf:submit useTabindexAutoIncrement="true" action="%{#actionName}" type="image" src="%{#iconImagePath}" value="%{getText('label.moveDown')}" title="%{getText('label.moveDown')}" />
+		<wpfssa:actionParam action="moveFilter" var="moveFilterActionNameVar" >
+			<wpfssa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
+			<wpfssa:actionSubParam name="movement" value="DOWN" />
+		</wpfssa:actionParam>
+		<s:url var="moveFilterActionVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="%{#moveFilterActionNameVar}" />
+		<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL />administration/common/img/icons/go-down.png</s:set>
+		<sj:submit type="image" targets="form-container" value="%{getText('label.moveDown')}" button="true" 
+			href="%{#moveFilterActionVar}" src="%{#iconImagePath}" title="%{getText('label.moveDown')}" />
 	</td>
-	<td class="icon">	
-		<wpsa:actionParam action="removeFilter" var="actionName" >
-			<wpsa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
-		</wpsa:actionParam>
-		<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL/>administration/common/img/icons/delete.png</s:set>
-		<wpsf:submit useTabindexAutoIncrement="true" action="%{#actionName}" type="image"  src="%{#iconImagePath}" value="%{getText('label.remove')}" title="%{getText('label.remove')}" />
-	</td>	
+	<td class="icon">
+		<wpfssa:actionParam action="removeFilter" var="removeFilterActionNameVar" >
+			<wpfssa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
+		</wpfssa:actionParam>
+		<s:url var="removeFilterActionVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="%{#removeFilterActionNameVar}" />
+		<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL />administration/common/img/icons/delete.png</s:set>
+		<sj:submit type="image" targets="form-container" value="%{getText('label.remove')}" button="true" 
+			href="%{#removeFilterActionVar}" src="%{#iconImagePath}" title="%{getText('label.remove')}" />
+	</td>
 </tr>
 </s:iterator>
 </table>
@@ -220,41 +225,36 @@
 <div class="accordion_element">
 <p><s:text name="note.extraOption.intro" /></p>
 	<s:iterator id="lang" value="langs">
-		<p>
-			<label for="title_<s:property value="#lang.code" />"  class="basic-mint-label"><span class="monospace">(<s:property value="#lang.code" />)</span><s:text name="label.title" />:</label>
-			<wpsf:textfield useTabindexAutoIncrement="true" name="title_%{#lang.code}" id="title_%{#lang.code}" value="%{showlet.config.get('title_' + #lang.code)}" cssClass="text" />
-		</p>
+	<p>
+		<label for="title_<s:property value="#lang.code" />"  class="basic-mint-label"><span class="monospace">(<s:property value="#lang.code" />)</span><s:text name="label.title" />:</label>
+		<wpsf:textfield useTabindexAutoIncrement="true" name="title_%{#lang.code}" id="title_%{#lang.code}" value="%{showlet.config.get('title_' + #lang.code)}" cssClass="text" />
+	</p>
 	</s:iterator>
-
 	<p>
 		<label for="pageLink"  class="basic-mint-label"><s:text name="label.link.page" />:</label>
 		<wpsf:select useTabindexAutoIncrement="true" list="pages" name="pageLink" id="pageLink" listKey="code" listValue="getShortFullTitle(currentLang.code)" 
 				value="%{showlet.config.get('pageLink')}" headerKey="" headerValue="- %{getText('label.select')} -" />
 	</p>
-	
 	<s:iterator var="lang" value="langs">
 		<p>
 			<label for="linkDescr_<s:property value="#lang.code" />"  class="basic-mint-label"><span class="monospace">(<s:property value="#lang.code" />)</span><s:text name="label.link.descr"/>:</label>
 			<wpsf:textfield useTabindexAutoIncrement="true" name="linkDescr_%{#lang.code}" id="linkDescr_%{#lang.code}" value="%{showlet.config.get('linkDescr_' + #lang.code)}" cssClass="text" />
 		</p>
 	</s:iterator>
-
 </div>
 </fieldset>
-
 
 <%-- USER FILTERS - START BLOCK --%>
 <fieldset><legend><s:text name="title.filters.search" /></legend>
 	<p>
 		<label for="userFilterKey" class="basic-mint-label"><s:text name="label.filter" />:</label>
 		<wpsf:select useTabindexAutoIncrement="true" name="userFilterKey" id="userFilterKey" list="allowedUserFilterTypes" listKey="key" listValue="value" cssClass="text" />
-		<wpsf:submit useTabindexAutoIncrement="true" action="addUserFilter" value="%{getText('label.add')}" cssClass="button" />
+		<s:url var="addUserFilterUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="addUserFilter" />
+		<sj:submit targets="form-container" href="%{#addUserFilterUrlVar}" value="%{getText('label.add')}" indicator="indicator" button="true" cssClass="button" />
 	</p>
-
 	<p class="noscreen">
 		<wpsf:hidden name="userFilters" value="%{getShowlet().getConfig().get('userFilters')}" />
 	</p>
-	
 <s:if test="null != userFiltersProperties && userFiltersProperties.size() > 0" >
 	<table class="generic margin-bit-top" summary="<s:text name="note.page.contentListViewer.frontendFilters.summary" />">
 	<caption><span><s:text name="title.filters.search" /></span></caption>
@@ -283,28 +283,34 @@
 			</strong>
 		</td>
 		<td class="icon">
-			<wpsa:actionParam action="moveUserFilter" var="actionName" >
-				<wpsa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
-				<wpsa:actionSubParam name="movement" value="UP" />
-			</wpsa:actionParam>
-			<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL/>administration/common/img/icons/go-up.png</s:set>		
-			<wpsf:submit useTabindexAutoIncrement="true" action="%{#actionName}" type="image" src="%{#iconImagePath}" value="%{getText('label.moveUp')}" title="%{getText('label.moveUp')}" />
+			<wpfssa:actionParam action="moveUserFilter" var="moveUserFilterActionNameVar" >
+				<wpfssa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
+				<wpfssa:actionSubParam name="movement" value="UP" />
+			</wpfssa:actionParam>
+			<s:url var="moveUserFilterActionVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="%{#moveUserFilterActionNameVar}" />
+			<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL />administration/common/img/icons/go-up.png</s:set>
+			<sj:submit type="image" targets="form-container" value="%{getText('label.moveUp')}" button="true" 
+				href="%{#moveUserFilterActionVar}" src="%{#iconImagePath}" title="%{getText('label.moveUp')}" />
+		</td>
+		<td class="icon">	
+			<wpfssa:actionParam action="moveUserFilter" var="moveUserFilterActionNameVar" >
+				<wpfssa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
+				<wpfssa:actionSubParam name="movement" value="DOWN" />
+			</wpfssa:actionParam>
+			<s:url var="moveUserFilterActionVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="%{#moveUserFilterActionNameVar}" />
+			<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL />administration/common/img/icons/go-down.png</s:set>
+			<sj:submit type="image" targets="form-container" value="%{getText('label.moveDown')}" button="true" 
+				href="%{#moveUserFilterActionVar}" src="%{#iconImagePath}" title="%{getText('label.moveDown')}" />
 		</td>
 		<td class="icon">
-			<wpsa:actionParam action="moveUserFilter" var="actionName" >
-				<wpsa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
-				<wpsa:actionSubParam name="movement" value="DOWN" />
-			</wpsa:actionParam>
-			<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL/>administration/common/img/icons/go-down.png</s:set>
-			<wpsf:submit useTabindexAutoIncrement="true" action="%{#actionName}" type="image" src="%{#iconImagePath}" value="%{getText('label.moveDown')}" title="%{getText('label.moveDown')}" />
+			<wpfssa:actionParam action="removeUserFilter" var="removeUserFilterActionNameVar" >
+				<wpfssa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
+			</wpfssa:actionParam>
+			<s:url var="removeUserFilterActionVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="%{#removeUserFilterActionNameVar}" />
+			<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL />administration/common/img/icons/delete.png</s:set>
+			<sj:submit type="image" targets="form-container" value="%{getText('label.remove')}" button="true" 
+				href="%{#removeUserFilterActionVar}" src="%{#iconImagePath}" title="%{getText('label.remove')}" />
 		</td>
-		<td class="icon">
-			<wpsa:actionParam action="removeUserFilter" var="actionName" >
-				<wpsa:actionSubParam name="filterIndex" value="%{#rowstatus.index}" />
-			</wpsa:actionParam>
-			<s:set name="iconImagePath" id="iconImagePath"><wp:resourceURL/>administration/common/img/icons/delete.png</s:set>
-			<wpsf:submit useTabindexAutoIncrement="true" action="%{#actionName}" type="image"  src="%{#iconImagePath}" value="%{getText('label.remove')}" title="%{getText('label.remove')}" />
-		</td>	
 	</tr>
 	</s:iterator>
 	</table>
@@ -330,11 +336,13 @@
 </p>
 </fieldset>
 
-<p class="centerText"><wpsf:submit useTabindexAutoIncrement="true" action="saveListViewerConfig" value="%{getText('label.save')}" cssClass="button" /></p>
+<p class="centerText">
+	<s:url var="saveListViewerConfigUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="saveListViewerConfig" />
+	<sj:submit targets="form-container" href="%{#saveListViewerConfigUrlVar}" value="%{getText('label.save')}" indicator="indicator" button="true" cssClass="button" />
+</p>
 
 </s:else>
 
 </s:form>
 
-</div>
 </div>

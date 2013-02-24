@@ -1,24 +1,17 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="/apsadmin-form" prefix="wpsf" %>
-<h1><a href="<s:url action="viewTree" namespace="/do/Page" />" title="<s:text name="note.goToSomewhere" />: <s:text name="title.pageManagement" />"><s:text name="title.pageManagement" /></a></h1>
+<%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
 
-<div id="main">
-<h2><s:text name="title.configPage" /></h2>
+<div id="form-container" class="widget_form jpfrontshortcut-frameconfig-navigatorConfig">
+<h2 class="margin-more-top"><s:text name="name.showlet" />:&#32;<s:property value="%{getTitle(showlet.type.code, showlet.type.titles)}" /></h2>
 
-<s:set var="breadcrumbs_pivotPageCode" value="pageCode" />
-<s:include value="/WEB-INF/apsadmin/jsp/portal/include/pageInfo_breadcrumbs.jsp" />
-
-<div class="subsection-light">
-<h3><s:text name="title.configPage.youAreDoing" /></h3>
-
-<s:action namespace="/do/Page" name="printPageDetails" executeResult="true" ignoreContextParams="true"><s:param name="selectedNode" value="pageCode"></s:param></s:action>
-<s:include value="/WEB-INF/apsadmin/jsp/portal/include/frameInfo.jsp" />
+<h3><s:text name="title.editFrame" />: <s:property value="frame" /> &ndash; <s:property value="currentPage.getModel().getFrames()[frame]"/></h3>
 
 <s:set var="showletType" value="%{getShowletType(showletTypeCode)}"></s:set>
-<h3 class="margin-more-top"><s:text name="name.showlet" />:&#32;<s:property value="%{getTitle(#showletType.code, #showletType.titles)}" /></h3>
 <h4 class="margin-bit-bottom"><s:text name="title.filterAdd" /></h4>
 
-<s:form namespace="/do/jacms/Page/SpecialShowlet/ListViewer">
+<s:form namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" id="formform" theme="simple">
 <p class="noscreen">
 	<wpsf:hidden name="pageCode" />
 	<wpsf:hidden name="frame" />
@@ -59,7 +52,8 @@
 <p>
 	<label for="filterKey" class="basic-mint-label"><s:text name="label.type"/>:</label>
 	<wpsf:select useTabindexAutoIncrement="true" name="filterKey" id="filterKey" list="filterTypes" listKey="key" listValue="value" cssClass="text" />
-	<wpsf:submit useTabindexAutoIncrement="true" action="setFilterType" value="%{getText('label.continue')}" cssClass="button" />
+	<s:url var="setFilterTypeUrlVar" action="setFilterType" />
+	<sj:submit targets="form-container" href="%{#setFilterTypeUrlVar}" value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 </fieldset>
 
@@ -89,9 +83,13 @@
 <fieldset><legend><s:text name="label.settings"/></legend>
 <p>
 	<label for="filterOptionId" class="basic-mint-label"><s:text name="label.option"/>:</label>
-	<wpsf:select useTabindexAutoIncrement="true" id="filterOptionId" name="filterOptionId" list="#{-1:getText('label.presenceOptionFilter'),3:getText('label.absenceOptionFilter'),1:getText('label.valueLikeOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
+	<wpsf:select useTabindexAutoIncrement="true" id="filterOptionId" name="filterOptionId" list="#{3:getText('label.presenceOptionFilter'),4:getText('label.absenceOptionFilter'),1:getText('label.valueLikeOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
 	<s:if test="filterOptionId>-1"><wpsf:hidden name="filterOptionId" /></s:if>
-	<s:else><wpsf:submit useTabindexAutoIncrement="true" action="setFilterOption" value="%{getText('label.continue')}" cssClass="button" /></s:else>	
+	<s:else>
+		<s:url var="setFilterOptionUrlVar" action="setFilterOption" />
+		<sj:submit targets="form-container" href="%{#setFilterOptionUrlVar}" 
+			   value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
+	</s:else>
 </p>
 
 <s:if test="filterOptionId==1">
@@ -124,9 +122,13 @@
 <fieldset><legend><s:text name="label.settings"/></legend>
 <p>
 	<label for="filterOptionId" class="basic-mint-label"><s:text name="label.option"/>:</label>
-	<wpsf:select useTabindexAutoIncrement="true" name="filterOptionId" id="filterOptionId" list="#{-1:getText('label.presenceOptionFilter'),3:getText('label.absenceOptionFilter'),1:getText('label.valueOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
+	<wpsf:select useTabindexAutoIncrement="true" name="filterOptionId" id="filterOptionId" list="#{3:getText('label.presenceOptionFilter'),4:getText('label.absenceOptionFilter'),1:getText('label.valueOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
 	<s:if test="filterOptionId>-1"><wpsf:hidden name="filterOptionId" /></s:if>
-	<s:else><wpsf:submit useTabindexAutoIncrement="true" action="setFilterOption" value="%{getText('label.continue')}" cssClass="button" /></s:else>	
+	<s:else>
+		<s:url var="setFilterOptionUrlVar" action="setFilterOption" />
+		<sj:submit targets="form-container" href="%{#setFilterOptionUrlVar}" 
+			   value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
+	</s:else>
 </p>
 
 <s:if test="filterOptionId==1">
@@ -170,9 +172,13 @@
 <fieldset><legend><s:text name="label.settings"/></legend>
 <p>
 	<label for="filterOptionId" class="basic-mint-label"><s:text name="label.option"/>:</label>
-	<wpsf:select useTabindexAutoIncrement="true" name="filterOptionId" id="filterOptionId" list="#{-1:getText('label.presenceOptionFilter'),3:getText('label.absenceOptionFilter'),1:getText('label.valueOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
+	<wpsf:select useTabindexAutoIncrement="true" name="filterOptionId" id="filterOptionId" list="#{3:getText('label.presenceOptionFilter'),4:getText('label.absenceOptionFilter'),1:getText('label.valueOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
 	<s:if test="filterOptionId>-1"><wpsf:hidden name="filterOptionId" /></s:if>
-	<s:else><wpsf:submit useTabindexAutoIncrement="true" action="setFilterOption" value="%{getText('label.continue')}" cssClass="button" /></s:else>	
+	<s:else>
+		<s:url var="setFilterOptionUrlVar" action="setFilterOption" />
+		<sj:submit targets="form-container" href="%{#setFilterOptionUrlVar}" 
+			   value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
+	</s:else>
 </p>
 
 <s:if test="filterOptionId==1">
@@ -217,12 +223,13 @@
 <s:set name="saveFilterActionName"><s:if test="filterTypeId == 0">saveFilter</s:if><s:elseif test="filterTypeId == 1">saveTextFilter</s:elseif><s:elseif test="filterTypeId == 2">saveNumberFilter</s:elseif><s:elseif test="filterTypeId == 3">saveBooleanFilter</s:elseif><s:elseif test="filterTypeId == 4">saveDateFilter</s:elseif></s:set>
 
 <p class="centerText">
-	<wpsf:submit useTabindexAutoIncrement="true" action="%{#saveFilterActionName}" value="%{getText('label.save')}" cssClass="button" />
+	<s:url var="saveFilterActionNameUrlVar" action="saveFilter" />
+	<sj:submit targets="form-container" href="%{#saveFilterActionNameUrlVar}" 
+		value="%{getText('label.save')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 
 </s:else>
 
 </s:form>
 
-</div>
 </div>
