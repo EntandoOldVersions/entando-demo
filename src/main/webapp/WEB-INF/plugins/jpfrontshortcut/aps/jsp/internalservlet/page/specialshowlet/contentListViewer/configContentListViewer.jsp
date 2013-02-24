@@ -37,7 +37,6 @@
 	<label for="contentType" class="basic-mint-label"><s:text name="label.type"/>:</label>
 	<wpsf:select useTabindexAutoIncrement="true" name="contentType" id="contentType" list="contentTypes" listKey="code" listValue="descr" cssClass="text" />
 	<s:url var="configListViewerUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="configListViewer" />
-	<s:property value="#configListViewerUrlVar" />
 	<sj:submit targets="form-container" href="%{#configListViewerUrlVar}" value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 </fieldset>
@@ -111,8 +110,6 @@
 <p class="noscreen">
 	<wpsf:hidden name="filters" value="%{getShowlet().getConfig().get('filters')}" />
 </p>
-
-<s:property value="%{getShowlet().getConfig().get('filters')}" />
 
 <s:if test="null != filtersProperties && filtersProperties.size()>0" >
 <table class="generic margin-bit-top" summary="<s:text name="note.page.contentListViewer.summary" />">
@@ -225,10 +222,10 @@
 <div class="accordion_element">
 <p><s:text name="note.extraOption.intro" /></p>
 	<s:iterator id="lang" value="langs">
-	<p>
-		<label for="title_<s:property value="#lang.code" />"  class="basic-mint-label"><span class="monospace">(<s:property value="#lang.code" />)</span><s:text name="label.title" />:</label>
-		<wpsf:textfield useTabindexAutoIncrement="true" name="title_%{#lang.code}" id="title_%{#lang.code}" value="%{showlet.config.get('title_' + #lang.code)}" cssClass="text" />
-	</p>
+		<p>
+			<label for="title_<s:property value="#lang.code" />"  class="basic-mint-label"><span class="monospace">(<s:property value="#lang.code" />)</span><s:text name="label.title" />:</label>
+			<wpsf:textfield useTabindexAutoIncrement="true" name="title_%{#lang.code}" id="title_%{#lang.code}" value="%{showlet.config.get('title_' + #lang.code)}" cssClass="text" />
+		</p>
 	</s:iterator>
 	<p>
 		<label for="pageLink"  class="basic-mint-label"><s:text name="label.link.page" />:</label>
@@ -274,7 +271,11 @@
 						<s:text name="label.fulltext" />			
 					</s:if>
 					<s:elseif test="#userFilter['key'] == 'category'">
-						<s:text name="label.category" />			
+						<s:text name="label.category" />
+						<s:if test="null != #userFilter['categoryCode']">
+							<s:set name="userFilterCategoryRoot" value="%{getCategory(#userFilter['categoryCode'])}"></s:set>
+							(<s:property value="#userFilterCategoryRoot.getFullTitle(currentLang.code)"/>)
+						</s:if>
 					</s:elseif>
 				</s:if>
 				<s:elseif test="#userFilter['attributeFilter'] == 'true'">
@@ -330,10 +331,17 @@
 </p>
 
 <p>
-	<label for="maxElemForItem" class="basic-mint-label"><s:text name="label.maxElements" />:</label>
+	<label for="maxElemForItem" class="basic-mint-label"><s:text name="label.maxElementsForItem" />:</label>
 	<wpsf:select useTabindexAutoIncrement="true" name="maxElemForItem" id="maxElemForItem" value="%{getShowlet().getConfig().get('maxElemForItem')}" 
 		headerKey="" headerValue="%{getText('label.all')}" list="#{1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,15:15,20:20}" cssClass="text" />
 </p>
+
+<p>
+	<label for="maxElements" class="basic-mint-label"><s:text name="label.maxElements" />:</label>
+	<wpsf:select name="maxElements" id="maxElements" value="%{getShowlet().getConfig().get('maxElements')}" 
+		headerKey="" headerValue="%{getText('label.all')}" list="#{1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,15:15,20:20}" cssClass="text" />
+</p>
+
 </fieldset>
 
 <p class="centerText">

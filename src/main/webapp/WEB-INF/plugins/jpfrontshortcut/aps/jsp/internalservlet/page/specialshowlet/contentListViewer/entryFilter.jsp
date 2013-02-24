@@ -52,7 +52,7 @@
 <p>
 	<label for="filterKey" class="basic-mint-label"><s:text name="label.type"/>:</label>
 	<wpsf:select useTabindexAutoIncrement="true" name="filterKey" id="filterKey" list="filterTypes" listKey="key" listValue="value" cssClass="text" />
-	<s:url var="setFilterTypeUrlVar" action="setFilterType" />
+	<s:url var="setFilterTypeUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="setFilterType" />
 	<sj:submit targets="form-container" href="%{#setFilterTypeUrlVar}" value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
 </p>
 </fieldset>
@@ -86,7 +86,7 @@
 	<wpsf:select useTabindexAutoIncrement="true" id="filterOptionId" name="filterOptionId" list="#{3:getText('label.presenceOptionFilter'),4:getText('label.absenceOptionFilter'),1:getText('label.valueLikeOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
 	<s:if test="filterOptionId>-1"><wpsf:hidden name="filterOptionId" /></s:if>
 	<s:else>
-		<s:url var="setFilterOptionUrlVar" action="setFilterOption" />
+		<s:url var="setFilterOptionUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="setFilterOption" />
 		<sj:submit targets="form-container" href="%{#setFilterOptionUrlVar}" 
 			   value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
 	</s:else>
@@ -125,7 +125,7 @@
 	<wpsf:select useTabindexAutoIncrement="true" name="filterOptionId" id="filterOptionId" list="#{3:getText('label.presenceOptionFilter'),4:getText('label.absenceOptionFilter'),1:getText('label.valueOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
 	<s:if test="filterOptionId>-1"><wpsf:hidden name="filterOptionId" /></s:if>
 	<s:else>
-		<s:url var="setFilterOptionUrlVar" action="setFilterOption" />
+		<s:url var="setFilterOptionUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="setFilterOption" />
 		<sj:submit targets="form-container" href="%{#setFilterOptionUrlVar}" 
 			   value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
 	</s:else>
@@ -175,7 +175,7 @@
 	<wpsf:select useTabindexAutoIncrement="true" name="filterOptionId" id="filterOptionId" list="#{3:getText('label.presenceOptionFilter'),4:getText('label.absenceOptionFilter'),1:getText('label.valueOptionFilter'),2:getText('label.rangeOptionFilter')}" disabled="filterOptionId>-1" cssClass="text" />
 	<s:if test="filterOptionId>-1"><wpsf:hidden name="filterOptionId" /></s:if>
 	<s:else>
-		<s:url var="setFilterOptionUrlVar" action="setFilterOption" />
+		<s:url var="setFilterOptionUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="setFilterOption" />
 		<sj:submit targets="form-container" href="%{#setFilterOptionUrlVar}" 
 			   value="%{getText('label.continue')}" indicator="indicator" button="true" cssClass="button" />
 	</s:else>
@@ -183,7 +183,7 @@
 
 <s:if test="filterOptionId==1">
 <ul class="noBullet radiocheck">
-	<li><input type="radio" name="dateValueType" id="dateValueType_today" value="2" <s:if test="(2 == dateValueType)">checked="checked"</s:if> /> <label for="dateValueType_today"><s:text name="label.today" /></label></li>
+	<li><input type="radio" name="dateValueType" id="dateValueType_today" value="2" <s:if test="(2 == dateValueType)">checked="checked"</s:if> /> <label for="dateValueType_today"><s:text name="label.today" /></label>&nbsp;&nbsp;&nbsp;<label for="valueDateDelay"><s:text name="label.delay" /></label> <wpsf:textfield name="valueDateDelay" id="valueDateDelay" cssClass="text" /></li>
 	<li><input type="radio" name="dateValueType" id="dateValueType_chosen" value="3" <s:if test="(3 == dateValueType)">checked="checked"</s:if> /> <label for="dateValueType_chosen"><s:text name="label.chosenDate" /></label>, 
 		<label for="dateValue_cal"><s:text name="label.filterValue.exact" />:</label> <wpsf:textfield useTabindexAutoIncrement="true" name="dateValue" id="dateValue_cal" cssClass="text" /></li>
 </ul>
@@ -194,7 +194,7 @@
 <fieldset><legend><s:text name="label.filterFrom" /></legend>
 <ul class="noBullet radiocheck">
 	<li><input type="radio" name="dateStartType" id="dateStartType_none" value="1" <s:if test="(1 == dateStartType)">checked="checked"</s:if> /> <label for="dateStartType_none"><s:text name="label.none" /></label></li>
-	<li><input type="radio" name="dateStartType" id="dateStartType_today" value="2" <s:if test="(2 == dateStartType)">checked="checked"</s:if> /> <label for="dateStartType_today"><s:text name="label.today" /></label></li>
+	<li><input type="radio" name="dateStartType" id="dateStartType_today" value="2" <s:if test="(2 == dateStartType)">checked="checked"</s:if> /> <label for="dateStartType_today"><s:text name="label.today" /></label>&nbsp;&nbsp;&nbsp;<label for="startDateDelay"><s:text name="label.delay" /></label> <wpsf:textfield name="startDateDelay" id="startDateDelay" cssClass="text" /></li>
 	<li><input type="radio" name="dateStartType" id="dateStartType_chosen" value="3" <s:if test="(3 == dateStartType)">checked="checked"</s:if> /> <label for="dateStartType_chosen"><s:text name="label.chosenDate" /></label>, 
 		<label for="dateStart_cal"><s:text name="label.filterValue.exact" />:</label> <wpsf:textfield useTabindexAutoIncrement="true" name="dateStart" id="dateStart_cal" cssClass="text" /><span class="inlineNote">dd/MM/yyyy</span></li>
 </ul>
@@ -202,7 +202,7 @@
 <fieldset><legend><s:text name="label.filterTo" /></legend>
 <ul class="noBullet radiocheck">
 	<li><input type="radio" name="dateEndType" id="dateEndType_none" value="1" <s:if test="(1 == dateEndType)">checked="checked"</s:if> /> <label for="dateEndType_none"><s:text name="label.none" /></label></li>
-	<li><input type="radio" name="dateEndType" id="dateEndType_today" value="2" <s:if test="(2 == dateEndType)">checked="checked"</s:if> /> <label for="dateEndType_today"><s:text name="label.today" /></label></li>
+	<li><input type="radio" name="dateEndType" id="dateEndType_today" value="2" <s:if test="(2 == dateEndType)">checked="checked"</s:if> /> <label for="dateEndType_today"><s:text name="label.today" /></label>&nbsp;&nbsp;&nbsp;<label for="endDateDelay"><s:text name="label.delay" /></label> <wpsf:textfield name="endDateDelay" id="endDateDelay" cssClass="text" /></li>
 	<li><input type="radio" name="dateEndType" id="dateEndType_chosen" value="3" <s:if test="(3 == dateEndType)">checked="checked"</s:if> /> <label for="dateEndType_chosen"><s:text name="label.chosenDate" /></label>, 
 		<label for="dateEnd_cal"><s:text name="label.filterValue.exact" />:</label> <wpsf:textfield useTabindexAutoIncrement="true" name="dateEnd" id="dateEnd_cal" cssClass="text" /><span class="inlineNote">dd/MM/yyyy</span></li>
 </ul>
@@ -223,7 +223,7 @@
 <s:set name="saveFilterActionName"><s:if test="filterTypeId == 0">saveFilter</s:if><s:elseif test="filterTypeId == 1">saveTextFilter</s:elseif><s:elseif test="filterTypeId == 2">saveNumberFilter</s:elseif><s:elseif test="filterTypeId == 3">saveBooleanFilter</s:elseif><s:elseif test="filterTypeId == 4">saveDateFilter</s:elseif></s:set>
 
 <p class="centerText">
-	<s:url var="saveFilterActionNameUrlVar" action="saveFilter" />
+	<s:url var="saveFilterActionNameUrlVar" namespace="/do/jpfrontshortcut/Page/SpecialShowlet/ListViewer" action="%{#saveFilterActionName}" />
 	<sj:submit targets="form-container" href="%{#saveFilterActionNameUrlVar}" 
 		value="%{getText('label.save')}" indicator="indicator" button="true" cssClass="button" />
 </p>
