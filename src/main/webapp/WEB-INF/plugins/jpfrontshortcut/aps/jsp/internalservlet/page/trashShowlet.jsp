@@ -19,10 +19,9 @@
 				<s:text name="note.clearPosition.areYouSure.showlet" />&#32;<em class="important"><s:property value="%{getTitle(#showletTypeVar.getCode(), #showletTypeVar.getTitles())}" /></em>
 			</s:if>	
 			?
-			<s:set var="clearLabel"><wp:i18n key="CLEAR" /></s:set>
 		</p>
 		<p>
-			<sj:submit targets="form-container" value="%{#clearLabel}" indicator="indicator" button="true" />
+			<sj:submit targets="form-container" value="%{getText('label.clear')}" indicator="indicator" button="true" />
 		</p>
 	</s:form>
 </div>

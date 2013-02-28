@@ -14,8 +14,7 @@
 </p>
 <p>
 	<s:text name="note.deletePage.areYouSure" />&#32;<em class="important"><s:property value="%{getPage(nodeToBeDelete).getTitle(currentLang.getCode())}" /></em>?
-	<s:set var="deleteLabel"><wp:i18n key="DELETE" /></s:set>
-	<sj:submit targets="form-container" value="%{#deleteLabel}" indicator="indicator" button="true" />
+	<sj:submit targets="form-container" value="%{getText('page.options.delete')}" indicator="indicator" button="true" />
 </p>
 </s:form>
 

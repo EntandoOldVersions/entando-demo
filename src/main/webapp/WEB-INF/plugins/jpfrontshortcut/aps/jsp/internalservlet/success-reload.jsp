@@ -2,13 +2,10 @@
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
-<%--
-<s:set var="url" value="redirectUrl" />
---%>
 <s:set var="url"><wp:url /></s:set>
 <p class="widget-center">
 	<a href="<wp:url  />">
-		<wp:i18n key="CONTENT_CHANGED" />
+		<s:text name="jpfrontshortcut.dialog.content.changed" />
 	</a>
 </p>
 <script type="text/javascript">

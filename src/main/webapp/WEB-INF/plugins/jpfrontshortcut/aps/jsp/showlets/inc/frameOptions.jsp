@@ -14,9 +14,9 @@
 <c:set var="showletCodeVar" value="${null}" />
 <wp:currentPage param="owner" var="ownerGroupVar" />
 <wp:ifauthorized permission="managePages" groupName="${ownerGroupVar}">
-<wp:info key="currentLang" var="currentLang" />
-<wp:currentPage param="code" var="currentPageCode" />
-<wpcs:requestContextParam param="currentFrame" var="framePosVar" />
+	<wp:info key="currentLang" var="currentLang" />
+	<wp:currentPage param="code" var="currentPageCode" />
+	<wpcs:requestContextParam param="currentFrame" var="framePosVar" />
 
 [<c:out value="${framePosVar}" />
 	<!-- EDIT FRAME -->

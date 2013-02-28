@@ -160,11 +160,10 @@
 </s:iterator>
 <%-- END CICLO ATTRIBUTI --%>
 
-<s:set var="saveLabel"><wp:i18n key="SAVE" /></s:set>
 <p class="save">
 	<sj:submit 
 			targets="form-container" 
-			value="%{#saveLabel}" 
+			value="%{getText('label.save')}" 
 			indicator="indicator"
 			button="true"
 	/>

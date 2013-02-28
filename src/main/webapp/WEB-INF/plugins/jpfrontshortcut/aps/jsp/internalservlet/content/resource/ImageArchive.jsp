@@ -5,33 +5,33 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
 <%@ taglib prefix="wpfssa" uri="/WEB-INF/plugins/jpfrontshortcut/apsadmin/tld/jpfrontshortcut-apsadmin-core.tld" %>
-
-<h3><wp:i18n key="jpfastcontentedit_CHOOSE_IMAGE" /></h3>
+<% pageContext.setAttribute("random", (int) (Math.random() * 999999)); %>
+<s:set var="random"><c:out value="${random}" /></s:set>
+<h3><s:text name="title.chooseImage" /></h3>
 <s:form id="formform" action="search" namespace="/do/jpfrontshortcut/Content/Resource" theme="simple">
 	<fieldset>
-		<legend><wp:i18n key="jpfastcontentedit_SEARCH_FILTERS" /></legend>
+		<legend><s:text name="title.searchFilters" /></legend>
 		<p>
 			<wpsf:hidden name="resourceTypeCode" />
-			<label for="text"><wp:i18n key="jpfastcontentedit_DESCRIPTION" />:</label><br />
-			<wpsf:textfield useTabindexAutoIncrement="true" name="text" id="text" cssClass="text" />
+			<label for="text_<c:out value="${random}" />"><s:text name="label.description"/>:</label><br />
+			<wpsf:textfield useTabindexAutoIncrement="true" name="text" id="%{'text_'+#random}" cssClass="text" />
 		</p>
 		<p>
-			<label for="category"><wp:i18n key="jpfastcontentedit_CATEGORY" />:</label><br />
+			<label for="category_<c:out value="${random}" />"><s:text name="label.category" />:</label><br />
 			<s:set name="currentRoot" value="categoryRoot" />
-			<select name="categoryCode" id="category" >
+			<select name="categoryCode" id="category_<c:out value="${random}" />" >
 <s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/resource/inc/category-selectItem.jsp" />
 			</select>
 		</p>
 	</fieldset>
 
 	<p>
-		<s:set name="search_label"><wp:i18n key="jpfastcontentedit_SEARCH" /></s:set>
 		<s:url var="executeSearchUrlVar" namespace="/do/jpfrontshortcut/Content/Resource" action="search" />
 		<sj:submit 
 			targets="form-container" 
 			indicator="indicator" 
 			href="%{#executeSearchUrlVar}" 
-			value="%{#search_label}" 
+			value="%{getText('label.search')}" 
 			button="true" />
 	</p>
 
@@ -67,6 +67,6 @@
 	
 	<p class="lower-actions">
 		<s:url var="entryContentActionVar" action="backToEntryContent" />
-		<sj:submit value="Cancel, Back to Edit Content" href="%{#entryContentActionVar}" button="true" targets="form-container" />
+		<sj:submit value="%{getText('jpfrontshortcut.dialog.back.to.entryContent')}" href="%{#entryContentActionVar}" button="true" targets="form-container" />
 	</p>
 </s:form>

@@ -78,8 +78,7 @@
 				</p>
 
 			</fieldset>
-			<s:set var="saveLabel"><wp:i18n key="SAVE" /></s:set>
-			<p><sj:submit targets="form-container" value="%{#saveLabel}" indicator="indicator" button="true" /></p>
+			<p><sj:submit targets="form-container" value="%{getText('label.save')}" indicator="indicator" button="true" /></p>
 		</s:form>
 	</s:else>
 </div>

@@ -90,8 +90,7 @@
 						<wpsf:select useTabindexAutoIncrement="true" name="extraGroupName" id="%{'extraGroups'+#random}" list="groups" 
 							listKey="name" listValue="descr" cssClass="text" />
 						<s:url var="joinExtraGroupUrlVar" action="joinExtraGroup" />
-						<s:set var="joinLabel"><wp:i18n key="JOIN" /></s:set>
-						<sj:submit targets="form-container" value="%{#joinLabel}" button="true" href="%{joinExtraGroupUrlVar}" />
+						<sj:submit targets="form-container" value="%{getText('label.join')}" button="true" href="%{joinExtraGroupUrlVar}" />
 					</p>
 					<s:if test="extraGroups.size() != 0">
 						<ul>
