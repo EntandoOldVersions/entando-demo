@@ -70,11 +70,14 @@
 						try {
 							CKEDITOR.editor.prototype.destroy(CKEDITOR.instances["<s:property value="%{#attributeTracer.getFormFieldName(#attribute)}" />"]);
 						} catch(e) {}
-						var ofckeditor = CKEDITOR.replace("<s:property value="%{#attributeTracer.getFormFieldName(#attribute)}" />", {
+						var currentEditor = CKEDITOR.replace("<s:property value="%{#attributeTracer.getFormFieldName(#attribute)}" />", {
 							customConfig : '<wp:resourceURL />plugins/jpfrontshortcut/static/js/ckeditor/entando-ckeditor_config.js',
 							EntandoLinkActionPath: "<wp:info key="systemParam" paramName="applicationBaseURL" />do/jacms/Content/Hypertext/entandoInternalLink.action",
 							language: '<s:property value="locale" />',
 							width: textareaOriginalWidth
+						});
+						currentEditor.on('change', function (ev) {
+							ev.editor.updateElement();
 						});
 					});
 				</script>

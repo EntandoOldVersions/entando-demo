@@ -1,6 +1,6 @@
 CKEDITOR.editorConfig = function(config) {
 	//config.language = 'fr';
-	config.extraPlugins = 'entandolink';
+	config.extraPlugins = 'entandolink,onchange';
 	//config.uiColor = '#AADC6E';
 	config.toolbar = [['Bold', 'Italic', '-', 'NumberedList','BulletedList', '-', 'entandolink', 'Unlink', '-', 'Undo','Redo', '-', 'Table', '-', 'Source']];
 	config.height = 250;
