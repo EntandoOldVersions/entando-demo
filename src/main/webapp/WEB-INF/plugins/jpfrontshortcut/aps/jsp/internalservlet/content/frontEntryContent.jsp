@@ -95,7 +95,7 @@
 
 			<s:elseif test="#attribute.type == 'CheckBox'">
 				<%-- ############# ATTRIBUTO CheckBox ############# --%>
-				<s:include value="/WEB-INF/apsadmin/jsp/entity/modules/checkBoxAttribute.jsp" />
+				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/checkBoxAttribute.jsp" />
 				</p>
 			</s:elseif>
 
@@ -107,8 +107,8 @@
 
 			<s:elseif test="#attribute.type == 'ThreeState'">
 				<%-- ############# ATTRIBUTO ThreeState ############# --%>
-				</p>
 				<s:include value="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/internalservlet/content/modules/threeStateAttribute.jsp" />
+				</p>
 			</s:elseif>
 
 			<s:elseif test="#attribute.type == 'Number'">
