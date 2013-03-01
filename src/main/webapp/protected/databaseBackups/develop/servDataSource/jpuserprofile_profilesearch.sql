@@ -1,0 +1,12 @@
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('caroline', 'Nome', 'Caroline', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('caroline', 'Cognome', 'F.', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('caroline', 'email', 'caroline@entando.com', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('max', 'Nome', 'Max', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('max', 'Cognome', 'M.', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('max', 'email', 'max@entando.com', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('admin', 'Nome', 'Admin', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('admin', 'Cognome', 'C.', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('admin', 'email', 'admin@entando.com', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('jeff', 'Nome', 'Jeff', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('jeff', 'Cognome', 'S.', NULL, NULL, NULL);
+INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('jeff', 'email', 'jeff@entando.com', NULL, NULL, NULL);

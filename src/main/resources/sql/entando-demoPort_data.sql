@@ -2219,14 +2219,6 @@ INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinme
 <config>
   <useextratitles>false</useextratitles>
 </config>');
-INSERT INTO pages (code, parentcode, pos, modelcode, titles, groupcode, showinmenu, extraconfig) VALUES ('jpfrontshortcut_test', 'homepage', 7, 'jpfrontshortcut_test', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Front shortcut Test Page</property>
-<property key="it">Front shortcut Test Page</property>
-</properties>', 'free', 1, '<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <useextratitles>false</useextratitles>
-</config>');
 
 
 
@@ -3160,14 +3152,14 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'para
 	<ExtendendPrivacyModule>
 		<Param name="extendedPrivacyModuleEnabled">false</Param>
 		<Param name="maxMonthsSinceLastAccess">6</Param>
-		<Param name="maxMonthsSinceLastPasswordChange">3</Param>        
+		<Param name="maxMonthsSinceLastPasswordChange">3</Param>
 	</ExtendendPrivacyModule>
 	<ExtraParams>
-		<Param name="jpfrontshortcut_activeFrameFrontEndEditing">false</Param>
+		<Param name="jpfrontshortcut_activeFrameFrontEndEditing">true</Param>
 		<Param name="jpfrontshortcut_activeContentFrontEndEditing">true</Param>
+		<Param name="jpfrontshortcut_activePageFrontEndEditing">true</Param>
 	</ExtraParams>
-</Params>
-');
+</Params>');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpuserprofileProfileType', 'Definizione del profilo utente', '<?xml version="1.0" encoding="UTF-8"?>
 <profiletypes>
 	<profiletype typecode="PFL" typedescr="Profilo utente/cittadino tipo">
