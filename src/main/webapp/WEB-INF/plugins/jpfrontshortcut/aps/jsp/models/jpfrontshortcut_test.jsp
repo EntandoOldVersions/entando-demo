@@ -28,15 +28,15 @@
 		<%-- <style>: just an example, you DON'T need this --%>
 			<style type="text/css" media="all">
 				body {
-					font-size: 13px;
+					font-size: 12px;
 				}
-				body > div {
+				body > .sample {
 					float: left;
 					width: 100%;
 					margin: 2em 0%;
 					padding: 1em 0;
 				}
-				body > div > div {
+				body > .sample > div {
 					float: left;
 					width: 40%;
 					background-color: whitesmoke;
@@ -46,11 +46,11 @@
 	</head>
 	<body>
 		<h1><wp:currentPage param="title" /></h1>
-		<div>
+		<div class="sample">
 			<wp:show frame="0" />
 		</div>
 		
-		<div>
+		<div class="sample">
 			<div>
 				<wp:show frame="1" />
 				<wp:show frame="2" />
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="sample">
 			<wp:show frame="9" />
 		</div>
 		
