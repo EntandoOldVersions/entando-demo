@@ -477,3 +477,4 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 ', NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('apis', 36, 'jpsharewith', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('apis', 14, 'entando_apis', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('login', 10, 'login_form', NULL, NULL);
