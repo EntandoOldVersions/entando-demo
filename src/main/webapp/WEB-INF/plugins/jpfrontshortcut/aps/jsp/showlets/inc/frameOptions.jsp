@@ -9,7 +9,7 @@
 
 <wp:info key="systemParam" paramName="jpfrontshortcut_activeFrameFrontEndEditing" var="frontEditingActiveVar" /> 
 
-<c:if test="${frontEditingActiveVar == 'true'}" >
+<c:if test="${null != frontEditingActiveVar && frontEditingActiveVar  == 'true'}">
 
 <c:set var="showletCodeVar" value="${null}" />
 <wp:currentPage param="owner" var="ownerGroupVar" />

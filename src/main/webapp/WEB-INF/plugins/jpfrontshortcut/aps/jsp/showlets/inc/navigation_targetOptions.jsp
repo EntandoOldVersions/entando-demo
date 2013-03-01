@@ -5,6 +5,10 @@
 <c:if test="${sessionScope.currentUser != 'guest'}">
 <wp:pageInfo pageCode="${currentTarget.code}" info="owner" var="currentPageOwner" />
 <wp:ifauthorized permission="managePages" groupName="${currentPageOwner}">
+
+<wp:info key="systemParam" paramName="jpfrontshortcut_activePageFrontEndEditing" var="activePageEditingVar" />
+<c:if test="${null != activePageEditingVar && activePageEditingVar  == 'true'}">
+
 <wp:info key="currentLang" var="currentLang" />
 <wp:currentPage param="code" var="currentViewCode" />
 <wp:pageInfo pageCode="${currentTarget.code}" info="code" var="targetPageCode" />
@@ -56,5 +60,7 @@
 	});  
 	</script>
 	</c:if>
+</c:if>
 </wp:ifauthorized>
+
 </c:if>
