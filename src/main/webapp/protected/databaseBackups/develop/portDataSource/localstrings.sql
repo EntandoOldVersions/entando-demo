@@ -106,6 +106,8 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile_ENTITY_ATTRIBUTE_MAXLENGTH_SHORT', 'en', 'Max');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile_ENTITY_ATTRIBUTE_MAXLENGTH_FULL', 'it', 'Lunghezza Massima');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile_ENTITY_ATTRIBUTE_MAXLENGTH_FULL', 'en', 'Maximum length');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile_CURRENT_USER_WITHOUT_PROFILE', 'it', 'Utente corrente senza profilo');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile_CURRENT_USER_WITHOUT_PROFILE', 'en', 'Current user without profile');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USER_NAME_4', 'it', 'Walter');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USER_NAME_4', 'en', 'Walter');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USER_DESCR_4', 'it', 'customer user');
@@ -200,6 +202,10 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpsharewith_T
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpsharewith_TITLE', 'en', 'Share with...');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpsharewith_NOSCRIPT', 'en', 'This feature needs a Javascript enabled browser.');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpsharewith_NOSCRIPT', 'it', 'Questa funzionalità ha bisogno di un browser con Javascript attivato.');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_FIELD', 'en', 'The value for field');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_FIELD', 'it', 'Il valore del campo');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_INVALID_FORMAT', 'en', 'is invalid');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_LIST_VIEWER_INVALID_FORMAT', 'it', 'non è corretto');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('PORTAL_TITLE', 'it', 'Entando Demo');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('PORTAL_TITLE', 'en', 'Entando Demo');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('PREV', 'it', 'Prec');
