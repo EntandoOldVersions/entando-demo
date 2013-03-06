@@ -37,10 +37,10 @@ window.addEvent('domready', function(){
 	<div class="jpfastcontentedit-editor"> 
 		
 		<s:if test="%{resourceTypeCode.equalsIgnoreCase('attach')}">
-			<h2><wp:i18n key="jpfastcontentedit_NEW_ATTACH" /></h2>
+			<h2><wp:i18n key="jpfastcontentedit_LABEL_NEW_ATTACH" /></h2>
 		</s:if>
 		<s:elseif test="%{resourceTypeCode.equalsIgnoreCase('image')}">
-			<h2><wp:i18n key="jpfastcontentedit_NEW_IMAGE" /></h2>
+			<h2><wp:i18n key="jpfastcontentedit_LABEL_NEW_IMAGE" /></h2>
 		</s:elseif>
 		
 		<div id="int">
