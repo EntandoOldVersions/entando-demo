@@ -96,7 +96,7 @@ window.addEvent('domready', function(){
 	</form>
 	
 	
-	<h3><wp:i18n key="jpfastcontentedit_NEW_IMAGE" /></h3>
+	<h3><wp:i18n key="jpfastcontentedit_LABEL_NEW_IMAGE" /></h3>
 	<p>
 		<a href="<wp:action path="/ExtStr2/do/jpfastcontentedit/Content/Resource/new.action"><wp:parameter name="resourceTypeCode">Image</wp:parameter></wp:action>">
 			Upload a new Image in the archive

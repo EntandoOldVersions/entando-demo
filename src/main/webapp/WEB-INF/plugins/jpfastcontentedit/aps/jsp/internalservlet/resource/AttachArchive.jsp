@@ -104,7 +104,7 @@ window.addEvent('domready', function(){
 		
 	</form>
 		
-	<h3><wp:i18n key="jpfastcontentedit_NEW_ATTACH" /></h3>
+	<h3><wp:i18n key="jpfastcontentedit_LABEL_NEW_ATTACH" /></h3>
 	<p>
 		<a href="<wp:action path="/ExtStr2/do/jpfastcontentedit/Content/Resource/new.action"><wp:parameter name="resourceTypeCode">Attach</wp:parameter></wp:action>">
 			Upload a new Attachment in the archive

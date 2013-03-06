@@ -803,8 +803,6 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile_ATTRCognome', 'en', 'Surname');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile_ATTRemail', 'it', 'Email');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpuserprofile_ATTRemail', 'en', 'Email');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpmyportalplus_RESET_INTRO', 'it', 'Se vuoi, puoi resettare la configurazione della pagina.');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpmyportalplus_RESET_INTRO', 'en', 'If you preferer, reset the page configuration.');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USER_NAME_1', 'en', 'Jeff');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USER_NAME_1', 'it', 'Jeff');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('USER_LOGIN_1', 'en', 'jeff');
@@ -952,8 +950,8 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_EDIT_CONTENT', 'en', 'Edit');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_REMOVE_CONTENT', 'it', 'Elimina');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_REMOVE_CONTENT', 'en', 'Remove');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_CONTENT', 'it', 'Crea un nuovo contenuto');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_CONTENT', 'en', 'Create a new content');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LABEL_NEW_CONTENT', 'it', 'Crea un nuovo contenuto');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LABEL_NEW_CONTENT', 'en', 'Create a new content');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_CHOOSE_ATTACH', 'it', 'Scegli un allegato');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_CHOOSE_ATTACH', 'en', 'Choose an attachment');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_CHOOSE_IMAGE', 'it', 'Scegli un''immagine');
@@ -964,8 +962,8 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_JOIN', 'en', 'Join');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_JOIN_TO', 'it', 'Associa al Contenuto');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_JOIN_TO', 'en', 'Join to Content');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_RESOURCE', 'en', 'New Resource');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_RESOURCE', 'it', 'Nuova Risorsa');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LABEL_NEW_RESOURCE', 'en', 'New Resource');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LABEL_NEW_RESOURCE', 'it', 'Nuova Risorsa');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_BACK_TO_CONTENT', 'en', 'Back to the Content');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_BACK_TO_CONTENT', 'it', 'Torna al Contenuto');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_REQUIRED_SHORT', 'en', '*');
@@ -1205,10 +1203,10 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontent
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LIST', 'en', 'List');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_COM', 'it', 'Form Azienda');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpwebdynamicform_TITLE_COM', 'en', 'Company Form');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_ATTACH', 'en', 'New File');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_ATTACH', 'it', 'Nuovo File');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_IMAGE', 'it', 'Nuovo File');
-INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_NEW_IMAGE', 'en', 'New File');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LABEL_NEW_ATTACH', 'en', 'New File');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LABEL_NEW_ATTACH', 'it', 'Nuovo File');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LABEL_NEW_IMAGE', 'it', 'Nuovo File');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfastcontentedit_LABEL_NEW_IMAGE', 'en', 'New File');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('VIEW_ALL', 'it', 'View All');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('VIEW_ALL', 'en', 'View All');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('EDIT_CONTENT_BACKOFFICE', 'en', 'Edit Content (Backoffice)');
