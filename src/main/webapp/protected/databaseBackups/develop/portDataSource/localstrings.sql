@@ -743,3 +743,17 @@ INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortc
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_CNG_Image2', 'en', 'Image2');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_CNG_Attach', 'en', 'Attach');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_CNG_Links', 'en', 'Links');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_POPUP_TITLE','en','Edit');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_POPUP_TITLE','it','Modifica');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_EDIT_FRAME','en','Edit frame:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_EDIT_FRAME','it','Modifica Posizione:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_EMPTY_FRAME','en','Empty frame:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_EMPTY_FRAME','it','Svuola la posizione:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_NEWPAGE','en','Create child page of:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_NEWPAGE','it','Crea pagina figlia di:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_EDITPAGE','en','Edit page:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_EDITPAGE','it','Modifica pagina:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_DELETEPAGE','en','Delete page:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_DELETEPAGE','it','Elimina pagina:');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_EDIT_THIS_CONTENT','en','Edit this content (Front Shortcut)');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jpfrontshortcut_EDIT_THIS_CONTENT','it','Modifica questo contenuto (Front Shortcut)');
