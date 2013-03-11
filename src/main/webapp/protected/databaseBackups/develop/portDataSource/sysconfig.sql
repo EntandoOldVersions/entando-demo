@@ -49,13 +49,11 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'para
 		<Param name="maxMonthsSinceLastPasswordChange">3</Param>
 	</ExtendendPrivacyModule>
 	<ExtraParams>
-		<Param name="jpfrontshortcut_activeFrameFrontEndEditing">true</Param>
+		<Param name="jpfrontshortcut_activeFrameFrontEndEditing">false</Param>
 		<Param name="jpfrontshortcut_activeContentFrontEndEditing">true</Param>
-		<Param name="jpfrontshortcut_activePageFrontEndEditing">true</Param>
+		<Param name="jpfrontshortcut_activePageFrontEndEditing">false</Param>
 	</ExtraParams>
-</Params>
-
-');
+</Params>');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpuserprofileProfileType', 'Definizione del profilo utente', '<?xml version="1.0" encoding="UTF-8"?>
 <profiletypes>
 	<profiletype typecode="PFL" typedescr="Profilo utente/cittadino tipo">
