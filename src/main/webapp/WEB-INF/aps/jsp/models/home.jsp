@@ -159,11 +159,9 @@
 
 			<div id="welcome" class="page-space  user-<c:out value="${sessionScope.currentUser}" />"><div class="page-space-1"><div class="page-space-2">
 				<div class="column-container">
-					<c:if test="${sessionScope.currentUser != 'guest'}">
-						<p>
-							<wp:i18n key="WELCOME_${sessionScope.currentUser}" escapeXml="false" />
-						</p>
-					</c:if>
+					<p>
+						<wp:i18n key="WELCOME_${sessionScope.currentUser}" escapeXml="false" />
+					</p>
 				</div>
 				<wp:url var="opencloseActionURL" paramRepeat="false"><wp:urlPar name="openFrame" ><c:out value="${edit_link_href_value}" /></wp:urlPar></wp:url>
 				<h2 id="editshowlet_title"><a id="editshowlet" class="open" href="<c:out value="${opencloseActionURL}" />"><img src="<wp:imgURL />configure-page.png" alt="configure page" /></a></h2>

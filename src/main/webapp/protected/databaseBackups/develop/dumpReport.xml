@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <backup>
-	<date>2013-03-01 16:27:22</date>
-	<requiredTime>634</requiredTime>
+	<date>2013-03-12 18:29:04</date>
+	<requiredTime>403</requiredTime>
 	<subfolder>develop</subfolder>
 	<componentsHistory>
-		<component code="entandoCore" date="2013-03-01 16:09:28" status="OK">
+		<component code="entandoCore" date="2013-03-12 17:59:44" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="OK">
 					<table name="authgroups" />
@@ -37,7 +37,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jacms" date="2013-03-01 16:09:43" status="OK">
+		<component code="jacms" date="2013-03-12 18:00:01" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="OK">
@@ -57,7 +57,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpcontentfeedback" date="2013-03-01 16:09:48" status="OK">
+		<component code="jpcontentfeedback" date="2013-03-12 18:00:06" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="OK">
@@ -71,7 +71,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpfastcontentedit" date="2013-03-01 16:09:48" status="OK">
+		<component code="jpfastcontentedit" date="2013-03-12 18:00:07" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
@@ -82,7 +82,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpfrontshortcut" date="2013-03-01 16:09:48" status="OK">
+		<component code="jpfrontshortcut" date="2013-03-12 18:00:07" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
@@ -93,7 +93,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpmail" date="2013-03-01 16:09:48" status="OK">
+		<component code="jpmail" date="2013-03-12 18:00:07" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
@@ -104,7 +104,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpmyportalplus" date="2013-03-01 16:09:48" status="OK">
+		<component code="jpmyportalplus" date="2013-03-12 18:00:07" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="OK">
@@ -117,7 +117,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpsharewith" date="2013-03-01 16:09:49" status="OK">
+		<component code="jpsharewith" date="2013-03-12 18:00:07" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
@@ -128,7 +128,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpsurvey" date="2013-03-01 16:09:49" status="OK">
+		<component code="jpsurvey" date="2013-03-12 18:00:07" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="OK">
 					<table name="jpsurvey" />
@@ -145,7 +145,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpuserprofile" date="2013-03-01 16:09:51" status="OK">
+		<component code="jpuserprofile" date="2013-03-12 18:00:10" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="OK">
 					<table name="jpuserprofile_authuserprofiles" />
@@ -159,7 +159,7 @@
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpwebdynamicform" date="2013-03-01 16:09:52" status="OK">
+		<component code="jpwebdynamicform" date="2013-03-12 18:00:10" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="OK">
 					<table name="jpwebdynamicform_messages" />
@@ -176,49 +176,49 @@
 		</component>
 	</componentsHistory>
 	<datasource name="servDataSource">
-		<table name="api_oauth_consumers" requiredTime="5" rows="0" />
-		<table name="api_oauth_tokens" requiredTime="6" rows="0" />
-		<table name="apicatalog_methods" requiredTime="7" rows="0" />
-		<table name="apicatalog_services" requiredTime="16" rows="4" />
+		<table name="api_oauth_consumers" requiredTime="4" rows="0" />
+		<table name="api_oauth_tokens" requiredTime="5" rows="0" />
+		<table name="apicatalog_methods" requiredTime="4" rows="0" />
+		<table name="apicatalog_services" requiredTime="5" rows="4" />
 		<table name="authgroups" requiredTime="4" rows="5" />
-		<table name="authpermissions" requiredTime="10" rows="9" />
-		<table name="authrolepermissions" requiredTime="15" rows="1" />
-		<table name="authroles" requiredTime="15" rows="1" />
-		<table name="authusergroups" requiredTime="5" rows="7" />
+		<table name="authpermissions" requiredTime="4" rows="9" />
+		<table name="authrolepermissions" requiredTime="22" rows="1" />
+		<table name="authroles" requiredTime="4" rows="1" />
+		<table name="authusergroups" requiredTime="7" rows="7" />
 		<table name="authuserroles" requiredTime="4" rows="2" />
-		<table name="authusers" requiredTime="11" rows="4" />
-		<table name="authusershortcuts" requiredTime="13" rows="2" />
-		<table name="jpsurvey" requiredTime="10" rows="2" />
-		<table name="jpsurvey_choices" requiredTime="9" rows="24" />
-		<table name="jpsurvey_questions" requiredTime="7" rows="6" />
-		<table name="jpsurvey_responses" requiredTime="8" rows="10" />
-		<table name="jpsurvey_voters" requiredTime="9" rows="2" />
-		<table name="jpuserprofile_authuserprofiles" requiredTime="5" rows="4" />
-		<table name="jpuserprofile_profilesearch" requiredTime="9" rows="12" />
-		<table name="jpwebdynamicform_answers" requiredTime="13" rows="0" />
-		<table name="jpwebdynamicform_messages" requiredTime="9" rows="0" />
-		<table name="jpwebdynamicform_search" requiredTime="20" rows="0" />
+		<table name="authusers" requiredTime="8" rows="4" />
+		<table name="authusershortcuts" requiredTime="3" rows="2" />
+		<table name="jpsurvey" requiredTime="6" rows="4" />
+		<table name="jpsurvey_choices" requiredTime="7" rows="44" />
+		<table name="jpsurvey_questions" requiredTime="5" rows="11" />
+		<table name="jpsurvey_responses" requiredTime="5" rows="10" />
+		<table name="jpsurvey_voters" requiredTime="4" rows="2" />
+		<table name="jpuserprofile_authuserprofiles" requiredTime="4" rows="4" />
+		<table name="jpuserprofile_profilesearch" requiredTime="5" rows="12" />
+		<table name="jpwebdynamicform_answers" requiredTime="4" rows="0" />
+		<table name="jpwebdynamicform_messages" requiredTime="5" rows="0" />
+		<table name="jpwebdynamicform_search" requiredTime="5" rows="0" />
 	</datasource>
 	<datasource name="portDataSource">
-		<table name="categories" requiredTime="5" rows="3" />
+		<table name="categories" requiredTime="4" rows="4" />
 		<table name="contentmodels" requiredTime="8" rows="23" />
-		<table name="contentrelations" requiredTime="30" rows="60" />
-		<table name="contents" requiredTime="10" rows="24" />
-		<table name="contentsearch" requiredTime="24" rows="57" />
-		<table name="jpcontentfeedback_comments" requiredTime="20" rows="0" />
-		<table name="jpcontentfeedback_rating" requiredTime="14" rows="0" />
-		<table name="jpmyportalplus_userpageconfig" requiredTime="16" rows="44" />
-		<table name="localstrings" requiredTime="45" rows="741" />
+		<table name="contentrelations" requiredTime="8" rows="62" />
+		<table name="contents" requiredTime="9" rows="25" />
+		<table name="contentsearch" requiredTime="9" rows="59" />
+		<table name="jpcontentfeedback_comments" requiredTime="4" rows="0" />
+		<table name="jpcontentfeedback_rating" requiredTime="4" rows="0" />
+		<table name="jpmyportalplus_userpageconfig" requiredTime="4" rows="8" />
+		<table name="localstrings" requiredTime="67" rows="762" />
 		<table name="pagemodels" requiredTime="6" rows="3" />
-		<table name="pages" requiredTime="11" rows="28" />
-		<table name="resourcerelations" requiredTime="24" rows="0" />
-		<table name="resources" requiredTime="21" rows="23" />
-		<table name="showletcatalog" requiredTime="21" rows="38" />
-		<table name="showletconfig" requiredTime="39" rows="304" />
-		<table name="sysconfig" requiredTime="6" rows="12" />
-		<table name="uniquekeys" requiredTime="12" rows="1" />
-		<table name="workcontentrelations" requiredTime="18" rows="2" />
-		<table name="workcontentsearch" requiredTime="23" rows="57" />
+		<table name="pages" requiredTime="6" rows="28" />
+		<table name="resourcerelations" requiredTime="4" rows="0" />
+		<table name="resources" requiredTime="6" rows="28" />
+		<table name="showletcatalog" requiredTime="7" rows="39" />
+		<table name="showletconfig" requiredTime="41" rows="302" />
+		<table name="sysconfig" requiredTime="5" rows="12" />
+		<table name="uniquekeys" requiredTime="7" rows="1" />
+		<table name="workcontentrelations" requiredTime="3" rows="9" />
+		<table name="workcontentsearch" requiredTime="11" rows="59" />
 	</datasource>
 </backup>
 

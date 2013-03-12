@@ -105,16 +105,21 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <properties>
 <property key="en">Latest News</property>
 <property key="it">Ultime Notizie</property>
-</properties>', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
+</properties>
+
+', NULL, NULL, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="maxElemForItem">1</property>
 <property key="linkDescr_it">Configura</property>
+<property key="categories">news</property>
 <property key="pageLink">news_style1</property>
 <property key="filters">(order=DESC;attributeFilter=true;key=Date)</property>
 <property key="linkDescr_en">Configure</property>
 <property key="contentType">NEW</property>
 <property key="modelId">27</property>
-</properties>', 0, 'free');
+</properties>
+
+', 0, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpsharewith', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Share With...</property>
@@ -313,11 +318,28 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	<parameter name="modelId">Content Model ID</parameter>
 	<action name="viewerConfig"/>
 </config>', 'jpfrontshortcut', NULL, NULL, 1, NULL);
-INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('jpfrontshortcut_navigation_menu', '<?xml version="1.0" encoding="UTF-8"?>
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('CNT', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
-<property key="en">Navigation - Vertical Menu</property>
-<property key="it">Navigazione - Menù Verticale</property>
-</properties>', '<config>
-<parameter name="navSpec">Rules for the Page List auto-generation</parameter>
-<action name="navigatorConfig" />
-</config>', 'jpfrontshortcut', NULL, NULL, 1, NULL);
+<property key="en">Contact Us Form</property>
+<property key="it">Form Contatti</property>
+</properties>
+
+', NULL, NULL, 'jpwebdynamicform_message_form', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="typeCode">CNT</property>
+</properties>
+
+', 0, 'free');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('WCN', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Content</property>
+<property key="it">Content</property>
+</properties>
+
+', NULL, NULL, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="contentId">CNG77</property>
+<property key="modelId">34</property>
+</properties>
+
+', 0, 'administrators');
