@@ -1,81 +1,8 @@
-INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, myentando, authenticationrequired, requiredpermission, requiredgroup, ishidden) VALUES ('contents', 'jacms:contents', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">List news</property>
-<property key="it">Lista news</property>
-</properties>
-
-', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="contentType">NEW</property>
-<property key="modelId">25</property>
-</properties>
-
-', 'jacms:contents', '<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <freeparameters>
-    <parameter name="modelId" />
-  </freeparameters>
-</config>
-
-', 1, 1, 0, NULL, NULL, 0);
-INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, myentando, authenticationrequired, requiredpermission, requiredgroup, ishidden) VALUES ('content', 'jacms:content', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
-<property key="it">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
-</properties>
-
-', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="id">NEW11</property>
-<property key="modelId">2</property>
-</properties>
-
-', 'jacms:content', NULL, 1, 1, 0, NULL, NULL, 0);
-INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, myentando, authenticationrequired, requiredpermission, requiredgroup, ishidden) VALUES ('news_test', 'jacms:content', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">erogazione NEW17</property>
-<property key="it">erogazione NEW17</property>
-</properties>
-
-', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="id">NEW17</property>
-<property key="modelId">2</property>
-</properties>
-
-', 'jacms:content', '<?xml version="1.0" encoding="UTF-8"?>
-<config>
-  <freeparameters>
-    <parameter name="modelId" />
-  </freeparameters>
-</config>
-
-', 1, 1, 0, NULL, NULL, 0);
-INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, myentando, authenticationrequired, requiredpermission, requiredgroup, ishidden) VALUES ('generic_contents', 'jacms:contents', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="en">Generic Contents</property>
-<property key="it">Contenuti generici</property>
-<property key="de">Generic Contents</property>
-</properties>
-
-', '<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-<property key="contentType">CNG</property>
-<property key="modelId">31</property>
-</properties>
-
-', 'jacms:contents', NULL, 1, 1, NULL, NULL, NULL, 0);
-
-
-
-
 INSERT INTO authgroups (groupname, descr) VALUES ('administrators', 'Administrators');
 INSERT INTO authgroups (groupname, descr) VALUES ('free', 'Free Access');
 INSERT INTO authgroups (groupname, descr) VALUES ('intranet', 'Intranet users');
 INSERT INTO authgroups (groupname, descr) VALUES ('customers', 'Customer users');
 INSERT INTO authgroups (groupname, descr) VALUES ('registered', 'Registered Users');
-
-
 
 
 INSERT INTO authpermissions (permissionname, descr) VALUES ('superuser', 'All functions');
@@ -89,16 +16,16 @@ INSERT INTO authpermissions (permissionname, descr) VALUES ('jpuserprofile_profi
 INSERT INTO authpermissions (permissionname, descr) VALUES ('jpuserprofile_profile_edit', 'User Profile - Edit');
 
 
-
-
 INSERT INTO authroles (rolename, descr) VALUES ('admin', 'Administrator');
-
-
 
 
 INSERT INTO authrolepermissions (rolename, permissionname) VALUES ('admin', 'superuser');
 
 
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('caroline', 'd6lFouRLMVSGYCQqiZnvMA==', '2011-09-26 00:00:00', '2013-03-14 00:00:00', '2011-09-26 00:00:00', 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('max', 'oqYapx7mUieGYCQqiZnvMA==', '2011-09-26 00:00:00', '2013-03-14 00:00:00', '2011-09-26 00:00:00', 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('admin', 'adminadmin', '2008-10-10 00:00:00', '2013-03-13 00:00:00', NULL, 1);
+INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('jeff', 'M6a/uY1I0JDGWU/XU+dWTA==', '2011-09-26 00:00:00', '2013-03-14 00:00:00', NULL, 1);
 
 
 INSERT INTO authusergroups (username, groupname) VALUES ('admin', 'administrators');
@@ -110,20 +37,8 @@ INSERT INTO authusergroups (username, groupname) VALUES ('max', 'registered');
 INSERT INTO authusergroups (username, groupname) VALUES ('max', 'customers');
 
 
-
-
 INSERT INTO authuserroles (username, rolename) VALUES ('admin', 'admin');
 INSERT INTO authuserroles (username, rolename) VALUES ('jeff', 'admin');
-
-
-
-
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('caroline', 'd6lFouRLMVSGYCQqiZnvMA==', '2011-09-26 00:00:00.0', '2011-12-07 00:00:00.0', '2011-09-26 00:00:00.0', 1);
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('max', 'oqYapx7mUieGYCQqiZnvMA==', '2011-09-26 00:00:00.0', '2011-12-07 00:00:00.0', '2011-09-26 00:00:00.0', 1);
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('admin', 'adminadmin', '2008-10-10 00:00:00.0', '2011-12-19 00:00:00.0', NULL, 1);
-INSERT INTO authusers (username, passwd, registrationdate, lastaccess, lastpasswordchange, active) VALUES ('jeff', 'M6a/uY1I0JDGWU/XU+dWTA==', '2011-09-26 00:00:00.0', '2013-01-16 00:00:00.0', NULL, 1);
-
-
 
 
 INSERT INTO authusershortcuts (username, config) VALUES ('jeff', '<?xml version="1.0" encoding="UTF-8"?>
@@ -158,6 +73,73 @@ INSERT INTO authusershortcuts (username, config) VALUES ('admin', '<?xml version
 ');
 
 
+INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, ishidden, myentando, authenticationrequired, requiredpermission, requiredgroup) VALUES ('contents', 'jacms:contents', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">List news</property>
+<property key="it">Lista news</property>
+</properties>
+
+', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="contentType">NEW</property>
+<property key="modelId">25</property>
+</properties>
+
+', 'jacms:contents', '<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <freeparameters>
+    <parameter name="modelId" />
+  </freeparameters>
+</config>
+
+', 1, 0, 1, 0, NULL, NULL);
+INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, ishidden, myentando, authenticationrequired, requiredpermission, requiredgroup) VALUES ('content', 'jacms:content', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
+<property key="it">Webinar sull''integrazione della piattaforma Entando e Pentaho Business Intelligence</property>
+</properties>
+
+', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="id">NEW11</property>
+<property key="modelId">2</property>
+</properties>
+
+', 'jacms:content', NULL, 1, 0, 1, 0, NULL, NULL);
+INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, ishidden, myentando, authenticationrequired, requiredpermission, requiredgroup) VALUES ('news_test', 'jacms:content', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">erogazione NEW17</property>
+<property key="it">erogazione NEW17</property>
+</properties>
+
+', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="id">NEW17</property>
+<property key="modelId">2</property>
+</properties>
+
+', 'jacms:content', '<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <freeparameters>
+    <parameter name="modelId" />
+  </freeparameters>
+</config>
+
+', 1, 0, 1, 0, NULL, NULL);
+INSERT INTO apicatalog_services (servicekey, resource, description, parameters, tag, freeparameters, isactive, ishidden, myentando, authenticationrequired, requiredpermission, requiredgroup) VALUES ('generic_contents', 'jacms:contents', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Generic Contents</property>
+<property key="it">Contenuti generici</property>
+<property key="de">Generic Contents</property>
+</properties>
+
+', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="contentType">CNG</property>
+<property key="modelId">31</property>
+</properties>
+
+', 'jacms:contents', NULL, 1, 0, 1, NULL, NULL, NULL);
 
 
 INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, publicpartialresult, publicresult, questionnaire, gatheruserinfo, title, restrictedaccess, checkcookie, checkipaddress, imageid, imagedescr) VALUES (2, '<?xml version="1.0" encoding="UTF-8"?>
@@ -166,7 +148,7 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 <property key="it">Sondaggio di prova</property>
 </properties>
 
-', 'intranet', '2011-11-01 00:00:00.0', '2013-12-11 00:00:00.0', 1, 1, 1, 0, 0, '<?xml version="1.0" encoding="UTF-8"?>
+', 'intranet', '2011-11-01 00:00:00', '2013-12-11 00:00:00', 1, 1, 1, 0, 0, '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Pool 1</property>
 <property key="it">Sondaggio 1</property>
@@ -183,7 +165,7 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 <property key="en">Just some testing here...</property>
 </properties>
 
-', 'intranet', '2011-11-01 00:00:00.0', '2012-12-21 00:00:00.0', 1, 0, 0, 1, 0, '<?xml version="1.0" encoding="UTF-8"?>
+', 'intranet', '2011-11-01 00:00:00', '2013-12-21 00:00:00', 1, 0, 0, 1, 0, '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Questionnaire 1</property>
 <property key="it">Questionario 1</property>
@@ -195,8 +177,42 @@ INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, pu
 </properties>
 
 ');
+INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, publicpartialresult, publicresult, questionnaire, gatheruserinfo, title, restrictedaccess, checkcookie, checkipaddress, imageid, imagedescr) VALUES (3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Employee job satisfaction</property>
+<property key="it">Soddisfazione degli impiegati riguardo il lavoro</property>
+</properties>
 
+', 'intranet', '2013-03-11 00:00:00', '2014-12-30 00:00:00', 1, 0, 0, 1, 0, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Job satisfaction</property>
+<property key="it">Soddisfazione riguardo il lavoro</property>
+</properties>
 
+', 0, 1, 0, '75', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Satisfaction</property>
+</properties>
+
+');
+INSERT INTO jpsurvey (id, description, maingroup, startdate, enddate, active, publicpartialresult, publicresult, questionnaire, gatheruserinfo, title, restrictedaccess, checkcookie, checkipaddress, imageid, imagedescr) VALUES (4, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">7 Questions: Quality of communications to and with the employee</property>
+<property key="it">7 Domande: qualità delle comunicazioni da e con il dipendente</property>
+</properties>
+
+', 'intranet', '2013-03-11 00:00:00', '2014-09-30 00:00:00', 1, 1, 1, 0, 0, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Communication Within Company</property>
+<property key="it">La comunicazione all''interno dell''azienda</property>
+</properties>
+
+', 0, 1, 0, '74', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Communication</property>
+</properties>
+
+');
 
 
 INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (4, 2, '<?xml version="1.0" encoding="UTF-8"?>
@@ -239,8 +255,41 @@ INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minre
 </properties>
 
 ', 2, 0, 2, 4);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (7, 3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Overall, how satisfied are you with your job?</property>
+<property key="it">In generale, quanto sei soddisfatto per il tuo lavoro?</property>
+</properties>
 
+', 0, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (8, 3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Compared to a year ago how would you describe your current job satisfaction level?</property>
+<property key="it">Rispetto ad un anno fa, come descriveresti il tuo attuale livello di soddisfazione per il lavoro?</property>
+</properties>
 
+', 1, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (9, 3, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">What is the best thing about working for this company?</property>
+<property key="it">Qual è la cosa che ti piace di più nel lavorare per questa società?</property>
+</properties>
+
+', 2, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (10, 4, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">I am kept well informed about my work group''s plans and progress</property>
+<property key="it">Sono tenuto adeguatamente informato sui piani del mio gruppo di lavoro e dei progressi</property>
+</properties>
+
+', 0, 1, 0, 0);
+INSERT INTO jpsurvey_questions (id, surveyid, question, pos, singlechoice, minresponsenumber, maxresponsenumber) VALUES (11, 4, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">I am kept well informed about company plans and progress.</property>
+<property key="it">Sono tenuto adeguatamente informato sui piani aziendali e i progressi.</property>
+</properties>
+
+', 1, 1, 0, 0);
 
 
 INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (7, 3, '<?xml version="1.0" encoding="UTF-8"?>
@@ -387,14 +436,149 @@ INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (6, 
 </properties>
 
 ', 2, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (25, 7, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Dissatisfied</property>
+<property key="it">Insoddisfatto</property>
+</properties>
+
+', 0, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (26, 7, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Somewhat dissatisfied</property>
+<property key="it">Parzialmente Insoddisfatto</property>
+</properties>
+
+', 1, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (27, 7, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Neutral</property>
+<property key="it">Neutrale</property>
+</properties>
+
+', 2, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (28, 7, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Satisfied</property>
+<property key="it">Soddisfatto</property>
+</properties>
+
+', 3, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (29, 7, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Very Satisfied</property>
+<property key="it">Molto soddisfatto</property>
+</properties>
+
+', 4, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (30, 8, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Much less satisfied</property>
+<property key="it">Molto meno soddisfatto</property>
+</properties>
+
+', 0, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (31, 8, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Somewhat less satisfied</property>
+<property key="it">Un po'' meno soddisfatto</property>
+</properties>
+
+', 1, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (32, 8, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Same</property>
+<property key="it">Lo stesso</property>
+</properties>
+
+', 2, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (33, 8, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Somewhat more satisfied</property>
+<property key="it">Un po'' più soddisfatto</property>
+</properties>
+
+', 3, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (34, 9, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="ERROR">YOU SHOULD _NOT_ SEE THIS</property>
+</properties>
+
+', 0, 1);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (35, 10, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Very dissatisfied</property>
+<property key="it">Molto insoddisfatto</property>
+</properties>
+
+', 0, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (36, 10, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Somewhat dissatisfied</property>
+<property key="it">Un pò insoddisfatto</property>
+</properties>
+
+', 1, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (37, 10, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Undecided</property>
+<property key="it">Indeciso</property>
+</properties>
+
+', 2, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (38, 10, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Somewhat satisfied</property>
+<property key="it">Abbastanza soddisfatto</property>
+</properties>
+
+', 3, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (39, 10, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Very satisfied</property>
+<property key="it">Molto soddisfatto</property>
+</properties>
+
+', 4, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (40, 11, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Very dissatisfied</property>
+<property key="it">Molto insoddisfatto</property>
+</properties>
+
+', 0, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (41, 11, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Somewhat dissatisfied</property>
+<property key="it">Un pò insoddisfatto</property>
+</properties>
+
+', 1, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (42, 11, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Undecided</property>
+<property key="it">Indeciso</property>
+</properties>
+
+', 2, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (43, 11, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Somewhat satisfied</property>
+<property key="it">Abbastanza soddisfatto</property>
+</properties>
+
+', 3, 0);
+INSERT INTO jpsurvey_choices (id, questionid, choice, pos, freetext) VALUES (44, 11, '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Very satisfied</property>
+<property key="it">Molto soddisfatto</property>
+</properties>
+
+', 4, 0);
 
 
-
-
-INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username, ipaddress) VALUES (1, 0, NULL, NULL, '2011-11-17 00:00:00.0', 1, 'admin', '127.0.0.1');
-INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username, ipaddress) VALUES (2, 0, NULL, NULL, '2011-11-18 00:00:00.0', 1, 'guest', '192.168.1.245');
-
-
+INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username, ipaddress) VALUES (1, 0, NULL, NULL, '2011-11-17 00:00:00', 1, 'admin', '127.0.0.1');
+INSERT INTO jpsurvey_voters (id, age, country, sex, votedate, surveyid, username, ipaddress) VALUES (2, 0, NULL, NULL, '2011-11-18 00:00:00', 1, 'guest', '192.168.1.245');
 
 
 INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES (1, 1, 1, NULL);
@@ -407,8 +591,6 @@ INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES 
 INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES (2, 2, 5, NULL);
 INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES (2, 3, 9, NULL);
 INSERT INTO jpsurvey_responses (voterid, questionid, choiceid, freetext) VALUES (2, 3, 13, NULL);
-
-
 
 
 INSERT INTO jpuserprofile_authuserprofiles (username, profiletype, profilexml, publicprofile) VALUES ('caroline', 'PFL', '<?xml version="1.0" encoding="UTF-8"?>
@@ -425,8 +607,6 @@ INSERT INTO jpuserprofile_authuserprofiles (username, profiletype, profilexml, p
 ', 0);
 
 
-
-
 INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('caroline', 'Nome', 'Caroline', NULL, NULL, NULL);
 INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('caroline', 'Cognome', 'F.', NULL, NULL, NULL);
 INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('caroline', 'email', 'caroline@entando.com', NULL, NULL, NULL);
@@ -439,5 +619,3 @@ INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalu
 INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('jeff', 'Nome', 'Jeff', NULL, NULL, NULL);
 INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('jeff', 'Cognome', 'S.', NULL, NULL, NULL);
 INSERT INTO jpuserprofile_profilesearch (username, attrname, textvalue, datevalue, numvalue, langcode) VALUES ('jeff', 'email', 'jeff@entando.com', NULL, NULL, NULL);
-
-
