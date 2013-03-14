@@ -11,9 +11,7 @@
 	<ul class="navigation_menu_ul">
 	<wp:nav var="page">
 		<li class="navigation_menu_li <c:if test="${page.code == currentPageCode}"> current </c:if>">
-			<a href="<c:out value="${page.url}" />" class="link">
-				<span><c:out value="${page.title}" /></span>
-			</a>
+			<a href="<c:out value="${page.url}" />" class="link"><span><c:out value="${page.title}" /></span></a>
 			<c:set var="currentTarget" value="${page}" scope="request" />
 			<c:import url="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/showlets/inc/navigation_targetOptions.jsp" />
 		</li>
