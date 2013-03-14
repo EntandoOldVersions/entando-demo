@@ -1,9 +1,12 @@
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW70', 'events');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW33', 'news');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW17', 'news');
 INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW19', 'news');
 INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW21', 'news');
 INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW30', 'news');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW66', 'news');
-INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW71', 'events');
 INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW22', 'events');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW70', 'events');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW17', 'news');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW71', 'events');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW33', 'news');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW81', 'events');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW79', 'events');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW83', 'news');
+INSERT INTO workcontentrelations (contentid, refcategory) VALUES ('NEW66', 'news');

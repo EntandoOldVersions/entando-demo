@@ -351,6 +351,30 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpwe
 			</attribute>
 		</attributes>
 	</messagetype>
+	<messagetype typecode="VRF" typedescr="Vacation Request Form">
+		<attributes>
+			<attribute name="Name" attributetype="Monotext" description="Name" searcheable="true">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="Surname" attributetype="Monotext" description="Surname" searcheable="true">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="StartDate" attributetype="Date" description="Start Date">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+			<attribute name="EndDate" attributetype="Date" description="End Date">
+				<validations>
+					<required>true</required>
+				</validations>
+			</attribute>
+		</attributes>
+	</messagetype>
 </messagetypes>
 
 ');
@@ -362,15 +386,15 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpco
 		<rateContent>true</rateContent>
 </contentFeedbackConfig>');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'jpmyportalplus_config', 'Definizione degli oggetti configurabili di My Portal', '<?xml version="1.0" encoding="UTF-8"?>
-<myportalConfig><showlets><showlet code="jpwebdynamicform_message_choice" /><showlet code="jpsurvey_questionnaireList" /><showlet code="latest_video" /><showlet code="CNT" /><showlet code="jpsurvey_pollList" /><showlet code="latest_events" /><showlet code="latest_news" /><showlet code="WCN" /><showlet code="documents_list" /><showlet code="inEvidenza" /></showlets></myportalConfig>
+<myportalConfig><showlets><showlet code="CNT" /><showlet code="VRF" /><showlet code="WCN" /><showlet code="documents_list" /><showlet code="inEvidenza" /><showlet code="jpsurvey_pollList" /><showlet code="jpsurvey_questionnaireList" /><showlet code="jpwebdynamicform_message_choice" /><showlet code="latest_events" /><showlet code="latest_news" /><showlet code="latest_video" /></showlets></myportalConfig>
 ');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'subIndexDir', 'Name of the sub-directory containing content indexing files', 'indexdir20130115185332');
 INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'entandoComponentsReport', 'The component installation report', '<?xml version="1.0" encoding="UTF-8"?>
 <reports status="OK">
-	<creation>2013-03-12 17:59:44</creation>
-	<lastupdate>2013-03-12 18:00:22</lastupdate>
+	<creation>2013-03-14 15:51:16</creation>
+	<lastupdate>2013-03-14 15:51:48</lastupdate>
 	<components>
-		<component code="entandoCore" date="2013-03-12 17:59:44" status="OK">
+		<component code="entandoCore" date="2013-03-14 15:51:16" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="OK">
 					<table name="authgroups" />
@@ -403,7 +427,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jacms" date="2013-03-12 18:00:01" status="OK">
+		<component code="jacms" date="2013-03-14 15:51:32" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="OK">
@@ -423,7 +447,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpcontentfeedback" date="2013-03-12 18:00:06" status="OK">
+		<component code="jpcontentfeedback" date="2013-03-14 15:51:36" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="OK">
@@ -437,7 +461,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpfastcontentedit" date="2013-03-12 18:00:07" status="OK">
+		<component code="jpfastcontentedit" date="2013-03-14 15:51:36" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
@@ -448,7 +472,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpfrontshortcut" date="2013-03-12 18:00:07" status="OK">
+		<component code="jpfrontshortcut" date="2013-03-14 15:51:36" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
@@ -459,7 +483,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpmail" date="2013-03-12 18:00:07" status="OK">
+		<component code="jpmail" date="2013-03-14 15:51:36" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
@@ -470,7 +494,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpmyportalplus" date="2013-03-12 18:00:07" status="OK">
+		<component code="jpmyportalplus" date="2013-03-14 15:51:36" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="OK">
@@ -483,7 +507,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpsharewith" date="2013-03-12 18:00:07" status="OK">
+		<component code="jpsharewith" date="2013-03-14 15:51:37" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="NOT_AVAILABLE" />
 				<datasource name="portDataSource" status="NOT_AVAILABLE" />
@@ -494,7 +518,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpsurvey" date="2013-03-12 18:00:07" status="OK">
+		<component code="jpsurvey" date="2013-03-14 15:51:37" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="OK">
 					<table name="jpsurvey" />
@@ -511,7 +535,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpuserprofile" date="2013-03-12 18:00:10" status="OK">
+		<component code="jpuserprofile" date="2013-03-14 15:51:38" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="OK">
 					<table name="jpuserprofile_authuserprofiles" />
@@ -525,7 +549,7 @@ INSERT INTO sysconfig (version, item, descr, config) VALUES ('production', 'enta
 			</data>
 			<postProcess status="NOT_AVAILABLE" />
 		</component>
-		<component code="jpwebdynamicform" date="2013-03-12 18:00:10" status="OK">
+		<component code="jpwebdynamicform" date="2013-03-14 15:51:39" status="OK">
 			<schema status="OK">
 				<datasource name="servDataSource" status="OK">
 					<table name="jpwebdynamicform_messages" />

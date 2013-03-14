@@ -383,7 +383,6 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 </properties>
 
 ', NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 123, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 0, 'navigation_langbar', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 1, 'login_form', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('fastcontentedit', 4, 'search_form', NULL, NULL);
@@ -423,7 +422,6 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 
 ', NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('apis', 36, 'jpsharewith', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('apis', 14, 'entando_apis', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('news_archive', 14, 'content_viewer_list', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="maxElemForItem">3</property>
@@ -472,10 +470,19 @@ INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcon
 ', NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 124, 'CNT', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 24, 'latest_events', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 25, 'documents_list', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 125, 'jpsurvey_questionnaireList', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 23, 'jpmyportalplus_void', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 67, 'latest_video', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 64, 'WCN', NULL, NULL);
 INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 65, 'latest_news', NULL, NULL);
-INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 66, 'inEvidenza', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 23, 'inEvidenza', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 66, 'documents_list', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 25, 'jpmyportalplus_void', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('homepage', 123, 'VRF', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('apis', 15, 'entando_apis', NULL, NULL);
+INSERT INTO showletconfig (pagecode, framepos, showletcode, config, publishedcontent) VALUES ('apis', 14, 'content_viewer', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="contentId">CNG86</property>
+<property key="modelId">3</property>
+</properties>
+
+', 'CNG86');

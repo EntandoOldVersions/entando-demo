@@ -187,7 +187,9 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 <properties>
 <property key="en">Content Feedback - Publish a Content</property>
 <property key="it">Feedback Contenuti - Pubblica un Contenuto</property>
-</properties>', '<config>
+</properties>
+
+', '<config>
 	<parameter name="contentId">Content ID</parameter>
 	<parameter name="modelId">Content Model ID</parameter>
 	<parameter name="usedContentRating">Enable content rating (true|false)</parameter>
@@ -195,7 +197,7 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 	<parameter name="usedCommentWithRating">Enable rating on comments (true|false)</parameter>
 	<parameter name="commentValidation">Enable administrator moderation of comments (true|false)</parameter> 
 <action name="viewerContentFeedbackConfig"/>
-</config>', 'jpcontentfeedback', NULL, NULL, 1, NULL);
+</config>', 'jpcontentfeedback', NULL, NULL, 1, 'free');
 INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('latest_video', '<?xml version="1.0" encoding="UTF-8"?>
 <properties>
 <property key="en">Latest Video</property>
@@ -343,3 +345,15 @@ INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode
 </properties>
 
 ', 0, 'administrators');
+INSERT INTO showletcatalog (code, titles, parameters, plugincode, parenttypecode, defaultconfig, locked, maingroup) VALUES ('VRF', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="en">Vacation Request Form</property>
+<property key="it">Form Richiesta Ferie</property>
+</properties>
+
+', NULL, NULL, 'jpwebdynamicform_message_form', '<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+<property key="typeCode">VRF</property>
+</properties>
+
+', 0, 'intranet');
