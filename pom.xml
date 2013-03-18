@@ -5,7 +5,7 @@
 	<groupId>org.entando.entando</groupId>
 	<artifactId>entando-demo</artifactId>
 	<packaging>war</packaging>
-	<version>3.2.0-SNAPSHOT</version>
+	<version>3.2.0</version>
 	<name>entando-demo</name>
 	<url>http://maven.apache.org/</url>
 	<profiles>
@@ -96,7 +96,7 @@
 		<test.database.serv.url>jdbc:derby:${project.build.directory}/test/db/${project.artifactId}testServ;create=true</test.database.serv.url>
 
 		<skipDerby>true</skipDerby>
-		<entando.version>3.2.0-SNAPSHOT</entando.version>
+		<entando.version>3.2.0</entando.version>
 		<spring.version>3.0.6.RELEASE</spring.version>
 		<struts2.version>2.3.4.1</struts2.version>
 	</properties>
