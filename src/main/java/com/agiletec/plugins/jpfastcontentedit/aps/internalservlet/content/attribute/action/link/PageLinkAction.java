@@ -1,6 +1,6 @@
 /*
 *
-* Copyright 2012 Entando S.r.l. (http://www.entando.com) All rights reserved.
+* Copyright 2013 Entando S.r.l. (http://www.entando.com) All rights reserved.
 *
 * This file is part of Entando software.
 * Entando is a free software; 
@@ -12,7 +12,7 @@
 * 
 * 
 * 
-* Copyright 2012 Entando S.r.l. (http://www.entando.com) All rights reserved.
+* Copyright 2013 Entando S.r.l. (http://www.entando.com) All rights reserved.
 *
 */
 package com.agiletec.plugins.jpfastcontentedit.aps.internalservlet.content.attribute.action.link;
@@ -25,15 +25,15 @@ import javax.servlet.http.HttpSession;
  */
 public class PageLinkAction extends com.agiletec.plugins.jacms.apsadmin.content.attribute.action.link.PageLinkAction {
 
-    @Override
-    public String joinLink() {
-        HttpSession session = this.getRequest().getSession();
-	this.setLangCode((String) session.getAttribute(ILinkAttributeActionHelper.LINK_LANG_CODE_SESSION_PARAM));
-        return super.joinLink();
-    }
+	@Override
+	public String joinLink() {
+		HttpSession session = this.getRequest().getSession();
+		this.setLangCode((String) session.getAttribute(ILinkAttributeActionHelper.LINK_LANG_CODE_SESSION_PARAM));
+		return super.joinLink();
+	}
     
     public String getLangTabAnchorDest() {
-	return this.getLangCode() + "_tab";
+		return this.getLangCode() + "_tab";
     }
     
     protected String getLangCode() {

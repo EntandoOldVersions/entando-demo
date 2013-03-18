@@ -25,6 +25,10 @@
 			</c:if>
 		<!--  -->
 
+		<script type="text/javascript">
+			<!-- firefox compatiblity fix with mootools 1.2 -->
+			try { delete String.prototype.contains; } catch(e) {}
+		</script>
 		<script type="text/javascript" src="<wp:resourceURL />plugins/jpmyportalplus/static/js/lib/mootools-1.2-core.js"></script>
 		<script type="text/javascript" src="<wp:resourceURL />plugins/jpmyportalplus/static/js/lib/mootools-1.2-more.js"></script>
 
@@ -150,11 +154,9 @@
 
 			<div id="welcome" class="page-space  user-<c:out value="${sessionScope.currentUser}" />"><div class="page-space-1"><div class="page-space-2">
 				<div class="column-container">
-					<c:if test="${sessionScope.currentUser != 'guest'}">
-						<p>
-							<wp:i18n key="WELCOME_${sessionScope.currentUser}" escapeXml="false" />
-						</p>
-					</c:if>
+					<p>
+						<wp:i18n key="WELCOME_${sessionScope.currentUser}" escapeXml="false" />
+					</p>
 				</div>
 				<wp:url var="opencloseActionURL" paramRepeat="false"><wp:urlPar name="openFrame" ><c:out value="${edit_link_href_value}" /></wp:urlPar></wp:url>
 			</div></div></div>
@@ -260,10 +262,10 @@
 				</div>
 			</div></div></div>
 		</div>
-
+		
 		<c:if test="${outputHeadInfo_JS_JQUERY_isHere}">
-			<jsp:include page="inc/widget_popup_init.jsp" />
+			<jsp:include page="/WEB-INF/plugins/jpfrontshortcut/aps/jsp/models/inc/widget_popup_init.jsp" />
 		</c:if>
-
+		
 	</body>
 </html>

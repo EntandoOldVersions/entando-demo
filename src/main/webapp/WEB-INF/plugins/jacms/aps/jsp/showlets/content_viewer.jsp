@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="wp" uri="/aps-core" %>
 <%@ taglib prefix="jacms" uri="/jacms-aps-core" %>
-<%@ taglib prefix="fce" uri="/jpfastcontentedit-aps-core" %>
 <jacms:contentInfo param="authToEdit" var="canEditThis" />
 <jacms:contentInfo param="contentId" var="myContentId" />
 <c:if test="${canEditThis}">

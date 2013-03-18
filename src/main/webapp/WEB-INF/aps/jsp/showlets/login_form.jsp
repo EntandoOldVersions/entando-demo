@@ -55,6 +55,9 @@
 		</c:when>
 		<c:otherwise>
 			<form action="<wp:url/>" method="post">
+				<c:if test="${null != param['returnUrl']}">
+				<input type="hidden" name="returnUrl" value="<c:out value="${param['returnUrl']}" />" />
+				</c:if>
 				<p>
 					<c:if test="${accountExpired}">
 						<span class="error"><wp:i18n key="USER_STATUS_EXPIRED" /></span>

@@ -89,7 +89,7 @@
 	</ul>
 
 
-	<form action="<wp:action path="/ExtStr2/do/jpfastcontentedit/Content/save.action" />" method="post" enctype="multipart/form-data" class="newContentForm">
+	<form action="<wp:action path="/ExtStr2/do/jpfastcontentedit/Content/save.action" />" method="post" class="newContentForm">
 
 	<div id="info" class="tab">
 
